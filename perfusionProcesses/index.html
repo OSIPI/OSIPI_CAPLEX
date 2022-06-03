@@ -290,19 +290,6 @@
     Baseline estimation
   </a>
   
-    <nav class="md-nav" aria-label="Baseline estimation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#baseline-estimation-methods" class="md-nav__link">
-     Baseline estimation methods
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -377,6 +364,26 @@
           <li class="md-nav__item">
   <a href="#electromagnetic-property-to-concentration-conversion-methods" class="md-nav__link">
      Electromagnetic property to concentration conversion methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leakage-correction" class="md-nav__link">
+    Leakage correction
+  </a>
+  
+    <nav class="md-nav" aria-label="Leakage correction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leakage-correction-methods" class="md-nav__link">
+     Leakage correction methods
   </a>
   
 </li>
@@ -502,19 +509,6 @@
     Baseline estimation
   </a>
   
-    <nav class="md-nav" aria-label="Baseline estimation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#baseline-estimation-methods" class="md-nav__link">
-     Baseline estimation methods
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -599,6 +593,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#leakage-correction" class="md-nav__link">
+    Leakage correction
+  </a>
+  
+    <nav class="md-nav" aria-label="Leakage correction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leakage-correction-methods" class="md-nav__link">
+     Leakage correction methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#extraction-of-parameters" class="md-nav__link">
     Extraction of parameters
   </a>
@@ -622,8 +636,7 @@
 <h1 id="sections-p-perfusion-processes">Sections P: Perfusion Processes<a class="headerlink" href="#sections-p-perfusion-processes" title="Permanent link">&para;</a></h1>
 <p>Go to <a href="../perfusionModels/#Section M">section M</a>.</p>
 <h2 id="native-r1-estimation">Native R1 estimation<a class="headerlink" href="#native-r1-estimation" title="Permanent link">&para;</a></h2>
-<p>The processes in this section describe commonly used methods to estimate the native relaxation rate
- <img src="https://latex.codecogs.com/svg.image?R_{10}" title="https://latex.codecogs.com/svg.image?R_{10}" /> from a given MR signal data set.
+<p>The processes in this section describe commonly used methods to estimate the native relaxation rate <em>R<sub>10</sub></em> from a given MR signal data set.
 The resulting native relaxation rate can be used e.g. as input for the conversion from an electromagnetic property to indicator concentration.</p>
 <table>
 <thead>
@@ -638,19 +651,11 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 </thead>
 <tbody>
 <tr>
-<td>P.R.001</td>
+<td>P.NR1.001</td>
 <td>Estimate native  <em>R<sub>1</sub></em></td>
 <td>--</td>
 <td>Estimate <em>R<sub>10</sub></em></td>
-<td>This process returns the native <em>R<sub>1</sub></em> relaxation rate <em>R<sub>10</sub></em> derived using a given native <em>R<sub>1</sub></em>  estimation method (P.R.002). <br /> <strong>Input</strong>: <br /> Native <em>R<sub>1</sub></em> estimation method (P.R.002) <br /> <strong>Output:</strong> <br /> <em>R<sub>10</sub></em> (Q.E.002)</td>
-<td>--</td>
-</tr>
-<tr>
-<td>P.R.002</td>
-<td>Native  estimation method</td>
-<td>--</td>
-<td>--</td>
-<td>The method used to derive the native <em>R<sub>1</sub></em>  relaxation rate <em>R<sub>10</sub></em>. Select from <a href="#Native R1 estimation methods">Native <em>R<sub>1</sub></em>-estimation methods</a></td>
+<td>This process returns the native <em>R<sub>1</sub></em> relaxation rate <em>R<sub>10</sub></em> derived using a given native <em>R<sub>1</sub></em>  estimation method. <br /> <strong>Input</strong>: <br /> Native <em>R<sub>1</sub></em> estimation method (Select from <a href="#Native R1 estimation methods">Native <em>R<sub>1</sub></em>-estimation methods</a>) <br /> <strong>Output:</strong> <br /> <em>R<sub>10</sub></em> (Q.E.002)</td>
 <td>--</td>
 </tr>
 </tbody>
@@ -669,36 +674,44 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 </thead>
 <tbody>
 <tr>
-<td>P.R.003</td>
+<td>P.NR2.001</td>
 <td>Fixed Value</td>
 <td>--</td>
 <td>--</td>
-<td>A fixed value of <em>R<sub>10</sub></em>, e.g. a literature value, rather than a measured value is assumed. <br /> <strong>Input:</strong> <br /> Fixed <em>R<sub>10</sub></em>-value (Q.R.001) <br /> <strong>Output</strong>: <br />  <em>R<sub>10</sub></em> (Q.E.002)</td>
+<td>A fixed value of <em>R<sub>10</sub></em>, e.g. a literature value, rather than a measured value is assumed. <br /> <strong>Input:</strong> <br /> Fixed <em>R<sub>10</sub></em>-value (Q.NR1.001) <br /> <strong>Output</strong>: <br />  <em>R<sub>10</sub></em> (Q.EL1.002)</td>
 <td>Haacke et al. 2007</td>
 </tr>
 <tr>
-<td>P.R.004</td>
+<td>P.NR2.002</td>
 <td>Variable Flip Angle</td>
 <td>--</td>
 <td>VFA</td>
-<td>This process estimates the native longitudinal relaxation rate <em>R<sub>10</sub></em> (and signal scaling factor <em>S<sub>0</sub></em>) from the MR signal measured at multiple flip angles by inverting the SPGR model (M.S.004) according to a specified inversion method. <br /> <strong>Input</strong>: <br /> Inversion method (G.I.002), <br />  [Data (Q.G.002), Data grid (Q.G.001)] = [Signal (Q.S.001), Flip angle (Q.S.007)],  <br />  Forward model (M.G.001) = SPGR model (M.S.004) <br /> <strong>Output:</strong> <br /> <em>R<sub>10</sub></em> (Q.E.002), <br/> Signal scaling factor (Q.S.010))</td>
+<td>This process estimates the native longitudinal relaxation rate <em>R<sub>10</sub></em> (and signal scaling factor <em>S<sub>0</sub></em>) from the MR signal measured at multiple flip angles by inverting the SPGR model (M.S.004) according to a specified inversion method. <br /> <strong>Input</strong>: <br /> Inversion method (select from inversion methods) with <br />  [Data (Q.GE1.002), Data grid (Q.GE1.001)] = [Signal (Q.MS1.001), Prescribed excitatory flip angle (Q.MS1.007)],  <br />  Forward model (M.GF1.001) = SPGR model (M.SM2.002) <br /> <strong>Output:</strong> <br /> <em>R<sub>10</sub></em> (Q.EL1.002), <br/> Signal scaling factor (Q.MS1.010)</td>
 <td>Wang et al. 1987</td>
 </tr>
 <tr>
-<td>P.R.005</td>
+<td>P.NR2.003</td>
 <td>Multi-delay Saturation Recovery</td>
 <td>--</td>
 <td>SR</td>
-<td>This process estimates the native longitudinal relaxation rate <em>R<sub>10</sub></em> (and signal scaling factor <em>S<sub>0</sub></em>) from the MR signal measured at multiple prepulse delays by inverting the saturation recovery GRE signal model according to a specified inversion method. <br /> <strong>Input:</strong> <br /> Inversion method (G.I.002),  <br /> [Data (Q.G.002), Data grid (Q.G.001)] = [Signal (Q.S.001), Prepulse delay (Q.S.008)], <br/> Forward model (M.G.001)  = an SR model from MR signal models <br/> <strong>Output:</strong> <br /> <em>R<sub>10</sub></em> (Q.E.002), <br/> Signal scaling factor (Q.S.010))</td>
+<td>This process estimates the native longitudinal relaxation rate <em>R<sub>10</sub></em> (and signal scaling factor <em>S<sub>0</sub></em>) from the MR signal measured at multiple prepulse delays by inverting the saturation recovery GRE signal model according to a specified inversion method. <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) with  <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] = [Signal (Q.MS1.001), Prepulse delay (Q.MS1.008)], <br/> Forward model (M.GF1.001)  = an SR model from MR signal models <br/> <strong>Output:</strong> <br /> <em>R<sub>10</sub></em> (Q.EL1.002), <br/> Signal scaling factor (Q.MS1.010)</td>
 <td>Parker et al. 2000</td>
 </tr>
 <tr>
-<td>P.R.006</td>
+<td>P.NR2.004</td>
 <td>Multi-delay Inversion Recovery</td>
 <td>--</td>
 <td>IR</td>
-<td>This process estimates the native longitudinal relaxation rate <em>R<sub>10</sub></em> (and signal scaling factor <em>S<sub>0</sub></em>) from the MR signal measured at multiple prepulse delays assuming an inversion recovery GRE signal model. <br /> <strong>Input:</strong> <br /> Inversion method (G.I.002),  <br /> [Data (Q.G.002), Data grid (Q.G.001)] = [Signal (Q.S.001), Prepulse delay (Q.S.008)], <br/> Forward model (M.G.001)  = an IR model from MR signal models. <br/> <strong>Output:</strong> <br /> <em>R<sub>10</sub></em> (Q.E.002), <br/> Signal scaling factor (Q.S.010))</td>
+<td>This process estimates the native longitudinal relaxation rate <em>R<sub>10</sub></em> (and signal scaling factor <em>S<sub>0</sub></em>) from the MR signal measured at multiple prepulse delays assuming an inversion recovery GRE signal model. <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) with  <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] = [Signal (Q.MS1.001), Prepulse delay (Q.MS1.008)], <br/> Forward model (M.GF1.001)  = an IR model from MR signal models. <br/> <strong>Output:</strong> <br /> <em>R<sub>10</sub></em> (Q.EL1.002), <br/> Signal scaling factor (Q.MS1.010)</td>
 <td>Ordidge et al. 1990</td>
+</tr>
+<tr>
+<td>P.NR2.999</td>
+<td>Method not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
 </tr>
 </tbody>
 </table>
@@ -716,20 +729,12 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 </thead>
 <tbody>
 <tr>
-<td>P.B.001</td>
+<td>P.BA1.001</td>
 <td>Estimate Bolus Arrival Time</td>
 <td>--</td>
 <td>EstimateBAT</td>
-<td>This process returns the bolus arrival time (BAT) of a data set according to a specified bolus arrival time estimation method. <br /> <strong>Input:</strong> <br /> Bolus arrival time estimation method (P.B.002) <br /> <strong>Output</strong>: <br />  Bolus arrival time (Q.B.001)</td>
+<td>This process returns the bolus arrival time (BAT) of a data set according to a specified bolus arrival time estimation method. <br /> <strong>Input:</strong> <br /> Bolus arrival time estimation method (select from BAT estimations methods) <br /> <strong>Output</strong>: <br />  Bolus arrival time (Q.BA1.001)</td>
 <td>--</td>
-</tr>
-<tr>
-<td>P.B.002</td>
-<td>Bolus arrival time estimation method</td>
-<td>--</td>
-<td>BAT estimation method</td>
-<td>Method to determine the bolus arrival time of a data set. Select from <a href="#Bolus arrival time estimation methods">Bolus arrival time estimation methods</a>.</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -747,44 +752,52 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 </thead>
 <tbody>
 <tr>
-<td>P.B.003</td>
+<td>P.BA2.001</td>
 <td>Manually</td>
 <td>--</td>
 <td>Manually</td>
-<td>The BAT is manually determined by visual inspection.<br />  <strong>Input:</strong> <br /> [Data (Q.G.002), Data grid (Q.G.001)]  <br /> <strong>Output</strong>: <br />  Bolus arrival time (Q.B.001)</td>
+<td>The BAT is manually determined by visual inspection.<br />  <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)]  <br /> <strong>Output</strong>: <br />  Bolus arrival time (Q.BA1.001)</td>
 <td>--</td>
 </tr>
 <tr>
-<td>P.B.004</td>
+<td>P.BA2.002</td>
 <td>Data value exceeds threshold</td>
 <td>--</td>
 <td>Exceeds threshold</td>
-<td>The BAT is estimated as the minimal data grid point at which the data value exceeds a certain threshold.<br /> <strong>Input:</strong> <br /> [Data (Q.G.002), Data grid (Q.G.001)], <br /> Lower threshold (Q.G.010) <br /> <strong>Output</strong>: <br /> Bolus arrival time (Q.B.001)</td>
+<td>The BAT is estimated as the minimal data grid point at which the data value exceeds a certain threshold.<br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Lower threshold (Q.GE1.010) <br /> <strong>Output</strong>: <br /> Bolus arrival time (Q.BA1.001)</td>
 <td>--</td>
 </tr>
 <tr>
-<td>P.B.005</td>
+<td>P.BA2.003</td>
 <td>Derivative of data values exceeds threshold</td>
 <td>--</td>
 <td>Derivative exceeds threshold</td>
-<td>The BAT is estimated as the minimal data grid point at which the derivative of the data values exceeds a certain threshold. <br /> <strong>Input:</strong> <br /> [Data (Q.G.002), Data grid (Q.G.001)], <br /> Lower threshold (Q.G.010) <br /> <strong>Output</strong>: <br /> Bolus arrival time (Q.B.001)</td>
+<td>The BAT is estimated as the minimal data grid point at which the derivative of the data values exceeds a certain threshold. <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Lower threshold (Q.GE1.010) <br /> <strong>Output</strong>: <br /> Bolus arrival time (Q.BA1.001)</td>
 <td>--</td>
 </tr>
 <tr>
-<td>P.B.006</td>
+<td>P.BA2.004</td>
 <td>Intersection-based</td>
 <td>--</td>
 <td>Intersection-based</td>
-<td>The BAT is determined from calculating the intersection points of the data grid axis and straight lines joining the first N pairs of adjacent points. The BAT is estimated as the maximum of the intersection points. <br /> <strong>Input:</strong> <br /> [Data (Q.G.002), Data grid (Q.G.001)], <br /> Intersection- based BAT estimation parameters (Q.B.002) <br /> <strong>Output</strong>: <br /> Bolus arrival time (Q.B.001)</td>
+<td>The BAT is determined from calculating the intersection points of the data grid axis and straight lines joining the first N pairs of adjacent points. The BAT is estimated as the maximum of the intersection points. <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Intersection- based BAT estimation parameters (Q.BA1.002) <br /> <strong>Output</strong>: <br /> Bolus arrival time (Q.BA1.001)</td>
 <td>Galbraith et al. 2002</td>
 </tr>
 <tr>
-<td>P.B.007</td>
+<td>P.BA2.005</td>
 <td>Model-based</td>
 <td>--</td>
 <td>Model-based</td>
-<td>A specified model is fitted to the data, yielding the BAT as one of the estimated model parameters. <br /> <strong>Input:</strong> <br /> Optimization method (G.I.005) <br /> <strong>Output</strong>: <br /> Bolus arrival time (Q.B.001)</td>
+<td>A specified model is fitted to the data, yielding the BAT as one of the estimated model parameters. <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) <br /> <strong>Output</strong>: <br /> Bolus arrival time (Q.BA1.001)</td>
 <td>Singh et al. 2009</td>
+</tr>
+<tr>
+<td>P.BA2.999</td>
+<td>Method not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
 </tr>
 </tbody>
 </table>
@@ -802,24 +815,23 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 </thead>
 <tbody>
 <tr>
-<td>P.BL.001</td>
+<td>P.BL1.001</td>
 <td>Estimate Baseline</td>
 <td>--</td>
 <td>EstimateBaseline</td>
-<td>This process returns the value of the baseline of a data set according to a specified baseline estimation method.  <br /> <strong>Input:</strong> <br /> Baseline estimation method (P.BA.002) <br /> <strong>Output</strong>: <br /> Baseline (Q.BL.001)</td>
+<td>This process returns the value of the baseline of a data set according to a specified baseline estimation method.  <br /> <strong>Input:</strong> <br /> Baseline estimation method (select from baseline estimation methods) <br /> <strong>Output</strong>: <br /> Baseline (Q.BL1.001)</td>
 <td>--</td>
 </tr>
 <tr>
-<td>P.BL.002</td>
-<td>Baseline estimation method</td>
-<td>--</td>
-<td>--</td>
-<td>Method to estimate the baseline of a given data set. Select from <a href="#Baseline estimation methods">Baseline estimation methods</a>.</td>
-<td>--</td>
+<td>### <a name="Baseline estimation methods"></a> Baseline estimation methods</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="baseline-estimation-methods"><a name="Baseline estimation methods"></a> Baseline estimation methods<a class="headerlink" href="#baseline-estimation-methods" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -833,44 +845,52 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 </thead>
 <tbody>
 <tr>
-<td>P.BL.003</td>
+<td>P.BL2.001</td>
 <td>Manually</td>
 <td>--</td>
 <td>--</td>
-<td>The baseline is manually determined by visual inspection.  <br /> <strong>Input:</strong> <br /> [Data (Q.G.002), Data grid (Q.G.001)] <br /> <strong>Output</strong>: <br /> Baseline (Q.BL.001)</td>
+<td>The baseline is manually determined by visual inspection.  <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] <br /> <strong>Output</strong>: <br /> Baseline (Q.BL1.001)</td>
 <td>--</td>
 </tr>
 <tr>
-<td>P.BL.004</td>
+<td>P.BL2.002</td>
 <td>nth data value</td>
 <td>--</td>
 <td>--</td>
-<td>The baseline is determined as the data value of thenth data grid point.  <br /> <strong>Input:</strong> <br /> [Data (Q.G.002), Data grid (Q.G.001)], <br /> Index n (Q.G.003) <br /> <strong>Output</strong>: <br /> Baseline (Q.BL.001)</td>
+<td>The baseline is determined as the data value of thenth data grid point.  <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Index n (Q.GE1.003) <br /> <strong>Output</strong>: <br /> Baseline (Q.BL1.001)</td>
 <td>--</td>
 </tr>
 <tr>
-<td>P.BL.005</td>
+<td>P.BL2.003</td>
 <td>Mean baseline of range</td>
 <td>--</td>
 <td>Mean baseline</td>
-<td>The baseline is determined as the mean of data values in the data grid range (Start, End).  <br /> <strong>Input:</strong> <br /> [Data (Q.G.002), Data grid (Q.G.001)], <br /> Start of range (Q.G.013),  <br /> End of range(Q.G.014) <br /> <strong>Output</strong>: <br /> Baseline (Q.BL.001)</td>
+<td>The baseline is determined as the mean of data values in the data grid range (Start, End).  <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Start of range (Q.GE1.013),  <br /> End of range(Q.GE1.014) <br /> <strong>Output</strong>: <br /> Baseline (Q.BL1.001)</td>
 <td>--</td>
 </tr>
 <tr>
-<td>P.BL.006</td>
+<td>P.BL2.004</td>
 <td>Minimum value</td>
 <td>--</td>
 <td>Minimum</td>
-<td>The baseline is determined as the minimum of all data values.  <br /> <strong>Input:</strong> <br /> [Data (Q.G.002), Data grid (Q.G.001)] <br /> <strong>Output</strong>: <br /> Baseline (Q.BL.001)</td>
+<td>The baseline is determined as the minimum of all data values.  <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] <br /> <strong>Output</strong>: <br /> Baseline (Q.BL1.001)</td>
 <td>--</td>
 </tr>
 <tr>
-<td>P.BL.007</td>
+<td>P.BL2.005</td>
 <td>Model-based</td>
 <td>--</td>
 <td>--</td>
-<td>A specified model is fitted to the data, yielding the baseline value as one of the estimated model parameters.  <br /> <strong>Input:</strong> <br /> Optimization method (G.I.005) <br /> <strong>Output</strong>: <br /> Baseline (Q.BL.001)</td>
+<td>A specified model is fitted to the data, yielding the baseline value as one of the estimated model parameters.  <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) <br /> <strong>Output</strong>: <br /> Baseline (Q.BL1.001)</td>
 <td>Singh et al. 2009</td>
+</tr>
+<tr>
+<td>P.BL2.999</td>
+<td>Method not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
 </tr>
 </tbody>
 </table>
@@ -889,19 +909,11 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 </thead>
 <tbody>
 <tr>
-<td>P.S.001</td>
+<td>P.SC1.001</td>
 <td>Estimate signal scaling factor</td>
 <td>--</td>
 <td>Estimate <em>S<sub>0</sub></em></td>
-<td>In this process the signal scaling factor is determined according to a specified <em>S<sub>0</sub></em> -estimation method.  <br /> <strong>Input:</strong> <br /> Signal scaling factor estimation method (P.S.0012) <br /> <strong>Output</strong>: <br /> <em>S<sub>0</sub></em> (Q.S.010)</td>
-<td>--</td>
-</tr>
-<tr>
-<td>P.S.002</td>
-<td>Signal scaling factor estimation method</td>
-<td>--</td>
-<td><em>S<sub>0</sub></em> estimation method</td>
-<td>Method to estimate the signal scaling factor <em>S<sub>0</sub></em>  of a given data set. Select from <a href="#Signal scaling factor estimation methods">Signal scaling factor estimation methods</a>.</td>
+<td>In this process the signal scaling factor is determined according to a specified <em>S<sub>0</sub></em> -estimation method.  <br /> <strong>Input:</strong> <br /> Signal scaling factor estimation method ( select from signal scaling factor estimation methods) <br /> <strong>Output</strong>: <br /> <em>S<sub>0</sub></em> (Q.MS1.010)</td>
 <td>--</td>
 </tr>
 </tbody>
@@ -920,19 +932,27 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 </thead>
 <tbody>
 <tr>
-<td>P.S.003</td>
+<td>P.SC2.001</td>
 <td><em>S<sub>0</sub></em> from native <em>R<sub>1</sub></em> estimation</td>
 <td>--</td>
 <td>--</td>
-<td>In this method <em>S<sub>0</sub></em>  is estimated as described in the native <em>R<sub>1</sub></em> -estimation methods which have <em>S<sub>0</sub></em>  as output.  <br /> <strong>Input:</strong> <br />  Native R1 estimation method (P.R.002)  with with <em>S<sub>0</sub></em> as output  <br /> <strong>Output</strong>: <br /> <em>S<sub>0</sub></em> (Q.S.010)</td>
+<td>In this method <em>S<sub>0</sub></em>  is estimated as described in the native <em>R<sub>1</sub></em> -estimation methods which have <em>S<sub>0</sub></em>  as output.  <br /> <strong>Input:</strong> <br />  Select native R1 estimation method with <em>S<sub>0</sub></em> as output  <br /> <strong>Output</strong>: <br /> <em>S<sub>0</sub></em> (Q.MS1.010)</td>
 <td>--</td>
 </tr>
 <tr>
-<td>P.S.004</td>
+<td>P.SC2.002</td>
 <td><em>S<sub>0</sub></em> from baseline signal of dynamic data</td>
 <td>--</td>
 <td>--</td>
-<td>In this method <em>S<sub>0</sub></em>  is estimated by inverting a specified MR signal model according to a specified inversion method for the baseline signal and baseline relaxation rate. <br /> <strong>Input:</strong> <br /> Inversion method (G.I.002) with Forward model (M.G.001) = select from MR signal models with <br /> <em>R<sub>1</sub></em> (Q.E.001) =  <em>R<sub>10</sub></em> (Q.E.002) or <em>R<sub>2</sub></em> (Q.E.004) = <em>R<sub>20</sub></em> (Q.E.005) or <em>R<sub>2</sub><sup></em></sup>* (Q.E.007) = <em>R<sub>20</sub><sup></em></sup>* (Q.E.008), S (Q.S.001) = <em>S<sub>BL</sub></em>(Q.S.002) <strong>Output</strong>: <br /> <em>S<sub>0</sub></em> (Q.S.010)</td>
+<td>In this method <em>S<sub>0</sub></em>  is estimated by inverting a specified MR signal model according to a specified inversion method for the baseline signal and baseline relaxation rate. <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) with Forward model (M.GF1.001) = select from MR signal models with <br /> <em>R<sub>1</sub></em> (Q.EL1.001) =  <em>R<sub>10</sub></em> (Q.EL1.002) or <em>R<sub>2</sub></em> (Q.EL1.004) = <em>R<sub>20</sub></em> (Q.EL1.005) or <em>R<sub>2</sub><sup></em></sup>* (Q.EL1.007) = <em>R<sub>20</sub><sup></em></sup>* (Q.E.008), S (Q.MS1.001) = <em>S<sub>BL</sub></em>(Q.MS1.002) <strong>Output</strong>: <br /> <em>S<sub>0</sub></em> (Q.MS1.010)</td>
+<td>--</td>
+</tr>
+<tr>
+<td>P.SC2.999</td>
+<td>Method not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
 <td>--</td>
 </tr>
 </tbody>
@@ -951,27 +971,11 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 </thead>
 <tbody>
 <tr>
-<td>P.A.001</td>
+<td>P.AE1.001</td>
 <td>Estimate arterial input function</td>
 <td>--</td>
 <td>Estimate AIF</td>
-<td>This process returns the AIF from a given data set, derived using a specified AIF estimation method. Furthermore, it can be optionally specified if an AIF correction method (.e.g. Partial volume correction) will be applied or if a measurement preparation (e.g. dual bolus) has been done for data acquisition.  <br /> <strong>Input:</strong> <br /> AIF estimation method (P.A.002), <br /> <em>optional</em>: <br /> AIF correction or measurement preparation (P.A.003).  <br /> <strong>Output</strong>: <br />  [Plasma AIF (Q.I.003), t (Q.G.004)] or <br /> [Whole blood AIF (Q.I.004), t (Q.G.004)]</td>
-<td>--</td>
-</tr>
-<tr>
-<td>P.A.002</td>
-<td>Arterial input function estimation method</td>
-<td>--</td>
-<td>AIF estimation method</td>
-<td>Method used to estimate the arterial input function. Select from <a href="#AIF estimation methods">AIF estimation methods</a>.</td>
-<td>--</td>
-</tr>
-<tr>
-<td>P.A.003</td>
-<td>Arterial input function correction or measurement preparation</td>
-<td>--</td>
-<td>AIF correction or measurement preparation</td>
-<td>Method for AIF correction (e.g. partial volume correction)  or measurement preparation (e.g. dual bolus) . Select from <a href="#AIF correction and measurement preparation">AIF correction and measurement preparation</a>.</td>
+<td>This process returns the AIF from a given data set, derived using a specified AIF estimation method. Furthermore, it can be optionally specified if an AIF correction method (.e.g. Partial volume correction) will be applied or if a measurement preparation (e.g. dual bolus) has been done for data acquisition.  <br /> <strong>Input:</strong> <br /> AIF estimation method (select from AIF estimation methods), <br /> <em>optional</em>: <br /> AIF correction or measurement preparation (select from AIF correction and measurement preparation methods.  <br /> <strong>Output</strong>: <br />  [Plasma AIF (Q.IC1.003), t (Q.GE1.004)] or <br /> [Whole blood AIF (Q.IC1.004), t (Q.GE1.004)]</td>
 <td>--</td>
 </tr>
 </tbody>
@@ -990,52 +994,52 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 </thead>
 <tbody>
 <tr>
-<td>P.A.004</td>
+<td>P.AE2.001</td>
 <td>Literature-based AIF</td>
 <td>Population-based AIF</td>
 <td>--</td>
-<td>The AIF is taken from a published reference or from the average of a population.  <br /> <strong>Input:</strong> <br /> --  <br /> <strong>Output</strong>: <br />  [Plasma AIF (Q.I.003), t (Q.G.004)] or <br /> [Whole blood AIF (Q.I.004), t (Q.G.004)]</td>
+<td>The AIF is taken from a published reference or from the average of a population.  <br /> <strong>Input:</strong> <br /> --  <br /> <strong>Output</strong>: <br />  [Plasma AIF (Q.IC1.003), t (Q.GE1.004)] or <br /> [Whole blood AIF (Q.IC1.004), t (Q.GE1.004)]</td>
 <td>--</td>
 </tr>
 <tr>
-<td>P.A.005</td>
+<td>P.AE2.002</td>
 <td>Mean ROI AIF</td>
 <td>--</td>
 <td>--</td>
-<td>In this process the AIF is determined by specifying the mask of a user-defined region of interest (within an artery). This process returns the mean concentration time curve within this masked ROI. <br /> <strong>Input:</strong> <br /> [Indicator concentration (Q.I.001),  t (Q.G.004)], <br /> Binary AIF mask (Q.SE.002) <br />  <strong>Output</strong>: <br /> [Whole blood AIF (Q.I.004), t (Q.G.004)]</td>
+<td>In this process the AIF is determined by specifying the mask of a user-defined region of interest (within an artery). This process returns the mean concentration time curve within this masked ROI. <br /> <strong>Input:</strong> <br /> [Indicator concentration (Q.IC1.001),  t (Q.GE1.004)], <br /> Binary AIF mask (Q.SE1.002) <br />  <strong>Output</strong>: <br /> [Whole blood AIF (Q.IC1.004), t (Q.GE1.004)]</td>
 <td>--</td>
 </tr>
 <tr>
-<td>P.A.006</td>
+<td>P.AE2.003</td>
 <td>Model-based AIF</td>
 <td>--</td>
 <td>--</td>
-<td>The AIF is derived from fitting a model to the dynamic concentration data. <br /> <strong>Input:</strong> <br /> Optimization method (G.I.005) with <br /> [Data (Q.G.002), Data grid (Q.G.001)] =  [Indicator concentration (Q.I.001), t (Q.G.004)] and <br /> Forward model (M.G.001) = select from AIF models or descriptive models] <br />  <strong>Output</strong>: <br />  [Plasma AIF (Q.I.003), t (Q.G.004)] or <br /> [Whole blood AIF (Q.I.004), t (Q.G.004)]</td>
+<td>The AIF is derived from fitting a model to the dynamic concentration data. <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) with <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] =  [Indicator concentration (Q.IC1.001), t (Q.GE1.004)] and <br /> Forward model (M.GF1.001) = select from AIF models or descriptive models] <br />  <strong>Output</strong>: <br />  [Plasma AIF (Q.IC1.003), t (Q.GE1.004)] or <br /> [Whole blood AIF (Q.IC1.004), t (Q.GE1.004)]</td>
 <td>--</td>
 </tr>
 <tr>
-<td>P.A.007</td>
+<td>P.AE2.004</td>
 <td>Automatic <em>k</em>-means-cluster-based</td>
 <td>--</td>
 <td><em>k</em>-means</td>
-<td>For automatic AIF selection, a k-means cluster algorithm to identify k clusters. The cluster with the lowest first moment represents the AIF. <br /> <strong>Input:</strong> <br /> [Indicator concentration (Q.I.001), t (Q.G.004)], <br />  Binary AIF mask (Q.SE.002), <br />  <em>k</em>-means-cluster-algorithm-parameters (Q.A.001) <br /> <strong>Output</strong>: <br /> [Whole blood AIF (Q.I.004), t (Q.G.004)]</td>
+<td>For automatic AIF selection, a k-means cluster algorithm to identify k clusters. The cluster with the lowest first moment represents the AIF. <br /> <strong>Input:</strong> <br /> [Indicator concentration (Q.IC1.001), t (Q.GE1.004)], <br />  Binary AIF mask (Q.SE1.002), <br />  <em>k</em>-means-cluster-algorithm-parameters (Q.AE1.001) <br /> <strong>Output</strong>: <br /> [Whole blood AIF (Q.IC1.004), t (Q.GE1.004)]</td>
 <td>--</td>
 </tr>
 <tr>
-<td>P.A.008</td>
+<td>P.AE2.005</td>
 <td>Automatic fuzzy-c-means-cluster-based</td>
 <td>--</td>
 <td>FCM</td>
-<td>For automatic AIF selection, a fuzzy-c-means-cluster algorithm with the “fuzziness” parameter <em>m</em>, the iterative tolerance level <img src="https://latex.codecogs.com/svg.image?\epsilon" title="https://latex.codecogs.com/svg.image?\epsilon" />, the number of clusters <em>c</em>, the cluster probability threshold value <em>P<sub>c</sub></em> and the initial cluster centroids <em>v<sub>i</sub></em>  are applied. The cluster with maximal <img src="https://latex.codecogs.com/svg.image?M&space;=&space;\frac{f_{max}}{TTP\cdot&space;FWHM}" title="https://latex.codecogs.com/svg.image?M = \frac{f_{max}}{TTP\cdot FWHM}" /> represents the AIF.  <br /> <strong>Input:</strong> <br /> [Indicator concentration (Q.I.001), t (Q.G.004)], <br />  Binary AIF mask (Q.SE.002), <br />  Fuzzy-c-means-cluster-algorithm parameters (Q.A.002) <br />  <strong>Output</strong>: <br /> [Whole blood AIF (Q.I.004), t (Q.G.004)]</td>
+<td>For automatic AIF selection, a fuzzy-c-means-cluster algorithm with the “fuzziness” parameter <em>m</em>, the iterative tolerance level <img src="https://latex.codecogs.com/svg.image?\epsilon" title="https://latex.codecogs.com/svg.image?\epsilon" />, the number of clusters <em>c</em>, the cluster probability threshold value <em>P<sub>c</sub></em> and the initial cluster centroids <em>v<sub>i</sub></em>  are applied. The cluster with maximal <img src="https://latex.codecogs.com/svg.image?M&space;=&space;\frac{f_{max}}{TTP\cdot&space;FWHM}" title="https://latex.codecogs.com/svg.image?M = \frac{f_{max}}{TTP\cdot FWHM}" /> represents the AIF.  <br /> <strong>Input:</strong> <br /> [Indicator concentration (Q.IC1.001), t (Q.GE1.004)], <br />  Binary AIF mask (Q.SE1.002), <br />  Fuzzy-c-means-cluster-algorithm parameters (Q.AE1.002) <br />  <strong>Output</strong>: <br /> [Whole blood AIF (Q.IC1.004), t (Q.GE1.004)]</td>
 <td>--</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>P.AE2.999</td>
+<td>Method not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
 </tr>
 </tbody>
 </table>
@@ -1053,7 +1057,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 </thead>
 <tbody>
 <tr>
-<td>P.A.009</td>
+<td>P.AE3.001</td>
 <td>Partial-volume effect corrected</td>
 <td>--</td>
 <td>PVE</td>
@@ -1061,12 +1065,20 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>--</td>
 </tr>
 <tr>
-<td>P.A.010</td>
+<td>P.AE3.002</td>
 <td>Dual Bolus</td>
 <td>--</td>
 <td>DB</td>
 <td>If this item is set in the Estimate AIF (P.A.001) method, the full-dose AIF was reconstructed from a pre-bolus injection with a smaller dose. Otherwise, or if not specified, no dual bolus approach was used.</td>
 <td>Risse et al. 2006</td>
+</tr>
+<tr>
+<td>P.AE3.999</td>
+<td>Method not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
 </tr>
 </tbody>
 </table>
@@ -1084,7 +1096,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 </thead>
 <tbody>
 <tr>
-<td>P.C.001</td>
+<td>P.SC1.001</td>
 <td>Convert signal to concentration</td>
 <td>--</td>
 <td>ConvertSToC</td>
@@ -1092,7 +1104,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>--</td>
 </tr>
 <tr>
-<td>P.C.002</td>
+<td>P.SC1.002</td>
 <td>Signal to concentration conversion method</td>
 <td>--</td>
 <td>ConvertSToC</td>
@@ -1115,7 +1127,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 </thead>
 <tbody>
 <tr>
-<td>P.C.003</td>
+<td>P.SC2.001</td>
 <td>Direct conversion from signal concentration</td>
 <td>--</td>
 <td>ConvertDirectSToC</td>
@@ -1123,27 +1135,11 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>--</td>
 </tr>
 <tr>
-<td>P.C.004</td>
+<td>P.SC2.002</td>
 <td>Conversion via electromagnetic property</td>
 <td>--</td>
 <td>ConvertSToCViaEP</td>
 <td>In this process the MR signal is first converted to an electromagnetic property, which is in a second step converted to indicator concentration.  <br /> <strong>Input:</strong> <br /> Signal to electromagnetic property conversion method (P.C.005), <br /> Electromagnetic property to concentration conversion method (P.C.006) <br />   <strong>Output</strong>: <br /> Indicator concentration (Q.I.001) <br /></td>
-<td>--</td>
-</tr>
-<tr>
-<td>P.C.005</td>
-<td>Signal to electromagnetic property conversion method</td>
-<td>--</td>
-<td>--</td>
-<td>Method used to convert the given MR signal to an electromagnetic property (e.g. R1). Select from <a href="#Signal to electromagnetic property conversion methods">Signal to electromagnetic property conversion methods</a>.</td>
-<td>--</td>
-</tr>
-<tr>
-<td>P.C.006</td>
-<td>Electromagnetic property to concentration conversion method</td>
-<td>--</td>
-<td>--</td>
-<td>Method used to convert the given electromagnetic property (e.g. R1) to indicator concentration. Select from <a href="#Electromagnetic property to concentration conversion methods">Electromagnetic property to concentration conversion methods</a>.</td>
 <td>--</td>
 </tr>
 </tbody>
@@ -1194,6 +1190,9 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 </tr>
 </tbody>
 </table>
+<h2 id="leakage-correction">Leakage correction<a class="headerlink" href="#leakage-correction" title="Permanent link">&para;</a></h2>
+<h3 id="leakage-correction-methods"><a name="Leakage correction methods"></a> Leakage correction methods<a class="headerlink" href="#leakage-correction-methods" title="Permanent link">&para;</a></h3>
+<p>| Code | OSIPI name| Alternative names|Notation|Description|Reference|</p>
 <h2 id="extraction-of-parameters">Extraction of parameters<a class="headerlink" href="#extraction-of-parameters" title="Permanent link">&para;</a></h2>
 
               
