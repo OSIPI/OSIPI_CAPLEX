@@ -1100,15 +1100,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Convert signal to concentration</td>
 <td>--</td>
 <td>ConvertSToC</td>
-<td>In this process the MR signal is converted to the indicator concentration according to a specified conversion method. <br /> <strong>Input:</strong> <br /> Signal to concentration conversion method (P.C.002) <br />  <strong>Output</strong>: <br /> Indicator concentration (Q.I.001) <br /></td>
-<td>--</td>
-</tr>
-<tr>
-<td>P.SC1.002</td>
-<td>Signal to concentration conversion method</td>
-<td>--</td>
-<td>ConvertSToC</td>
-<td>Method used to convert the given MR signal to indicator concentration. Select from <a href="#Signal to concentration conversion methods">Signal to concentration conversion methods</a>.</td>
+<td>In this process the MR signal is converted to the indicator concentration according to a specified conversion method . <br /> <strong>Input:</strong> <br /> Signal to concentration conversion method (select from signal to concentration conversion methods). <br />  <strong>Output</strong>: <br /> Indicator concentration (Q.IC1.001) <br /></td>
 <td>--</td>
 </tr>
 </tbody>
@@ -1131,7 +1123,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Direct conversion from signal concentration</td>
 <td>--</td>
 <td>ConvertDirectSToC</td>
-<td>In this process the MR signal is directly converted to the indicator concentration by inverting a specified forward model which describes a direct relationship between signal and indicator concentration.  <br /> <strong>Input:</strong> <br /> Inversion method (G.I.002) with <br /> Data (Q.G.002) = Signal (Q.S.001), <br /> Forward model (M.G.001) = select from MR signal model with direct relationship between signal and indicator concentration <br />   <strong>Output</strong>: <br /> Indicator concentration (Q.I.001) <br /></td>
+<td>In this process the MR signal is directly converted to the indicator concentration by inverting a specified forward model which describes a direct relationship between signal and indicator concentration.  <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) with <br /> Data (Q.GE1.002) = Signal (Q.MS1.001), <br /> Forward model (M.GF1.001) = select from MR signal model with direct relationship between signal and indicator concentration <br />   <strong>Output</strong>: <br /> Indicator concentration (Q.IC1.001) <br /></td>
 <td>--</td>
 </tr>
 <tr>
@@ -1139,7 +1131,15 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Conversion via electromagnetic property</td>
 <td>--</td>
 <td>ConvertSToCViaEP</td>
-<td>In this process the MR signal is first converted to an electromagnetic property, which is in a second step converted to indicator concentration.  <br /> <strong>Input:</strong> <br /> Signal to electromagnetic property conversion method (P.C.005), <br /> Electromagnetic property to concentration conversion method (P.C.006) <br />   <strong>Output</strong>: <br /> Indicator concentration (Q.I.001) <br /></td>
+<td>In this process the MR signal is first converted to an electromagnetic property, which is in a second step converted to indicator concentration.  <br /> <strong>Input:</strong> <br /> Signal to electromagnetic property conversion method (select from signal to electromagnetic property conversion conversion methods), <br /> Electromagnetic property to concentration conversion method (select from electromagnetic property to concentration conversion methods) <br />   <strong>Output</strong>: <br /> Indicator concentration (Q.IC1.001) <br /></td>
+<td>--</td>
+</tr>
+<tr>
+<td>P.SC2.999</td>
+<td>Method not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
 <td>--</td>
 </tr>
 </tbody>
@@ -1158,11 +1158,19 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 </thead>
 <tbody>
 <tr>
-<td>P.C.007</td>
+<td>P.SE1.007</td>
 <td>Model-based</td>
 <td>--</td>
 <td>--</td>
-<td>In this process the MR signal is converted to an electromagnetic property (e.g. R1) via inversion of a specified model.  <br /> <strong>Input:</strong> <br /> Inversion method (G.I.002) with Data (Q.G.002) = Signal (Q.S.001), <br /> Forward model (M.G.001) = select from MR signal models <br />  <strong>Output</strong>: <br /> Quantity from Electromagnetic quantities ( e.g. <em>R<sub>1</sub></em>, <em>R<sub>2</sub></em>, <em>R<sub>2</sub><sup></em></sup>* or <img src="https://latex.codecogs.com/svg.image?\chi" title="https://latex.codecogs.com/svg.image?\chi" /> ) <br /></td>
+<td>In this process the MR signal is converted to an electromagnetic property (e.g. R<sub>1</sub>) via inversion of a specified model.  <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) with Data (Q.GE1.002) = Signal (Q.MS1.001), <br /> Forward model (M.GF1.001) = select from MR signal models <br />  <strong>Output</strong>: <br /> Quantity from Electromagnetic quantities ( e.g. <em>R<sub>1</sub></em>, <em>R<sub>2</sub></em>, <em>R<sub>2</sub><sup></em></sup>* or <img src="https://latex.codecogs.com/svg.image?\chi" title="https://latex.codecogs.com/svg.image?\chi" /> ) <br /></td>
+<td>--</td>
+</tr>
+<tr>
+<td>P.SE1.999</td>
+<td>Method not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
 <td>--</td>
 </tr>
 </tbody>
@@ -1181,19 +1189,126 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 </thead>
 <tbody>
 <tr>
-<td>P.C.008</td>
+<td>P.EC1.008</td>
 <td>Model-based</td>
 <td>--</td>
 <td>--</td>
-<td>In this process an electromagnetic property (e.g. R1) is converted to the indicator concentration via inversion of a specified model. <br /> <strong>Input:</strong> <br /> Inversion method (G.I.002) with Data (Q.G.002) = Quantity from Electromagnetic quantities, <br /> Forward model (M.G.001) = select from electromagnetic property models  <br />  <strong>Output</strong>: <br /> Indicator concentration (Q.I.001) <br /></td>
+<td>In this process an electromagnetic property (e.g. R<sub>1</sub>) is converted to the indicator concentration via inversion of a specified model. <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) with Data (Q.GE1.002) = Quantity from Electromagnetic quantities, <br /> Forward model (M.GF1.001) = select from electromagnetic property models  <br />  <strong>Output</strong>: <br /> Indicator concentration (Q.IC1.001) <br /></td>
+<td>--</td>
+</tr>
+<tr>
+<td>P.EC1.999</td>
+<td>Method not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
 <td>--</td>
 </tr>
 </tbody>
 </table>
 <h2 id="leakage-correction">Leakage correction<a class="headerlink" href="#leakage-correction" title="Permanent link">&para;</a></h2>
+<p>This group contains methods used to correct for the leakage of an indicator into the tissue which is not assumed to leave the vasculature.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P.LC1.001</td>
+<td>Leakage correction</td>
+<td>--</td>
+<td>LC</td>
+<td>This method is used to correct for the leakage of an indicator into the tissue which is not assumed to leave the vasculature. <br />  <strong>Input</strong>: <br /> Leakage correction method (select from leakage correction methods) <br />  <strong>Output</strong>: <br /> R<sub>2</sub><sup>*</sup> (Q.EL1.007.[ j ])</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
 <h3 id="leakage-correction-methods"><a name="Leakage correction methods"></a> Leakage correction methods<a class="headerlink" href="#leakage-correction-methods" title="Permanent link">&para;</a></h3>
-<p>| Code | OSIPI name| Alternative names|Notation|Description|Reference|</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P.LC2.001</td>
+<td>Model-based</td>
+<td>--</td>
+<td>--</td>
+<td>The leakage correction is done assuming a leakage correction model. <br />  <strong>Input</strong>: <br /> Inversion method (select from inversion methods) with a Forward model (M.GF1.001) from leakage correction models <br />  <strong>Output</strong>: <br /> R<sub>2</sub><sup>*</sup> (Q.EL1.007.[ j ])</td>
+<td>--</td>
+</tr>
+<tr>
+<td>P.LC2.999</td>
+<td>Method not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
 <h2 id="extraction-of-parameters">Extraction of parameters<a class="headerlink" href="#extraction-of-parameters" title="Permanent link">&para;</a></h2>
+<p>In this group various methods of how physiological or descriptive parameters can be derived.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P.EX1.001</td>
+<td>Model-based parameter extraction</td>
+<td>--</td>
+<td>Model-based</td>
+<td>Parameters are derived by inverting a specified model which provides as output physiological or descriptive model quantities, e.g. via model fitting or deconvolution. <br />  <strong>Input</strong>: <br /> Inversion method (select from inversion methods) with a Forward model (M.GF1.001) from indicator concentration models or descriptive models. <br />  <strong>Output</strong>: <br /> [Estimated model parameters from physiological quantities or descriptive model quantities]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>P.EX1.002</td>
+<td>Curve descriptive parameter extraction</td>
+<td>--</td>
+<td>Descriptive</td>
+<td>This process returns the value of a curve descriptive quantity from a given data set on a given data grid according to a specified curve descriptive process. <br />  <strong>Input</strong>: <br /> Method from curve descriptive processes <br />  <strong>Output</strong>: <br /> [Quantities from curve descriptive quantities]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>P.EX1.003</td>
+<td>Derivation of parameters from other parameters</td>
+<td>--</td>
+<td>Identity-based</td>
+<td>This process returns a quantity from other given quantities and a specified parameter identity model. <br />  <strong>Input</strong>: <br /> Inversion method (select from inversion methods) with a Forward model (M.GF1.001) from perfusion identity models <br />  <strong>Output</strong>: <br /> [Estimated model parameters from physiological quantities]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>P.EX1.999</td>
+<td>Method not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
 
               
             </article>
