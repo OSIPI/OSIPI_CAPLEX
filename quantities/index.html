@@ -347,13 +347,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#arterial-input-function-estimation-quantities_1" class="md-nav__link">
-    Arterial input function estimation quantities
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#segmentation-quantities" class="md-nav__link">
     Segmentation quantities
   </a>
@@ -552,13 +545,6 @@
       
         <li class="md-nav__item">
   <a href="#arterial-input-function-estimation-quantities" class="md-nav__link">
-    Arterial input function estimation quantities
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#arterial-input-function-estimation-quantities_1" class="md-nav__link">
     Arterial input function estimation quantities
   </a>
   
@@ -1184,7 +1170,7 @@
 <thead>
 <tr>
 <th>Code</th>
-<th>Data grid</th>
+<th>OSIPI name</th>
 <th>Alternative names</th>
 <th>Notation</th>
 <th>Description</th>
@@ -1195,7 +1181,7 @@
 <tbody>
 <tr>
 <td>Q.GE1.001</td>
-<td><a name="Datagird"></a> Data grid</td>
+<td><a name="DataGrid"></a> Data grid</td>
 <td>--</td>
 <td><em>[x<sub>1</sub>,...,x<sub>n</sub>]</em></td>
 <td>Sampling points of a data set (typically time or frequency).</td>
@@ -1303,7 +1289,7 @@
 </tr>
 <tr>
 <td>Q.GE1.013</td>
-<td>Start of range</td>
+<td><a name="x_start"></a> Start of range</td>
 <td>--</td>
 <td><em>x<sub>start</sub></em></td>
 <td>The start point of the range [<em>x<sub>start</sub></em>, <em>x<sub>end</sub></em>].</td>
@@ -1312,7 +1298,7 @@
 </tr>
 <tr>
 <td>Q.GE1.014</td>
-<td>End of range</td>
+<td><a name="x_end"></a> End of range</td>
 <td>--</td>
 <td><em>x<sub>end</sub></em></td>
 <td>The end point of the range [<em>x<sub>start</sub></em>, <em>x<sub>end</sub></em>].</td>
@@ -1321,7 +1307,7 @@
 </tr>
 <tr>
 <td>Q.GE1.015</td>
-<td>Sample size</td>
+<td><a name="sampleSize"></a> Sample size</td>
 <td>--</td>
 <td><em>n</em></td>
 <td>The number samples within a data set.</td>
@@ -1330,7 +1316,7 @@
 </tr>
 <tr>
 <td>Q.GE1.999</td>
-<td>Quantity not listed</td>
+<td><a name="not listed GE1"></a> Quantity not listed</td>
 <td>--</td>
 <td>--</td>
 <td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
@@ -1347,7 +1333,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <thead>
 <tr>
 <th>Code</th>
-<th>Data grid</th>
+<th>OSIPI name</th>
 <th>Alternative names</th>
 <th>Notation</th>
 <th>Description</th>
@@ -1358,7 +1344,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <tbody>
 <tr>
 <td>Q.CD1.001</td>
-<td>Data value at data grid point</td>
+<td><a name="f(x_i)"></a> Data value at data grid point</td>
 <td>--</td>
 <td><em>f(x<sub>i</sub>)</em></td>
 <td>The data value at the data grid point x<sub>i</sub>.</td>
@@ -1367,7 +1353,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.CD1.002</td>
-<td>Maximum value</td>
+<td><a name="f_max"></a> Maximum value</td>
 <td>--</td>
 <td><em>f<sub>max</sub></em></td>
 <td>The maximum value of given data.</td>
@@ -1376,7 +1362,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.CD1.003</td>
-<td>Data grid point of maximum value</td>
+<td><a name="a_max"></a> Data grid point of maximum value</td>
 <td>--</td>
 <td><em>x<sub>max</sub></em></td>
 <td>The data grid point at which the maximum value of a given data set occurs.</td>
@@ -1385,7 +1371,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.CD1.004</td>
-<td>Minimum value</td>
+<td><a name="f_min"></a> Minimum value</td>
 <td>--</td>
 <td><em>f<sub>min</sub></em></td>
 <td>The minimum value of given data.</td>
@@ -1394,7 +1380,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.CD1.005</td>
-<td>Data grid point of minimum value</td>
+<td><a name="x_min"></a> Data grid point of minimum value</td>
 <td>--</td>
 <td><em>x<sub>min</sub></em></td>
 <td>The data grid point at which the minimum value of a given data set occurs.</td>
@@ -1403,7 +1389,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.CD1.006</td>
-<td>Final data grid point</td>
+<td><a name="x_fin"></a> Final data grid point</td>
 <td>--</td>
 <td>x<sub>fin</sub></td>
 <td>The last point of a given data grid.</td>
@@ -1412,7 +1398,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.CD1.007</td>
-<td>Final data value</td>
+<td><a name="f_fin"></a> Final data value</td>
 <td>--</td>
 <td>f<sub>fin</sub></td>
 <td>The value of the data at the last data grid point.</td>
@@ -1421,7 +1407,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.CD1.008</td>
-<td>Maximum deviation from baseline</td>
+<td><a name="maxDev"></a> Maximum deviation from baseline</td>
 <td>--</td>
 <td><em>&#916; f<sub>BL,max</sub></em></td>
 <td>The maximum absolute deviation of a given data set from the baseline.</td>
@@ -1430,7 +1416,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.CD1.009</td>
-<td>Derivative at data grid point <img src="https://latex.codecogs.com/svg.image?x_i" title="https://latex.codecogs.com/svg.image?x_i" /></td>
+<td><a name="Deriv"></a> Derivative at data grid point <img src="https://latex.codecogs.com/svg.image?x_i" title="https://latex.codecogs.com/svg.image?x_i" /></td>
 <td>--</td>
 <td><img src="https://latex.codecogs.com/svg.image?\frac{df(x_i)}{dx}" title="https://latex.codecogs.com/svg.image?\frac{df(x_i)}{dx}" /></td>
 <td>Derivative of a function f with respect to the independent variable x at the data grid point <img src="https://latex.codecogs.com/svg.image?x_i" title="https://latex.codecogs.com/svg.image?x_i" />.</td>
@@ -1439,7 +1425,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.CD1.010</td>
-<td>Time to peak</td>
+<td><a name="">TTP</a> Time to peak</td>
 <td>--</td>
 <td><em>TTP</em></td>
 <td>The time between the bolus arrival time (BAT) and the maximum time point <em>x<sub>max</sub></em>. <em>TTP=x<sub>max</sub>-BAT</em> <br/>(Remark: this is expressed for time rather than a general data grid, because TTP is an often used parameter in perfusion analysis).</td>
@@ -1448,7 +1434,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.CD1.011</td>
-<td>Wash-in-slope</td>
+<td><a name="">WIS</a> Wash-in-slope</td>
 <td>--</td>
 <td><em>WIS</em></td>
 <td>The ratio of the difference of the maximum data value <em>f<sub>max</sub></em> and the baseline value <em>f<sub>BL</sub></em> and the time to peak: <img src="https://latex.codecogs.com/svg.image?\frac{f_{max}-f_{BL}}{TTP}" title="https://latex.codecogs.com/svg.image?\frac{f_{max}-f_{BL}}{TTP}" /></td>
@@ -1457,7 +1443,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.CD1.012</td>
-<td>Wash-out-slope</td>
+<td><a name="WOS"></a> Wash-out-slope</td>
 <td>--</td>
 <td><em>WOS</em></td>
 <td>The ratio of the difference of the maximum data value f<sub>max</sub> and the data value at the last data grid point f<sub>fin</sub> and difference between the last time point and the time at which the maximum occurs: <img src="https://latex.codecogs.com/svg.image?\frac{f_{max}-f_{fin}}{x_{max}-x_{fin}}" title="https://latex.codecogs.com/svg.image?\frac{f_{max}-f_{fin}}{x_{max}-x_{fin}}" /></td>
@@ -1466,7 +1452,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.CD1.013</td>
-<td>Area under curve</td>
+<td><a name="AUC"></a> Area under curve</td>
 <td>--</td>
 <td><em>AUC<sub>x<sub>start</sub>,x<sub>end</sub></sub></em></td>
 <td>The integral value of a given dynamic function f (or the numeric approximation for discrete data <img src="https://latex.codecogs.com/svg.image?[f_1,...f_n]" title="https://latex.codecogs.com/svg.image?[f_1,...f_n]" /> ) between the data grid points <img src="https://latex.codecogs.com/svg.image?x_1" title="https://latex.codecogs.com/svg.image?x_1" /> and <img src="https://latex.codecogs.com/svg.image?x_2" title="https://latex.codecogs.com/svg.image?x_2" />.</td>
@@ -1475,7 +1461,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.DC1.999</td>
-<td>Quantity not listed</td>
+<td><a name="not listed DC1"></a> Quantity not listed</td>
 <td>--</td>
 <td>--</td>
 <td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
@@ -1490,7 +1476,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <thead>
 <tr>
 <th>Code</th>
-<th>Data grid</th>
+<th>OSIPI name</th>
 <th>Alternative names</th>
 <th>Notation</th>
 <th>Description</th>
@@ -1501,7 +1487,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <tbody>
 <tr>
 <td>Q.BA1.001</td>
-<td>Bolus arrival time</td>
+<td><a name=""></a> Bolus arrival time</td>
 <td>Onset Time, Lag Time</td>
 <td><em>BAT</em></td>
 <td>The time between the first data grid point and the onset obtained by applying a specified BAT estimation method.</td>
@@ -1510,7 +1496,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.BA1.002</td>
-<td>Intersection- based BAT estimation parameters</td>
+<td><a name=""></a> Intersection- based BAT estimation parameters</td>
 <td>--</td>
 <td><em>[N]</em></td>
 <td>Vector of ordered inputs to the intersection-based BAT estimation process.</td>
@@ -1519,7 +1505,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.BA1.999</td>
-<td>Quantity not listed</td>
+<td><a name=""></a> Quantity not listed</td>
 <td>--</td>
 <td>--</td>
 <td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
@@ -1534,7 +1520,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <thead>
 <tr>
 <th>Code</th>
-<th>Data grid</th>
+<th>OSIPI name</th>
 <th>Alternative names</th>
 <th>Notation</th>
 <th>Description</th>
@@ -1545,7 +1531,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <tbody>
 <tr>
 <td>Q.BL1.001</td>
-<td>Baseline value</td>
+<td><a name="f_BL"></a> Baseline value</td>
 <td>--</td>
 <td>f<sub>BL</sub></td>
 <td>The baseline value of given data obtained by applying the baseline estimation process. variable</td>
@@ -1554,7 +1540,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.BL.999</td>
-<td>Quantity not listed</td>
+<td><a name="not listed BL1"></a> Quantity not listed</td>
 <td>--</td>
 <td>--</td>
 <td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
@@ -1569,7 +1555,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <thead>
 <tr>
 <th>Code</th>
-<th>Data grid</th>
+<th>OSIPI name</th>
 <th>Alternative names</th>
 <th>Notation</th>
 <th>Description</th>
@@ -1580,7 +1566,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <tbody>
 <tr>
 <td>Q.DM1.001</td>
-<td>Unit step model parameters</td>
+<td><a name="UnitStepParams"></a> Unit step model parameters</td>
 <td>--</td>
 <td><em>[T]</em></td>
 <td>Vector of ordered inputs to the unit step model (M.DM1.001).</td>
@@ -1589,7 +1575,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.DM1.002</td>
-<td>Linear-quadratic model parameters</td>
+<td><a name="LinQuandraticParams"></a> Linear-quadratic model parameters</td>
 <td>--</td>
 <td><em>[BAT,f<sub>BL</sub>,&#946;<sub>1</sub>,&#946;<sub>2</sub>]</em></td>
 <td>Vector of ordered inputs to the linear quadratic model (M.DM1.002).</td>
@@ -1598,7 +1584,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.DM1.003</td>
-<td>Two step linear model parameters</td>
+<td><a name="2SLParams"></a> Two step linear model parameters</td>
 <td>--</td>
 <td><em>[BAT,f<sub>BL</sub>,b<sub>1</sub>]</em></td>
 <td>Vector of ordered inputs to the two step linear model (M.DM1.003).</td>
@@ -1607,7 +1593,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.DM1.004</td>
-<td>Three step linear model parameters</td>
+<td><a name="3SLPamars"></a> Three step linear model parameters</td>
 <td>--</td>
 <td><em>[BAT,f<sub>BL</sub>,&#946;, b<sub>1</sub>,b<sub>2</sub>]</em></td>
 <td>Vector of ordered inputs to the three step linear model (M.DM1.004).</td>
@@ -1616,7 +1602,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.DM1.005</td>
-<td>Multi-exponential model parameters</td>
+<td><a name="MultiExpParams"></a> Multi-exponential model parameters</td>
 <td>--</td>
 <td><em>[A<sub>1</sub>,...A<sub>n</sub>,a<sub>1</sub>,...a<sub>n</sub>]</em></td>
 <td>Vector of ordered inputs to the multi-exponential model (M.DM1.005).</td>
@@ -1625,7 +1611,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.DM1.006</td>
-<td>Gamma-variate model parameters</td>
+<td><a name="GammaVarParams"></a> Gamma-variate model parameters</td>
 <td>--</td>
 <td><em>[BAT,&#945;,&#946;]</em></td>
 <td>Vector of ordered inputs to the gamma-variate model (M.DM1.006).</td>
@@ -1634,7 +1620,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.DM1.007</td>
-<td>Fermi model parameters</td>
+<td><a name="FermiParams"></a> Fermi model parameters</td>
 <td>--</td>
 <td><em>[F,a,b]</em></td>
 <td>Vector of ordered inputs to the Fermi model (M.DM1.007).</td>
@@ -1643,7 +1629,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.DM1.008</td>
-<td>Normal distribution model parameters</td>
+<td><a name="NormalParams"></a> Normal distribution model parameters</td>
 <td>--</td>
 <td><em>[&#956;,&#963;]</em></td>
 <td>Vector of ordered inputs to normal distribution model (M.DM1.008).</td>
@@ -1652,7 +1638,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.DM1.999</td>
-<td>Quantity not listed</td>
+<td><a name="not listed DM1"></a> Quantity not listed</td>
 <td>--</td>
 <td>--</td>
 <td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
@@ -1667,7 +1653,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <thead>
 <tr>
 <th>Code</th>
-<th>Data grid</th>
+<th>OSIPI name</th>
 <th>Alternative names</th>
 <th>Notation</th>
 <th>Description</th>
@@ -1678,7 +1664,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <tbody>
 <tr>
 <td>Q.LC1.001</td>
-<td>Uncontaminated R<sub>2</sub><sup>*</sup> scaling term</td>
+<td><a name="K1"></a> Uncontaminated R<sub>2</sub><sup>*</sup> scaling term</td>
 <td>--</td>
 <td>K<sub>1</sub></td>
 <td>Scaling constant for the uncontaminated effective transverse relaxation rate in the BSW leakage correction model and Bidirectional leakage correction model.</td>
@@ -1687,7 +1673,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.LC1.002</td>
-<td>Leakage scaling term</td>
+<td><a name="K2"></a> Leakage scaling term</td>
 <td>--</td>
 <td>K<sub>2</sub></td>
 <td>Scaling constant which reflects the effects of leakage in the BSW leakage correction model and Bidirectional leakage correction model.</td>
@@ -1696,7 +1682,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.LC1.999</td>
-<td>Quantity not listed</td>
+<td><a name="not listed LC1"></a> Quantity not listed</td>
 <td>--</td>
 <td>--</td>
 <td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
@@ -1711,7 +1697,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <thead>
 <tr>
 <th>Code</th>
-<th>Data grid</th>
+<th>OSIPI name</th>
 <th>Alternative names</th>
 <th>Notation</th>
 <th>Description</th>
@@ -1722,7 +1708,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <tbody>
 <tr>
 <td>Q.US1.001</td>
-<td>Arithmetic mean (sample)</td>
+<td><a name="Mean_sample"></a> Arithmetic mean (sample)</td>
 <td>Average</td>
 <td><img src="https://latex.codecogs.com/svg.image?\bar{x}" title="https://latex.codecogs.com/svg.image?\bar{x}" /></td>
 <td>The mean value of a given data sample <em>[x<sub>1</sub>,...,x<sub>n</sub>]</em>, with sample size n, calculated as <img src="https://latex.codecogs.com/svg.image?\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_i" title="https://latex.codecogs.com/svg.image?\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_i" />.</td>
@@ -1731,7 +1717,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.US1.002</td>
-<td>Geometric mean (sample)</td>
+<td><a name="GeomMean_sample"></a> Geometric mean (sample)</td>
 <td>--</td>
 <td><img src="https://latex.codecogs.com/svg.image?\bar{x}_{geom}" title="https://latex.codecogs.com/svg.image?\bar{x}_{geom}" /></td>
 <td>The mean value of a given data sample <em>[x<sub>1</sub>,...,x<sub>n</sub>]</em>, with sample size n, calculated as <img src="https://latex.codecogs.com/svg.image?\bar{x}_{geom}=\sqrt[n]{\prod_{i=1}^{n}x_i}" title="https://latex.codecogs.com/svg.image?\bar{x}_{geom}=\sqrt[n]{\prod_{i=1}^{n}x_i}" /></td>
@@ -1740,7 +1726,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.US1.003</td>
-<td>Variance (sample)</td>
+<td><a name="Var"></a> Variance (sample)</td>
 <td>--</td>
 <td><em>s<sup>2</sup></em></td>
 <td>Mean squared deviation of the mean of a given data set <em>[x<sub>1</sub>,...,x<sub>n</sub>]</em> with sample size <em>n</em> and mean value <img src="https://latex.codecogs.com/svg.image?\bar{x}" title="https://latex.codecogs.com/svg.image?\bar{x}" />, calculated as <img src="https://latex.codecogs.com/svg.image?s^2=\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}" title="https://latex.codecogs.com/svg.image?s^2=\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}" />.</td>
@@ -1749,7 +1735,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.US1.004</td>
-<td>Standard deviation (sample)</td>
+<td><a name="StdDev"></a> Standard deviation (sample)</td>
 <td>--</td>
 <td><em>s</em></td>
 <td>The standard deviation of the mean value of a given data set <em>[x<sub>1</sub>,...,x<sub>n</sub>]</em> with sample size <em>n</em> and mean value <img src="https://latex.codecogs.com/svg.image?\bar{x}" title="https://latex.codecogs.com/svg.image?\bar{x}" /> , calculated as <img src="https://latex.codecogs.com/svg.image?s^2=\sqrt{\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}}" title="https://latex.codecogs.com/svg.image?s^2=\sqrt{\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}}" />.</td>
@@ -1758,7 +1744,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.US1.005</td>
-<td>Median value (sample)</td>
+<td><a name="Median"></a> Median value (sample)</td>
 <td>--</td>
 <td><em>x<sub>median</sub></em></td>
 <td>Centermost point  of ordered data points   for an odd number of samples or the average of the two centermost points xn/2+xn/2+12 for an even number of samples.</td>
@@ -1988,7 +1974,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <thead>
 <tr>
 <th>Code</th>
-<th>Data grid</th>
+<th>OSIPI name</th>
 <th>Alternative names</th>
 <th>Notation</th>
 <th>Description</th>
@@ -1999,7 +1985,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <tbody>
 <tr>
 <td>Q.AI1.001</td>
-<td>Static model parameters</td>
+<td><a name=""></a> Static model parameters</td>
 <td>--</td>
 <td>SMP</td>
 <td>A vector of the known quantities of a forward model. Select from section Q.</td>
@@ -2008,7 +1994,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.AI1.002</td>
-<td>Model parameters</td>
+<td><a name=""></a> Model parameters</td>
 <td>--</td>
 <td>MP</td>
 <td>A vector of the quantities to be determined by the analytical inversion of a forward model. Select from section Q.</td>
@@ -2017,7 +2003,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.AI1.999</td>
-<td>Quantity not listed</td>
+<td><a name=""></a> Quantity not listed</td>
 <td>--</td>
 <td>--</td>
 <td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
@@ -2032,7 +2018,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <thead>
 <tr>
 <th>Code</th>
-<th>Data grid</th>
+<th>OSIPI name</th>
 <th>Alternative names</th>
 <th>Notation</th>
 <th>Description</th>
@@ -2043,7 +2029,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <tbody>
 <tr>
 <td>Q.OP1.001</td>
-<td>Model parameters</td>
+<td><a name="MP"></a> Model parameters</td>
 <td>--</td>
 <td><em>&#934;</em>, MP</td>
 <td>A vector of quantities which are the variable of the model fitting process. Select from section Q.</td>
@@ -2052,7 +2038,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.OP1.002</td>
-<td>Static model parameters</td>
+<td><a name="SMP"></a> Static model parameters</td>
 <td>--</td>
 <td>&#952;, SMP</td>
 <td>A vector of the quantities of the forward model to be fitted which are not in the scope of the optimization. Select from section Q.</td>
@@ -2061,7 +2047,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.OP1.003</td>
-<td>Estimated model parameter</td>
+<td><a name="EMP"></a> Estimated model parameter</td>
 <td>--</td>
 <td><img src="https://latex.codecogs.com/svg.image?\hat{\phi}" title="https://latex.codecogs.com/svg.image?\hat{\phi}" />, EMP</td>
 <td>A vector (in the same order as model parameters, indicated with “^”) of the estimated model parameters resulting from the optimization process.</td>
@@ -2070,7 +2056,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.OP1.004</td>
-<td>Cost value</td>
+<td><a name="CostValue"></a> Cost value</td>
 <td>--</td>
 <td><em>C</em></td>
 <td>The scalar or vectorial value of a specified cost function.</td>
@@ -2079,7 +2065,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.OP1.005</td>
-<td>Cost value minimum</td>
+<td><a name="CostValue_min"></a> Cost value minimum</td>
 <td>--</td>
 <td><em>C<sub>min</sub></em></td>
 <td>The minimum cost value as returned by an optimizer. This can be a local or global minimum.</td>
@@ -2088,7 +2074,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.OP1.006</td>
-<td>Initial model parameters</td>
+<td><a name="MP_init"></a> Initial model parameters</td>
 <td>--</td>
 <td><em>&#934;<sub>init</sub></em></td>
 <td>Vector of the starting values of the search for the model parameters.</td>
@@ -2097,7 +2083,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.OP1.007</td>
-<td>Model parameter lower bounds</td>
+<td><a name="MP_L"></a> Model parameter lower bounds</td>
 <td>--</td>
 <td><em>&#934;<sub>LB</sub></em></td>
 <td>Vector of the lower bounds for the search for the model parameters.</td>
@@ -2106,7 +2092,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.OP1.008</td>
-<td>Model parameter upper bounds</td>
+<td><a name="MP_U"></a> Model parameter upper bounds</td>
 <td>--</td>
 <td><em>&#934;<sub>UB</sub></em></td>
 <td>Vector of the upper bounds for the search for the model parameters.</td>
@@ -2115,7 +2101,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.OP1.009</td>
-<td>Data weights</td>
+<td><a name="Weights"></a> Data weights</td>
 <td>--</td>
 <td><em>&#969;</em></td>
 <td>Vector of weights on the measured values during the optimization process.</td>
@@ -2124,7 +2110,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.OP1.010</td>
-<td>Maximum number of iterations</td>
+<td><a name="N_iter_max"></a> Maximum number of iterations</td>
 <td>--</td>
 <td><em>N<sub>it,max</sub></em></td>
 <td>Largest number of steps taken in an iterative optimization.</td>
@@ -2133,7 +2119,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.OP1.011</td>
-<td>Convergence threshold</td>
+<td><a name="ConvThresh"></a> Convergence threshold</td>
 <td>--</td>
 <td><em>e</em></td>
 <td>Convergence threshold on the optimizer.</td>
@@ -2142,7 +2128,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.OP1.012</td>
-<td>Linear coefficients matrix</td>
+<td><a name="A"></a> Linear coefficients matrix</td>
 <td>--</td>
 <td><em>A</em></td>
 <td>A matrix with elements A<sub>ij</sub> with which a function linear in the model parameters  can be  expressed as <img src="https://latex.codecogs.com/svg.image?f(\phi;x_i)=&space;\sum_{j=1}^{m}A_{ij}\phi_j" title="https://latex.codecogs.com/svg.image?f(\phi;x_i)= \sum_{j=1}^{m}A_{ij}\phi_j" />. The A<sub>ij</sub> contain the data grid and the static model parameters.</td>
@@ -2151,7 +2137,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.OP1.013</td>
-<td>Regularization parameter</td>
+<td><a name="Lambda"></a> Regularization parameter</td>
 <td>--</td>
 <td><em>&#955;</em></td>
 <td>A parameter which determines the weight of the regularization in an optimization.</td>
@@ -2160,7 +2146,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.OP1.014</td>
-<td>Normalized regularization parameter</td>
+<td><a name="Lambda_norm"></a> Normalized regularization parameter</td>
 <td>--</td>
 <td><img src="https://latex.codecogs.com/svg.image?\hat{\lambda}" title="https://latex.codecogs.com/svg.image?\hat{\lambda}" /></td>
 <td>The regularization parameter is expressed relative to the largest singular value &#963;<sub>1</sub> of a SVD: <img src="https://latex.codecogs.com/svg.image?\hat{\lambda}=\frac{\lambda}{\sigma_1}" title="https://latex.codecogs.com/svg.image?\hat{\lambda}=\frac{\lambda}{\sigma_1}" /> .</td>
@@ -2169,7 +2155,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.OP1.015</td>
-<td>Fixed <em>&#955;</em> value</td>
+<td><a name="Lambda_fixed"></a> Fixed <em>&#955;</em> value</td>
 <td>--</td>
 <td><em>&#955;<sub>fixed</sub></em></td>
 <td>A fixed value, e.g. a literature value, assumed as regularization parameter.</td>
@@ -2178,7 +2164,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.OP1.999</td>
-<td>Quantity not listed</td>
+<td><a name="not listes OP1"></a> Quantity not listed</td>
 <td>--</td>
 <td>--</td>
 <td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
@@ -2193,7 +2179,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <thead>
 <tr>
 <th>Code</th>
-<th>Data grid</th>
+<th>OSIPI name</th>
 <th>Alternative names</th>
 <th>Notation</th>
 <th>Description</th>
@@ -2204,7 +2190,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <tbody>
 <tr>
 <td>Q.NR1.001</td>
-<td>Fixed R10 value</td>
+<td><a name="R10_fixed"></a> Fixed R10 value</td>
 <td>--</td>
 <td><em>R<sub>10,fixed</sub></em></td>
 <td>A fixed value, e.g. a literature value, assumed as native <em>R<sub>1</sub></em> relaxation rate value.</td>
@@ -2213,7 +2199,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.NR1.999</td>
-<td>Quantity not listed</td>
+<td><a name="not listed NR1"></a> Quantity not listed</td>
 <td>--</td>
 <td>--</td>
 <td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
@@ -2228,7 +2214,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <thead>
 <tr>
 <th>Code</th>
-<th>Data grid</th>
+<th>OSIPI name</th>
 <th>Alternative names</th>
 <th>Notation</th>
 <th>Description</th>
@@ -2239,7 +2225,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <tbody>
 <tr>
 <td>Q.AE1.001</td>
-<td><em>k</em>-means-cluster-algorithm-parameters</td>
+<td><a name="kMeansParams"></a> <em>k</em>-means-cluster-algorithm-parameters</td>
 <td>--</td>
 <td><em>[k]</em></td>
 <td>Vector of ordered inputs to the <em>k</em>-means AIF detection algorithm.</td>
@@ -2248,7 +2234,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.AE1.002</td>
-<td>Fuzzy-c-means-cluster-algorithm-parameters</td>
+<td><a name="fuzzyMeansParams"></a> Fuzzy-c-means-cluster-algorithm-parameters</td>
 <td>--</td>
 <td><em>[m,&#917;,c,P<sub>c</sub>,c<sub>i</sub>]</em></td>
 <td>Vector of ordered inputs to the fuzzy-c-means AIF detection algorithm.</td>
@@ -2257,7 +2243,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.AE1.003</td>
-<td>Partial-volume corrected</td>
+<td><a name="PVC"></a> Partial-volume corrected</td>
 <td>--</td>
 <td>PVE</td>
 <td>If the value of this flag is 1, partial volume effects are accounted for. Otherwise, or if not specified, no partial volume effect correction was done.</td>
@@ -2266,7 +2252,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.AE1.004</td>
-<td>Dual Bolus</td>
+<td><a name="DB"></a> Dual Bolus</td>
 <td>--</td>
 <td>DB</td>
 <td>The full-dose AIF is reconstructed from pre-bolus injection with a smaller dose. If the value of this flag is 1, a dual bolus approach is used. Otherwise, or if not specified, no dual bolus approach is used.</td>
@@ -2275,7 +2261,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.AE1.005</td>
-<td>Arterial partial volume correction factor</td>
+<td><a name="PA"></a> Arterial partial volume correction factor</td>
 <td>--</td>
 <td><em>P<sub>A</sub></em></td>
 <td>A factor that scales signal or indicator concentrations measured in a partial volume affected artery such that partial volume effects are removed. Usually this is estimated by deconvolving arterial and venous signals or indicator concentrations.</td>
@@ -2284,7 +2270,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.AE1.999</td>
-<td>Quantity not listed</td>
+<td><a name="not listed AE1"></a> Quantity not listed</td>
 <td>--</td>
 <td>--</td>
 <td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
@@ -2293,14 +2279,13 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 </tbody>
 </table>
-<h2 id="arterial-input-function-estimation-quantities_1">Arterial input function estimation quantities<a class="headerlink" href="#arterial-input-function-estimation-quantities_1" title="Permanent link">&para;</a></h2>
 <h2 id="segmentation-quantities">Segmentation quantities<a class="headerlink" href="#segmentation-quantities" title="Permanent link">&para;</a></h2>
 <p>This group contains quantities related to the process of image segmentation.</p>
 <table>
 <thead>
 <tr>
 <th>Code</th>
-<th>Data grid</th>
+<th>OSIPI name</th>
 <th>Alternative names</th>
 <th>Notation</th>
 <th>Description</th>
@@ -2311,7 +2296,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 <tbody>
 <tr>
 <td>Q.SE1.001</td>
-<td>Binary mask</td>
+<td><a name="BinMask"></a> Binary mask</td>
 <td>--</td>
 <td>Mask</td>
 <td>Binary mask of segmented region of interest.</td>
@@ -2320,7 +2305,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.SE1.002</td>
-<td>Binary AIF mask</td>
+<td><a name="BinAIFMask"></a> Binary AIF mask</td>
 <td>--</td>
 <td>AIF mask</td>
 <td>Binary mask of a vessel in which the arterial input function is estimated.</td>
@@ -2329,7 +2314,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.SE1.003</td>
-<td>Binary ROI mask</td>
+<td><a name="BinROIMask"></a> Binary ROI mask</td>
 <td>--</td>
 <td>ROI mask</td>
 <td>Binary mask of a tissue region of interest.</td>
@@ -2338,7 +2323,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.SE1.004</td>
-<td>Seeds</td>
+<td><a name="Seeds"></a> Seeds</td>
 <td>--</td>
 <td>[seeds]</td>
 <td>Vector of ordered voxel coordinates of seed points for seed based segmentation (e.g. region growing segmentation).</td>
@@ -2347,7 +2332,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.SE1.005</td>
-<td>Number of k–means clusters</td>
+<td><a name="N_kMeans"></a> Number of k–means clusters</td>
 <td>--</td>
 <td><em>N<sub>k-means</sub></em></td>
 <td>Number of clusters in the k-means clustering algorithm.</td>
@@ -2356,7 +2341,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 </tr>
 <tr>
 <td>Q.SE1.999</td>
-<td>Quantity not listed</td>
+<td><a name="not listed SE1"></a> Quantity not listed</td>
 <td>--</td>
 <td>--</td>
 <td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
