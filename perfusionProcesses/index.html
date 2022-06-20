@@ -288,6 +288,19 @@
     Baseline estimation
   </a>
   
+    <nav class="md-nav" aria-label="Baseline estimation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#baseline-estimation-methods" class="md-nav__link">
+     Baseline estimation methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -507,6 +520,19 @@
     Baseline estimation
   </a>
   
+    <nav class="md-nav" aria-label="Baseline estimation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#baseline-estimation-methods" class="md-nav__link">
+     Baseline estimation methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -653,7 +679,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Estimate native  <em>R<sub>1</sub></em></td>
 <td>--</td>
 <td>Estimate <em>R<sub>10</sub></em></td>
-<td>This process returns the native <em>R<sub>1</sub></em> relaxation rate <em>R<sub>10</sub></em> derived using a given native <em>R<sub>1</sub></em>  estimation method. <br /> <strong>Input</strong>: <br /> Native <em>R<sub>1</sub></em> estimation method (select from <a href="#Native R1 estimation methods">Native <em>R<sub>1</sub></em>-estimation methods</a>) <br /> <strong>Output:</strong> <br /> <a href="../quantities/#R10"><em>R<sub>10</sub></em>(Q.EL1.002)</a></td>
+<td>This process returns the native <em>R<sub>1</sub></em> relaxation rate <em>R<sub>10</sub></em> derived using a given native <em>R<sub>1</sub></em>  estimation method. <br /> <strong>Input</strong>: <br /> Native <em>R<sub>1</sub></em> estimation method (select from <a href="#Native R1 estimation methods">Native <em>R<sub>1</sub></em>-estimation methods</a>) <br /> <strong>Output:</strong> <br /> <a href="../quantities/#R10"><em>R<sub>10</sub></em> (Q.EL1.002)</a></td>
 <td>--</td>
 </tr>
 </tbody>
@@ -676,7 +702,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Fixed Value</td>
 <td>--</td>
 <td>--</td>
-<td>A fixed value of <em>R<sub>10</sub></em>, e.g. a literature value, rather than a measured value is assumed. <br /> <strong>Input:</strong> <br /> Fixed <em>R<sub>10</sub></em>-value (Q.NR1.001) <br /> <strong>Output</strong>: <br />  <em>R<sub>10</sub></em> (Q.EL1.002)</td>
+<td>A fixed value of <em>R<sub>10</sub></em>, e.g. a literature value, rather than a measured value is assumed. <br /> <strong>Input:</strong> <br /> <a href="../quantities/#R10_fixed">Fixed <em>R<sub>10</sub></em>-value (Q.NR1.001)</a> <br /> <strong>Output</strong>: <br />  <a href="../quantities/#R10"><em>R<sub>10</sub></em> (Q.EL1.002)</a></td>
 <td>Haacke et al. 2007</td>
 </tr>
 <tr>
@@ -684,7 +710,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Variable Flip Angle</td>
 <td>--</td>
 <td>VFA</td>
-<td>This process estimates the native longitudinal relaxation rate <em>R<sub>10</sub></em> (and signal scaling factor <em>S<sub>0</sub></em>) from the MR signal measured at multiple flip angles by inverting the SPGR model (M.S.004) according to a specified inversion method. <br /> <strong>Input</strong>: <br /> Inversion method (select from inversion methods) with <br />  [Data (Q.GE1.002), Data grid (Q.GE1.001)] = [Signal (Q.MS1.001), Prescribed excitatory flip angle (Q.MS1.007)],  <br />  Forward model (M.GF1.001) = SPGR model (M.SM2.002) <br /> <strong>Output:</strong> <br /> <em>R<sub>10</sub></em> (Q.EL1.002), <br/> Signal scaling factor (Q.MS1.010)</td>
+<td>This process estimates the native longitudinal relaxation rate <em>R<sub>10</sub></em> (and signal scaling factor <em>S<sub>0</sub></em>) from the MR signal measured at multiple flip angles by inverting the SPGR model (M.S.004) according to a specified inversion method. <br /> <strong>Input</strong>: <br /> Inversion method (select from <a href="../generalPurposeProcesses/#Inversion methods">Inversion methods</a>) with <br />  [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>] = [<a href="../quantities/#S">Signal (Q.MS1.001)</a>, <a href="../quantities/#Flip angle">Prescribed excitatory flip angle (Q.MS1.007)</a>],  <br />  <a href="../perfusionModels/#Forward model">Forward model (M.GF1.001)</a> = <a href="../perfusionModels/#SPGR model">SPGR model (M.SM2.002)</a> <br /> <strong>Output:</strong> <br /> <a href="../quantities/#R10"><em>R<sub>10</sub></em> (Q.EL1.002)</a>, <br/> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a></td>
 <td>Wang et al. 1987</td>
 </tr>
 <tr>
@@ -692,7 +718,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Multi-delay Saturation Recovery</td>
 <td>--</td>
 <td>SR</td>
-<td>This process estimates the native longitudinal relaxation rate <em>R<sub>10</sub></em> (and signal scaling factor <em>S<sub>0</sub></em>) from the MR signal measured at multiple prepulse delays by inverting the saturation recovery GRE signal model according to a specified inversion method. <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) with  <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] = [Signal (Q.MS1.001), Prepulse delay (Q.MS1.008)], <br/> Forward model (M.GF1.001)  = an SR model from MR signal models <br/> <strong>Output:</strong> <br /> <em>R<sub>10</sub></em> (Q.EL1.002), <br/> Signal scaling factor (Q.MS1.010)</td>
+<td>This process estimates the native longitudinal relaxation rate <em>R<sub>10</sub></em> (and signal scaling factor <em>S<sub>0</sub></em>) from the MR signal measured at multiple prepulse delays by inverting the saturation recovery GRE signal model according to a specified inversion method. <br /> <strong>Input:</strong> <br /> Inversion method (select from <a href="../generalPurposeProcesses/#Inversion methods">Inversion methods</a>) with  <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] = [Signal (Q.MS1.001), Prepulse delay (Q.MS1.008)], <br/> Forward model (M.GF1.001)  = an SR model from MR signal models <br/> <strong>Output:</strong> <br /> <a href="../quantities/#R10"><em>R<sub>10</sub></em> (Q.EL1.002)</a>, <br/> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a></td>
 <td>Parker et al. 2000</td>
 </tr>
 <tr>
@@ -700,7 +726,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Multi-delay Inversion Recovery</td>
 <td>--</td>
 <td>IR</td>
-<td>This process estimates the native longitudinal relaxation rate <em>R<sub>10</sub></em> (and signal scaling factor <em>S<sub>0</sub></em>) from the MR signal measured at multiple prepulse delays assuming an inversion recovery GRE signal model. <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) with  <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] = [Signal (Q.MS1.001), Prepulse delay (Q.MS1.008)], <br/> Forward model (M.GF1.001)  = an IR model from MR signal models. <br/> <strong>Output:</strong> <br /> <em>R<sub>10</sub></em> (Q.EL1.002), <br/> Signal scaling factor (Q.MS1.010)</td>
+<td>This process estimates the native longitudinal relaxation rate <em>R<sub>10</sub></em> (and signal scaling factor <em>S<sub>0</sub></em>) from the MR signal measured at multiple prepulse delays assuming an inversion recovery GRE signal model. <br /> <strong>Input:</strong> <br /> Inversion method (select from <a href="../generalPurposeProcesses/#Inversion methods">Inversion methods</a>) with  <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] = [Signal (Q.MS1.001), Prepulse delay (Q.MS1.008)], <br/> Forward model (M.GF1.001)  = an IR model from MR signal models. <br/> <strong>Output:</strong> <br /> <a href="../quantities/#R10"><em>R<sub>10</sub></em> (Q.EL1.002)</a>, <br/> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a></td>
 <td>Ordidge et al. 1990</td>
 </tr>
 <tr>
@@ -731,7 +757,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Estimate Bolus Arrival Time</td>
 <td>--</td>
 <td>EstimateBAT</td>
-<td>This process returns the bolus arrival time (BAT) of a data set according to a specified bolus arrival time estimation method. <br /> <strong>Input:</strong> <br /> Bolus arrival time estimation method (select from BAT estimations methods) <br /> <strong>Output</strong>: <br />  Bolus arrival time (Q.BA1.001)</td>
+<td>This process returns the bolus arrival time (BAT) of a data set according to a specified bolus arrival time estimation method. <br /> <strong>Input:</strong> <br /> Bolus arrival time estimation method (select from <a href="#Bolus arrival time estimation methods">BAT estimation methods</a>) <br /> <strong>Output</strong>: <br />  <a href="../quantities/#BAT">Bolus arrival time (Q.BA1.001)</a></td>
 <td>--</td>
 </tr>
 </tbody>
@@ -754,7 +780,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Manually</td>
 <td>--</td>
 <td>Manually</td>
-<td>The BAT is manually determined by visual inspection.<br />  <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)]  <br /> <strong>Output</strong>: <br />  Bolus arrival time (Q.BA1.001)</td>
+<td>The BAT is manually determined by visual inspection.<br />  <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)]  <br /> <strong>Output</strong>: <br />  <a href="../quantities/#BAT">Bolus arrival time (Q.BA1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
@@ -762,7 +788,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Data value exceeds threshold</td>
 <td>--</td>
 <td>Exceeds threshold</td>
-<td>The BAT is estimated as the minimal data grid point at which the data value exceeds a certain threshold.<br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Lower threshold (Q.GE1.010) <br /> <strong>Output</strong>: <br /> Bolus arrival time (Q.BA1.001)</td>
+<td>The BAT is estimated as the minimal data grid point at which the data value exceeds a certain threshold.<br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Lower threshold (Q.GE1.010) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#BAT">Bolus arrival time (Q.BA1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
@@ -770,7 +796,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Derivative of data values exceeds threshold</td>
 <td>--</td>
 <td>Derivative exceeds threshold</td>
-<td>The BAT is estimated as the minimal data grid point at which the derivative of the data values exceeds a certain threshold. <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Lower threshold (Q.GE1.010) <br /> <strong>Output</strong>: <br /> Bolus arrival time (Q.BA1.001)</td>
+<td>The BAT is estimated as the minimal data grid point at which the derivative of the data values exceeds a certain threshold. <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Lower threshold (Q.GE1.010) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#BAT">Bolus arrival time (Q.BA1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
@@ -778,7 +804,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Intersection-based</td>
 <td>--</td>
 <td>Intersection-based</td>
-<td>The BAT is determined from calculating the intersection points of the data grid axis and straight lines joining the first N pairs of adjacent points. The BAT is estimated as the maximum of the intersection points. <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Intersection- based BAT estimation parameters (Q.BA1.002) <br /> <strong>Output</strong>: <br /> Bolus arrival time (Q.BA1.001)</td>
+<td>The BAT is determined from calculating the intersection points of the data grid axis and straight lines joining the first N pairs of adjacent points. The BAT is estimated as the maximum of the intersection points. <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Intersection- based BAT estimation parameters (Q.BA1.002) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#BAT">Bolus arrival time (Q.BA1.001)</a></td>
 <td>Galbraith et al. 2002</td>
 </tr>
 <tr>
@@ -786,7 +812,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Model-based</td>
 <td>--</td>
 <td>Model-based</td>
-<td>A specified model is fitted to the data, yielding the BAT as one of the estimated model parameters. <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) <br /> <strong>Output</strong>: <br /> Bolus arrival time (Q.BA1.001)</td>
+<td>A specified model is fitted to the data, yielding the BAT as one of the estimated model parameters. <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#BAT">Bolus arrival time (Q.BA1.001)</a></td>
 <td>Singh et al. 2009</td>
 </tr>
 <tr>
@@ -817,19 +843,12 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Estimate Baseline</td>
 <td>--</td>
 <td>EstimateBaseline</td>
-<td>This process returns the value of the baseline of a data set according to a specified baseline estimation method.  <br /> <strong>Input:</strong> <br /> Baseline estimation method (select from baseline estimation methods) <br /> <strong>Output</strong>: <br /> Baseline (Q.BL1.001)</td>
+<td>This process returns the value of the baseline of a data set according to a specified baseline estimation method.  <br /> <strong>Input:</strong> <br /> Baseline estimation method (select from <a href="#Baseline estimation methods">Baseline estimation methods</a>) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_BL">Baseline (Q.BL1.001)</a></td>
 <td>--</td>
-</tr>
-<tr>
-<td>### <a name="Baseline estimation methods"></a> Baseline estimation methods</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
+<h3 id="baseline-estimation-methods"><a name="Baseline estimation methods"></a> Baseline estimation methods<a class="headerlink" href="#baseline-estimation-methods" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -847,7 +866,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Manually</td>
 <td>--</td>
 <td>--</td>
-<td>The baseline is manually determined by visual inspection.  <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] <br /> <strong>Output</strong>: <br /> Baseline (Q.BL1.001)</td>
+<td>The baseline is manually determined by visual inspection.  <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_BL">Baseline (Q.BL1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
@@ -855,7 +874,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>nth data value</td>
 <td>--</td>
 <td>--</td>
-<td>The baseline is determined as the data value of thenth data grid point.  <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Index n (Q.GE1.003) <br /> <strong>Output</strong>: <br /> Baseline (Q.BL1.001)</td>
+<td>The baseline is determined as the data value of the nth data grid point.  <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Index n (Q.GE1.003) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_BL">Baseline (Q.BL1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
@@ -863,7 +882,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Mean baseline of range</td>
 <td>--</td>
 <td>Mean baseline</td>
-<td>The baseline is determined as the mean of data values in the data grid range (Start, End).  <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Start of range (Q.GE1.013),  <br /> End of range(Q.GE1.014) <br /> <strong>Output</strong>: <br /> Baseline (Q.BL1.001)</td>
+<td>The baseline is determined as the mean of data values in the data grid range (Start, End).  <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Start of range (Q.GE1.013),  <br /> End of range(Q.GE1.014) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_BL">Baseline (Q.BL1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
@@ -871,7 +890,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Minimum value</td>
 <td>--</td>
 <td>Minimum</td>
-<td>The baseline is determined as the minimum of all data values.  <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] <br /> <strong>Output</strong>: <br /> Baseline (Q.BL1.001)</td>
+<td>The baseline is determined as the minimum of all data values.  <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_BL">Baseline (Q.BL1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
@@ -879,7 +898,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Model-based</td>
 <td>--</td>
 <td>--</td>
-<td>A specified model is fitted to the data, yielding the baseline value as one of the estimated model parameters.  <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) <br /> <strong>Output</strong>: <br /> Baseline (Q.BL1.001)</td>
+<td>A specified model is fitted to the data, yielding the baseline value as one of the estimated model parameters.  <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_BL">Baseline (Q.BL1.001)</a></td>
 <td>Singh et al. 2009</td>
 </tr>
 <tr>
@@ -911,7 +930,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Estimate signal scaling factor</td>
 <td>--</td>
 <td>Estimate <em>S<sub>0</sub></em></td>
-<td>In this process the signal scaling factor is determined according to a specified <em>S<sub>0</sub></em> -estimation method.  <br /> <strong>Input:</strong> <br /> Signal scaling factor estimation method ( select from signal scaling factor estimation methods) <br /> <strong>Output</strong>: <br /> <em>S<sub>0</sub></em> (Q.MS1.010)</td>
+<td>In this process the signal scaling factor is determined according to a specified <em>S<sub>0</sub></em> -estimation method.  <br /> <strong>Input:</strong> <br /> Signal scaling factor estimation method ( select from signal scaling factor estimation methods) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a></td>
 <td>--</td>
 </tr>
 </tbody>
@@ -934,7 +953,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td><em>S<sub>0</sub></em> from native <em>R<sub>1</sub></em> estimation</td>
 <td>--</td>
 <td>--</td>
-<td>In this method <em>S<sub>0</sub></em>  is estimated as described in the native <em>R<sub>1</sub></em> -estimation methods which have <em>S<sub>0</sub></em>  as output.  <br /> <strong>Input:</strong> <br />  Select native R1 estimation method with <em>S<sub>0</sub></em> as output  <br /> <strong>Output</strong>: <br /> <em>S<sub>0</sub></em> (Q.MS1.010)</td>
+<td>In this method <em>S<sub>0</sub></em>  is estimated as described in the native <em>R<sub>1</sub></em> -estimation methods which have <em>S<sub>0</sub></em>  as output.  <br /> <strong>Input:</strong> <br />  Select native R1 estimation method with <em>S<sub>0</sub></em> as output  <br /> <strong>Output</strong>: <br /> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a></td>
 <td>--</td>
 </tr>
 <tr>
@@ -942,7 +961,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td><em>S<sub>0</sub></em> from baseline signal of dynamic data</td>
 <td>--</td>
 <td>--</td>
-<td>In this method <em>S<sub>0</sub></em>  is estimated by inverting a specified MR signal model according to a specified inversion method for the baseline signal and baseline relaxation rate. <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) with Forward model (M.GF1.001) = select from MR signal models with <br /> <em>R<sub>1</sub></em> (Q.EL1.001) =  <em>R<sub>10</sub></em> (Q.EL1.002) or <em>R<sub>2</sub></em> (Q.EL1.004) = <em>R<sub>20</sub></em> (Q.EL1.005) or <em>R<sub>2</sub><sup></em></sup>* (Q.EL1.007) = <em>R<sub>20</sub><sup></em></sup>* (Q.E.008), S (Q.MS1.001) = <em>S<sub>BL</sub></em>(Q.MS1.002) <strong>Output</strong>: <br /> <em>S<sub>0</sub></em> (Q.MS1.010)</td>
+<td>In this method <em>S<sub>0</sub></em>  is estimated by inverting a specified MR signal model according to a specified inversion method for the baseline signal and baseline relaxation rate. <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) with Forward model (M.GF1.001) = select from MR signal models with <br /> <em>R<sub>1</sub></em> (Q.EL1.001) =  <em>R<sub>10</sub></em> (Q.EL1.002) or <em>R<sub>2</sub></em> (Q.EL1.004) = <em>R<sub>20</sub></em> (Q.EL1.005) or <em>R<sub>2</sub><sup></em></sup>* (Q.EL1.007) = <em>R<sub>20</sub><sup></em></sup>* (Q.E.008), S (Q.MS1.001) = <em>S<sub>BL</sub></em>(Q.MS1.002) <br /><strong>Output</strong>: <br /> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a></td>
 <td>--</td>
 </tr>
 <tr>
@@ -1260,7 +1279,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 </tbody>
 </table>
 <h2 id="extraction-of-parameters">Extraction of parameters<a class="headerlink" href="#extraction-of-parameters" title="Permanent link">&para;</a></h2>
-<p>In this group various methods of how physiological or descriptive parameters can be derived.</p>
+<p>In this group methods are listed how to derive physiological or descriptive parameters.</p>
 <table>
 <thead>
 <tr>
