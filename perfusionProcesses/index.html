@@ -812,7 +812,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Model-based</td>
 <td>--</td>
 <td>Model-based</td>
-<td>A specified model is fitted to the data, yielding the BAT as one of the estimated model parameters. <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#BAT">Bolus arrival time (Q.BA1.001)</a></td>
+<td>A specified model is fitted to the data, yielding the BAT as one of the estimated model parameters. <br /> <strong>Input:</strong> <br /> Inversion method (select from <a href="../generalPurposeProcesses/#Inversion methods">Inversion methods</a>) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#BAT">Bolus arrival time (Q.BA1.001)</a></td>
 <td>Singh et al. 2009</td>
 </tr>
 <tr>
@@ -866,7 +866,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Manually</td>
 <td>--</td>
 <td>--</td>
-<td>The baseline is manually determined by visual inspection.  <br /> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#Data">Data grid (Q.GE1.001)</a>Grid] <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_BL">Baseline (Q.BL1.001)</a></td>
+<td>The baseline is manually determined by visual inspection.  <br /> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a> <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_BL">Baseline (Q.BL1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
@@ -874,7 +874,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>nth data value</td>
 <td>--</td>
 <td>--</td>
-<td>The baseline is determined as the data value of the nth data grid point.  <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Index n (Q.GE1.003) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_BL">Baseline (Q.BL1.001)</a></td>
+<td>The baseline is determined as the data value of the nth data grid point.  <br /> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>], <br /> <a href="../quantities/#index">Index n (Q.GE1.003)</a> <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_BL">Baseline (Q.BL1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
@@ -882,7 +882,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Mean baseline of range</td>
 <td>--</td>
 <td>Mean baseline</td>
-<td>The baseline is determined as the mean of data values in the data grid range (Start, End).  <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Start of range (Q.GE1.013),  <br /> End of range(Q.GE1.014) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_BL">Baseline (Q.BL1.001)</a></td>
+<td>The baseline is determined as the mean of data values in the data grid range (Start, End).  <br /> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>], <br /> <a href="../quantities/#x_start">Start of range (Q.GE1.013)</a>,  <br /> <a href="../quantities/#x_end">End of range (Q.GE1.014)</a> <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_BL">Baseline (Q.BL1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
@@ -890,7 +890,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Minimum value</td>
 <td>--</td>
 <td>Minimum</td>
-<td>The baseline is determined as the minimum of all data values.  <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_BL">Baseline (Q.BL1.001)</a></td>
+<td>The baseline is determined as the minimum of all data values.  <br /> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>] <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_BL">Baseline (Q.BL1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
@@ -898,7 +898,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Model-based</td>
 <td>--</td>
 <td>--</td>
-<td>A specified model is fitted to the data, yielding the baseline value as one of the estimated model parameters.  <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_BL">Baseline (Q.BL1.001)</a></td>
+<td>A specified model is fitted to the data, yielding the baseline value as one of the estimated model parameters.  <br /> <strong>Input:</strong> <br /> Inversion method (select from <a href="../generalPurposeProcesses/#Inversion methods">Inversion methods</a>) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_BL">Baseline (Q.BL1.001)</a></td>
 <td>Singh et al. 2009</td>
 </tr>
 <tr>
@@ -930,7 +930,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Estimate signal scaling factor</td>
 <td>--</td>
 <td>Estimate <em>S<sub>0</sub></em></td>
-<td>In this process the signal scaling factor is determined according to a specified <em>S<sub>0</sub></em> -estimation method.  <br /> <strong>Input:</strong> <br /> Signal scaling factor estimation method ( select from signal scaling factor estimation methods) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a></td>
+<td>In this process the signal scaling factor is determined according to a specified <em>S<sub>0</sub></em> -estimation method.  <br /> <strong>Input:</strong> <br /> Signal scaling factor estimation method ( select from <a href="#Signal scaling factor estimation methods">signal scaling factor estimation methods</a>) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a></td>
 <td>--</td>
 </tr>
 </tbody>
@@ -953,7 +953,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td><em>S<sub>0</sub></em> from native <em>R<sub>1</sub></em> estimation</td>
 <td>--</td>
 <td>--</td>
-<td>In this method <em>S<sub>0</sub></em>  is estimated as described in the native <em>R<sub>1</sub></em> -estimation methods which have <em>S<sub>0</sub></em>  as output.  <br /> <strong>Input:</strong> <br />  Select native R1 estimation method with <em>S<sub>0</sub></em> as output  <br /> <strong>Output</strong>: <br /> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a></td>
+<td>In this method <em>S<sub>0</sub></em>  is estimated as described in the native <em>R<sub>1</sub></em> -estimation methods which have <em>S<sub>0</sub></em>  as output.  <br /> <strong>Input:</strong> <br />  Select a <a href="#Native R1 estimation methods">native R1 estimation method</a> with <em>S<sub>0</sub></em> as output  <br /> <strong>Output</strong>: <br /> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a></td>
 <td>--</td>
 </tr>
 <tr>
@@ -961,7 +961,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td><em>S<sub>0</sub></em> from baseline signal of dynamic data</td>
 <td>--</td>
 <td>--</td>
-<td>In this method <em>S<sub>0</sub></em>  is estimated by inverting a specified MR signal model according to a specified inversion method for the baseline signal and baseline relaxation rate. <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) with Forward model (M.GF1.001) = select from MR signal models with <br /> <em>R<sub>1</sub></em> (Q.EL1.001) =  <em>R<sub>10</sub></em> (Q.EL1.002) or <em>R<sub>2</sub></em> (Q.EL1.004) = <em>R<sub>20</sub></em> (Q.EL1.005) or <em>R<sub>2</sub><sup></em></sup>* (Q.EL1.007) = <em>R<sub>20</sub><sup></em></sup>* (Q.E.008), S (Q.MS1.001) = <em>S<sub>BL</sub></em>(Q.MS1.002) <br /><strong>Output</strong>: <br /> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a></td>
+<td>In this method <em>S<sub>0</sub></em>  is estimated by inverting a specified MR signal model according to a specified inversion method for the baseline signal and baseline relaxation rate. <br /> <strong>Input:</strong> <br /> Inversion method (select from <a href="../generalPurposeProcesses/#Inversion methods">Inversion methods</a>) with <a href="../perfusionModels/#Forward model">Forward model (M.GF1.001)</a> = select from <a href="../perfusionModels/#MR signal models">MR signal models</a> with <br /> <a href="../quantities/#R1"><em>R<sub>1</sub></em> (Q.EL1.001)</a> =  <a href="../quantities/#R10"><em>R<sub>10</sub></em> (Q.EL1.002)</a> <br/> or <br/> <a href="../quantities/#R2"><em>R<sub>2</sub></em> (Q.EL1.004)</a> = <a href="../quantities/#R20"><em>R<sub>20</sub></em> (Q.EL1.005)</a> <br/> or <br/> <a href="../quantities/#R2Star"><em>R<sub>2</sub><sup></em></sup>* (Q.EL1.007)</a> = <a href="../quantities/#R2Star0"><em>R<sub>20</sub><sup></em></sup>* (Q.E.008)</a>, <br/> <a href="../quantities/#S">S (Q.MS1.001)</a> = <a href="../quantities/#S_BL"><em>S<sub>BL</sub></em>(Q.MS1.002)</a> <br /><strong>Output</strong>: <br /> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a></td>
 <td>--</td>
 </tr>
 <tr>
@@ -992,7 +992,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Estimate arterial input function</td>
 <td>--</td>
 <td>Estimate AIF</td>
-<td>This process returns the AIF from a given data set, derived using a specified AIF estimation method. Furthermore, it can be optionally specified if an AIF correction method (.e.g. Partial volume correction) will be applied or if a measurement preparation (e.g. dual bolus) has been done for data acquisition.  <br /> <strong>Input:</strong> <br /> AIF estimation method (select from AIF estimation methods), <br /> <em>optional</em>: <br /> AIF correction or measurement preparation (select from AIF correction and measurement preparation methods.  <br /> <strong>Output</strong>: <br />  [Plasma AIF (Q.IC1.003), t (Q.GE1.004)] or <br /> [Whole blood AIF (Q.IC1.004), t (Q.GE1.004)]</td>
+<td>This process returns the AIF from a given data set, derived using a specified AIF estimation method. Furthermore, it can be optionally specified if an AIF correction method (.e.g. Partial volume correction) will be applied or if a measurement preparation (e.g. dual bolus) has been done for data acquisition.  <br /> <strong>Input:</strong> <br /> AIF estimation method (select from <a href="#AIF estimation methods">AIF estimation methods</a>), <br /> <em>optional</em>: <br /> AIF correction or measurement preparation (select from <a href="#AIF correction and measurement preparation">AIF correction and measurement preparation</a>).  <br /> <strong>Output</strong>: <br />  [<a href="../quantities/#C">C<sub>a,p</sub> (Q.IC1.001.[a,p])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>] or <br /> [<a href="../quantities/#C">C<sub>a,b</sub> (Q.IC1.001.[a,b])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>]</td>
 <td>--</td>
 </tr>
 </tbody>
@@ -1015,7 +1015,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Literature-based AIF</td>
 <td>Population-based AIF</td>
 <td>--</td>
-<td>The AIF is taken from a published reference or from the average of a population.  <br /> <strong>Input:</strong> <br /> --  <br /> <strong>Output</strong>: <br />  [Plasma AIF (Q.IC1.003), t (Q.GE1.004)] or <br /> [Whole blood AIF (Q.IC1.004), t (Q.GE1.004)]</td>
+<td>The AIF is taken from a published reference or from the average of a population.  <br /> <strong>Input:</strong> <br /> --  <br /> <strong>Output</strong>: <br />  [<a href="../quantities/#C">C<sub>a,p</sub> (Q.IC1.001.[a,p])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>] or <br /> [<a href="../quantities/#C">C<sub>a,b</sub> (Q.IC1.001.[a,b])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>]</td>
 <td>--</td>
 </tr>
 <tr>
@@ -1023,7 +1023,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Mean ROI AIF</td>
 <td>--</td>
 <td>--</td>
-<td>In this process the AIF is determined by specifying the mask of a user-defined region of interest (within an artery). This process returns the mean concentration time curve within this masked ROI. <br /> <strong>Input:</strong> <br /> [Indicator concentration (Q.IC1.001),  t (Q.GE1.004)], <br /> Binary AIF mask (Q.SE1.002) <br />  <strong>Output</strong>: <br /> [Whole blood AIF (Q.IC1.004), t (Q.GE1.004)]</td>
+<td>In this process the AIF is determined by specifying the mask of a user-defined region of interest (within an artery). This process returns the mean concentration time curve within this masked ROI. <br /> <strong>Input:</strong> <br /> [<a href="../quantities/#C">Indicator concentration (Q.IC1.001)</a>,  <a href="../quantities/#t">t (Q.GE1.004)</a>], <br /> <a href="../quantities/#BinAIFMask">Binary AIF mask (Q.SE1.002)</a> <br />  <strong>Output</strong>: <br /> [<a href="../quantities/#C">C<sub>a,b</sub> (Q.IC1.001.[a,b])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>]</td>
 <td>--</td>
 </tr>
 <tr>
@@ -1031,7 +1031,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Model-based AIF</td>
 <td>--</td>
 <td>--</td>
-<td>The AIF is derived from fitting a model to the dynamic concentration data. <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) with <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] =  [Indicator concentration (Q.IC1.001), t (Q.GE1.004)] and <br /> Forward model (M.GF1.001) = select from AIF models or descriptive models] <br />  <strong>Output</strong>: <br />  [Plasma AIF (Q.IC1.003), t (Q.GE1.004)] or <br /> [Whole blood AIF (Q.IC1.004), t (Q.GE1.004)]</td>
+<td>The AIF is derived from fitting a model to the dynamic concentration data. <br /> <strong>Input:</strong> <br /> Inversion method (select from inversion methods) with <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>] =  [<a href="../quantities/#C">Indicator concentration (Q.IC1.001)</a>, <a href="../quantities/#t">t (Q.GE1.004)</a>] and <br /> <a href="../perfusionModels/#Forward model">Forward model (M.GF1.001)</a> = select from <a href="../perfusionModels/#AIF models">AIF models</a> or <a href="../perfusionModels/#Descriptive models">descriptive models</a>] <br />  <strong>Output</strong>: <br />  [<a href="../quantities/#C">C<sub>a,p</sub> (Q.IC1.001.[a,p])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>] or <br /> [<a href="../quantities/#C">C<sub>a,b</sub> (Q.IC1.001.[a,b])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>]</td>
 <td>--</td>
 </tr>
 <tr>
@@ -1039,7 +1039,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Automatic <em>k</em>-means-cluster-based</td>
 <td>--</td>
 <td><em>k</em>-means</td>
-<td>For automatic AIF selection, a k-means cluster algorithm to identify k clusters. The cluster with the lowest first moment represents the AIF. <br /> <strong>Input:</strong> <br /> [Indicator concentration (Q.IC1.001), t (Q.GE1.004)], <br />  Binary AIF mask (Q.SE1.002), <br />  <em>k</em>-means-cluster-algorithm-parameters (Q.AE1.001) <br /> <strong>Output</strong>: <br /> [Whole blood AIF (Q.IC1.004), t (Q.GE1.004)]</td>
+<td>For automatic AIF selection, a k-means cluster algorithm to identify k clusters. The cluster with the lowest first moment represents the AIF. <br /> <strong>Input:</strong> <br /> [<a href="../quantities/#C">Indicator concentration (Q.IC1.001)</a>, <a href="../quantities/#t">t (Q.GE1.004)</a>], <br />  <a href="../quantities/#BinAIFMask">Binary AIF mask (Q.SE1.002)</a>, <br />  <a href="../quantities/#kMeansParams"><em>k</em>-means-cluster-algorithm-parameters (Q.AE1.001)</a> <br /> <strong>Output</strong>: <br /> [<a href="../quantities/#C">C<sub>a,b</sub> (Q.IC1.001.[a,b])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>]</td>
 <td>--</td>
 </tr>
 <tr>
@@ -1047,7 +1047,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Automatic fuzzy-c-means-cluster-based</td>
 <td>--</td>
 <td>FCM</td>
-<td>For automatic AIF selection, a fuzzy-c-means-cluster algorithm with the “fuzziness” parameter <em>m</em>, the iterative tolerance level <img src="https://latex.codecogs.com/svg.image?\epsilon" title="https://latex.codecogs.com/svg.image?\epsilon" />, the number of clusters <em>c</em>, the cluster probability threshold value <em>P<sub>c</sub></em> and the initial cluster centroids <em>v<sub>i</sub></em>  are applied. The cluster with maximal <img src="https://latex.codecogs.com/svg.image?M&space;=&space;\frac{f_{max}}{TTP\cdot&space;FWHM}" title="https://latex.codecogs.com/svg.image?M = \frac{f_{max}}{TTP\cdot FWHM}" /> represents the AIF.  <br /> <strong>Input:</strong> <br /> [Indicator concentration (Q.IC1.001), t (Q.GE1.004)], <br />  Binary AIF mask (Q.SE1.002), <br />  Fuzzy-c-means-cluster-algorithm parameters (Q.AE1.002) <br />  <strong>Output</strong>: <br /> [Whole blood AIF (Q.IC1.004), t (Q.GE1.004)]</td>
+<td>For automatic AIF selection, a fuzzy-c-means-cluster algorithm with the “fuzziness” parameter <em>m</em>, the iterative tolerance level <img src="https://latex.codecogs.com/svg.image?\epsilon" title="https://latex.codecogs.com/svg.image?\epsilon" />, the number of clusters <em>c</em>, the cluster probability threshold value <em>P<sub>c</sub></em> and the initial cluster centroids <em>v<sub>i</sub></em>  are applied. The cluster with maximal <img src="https://latex.codecogs.com/svg.image?M&space;=&space;\frac{f_{max}}{TTP\cdot&space;FWHM}" title="https://latex.codecogs.com/svg.image?M = \frac{f_{max}}{TTP\cdot FWHM}" /> represents the AIF.  <br /> <strong>Input:</strong> <br /> [<a href="../quantities/#C">Indicator concentration (Q.IC1.001)</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>], <br />  <a href="../quantities/#BinAIFMask">Binary AIF mask (Q.SE1.002)</a>, <br />  <a href="../quantities/#fuzzycMeansParams">Fuzzy-c-means-cluster-algorithm parameters (Q.AE1.002)</a> <br />  <strong>Output</strong>: <br /> [<a href="../quantities/#C">C<sub>a,b</sub> (Q.IC1.001.[a,b])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>]</td>
 <td>--</td>
 </tr>
 <tr>
