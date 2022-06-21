@@ -718,7 +718,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Multi-delay Saturation Recovery</td>
 <td>--</td>
 <td>SR</td>
-<td>This process estimates the native longitudinal relaxation rate <em>R<sub>10</sub></em> (and signal scaling factor <em>S<sub>0</sub></em>) from the MR signal measured at multiple prepulse delays by inverting the saturation recovery GRE signal model according to a specified inversion method. <br /> <strong>Input:</strong> <br /> Inversion method (select from <a href="../generalPurposeProcesses/#Inversion methods">Inversion methods</a>) with  <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] = [Signal (Q.MS1.001), Prepulse delay (Q.MS1.008)], <br/> Forward model (M.GF1.001)  = an SR model from MR signal models <br/> <strong>Output:</strong> <br /> <a href="../quantities/#R10"><em>R<sub>10</sub></em> (Q.EL1.002)</a>, <br/> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a></td>
+<td>This process estimates the native longitudinal relaxation rate <em>R<sub>10</sub></em> (and signal scaling factor <em>S<sub>0</sub></em>) from the MR signal measured at multiple prepulse delays by inverting the saturation recovery GRE signal model according to a specified inversion method. <br /> <strong>Input:</strong> <br /> Inversion method (select from <a href="../generalPurposeProcesses/#Inversion methods">Inversion methods</a>) with  <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>] = [<a href="../quantities/#S">Signal (Q.MS1.001)</a>, <a href="../quantities/#PD">Prepulse delay time (Q.MS1.008)</a>], <br/> <a href="../perfusionModels/#Forward model">Forward model (M.GF1.001)</a> = an SR model from <a href="../perfusionModels/#MR signal models">MR signal models</a> <br/> <strong>Output:</strong> <br /> <a href="../quantities/#R10"><em>R<sub>10</sub></em> (Q.EL1.002)</a>, <br/> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a></td>
 <td>Parker et al. 2000</td>
 </tr>
 <tr>
@@ -726,7 +726,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Multi-delay Inversion Recovery</td>
 <td>--</td>
 <td>IR</td>
-<td>This process estimates the native longitudinal relaxation rate <em>R<sub>10</sub></em> (and signal scaling factor <em>S<sub>0</sub></em>) from the MR signal measured at multiple prepulse delays assuming an inversion recovery GRE signal model. <br /> <strong>Input:</strong> <br /> Inversion method (select from <a href="../generalPurposeProcesses/#Inversion methods">Inversion methods</a>) with  <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] = [Signal (Q.MS1.001), Prepulse delay (Q.MS1.008)], <br/> Forward model (M.GF1.001)  = an IR model from MR signal models. <br/> <strong>Output:</strong> <br /> <a href="../quantities/#R10"><em>R<sub>10</sub></em> (Q.EL1.002)</a>, <br/> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a></td>
+<td>This process estimates the native longitudinal relaxation rate <em>R<sub>10</sub></em> (and signal scaling factor <em>S<sub>0</sub></em>) from the MR signal measured at multiple prepulse delays assuming an inversion recovery GRE signal model. <br /> <strong>Input:</strong> <br /> Inversion method (select from <a href="../generalPurposeProcesses/#Inversion methods">Inversion methods</a>) with  <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>] = [<a href="../quantities/#S">Signal (Q.MS1.001)</a>, <a href="../quantities/#PD">Prepulse delay time (Q.MS1.008)</a>], <br/> <a href="../perfusionModels/#Forward model">Forward model (M.GF1.001)</a> = an IR model from <a href="../perfusionModels/#MR signal models">MR signal models</a>. <br/> <strong>Output:</strong> <br /> <a href="../quantities/#R10"><em>R<sub>10</sub></em> (Q.EL1.002)</a>, <br/> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a></td>
 <td>Ordidge et al. 1990</td>
 </tr>
 <tr>
@@ -780,7 +780,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Manually</td>
 <td>--</td>
 <td>Manually</td>
-<td>The BAT is manually determined by visual inspection.<br />  <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)]  <br /> <strong>Output</strong>: <br />  <a href="../quantities/#BAT">Bolus arrival time (Q.BA1.001)</a></td>
+<td>The BAT is manually determined by visual inspection.<br />  <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>]  <br /> <strong>Output</strong>: <br />  <a href="../quantities/#BAT">Bolus arrival time (Q.BA1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
@@ -788,7 +788,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Data value exceeds threshold</td>
 <td>--</td>
 <td>Exceeds threshold</td>
-<td>The BAT is estimated as the minimal data grid point at which the data value exceeds a certain threshold.<br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Lower threshold (Q.GE1.010) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#BAT">Bolus arrival time (Q.BA1.001)</a></td>
+<td>The BAT is estimated as the minimal data grid point at which the data value exceeds a certain threshold.<br /> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>], <br /> <a href="../quantities/#L">Lower threshold (Q.GE1.010)</a> <br /> <strong>Output</strong>: <br /> <a href="../quantities/#BAT">Bolus arrival time (Q.BA1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
@@ -796,7 +796,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Derivative of data values exceeds threshold</td>
 <td>--</td>
 <td>Derivative exceeds threshold</td>
-<td>The BAT is estimated as the minimal data grid point at which the derivative of the data values exceeds a certain threshold. <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Lower threshold (Q.GE1.010) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#BAT">Bolus arrival time (Q.BA1.001)</a></td>
+<td>The BAT is estimated as the minimal data grid point at which the derivative of the data values exceeds a certain threshold. <br /> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>], <br /> <a href="../quantities/#L">Lower threshold (Q.GE1.010)</a> <br /> <strong>Output</strong>: <br /> <a href="../quantities/#BAT">Bolus arrival time (Q.BA1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
@@ -804,7 +804,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Intersection-based</td>
 <td>--</td>
 <td>Intersection-based</td>
-<td>The BAT is determined from calculating the intersection points of the data grid axis and straight lines joining the first N pairs of adjacent points. The BAT is estimated as the maximum of the intersection points. <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Intersection- based BAT estimation parameters (Q.BA1.002) <br /> <strong>Output</strong>: <br /> <a href="../quantities/#BAT">Bolus arrival time (Q.BA1.001)</a></td>
+<td>The BAT is determined from calculating the intersection points of the data grid axis and straight lines joining the first N pairs of adjacent points. The BAT is estimated as the maximum of the intersection points. <br /> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>], <br /> <a href="../quantities/#IntersectionBATParms">Intersection-based BAT estimation parameters (Q.BA1.002)</a> <br /> <strong>Output</strong>: <br /> <a href="../quantities/#BAT">Bolus arrival time (Q.BA1.001)</a></td>
 <td>Galbraith et al. 2002</td>
 </tr>
 <tr>
@@ -866,7 +866,7 @@ The resulting native relaxation rate can be used e.g. as input for the conversio
 <td>Manually</td>
 <td>--</td>
 <td>--</td>
-<td>The baseline is manually determined by visual inspection.  <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_BL">Baseline (Q.BL1.001)</a></td>
+<td>The baseline is manually determined by visual inspection.  <br /> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#Data">Data grid (Q.GE1.001)</a>Grid] <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_BL">Baseline (Q.BL1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
