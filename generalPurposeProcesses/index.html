@@ -585,7 +585,7 @@
 <td>Analytical inversion</td>
 <td>--</td>
 <td>--</td>
-<td>This method is used when the solution of the model inversion is well-defined and the model parameters of interest can be calculated analytically. <br/> <strong>Input:</strong> <br /> Forward model (M.GE1.001), <br /> Static model parameters (Q.AI1.001), <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] <br /><strong>Output</strong>: <br /> Model parameters (Q.A1I.002)</td>
+<td>This method is used when the solution of the model inversion is well-defined and the model parameters of interest can be calculated analytically. <br/> <strong>Input:</strong> <br /> <a href="../perfusionModels/#Forward model">Forward model (M.GE1.001)</a>, <br /> <a href="../quantities/#AI_SMP">Static model parameters (Q.AI1.001)</a>, <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>] <br /><strong>Output</strong>: <br /> [<a href="../quantities/#AI_MP">Model parameters (Q.OP1.001)</a>]</td>
 <td>--</td>
 </tr>
 <tr>
@@ -593,7 +593,7 @@
 <td>Optimization</td>
 <td>Model fitting</td>
 <td>--</td>
-<td>Inversion of a forward model by iteratively adjusting the set of model parameters in order to minimize a similarity measure between the data and the model. <br/> <strong>Input:</strong> <br /> Optimizer (G.OP1.001) <br /> <strong>Output</strong>: <br /> Estimated model parameters (Q.OP1.003)</td>
+<td>Inversion of a forward model by iteratively adjusting the set of model parameters in order to minimize a similarity measure between the data and the model. <br/> <strong>Input:</strong> <br /> Optimizer (select from <a href="#Optimizers">optimizers</a>) <br /> <strong>Output</strong>: <br /> [<a href="../quantities/#EMP">Estimated model parameters (Q.OP1.003)</a>]</td>
 <td>--</td>
 </tr>
 <tr>
@@ -601,7 +601,7 @@
 <td>Deconvolution</td>
 <td>--</td>
 <td>--</td>
-<td>Method which can be used when a model is given as a convolution <img src="https://latex.codecogs.com/svg.image?h(x)=f(x)\ast&space;g(x)" title="https://latex.codecogs.com/svg.image?h(x)=f(x)\ast g(x)" /> with known <em>h(x)</em> and <em>f(x)</em> to determine <em>g(x)</em>. <br/> <strong>Input:</strong> <br /> Deconvolution method (G.D.001) <br /> <strong>Output</strong>: <br />  [Data (Q.G.002), Data grid (Q.G.001)] = [g(x), x]</td>
+<td>Method which can be used when a model is given as a convolution <img src="https://latex.codecogs.com/svg.image?h(x)=f(x)\ast&space;g(x)" title="https://latex.codecogs.com/svg.image?h(x)=f(x)\ast g(x)" /> with known <em>h(x)</em> and <em>f(x)</em> to determine <em>g(x)</em>. <br/> <strong>Input:</strong> <br /> Deconvolution method (select from <a href="#Deconvolution methods">deconvolution methods</a>) <br /> <strong>Output</strong>: <br />  [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001</a>)] = [g(x), x]</td>
 <td>--</td>
 </tr>
 <tr>
@@ -630,15 +630,15 @@
 <tbody>
 <tr>
 <td>G.OP1.001</td>
-<td>Levenberg-Marquardt</td>
+<td><a name="LM"></a> Levenberg-Marquardt</td>
 <td>--</td>
 <td>LM</td>
-<td>An algorithm that interpolates between the Gauss-Newton algorithm and the method of gradient descent.  <br/> <strong>Input:</strong> <br /> Cost function (select from cost functions), <br /> Initial parameters (Q.OP1.001) <br /> <em>Optional:</em> <br />  Parameter lower bounds (Q.O.002), <br /> Parameter upper bounds (Q.OP1.003),<br /> Data weights (Q.OP1.004),<br /> Maximum number of iterations (Q.OP1.010),<br /> Convergence threshold (Q.OP1.014)<br /> <strong>Output</strong>: <br />  Estimated model parameters (Q.OP1.003),<br /> Cost value minimum (Q.OP1.005)</td>
+<td>An algorithm that interpolates between the Gauss-Newton algorithm and the method of gradient descent.  <br/> <strong>Input:</strong> <br /> Cost function (select from <a href="#Cost functions">cost functions</a>), <br /> <a href="../quantities/#MP_init">Initial model parameters (Q.OP1.006)</a> <br /> <em>Optional:</em> <br />  <a href="../quantities/#MP_L">Model parameter lower bounds (Q.OP1.007)</a>, <br /> <a href="../quantities/#MP_U">Model parameter upper bounds (Q.OP1.008)</a>, <br /> <a href="../quantities/#Weights">Data weights (Q.OP1.009)</a>,<br /> <a href="../quantities/#N_iter_max">Maximum number of iterations (Q.OP1.010)</a>,<br /> <a href="../quantities/#ConvThresh">Convergence threshold (Q.OP1.011)</a><br /> <strong>Output</strong>: <br />  <a href="../quantities/#EMP">Estimated model parameters (Q.OP1.003)</a>,<br /> <a href="../quantities/#CostValue_min">Cost value minimum (Q.OP1.005)</a></td>
 <td>--</td>
 </tr>
 <tr>
 <td>G.OP1.999</td>
-<td>Method not listed</td>
+<td><a name="not listed OP1"></a> Method not listed</td>
 <td>--</td>
 <td>--</td>
 <td>This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
@@ -661,47 +661,47 @@
 <tbody>
 <tr>
 <td>G.OP2.001</td>
-<td>Non-linear least squares</td>
+<td><a name="NLLS"></a> Non-linear least squares</td>
 <td>--</td>
 <td>NLLS</td>
-<td><img src="https://latex.codecogs.com/svg.image?\left\|&space;f(\phi&space;,\theta;&space;x)-y(x)&space;\right\|_{2}^{2}&space;" title="https://latex.codecogs.com/svg.image?\left\| f(\phi ,\theta; x)-y(x) \right\|_{2}^{2} " /> , where <em>f</em> is a forward model describing the data, <em>x</em> is the data grid, <em>y(x)</em> is the measured data and <img src="https://latex.codecogs.com/svg.image?\left\|\&space;&space;\right\|_{2}&space;" title="https://latex.codecogs.com/svg.image?\left\|\ \right\|_{2} " />  is the L2-norm. The forward model is non-linear in the model parameters. <br/> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> Forward model (M.GF1.001), <br /> <img src="https://latex.codecogs.com/svg.image?\phi&space;&space;" title="https://latex.codecogs.com/svg.image?\phi " /> (Q.OP1.001), <br /> <img src="https://latex.codecogs.com/svg.image?\theta&space;" title="https://latex.codecogs.com/svg.image?\theta " /> (Q.OP1.002) <br /> <strong>Output</strong>: <br /> Cost value (Q.OP1.004) <br /></td>
+<td><img src="https://latex.codecogs.com/svg.image?\left\|&space;f(\phi&space;,\theta;&space;x)-y(x)&space;\right\|_{2}^{2}&space;" title="https://latex.codecogs.com/svg.image?\left\| f(\phi ,\theta; x)-y(x) \right\|_{2}^{2} " /> , where <em>f</em> is a forward model describing the data, <em>x</em> is the data grid, <em>y(x)</em> is the measured data and <img src="https://latex.codecogs.com/svg.image?\left\|\&space;&space;\right\|_{2}&space;" title="https://latex.codecogs.com/svg.image?\left\|\ \right\|_{2} " />  is the L2-norm. The forward model is non-linear in the model parameters. <br/> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>], <br /> <a href="../perfusionModels/#Forward model">Forward model (M.GF1.001)</a>, <br /> <a href="../quantities/#MP"><img src="https://latex.codecogs.com/svg.image?\phi&space;&space;" title="https://latex.codecogs.com/svg.image?\phi " /> (Q.OP1.001)</a>, <br /> <a href="../quantities/#SMP"><img src="https://latex.codecogs.com/svg.image?\theta&space;" title="https://latex.codecogs.com/svg.image?\theta " /> (Q.OP1.002)</a> <br /> <strong>Output</strong>: <br /> <a href="../quantities/#CostValue">Cost value (Q.OP1.004)</a> <br /></td>
 <td>--</td>
 </tr>
 <tr>
 <td>G.OP2.002</td>
-<td>Linear least squares</td>
+<td><a name="LLS"></a> Linear least squares</td>
 <td>--</td>
 <td>LLS</td>
-<td><img src="https://latex.codecogs.com/svg.image?\left\|A\phi&space;-y(x)&space;\right\|_{2}^{2}" title="https://latex.codecogs.com/svg.image?\left\|A\phi -y(x) \right\|_{2}^{2}" /> , where <em>x</em> is the data grid, <em>y(x)</em> is the measured data and <img src="https://latex.codecogs.com/svg.image?\left\|\&space;&space;\right\|_{2}&space;" title="https://latex.codecogs.com/svg.image?\left\|\ \right\|_{2} " />  is the L2-norm. <br/> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> <img src="https://latex.codecogs.com/svg.image?\phi&space;&space;" title="https://latex.codecogs.com/svg.image?\phi " /> (Q.OP1.001), <br /> <em>A</em> (Q.OP1.013) <br /> <strong>Output</strong>: <br /> Cost value (Q.OP1.004) <br /></td>
+<td><img src="https://latex.codecogs.com/svg.image?\left\|A\phi&space;-y(x)&space;\right\|_{2}^{2}" title="https://latex.codecogs.com/svg.image?\left\|A\phi -y(x) \right\|_{2}^{2}" /> , where <em>x</em> is the data grid, <em>y(x)</em> is the measured data and <img src="https://latex.codecogs.com/svg.image?\left\|\&space;&space;\right\|_{2}&space;" title="https://latex.codecogs.com/svg.image?\left\|\ \right\|_{2} " />  is the L2-norm. <br/> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>], <a href="../quantities/#MP"><br /> <img src="https://latex.codecogs.com/svg.image?\phi&space;&space;" title="https://latex.codecogs.com/svg.image?\phi " /> (Q.OP1.001)</a>, <br /> <a href="../quantities/#A"><em>A</em> (Q.OP1.012)</a> <br /> <strong>Output</strong>: <br /> <a href="../quantities/#CostValue">Cost value (Q.OP1.004)</a> <br /></td>
 <td>--</td>
 </tr>
 <tr>
 <td>G.OP2.003</td>
-<td>Standard-Form Tikhonov</td>
+<td><a name="SFT"></a> Standard-Form Tikhonov</td>
 <td>--</td>
 <td>SFT</td>
-<td><img src="https://latex.codecogs.com/svg.image?\left\|&space;A\phi&space;-y(x)&space;\right\|_{2}^{2}&plus;\lambda^{2}\left\|Lx&space;\right\|_{2}^{2}&space;" title="https://latex.codecogs.com/svg.image?\left\| A\phi -y(x) \right\|_{2}^{2}+\lambda^{2}\left\|Lx \right\|_{2}^{2} " /> , where <em>x</em> is the data grid, <em>y(x)</em> is the measured data , <img src="https://latex.codecogs.com/svg.image?\left\|\&space;&space;\right\|_{2}&space;" title="https://latex.codecogs.com/svg.image?\left\|\ \right\|_{2} " /> is the L2-norm and <em>L</em> is the identity matrix (same dimensions as <em>A</em>).  <br/> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> <img src="https://latex.codecogs.com/svg.image?\phi&space;&space;" title="https://latex.codecogs.com/svg.image?\phi " /> (Q.OP1.001), <br /> <em>A</em> (Q.OP1.013), <br /> <img src="https://latex.codecogs.com/svg.image?\lambda&space;" title="https://latex.codecogs.com/svg.image?\lambda " /> (Q.OP1.011) <br /> <strong>Output</strong>: <br /> Cost value (Q.OP1.004) <br /></td>
+<td><img src="https://latex.codecogs.com/svg.image?\left\|&space;A\phi&space;-y(x)&space;\right\|_{2}^{2}&plus;\lambda^{2}\left\|Lx&space;\right\|_{2}^{2}&space;" title="https://latex.codecogs.com/svg.image?\left\| A\phi -y(x) \right\|_{2}^{2}+\lambda^{2}\left\|Lx \right\|_{2}^{2} " /> , where <em>x</em> is the data grid, <em>y(x)</em> is the measured data , <img src="https://latex.codecogs.com/svg.image?\left\|\&space;&space;\right\|_{2}&space;" title="https://latex.codecogs.com/svg.image?\left\|\ \right\|_{2} " /> is the L2-norm and <em>L</em> is the identity matrix (same dimensions as <em>A</em>).  <br/> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>], <br /> <a href="../quantities/#MP"><img src="https://latex.codecogs.com/svg.image?\phi&space;&space;" title="https://latex.codecogs.com/svg.image?\phi " /> (Q.OP1.001)</a>, <br /> <a href="../quantities/#A"><em>A</em> (Q.OP1.012)</a>, <br /> <a href="../quantities/#Lambda"><img src="https://latex.codecogs.com/svg.image?\lambda&space;" title="https://latex.codecogs.com/svg.image?\lambda " /> (Q.OP1.013)</a> <br /> <strong>Output</strong>: <br /> <a href="../quantities/#CostValue">Cost value (Q.OP1.004)</a> <br /></td>
 <td>--</td>
 </tr>
 <tr>
 <td>G.OP2.004</td>
-<td>Generalized cross validation</td>
+<td><a name=GCV"></a> Generalized cross validation</td>
 <td>--</td>
 <td>GCV</td>
-<td><img src="https://latex.codecogs.com/svg.image?\frac{\left\|&space;A\phi_\lambda-y(x)\right\|_{2}^{2}}{trace(I-AA_{\lambda}^{\zeta})^{2}}" title="https://latex.codecogs.com/svg.image?\frac{\left\| A\phi_\lambda-y(x)\right\|_{2}^{2}}{trace(I-AA_{\lambda}^{\zeta})^{2}}" />, where <em>x</em> is the data grid, <em>y(x)</em> is the measured data, <img src="https://latex.codecogs.com/svg.image?\left\|\&space;&space;\right\|_{2}&space;" title="https://latex.codecogs.com/svg.image?\left\|\ \right\|_{2} " /> is the L2-norm, <em>I</em> is the identity matrix of the same dimensions a <em>A</em>, <img src="https://latex.codecogs.com/svg.image?\phi_\lambda&space;" title="https://latex.codecogs.com/svg.image?\phi_\lambda " /> is the solution of the matrix equation obtained from the SVD for a certain regularization parameter <em>&#955;</em>  and is defined by the relationship <img src="https://latex.codecogs.com/svg.image?\phi_\lambda=A_{\lambda}^{\zeta}y(x)" title="https://latex.codecogs.com/svg.image?\phi_\lambda=A_{\lambda}^{\zeta}y(x)" />.  <br/> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> <img src="https://latex.codecogs.com/svg.image?\phi&space;&space;" title="https://latex.codecogs.com/svg.image?\phi " /> (Q.OP1.001), <br /> <em>A</em> (Q.OP1.013), <br /> <img src="https://latex.codecogs.com/svg.image?\lambda&space;" title="https://latex.codecogs.com/svg.image?\lambda " /> (Q.OP1.011) <br /> <strong>Output</strong>: <br /> Cost value (Q.OP1.004) <br /></td>
+<td><img src="https://latex.codecogs.com/svg.image?\frac{\left\|&space;A\phi_\lambda-y(x)\right\|_{2}^{2}}{trace(I-AA_{\lambda}^{\zeta})^{2}}" title="https://latex.codecogs.com/svg.image?\frac{\left\| A\phi_\lambda-y(x)\right\|_{2}^{2}}{trace(I-AA_{\lambda}^{\zeta})^{2}}" />, where <em>x</em> is the data grid, <em>y(x)</em> is the measured data, <img src="https://latex.codecogs.com/svg.image?\left\|\&space;&space;\right\|_{2}&space;" title="https://latex.codecogs.com/svg.image?\left\|\ \right\|_{2} " /> is the L2-norm, <em>I</em> is the identity matrix of the same dimensions a <em>A</em>, <img src="https://latex.codecogs.com/svg.image?\phi_\lambda&space;" title="https://latex.codecogs.com/svg.image?\phi_\lambda " /> is the solution of the matrix equation obtained from the SVD for a certain regularization parameter <em>&#955;</em>  and is defined by the relationship <img src="https://latex.codecogs.com/svg.image?\phi_\lambda=A_{\lambda}^{\zeta}y(x)" title="https://latex.codecogs.com/svg.image?\phi_\lambda=A_{\lambda}^{\zeta}y(x)" />.  <br/> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>], <br /> <a href="../quantities/#MP"><img src="https://latex.codecogs.com/svg.image?\phi&space;&space;" title="https://latex.codecogs.com/svg.image?\phi " /> (Q.OP1.001)</a>, <br /> <a href="../quantities/#A"><em>A</em> (Q.OP1.012)</a>, <br /> <a href="../quantities/#Lambda"><img src="https://latex.codecogs.com/svg.image?\lambda&space;" title="https://latex.codecogs.com/svg.image?\lambda " /> (Q.OP1.013)</a> <br /> <strong>Output</strong>: <br /> <a href="../quantities/#CostValue">Cost value (Q.OP1.004)</a> <br /></td>
 <td>--</td>
 </tr>
 <tr>
 <td>G.OP2.005</td>
-<td>L-curve</td>
+<td><a name="LC"></a> L-curve</td>
 <td>--</td>
 <td>LC</td>
-<td><br/> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> <img src="https://latex.codecogs.com/svg.image?\phi&space;&space;" title="https://latex.codecogs.com/svg.image?\phi " /> (Q.OP1.001), <br /> <em>A</em> (Q.OP1.013), <br /> <img src="https://latex.codecogs.com/svg.image?\lambda&space;" title="https://latex.codecogs.com/svg.image?\lambda " /> (Q.OP1.011) <br /> <strong>Output</strong>: <br /> Cost value (Q.OP1.004) <br /></td>
+<td>TO DO <br/> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>], <br /> <a href="../quantities/#MP"><img src="https://latex.codecogs.com/svg.image?\phi&space;&space;" title="https://latex.codecogs.com/svg.image?\phi " /> (Q.OP1.001)</a>, <br /> <a href="../quantities/#A"><em>A</em> (Q.OP1.012)</a>, <br /> <a href="../quantities/#Lambda"><img src="https://latex.codecogs.com/svg.image?\lambda&space;" title="https://latex.codecogs.com/svg.image?\lambda " /> (Q.OP1.013)</a> <br /> <strong>Output</strong>: <br /> <a href="../quantities/#CostValue">Cost value (Q.OP1.004)</a> <br /></td>
 <td>--</td>
 </tr>
 <tr>
 <td>G.OP2.999</td>
-<td>Method not listed</td>
+<td><a name="not listed OP2"></a> Method not listed</td>
 <td>--</td>
 <td>--</td>
 <td>This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
@@ -724,31 +724,31 @@
 <tbody>
 <tr>
 <td>G.OP3.001</td>
-<td>Fixed</td>
+<td><a name="Lambda_fixed"></a> Fixed</td>
 <td>--</td>
 <td>--</td>
-<td>A fixed value of <em>&#955;</em> , rather than a determined value is assumed. <br/> <strong>Input:</strong> <br /> <em>&#955;</em><sub>fixed</sub> (Q.OP1.015) <br/> <strong>Output:</strong> <br /> <em>&#955;</em>(Q.OP1.013)</td>
+<td>A fixed value of <em>&#955;</em> , rather than a determined value is assumed. <br/> <strong>Input:</strong> <br /> <a href="../quantities/#Lambda_fixed"><em>&#955;</em><sub>fixed</sub> (Q.OP1.015)</a> <br/> <strong>Output:</strong> <br /> <a href="../quantities/#Lambda"><em>&#955;</em>(Q.OP1.013)</a></td>
 <td>--</td>
 </tr>
 <tr>
 <td>G.OP3.002</td>
-<td>Generalized Cross Validation</td>
+<td><a name="Lambda_GCV"></a> Generalized Cross Validation</td>
 <td>--</td>
 <td>GCV</td>
-<td><em>&#955;</em> is determined by minimizing the generalized cross validation cost function with respect to <em>&#955;</em>. <br/> <strong>Input:</strong> <br /> Optimizer (select from optimizers) with a Generalized cross validation (G.OP3.004) cost function and <em>&#934;</em>(Q.OP1.001) = <em>&#955;</em>(Q.OP1.013) <br/> <strong>Output:</strong> <br /> <em>&#955;</em>(Q.OP1.013)</td>
+<td><em>&#955;</em> is determined by minimizing the generalized cross validation cost function with respect to <em>&#955;</em>. <br/> <strong>Input:</strong> <br /> Optimizer (select from <a href="#Optimizers">optimizers</a>) with a <a href="#GCV">GCV cost function (G.OP2.004)</a> and <a href="../quantities/#MP"><em>&#934;</em>(Q.OP1.001)</a> = <a href="../quantities/#Lambda"><em>&#955;</em>(Q.OP1.013)</a> <br/> <strong>Output:</strong> <br /> <a href="../quantities/#Lambda"><em>&#955;</em>(Q.OP1.013)</a></td>
 <td>--</td>
 </tr>
 <tr>
 <td>G.OP3.003</td>
-<td>L-Curve criterion</td>
+<td><a name="Lambda_LC"></a> L-Curve criterion</td>
 <td>--</td>
 <td>LCC</td>
-<td><em>&#955;</em> is determined by minimizing the L-curve cost function with respect to <em>&#955;</em>. <br/> <strong>Input:</strong> <br /> Optimizer  (select from optimizers) with a  L-curve (G.OP3.005) cost function and <em>&#934;</em>(Q.OP1.001) = <em>&#955;</em>(Q.OP1.013). <br/> <strong>Output:</strong> <br /> <em>&#955;</em>(Q.OP1.013)</td>
+<td><em>&#955;</em> is determined by minimizing the L-curve cost function with respect to <em>&#955;</em>. <br/> <strong>Input:</strong> <br /> Optimizer  (select from <a href="#Optimizers">optimizers</a>) with a  <a href="#LC">L-curve cost function (G.OP2.005)</a> and <a href="../quantities/#MP"><em>&#934;</em>(Q.OP1.001)</a> = <a href="../quantities/#Lambda"><em>&#955;</em>(Q.OP1.013)</a>. <br/> <strong>Output:</strong> <br /> <a href="../quantities/#Lambda"><em>&#955;</em>(Q.OP1.013)</a></td>
 <td>--</td>
 </tr>
 <tr>
 <td>G.OP3.999</td>
-<td>Method not listed</td>
+<td><a name="not listed OP3"></a> Method not listed</td>
 <td>--</td>
 <td>--</td>
 <td>This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
@@ -770,27 +770,27 @@
 </thead>
 <tbody>
 <tr>
-<td>G.D.001</td>
-<td>Deconvolution method</td>
-<td>--</td>
-<td>--</td>
-<td>Method to determine [g(x), x] from a  convolution model of the shape <img src="https://latex.codecogs.com/svg.image?h(x)=f(x)\ast&space;g(x)" title="https://latex.codecogs.com/svg.image?h(x)=f(x)\ast g(x)" /> with given and [f(x),x] and [h(x),x]. Select from <a href="#Deconvolution methods">Deconvolution methods</a>.</td>
-<td>--</td>
-</tr>
-<tr>
-<td>G.D.002</td>
-<td>Discretization method</td>
+<td>G.DE1.001</td>
+<td><a name="Discretization method"></a> Discretization method</td>
 <td>--</td>
 <td>--</td>
 <td>Method to transfer continuous models, functions and equations into discrete counterparts. Select from <a href="#Discretization methods">Discretization methods</a>.</td>
 <td>--</td>
 </tr>
 <tr>
-<td>G.D.003</td>
-<td>Regularization method</td>
+<td>G.DE1.002</td>
+<td><a name="Regularization method"></a> Regularization method</td>
 <td>--</td>
 <td>--</td>
 <td>Method to control an excessively fluctuating function such that the coefficients do not take extreme values. This is done by adding an additional penalty term in the cost function. Select a regularized cost function from <a href="#Cost functions">Cost functions</a>.</td>
+<td>--</td>
+</tr>
+<tr>
+<td>G.DE1.999</td>
+<td><a name="not listed DE1"></a> Method not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
 <td>--</td>
 </tr>
 </tbody>
@@ -809,11 +809,19 @@
 </thead>
 <tbody>
 <tr>
-<td>--</td>
-<td>Singular Value Decomposition</td>
+<td>G.DE2.001</td>
+<td><a name="SVD"></a> Singular Value Decomposition</td>
 <td>--</td>
 <td>SVD</td>
-<td>Algebraic deconvolution of <img src="https://latex.codecogs.com/svg.image?h(x)=f(x)\ast&space;g(x)" title="https://latex.codecogs.com/svg.image?h(x)=f(x)\ast g(x)" /> with <em>f(x)</em> and <em>h(x)</em> sampled at discrete points <em>[f(x), x]</em> and <em>[g(x), x]</em>. The convolution equation is discretized according to a given discretization method and the resulting matrix equation is solved as a regularized least-squares problem with a given regularization method. <br/> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] =  [f(x), x], <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] = [g(x), x], <br /> Discretization method (G.DE1.002), <br /> Regularization method (G.DE1.003) <br /> <strong>Output</strong>: <br />[Data (Q.GE1.002), Data grid (Q.GE1.001)] = [g(x), x] <br /></td>
+<td>Algebraic deconvolution of <img src="https://latex.codecogs.com/svg.image?h(x)=f(x)\ast&space;g(x)" title="https://latex.codecogs.com/svg.image?h(x)=f(x)\ast g(x)" /> with <em>f(x)</em> and <em>h(x)</em> sampled at discrete points <em>[f(x), x]</em> and <em>[g(x), x]</em>. The convolution equation is discretized according to a given discretization method and the resulting matrix equation is solved as a regularized least-squares problem with a given regularization method. <br/> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>] =  [f(x), x], <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>] = [g(x), x], <br /> Discretization method (select from <a href="#Discretization methods">discretization methods</a> ), <br /> Regularization method (select from <a href="#Regularization method">regularization methods</a>) <br /> <strong>Output</strong>: <br />[<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>] = [g(x), x] <br /></td>
+<td>--</td>
+</tr>
+<tr>
+<td>G.DE2.999</td>
+<td><a name="not listed DE2"></a> Method not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
 <td>--</td>
 </tr>
 </tbody>
@@ -833,7 +841,7 @@
 </thead>
 <tbody>
 <tr>
-<td>G.DI.001</td>
+<td>G.DI1.001</td>
 <td>Numerical convolution (first order)</td>
 <td>--</td>
 <td>--</td>
@@ -841,7 +849,7 @@
 <td>--</td>
 </tr>
 <tr>
-<td>G.DI.002</td>
+<td>G.DI1.002</td>
 <td>Block-circulant</td>
 <td>--</td>
 <td>--</td>
@@ -849,7 +857,7 @@
 <td>Wu 2004</td>
 </tr>
 <tr>
-<td>G.DI.003</td>
+<td>G.DI1.003</td>
 <td>Volterra linear</td>
 <td>--</td>
 <td>--</td>
@@ -857,7 +865,7 @@
 <td>Sourbron 2003</td>
 </tr>
 <tr>
-<td>G.DI.004</td>
+<td>G.DI1.004</td>
 <td>Singular</td>
 <td>--</td>
 <td>--</td>
@@ -865,7 +873,7 @@
 <td>Ostergaard 1996</td>
 </tr>
 <tr>
-<td>G.DI.005</td>
+<td>G.DI1.005</td>
 <td>Hybrid</td>
 <td>--</td>
 <td>--</td>
@@ -873,12 +881,20 @@
 <td>Willats 2006</td>
 </tr>
 <tr>
-<td>G.DI.006</td>
+<td>G.DI1.006</td>
 <td>Exponential convolution</td>
 <td>--</td>
 <td>--</td>
 <td>Convolutions <img src="https://latex.codecogs.com/svg.image?f(x)&space;=&space;g(x)\ast&space;\frac{e^{-\frac{x}{T}}}{T}" title="https://latex.codecogs.com/svg.image?f(x) = g(x)\ast \frac{e^{-\frac{x}{T}}}{T}" /> are calculated as </br> <img src="https://latex.codecogs.com/svg.image?f_{i&plus;1}=e^{-x_i}f_i&plus;g_iE_0(x_i)&plus;a'TE_1(x_i)" title="https://latex.codecogs.com/svg.image?f_{i+1}=e^{-x_i}f_i+g_iE_0(x_i)+a'TE_1(x_i)" /> with </br> <img src="https://latex.codecogs.com/svg.image?x_i=\frac{t_{i&plus;1}-t_i}{T};&space;a'_i=\frac{a_{i&plus;1}-a}{t_{i&plus;1}-t_i};\&space;E_0&space;=&space;1-e^{-x};\&space;E_1(x)=x-E_0(x)" title="https://latex.codecogs.com/svg.image?x_i=\frac{t_{i+1}-t_i}{T}; a'_i=\frac{a_{i+1}-a}{t_{i+1}-t_i};\ E_0 = 1-e^{-x};\ E_1(x)=x-E_0(x)" /> .</td>
 <td>Flouri 2016</td>
+</tr>
+<tr>
+<td>G.DI1.999</td>
+<td><a name="not listed DI1"></a> Method not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
 </tr>
 </tbody>
 </table>
@@ -998,6 +1014,14 @@
 <td>--</td>
 <td><img src="https://latex.codecogs.com/svg.image?CalcAUC_{x_{start},x_{end}}" title="https://latex.codecogs.com/svg.image?CalcAUC_{x_{start},x_{end}}" /></td>
 <td>This process returns the integral of data on a data grid in between a range of data grid points <em>x<sub>start</sub></em> and <em>x<sub>end</sub></em>. <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)],<br/> [<em>x<sub>start</sub></em> (Q.GE1.013), <em>x<sub>end</sub></em>(Q.GE1.014)] <br /> <strong>Output</strong>:<br /> <em>AUC<sub>x<sub>start</sub>,x<sub>end</sub></sub></em> (Q.CD1.013)</td>
+<td>--</td>
+</tr>
+<tr>
+<td>G.CD1.999</td>
+<td><a name="not listed CD1"></a> Method not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
 <td>--</td>
 </tr>
 </tbody>
