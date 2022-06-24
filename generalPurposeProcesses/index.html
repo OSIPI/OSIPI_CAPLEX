@@ -813,7 +813,7 @@
 <td><a name="SVD"></a> Singular Value Decomposition</td>
 <td>--</td>
 <td>SVD</td>
-<td>Algebraic deconvolution of <img src="https://latex.codecogs.com/svg.image?h(x)=f(x)\ast&space;g(x)" title="https://latex.codecogs.com/svg.image?h(x)=f(x)\ast g(x)" /> with <em>f(x)</em> and <em>h(x)</em> sampled at discrete points <em>[f(x), x]</em> and <em>[g(x), x]</em>. The convolution equation is discretized according to a given discretization method and the resulting matrix equation is solved as a regularized least-squares problem with a given regularization method. <br/> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>] =  [f(x), x], <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>] = [g(x), x], <br /> Discretization method (select from <a href="#Discretization methods">discretization methods</a> ), <br /> Regularization method (select from <a href="#Regularization method">regularization methods</a>) <br /> <strong>Output</strong>: <br />[<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>] = [g(x), x] <br /></td>
+<td>Algebraic deconvolution of <img src="https://latex.codecogs.com/svg.image?h(x)=f(x)\ast&space;g(x)" title="https://latex.codecogs.com/svg.image?h(x)=f(x)\ast g(x)" /> with <em>f(x)</em> and <em>h(x)</em> sampled at discrete points <em>[f(x), x]</em> and <em>[g(x), x]</em>. The convolution equation is discretized according to a given discretization method and the resulting matrix equation is solved as a regularized least-squares problem with a given regularization method. <br/> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>] =  [f(x), x], <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>] = [g(x), x], <br /> Discretization method (select from <a href="#Discretization methods">discretization methods</a> ), <br /> <a href="#Regularization method">Regularization method</a> <br /> <strong>Output</strong>: <br />[<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>] = [g(x), x] <br /></td>
 <td>--</td>
 </tr>
 <tr>
@@ -842,7 +842,7 @@
 <tbody>
 <tr>
 <td>G.DI1.001</td>
-<td>Numerical convolution (first order)</td>
+<td><a name="Numerical convolution 1st order"></a> Numerical convolution (first order)</td>
 <td>--</td>
 <td>--</td>
 <td>Convolutions <img src="https://latex.codecogs.com/svg.image?f(x)=g(x)\ast&space;h(x)" title="https://latex.codecogs.com/svg.image?f(x)=g(x)\ast h(x)" /> are calculated as </br> <img src="https://latex.codecogs.com/svg.image?f_n&space;=&space;\Delta&space;x\cdot&space;\sum_{i=0}^{n}g_i\cdot&space;h_{n-i}" title="https://latex.codecogs.com/svg.image?f_n = \Delta x\cdot \sum_{i=0}^{n}g_i\cdot h_{n-i}" /></td>
@@ -850,7 +850,7 @@
 </tr>
 <tr>
 <td>G.DI1.002</td>
-<td>Block-circulant</td>
+<td><a name="Block-circulant"></a> Block-circulant</td>
 <td>--</td>
 <td>--</td>
 <td>Convolutions <img src="https://latex.codecogs.com/svg.image?f(x)=g(x)\ast&space;h(x)" title="https://latex.codecogs.com/svg.image?f(x)=g(x)\ast h(x)" /> are calculated as <img src="https://latex.codecogs.com/svg.image?f_n&space;=&space;\Delta&space;x\cdot(g_0h_n&plus;g_1h_{n-1}&plus;...&plus;g_Nh_{n-N})" title="https://latex.codecogs.com/svg.image?f_n = \Delta x\cdot(g_0h_n+g_1h_{n-1}+...+g_Nh_{n-N})" /> . </br> This requires <em>h<sub>i</sub></em> to be pre-padded with <em>N</em> zeros such that <em>h<sub>i</sub> &lt; 0 = 0</em>.</td>
@@ -858,7 +858,7 @@
 </tr>
 <tr>
 <td>G.DI1.003</td>
-<td>Volterra linear</td>
+<td><a name="Volterra linear"></a> Volterra linear</td>
 <td>--</td>
 <td>--</td>
 <td>Convolutions <img src="https://latex.codecogs.com/svg.image?f(x)=g(x)\ast&space;h(x)" title="https://latex.codecogs.com/svg.image?f(x)=g(x)\ast h(x)" /> are calculated as  </br> <img src="https://latex.codecogs.com/svg.image?f_n&space;=&space;\Delta&space;x\cdot&space;(h_0g_n^&plus;&space;&plus;\sum_{i=1}^{n-1}h_{n-i}g_i^{\pm}&plus;h_ng_0^&plus;)" title="https://latex.codecogs.com/svg.image?f_n = \Delta x\cdot (h_0g_n^+ +\sum_{i=1}^{n-1}h_{n-i}g_i^{\pm}+h_ng_0^+)" /></td>
@@ -866,7 +866,7 @@
 </tr>
 <tr>
 <td>G.DI1.004</td>
-<td>Singular</td>
+<td><a name=Singular"></a> Singular</td>
 <td>--</td>
 <td>--</td>
 <td>Convolutions <img src="https://latex.codecogs.com/svg.image?f(x)=g(x)\ast&space;h(x)" title="https://latex.codecogs.com/svg.image?f(x)=g(x)\ast h(x)" /> are calculated as </br> <img src="https://latex.codecogs.com/svg.image?f_n&space;=&space;\Delta&space;x\cdot(\sum_{i=-\infty&space;}^{&plus;\infty&space;}h_{n-i}g_i^\pm&space;)" title="https://latex.codecogs.com/svg.image?f_n = \Delta x\cdot(\sum_{i=-\infty }^{+\infty }h_{n-i}g_i^\pm )" /> . </br> It is assumed that <em>g<sub>i</sub> = 0</em> for <em>i &lt; 0</em> and there is an index <em>k</em> such that h<sub>n</sub> = 0* for <em>n &lt;- k</em>.</td>
@@ -874,7 +874,7 @@
 </tr>
 <tr>
 <td>G.DI1.005</td>
-<td>Hybrid</td>
+<td><a name=Hybrid"></a> Hybrid</td>
 <td>--</td>
 <td>--</td>
 <td>Convolutions <img src="https://latex.codecogs.com/svg.image?f(x)=g(x)\ast&space;h(x)" title="https://latex.codecogs.com/svg.image?f(x)=g(x)\ast h(x)" /> are calculated as </br> <img src="https://latex.codecogs.com/svg.image?f_n&space;=&space;\frac{\Delta&space;x}{2}\cdot(\sum_{i=-\infty&space;}^{&plus;\infty}h_{n-i}(g_{i-1}&plus;g_i))" title="https://latex.codecogs.com/svg.image?f_n = \frac{\Delta x}{2}\cdot(\sum_{i=-\infty }^{+\infty}h_{n-i}(g_{i-1}+g_i))" /> .</td>
@@ -882,7 +882,7 @@
 </tr>
 <tr>
 <td>G.DI1.006</td>
-<td>Exponential convolution</td>
+<td><a name=Exponential convolution"></a> Exponential convolution</td>
 <td>--</td>
 <td>--</td>
 <td>Convolutions <img src="https://latex.codecogs.com/svg.image?f(x)&space;=&space;g(x)\ast&space;\frac{e^{-\frac{x}{T}}}{T}" title="https://latex.codecogs.com/svg.image?f(x) = g(x)\ast \frac{e^{-\frac{x}{T}}}{T}" /> are calculated as </br> <img src="https://latex.codecogs.com/svg.image?f_{i&plus;1}=e^{-x_i}f_i&plus;g_iE_0(x_i)&plus;a'TE_1(x_i)" title="https://latex.codecogs.com/svg.image?f_{i+1}=e^{-x_i}f_i+g_iE_0(x_i)+a'TE_1(x_i)" /> with </br> <img src="https://latex.codecogs.com/svg.image?x_i=\frac{t_{i&plus;1}-t_i}{T};&space;a'_i=\frac{a_{i&plus;1}-a}{t_{i&plus;1}-t_i};\&space;E_0&space;=&space;1-e^{-x};\&space;E_1(x)=x-E_0(x)" title="https://latex.codecogs.com/svg.image?x_i=\frac{t_{i+1}-t_i}{T}; a'_i=\frac{a_{i+1}-a}{t_{i+1}-t_i};\ E_0 = 1-e^{-x};\ E_1(x)=x-E_0(x)" /> .</td>
@@ -914,71 +914,71 @@
 <tbody>
 <tr>
 <td>G.CD1.001</td>
-<td>Calculate value at data grid point</td>
+<td><a name="Calcf(x_i)"></a> Calculate value at data grid point</td>
 <td>--</td>
 <td><em>Calcf(x<sub>i</sub>)</em></td>
-<td>This process returns the data value <em>f(x<sub>i</em></sub>) at the data grid point <em>x<sub>i</sub></em>. <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)], <br /> <em>i</em> (Q.GE1.003) <br /> <strong>Output</strong>: <br /> <em>f(x<sub>i</sub>)</em> (Q.CD1.001)</td>
+<td>This process returns the data value <em>f(x<sub>i</em></sub>) at the data grid point <em>x<sub>i</sub></em>. <br /> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>], <br /> <a href="../quantities/#index"><em>i</em> (Q.GE1.003)</a> <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f(x_i)"><em>f(x<sub>i</sub>)</em> (Q.CD1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
 <td>G.CD1.002</td>
-<td>Calculate maximum of data</td>
+<td><a name="Calcf_max"></a> Calculate maximum of data</td>
 <td>--</td>
 <td><em>Calcf<sub>max</sub></em></td>
-<td>This process returns the maximum data value <em>f<sub>max</sub></em> . <br /> <strong>Input:</strong> <br /> Data (Q.GE1.002) <br /> <strong>Output</strong>: <br /> <em>f<sub>max</sub></em> (Q.CD1.002)</td>
+<td>This process returns the maximum data value <em>f<sub>max</sub></em> . <br /> <strong>Input:</strong> <br /> <a href="../quantities/#Data">Data (Q.GE1.002)</a> <br /> <strong>Output</strong>: <a href="../quantities/#f_max"><br /> <em>f<sub>max</sub></em> (Q.CD1.002)</a></td>
 <td>--</td>
 </tr>
 <tr>
 <td>G.CD1.003</td>
-<td>Calculate data grid point of maximum data value</td>
+<td><a name="Calcx_max"></a> Calculate data grid point of maximum data value</td>
 <td>--</td>
 <td><em>Calcx<sub>max</sub></em></td>
-<td>This process returns the data grid point at which the maximum of a given data set occurs. <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] <br /> <strong>Output</strong>: <br /> x<sub>max</sub> (Q.CD1.003)</td>
+<td>This process returns the data grid point at which the maximum of a given data set occurs. <br /> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>] <br /> <strong>Output</strong>: <br /> <a href="../quantities/#x_max">x<sub>max</sub> (Q.CD1.003)</a></td>
 <td>--</td>
 </tr>
 <tr>
 <td>G.CD1.004</td>
-<td>Calculate minimum of data</td>
+<td><a name="Calcf_min"></a> Calculate minimum of data</td>
 <td>--</td>
 <td><em>Calcf<sub>min</sub></em></td>
-<td>This process returns the minimum data value <em>f<sub>min</sub></em> . <br /> <strong>Input:</strong> <br /> Data (Q.GE1.002) <br /> <strong>Output</strong>: <br /> <em>f<sub>min</sub></em> (Q.CD1.004)</td>
+<td>This process returns the minimum data value <em>f<sub>min</sub></em> . <br /> <strong>Input:</strong> <br /> <a href="../quantities/#Data">Data (Q.GE1.002)</a> <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_min"><em>f<sub>min</sub></em> (Q.CD1.004)</a></td>
 <td>--</td>
 </tr>
 <tr>
 <td>G.CD1.005</td>
-<td>Calculate data grid point of minimum data value</td>
+<td><a name="Calcx_min"></a> Calculate data grid point of minimum data value</td>
 <td>--</td>
 <td><em>Calcx<sub>min</sub></em></td>
-<td>This process returns the data grid point at which the minimum of a given data set occurs. <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] <br /> <strong>Output</strong>: <br /> x<sub>min</sub> (Q.CD1.005)</td>
+<td>This process returns the data grid point at which the minimum of a given data set occurs. <br /> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>] <br /> <strong>Output</strong>: <br /> <a href="../quantities/#x_min">x<sub>min</sub> (Q.CD1.005)</a></td>
 <td>--</td>
 </tr>
 <tr>
 <td>G.CD1.006</td>
-<td>Calculate value of final data point</td>
+<td><a name="Calcf_fin"></a> Calculate value of final data point</td>
 <td>--</td>
 <td><em>Calcf<sub>fin</sub></em></td>
-<td>This process returns the value of the data at the final data grid point. <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)] <br /> <strong>Output</strong>: <br /> <em>f<sub>fin</sub></em> (Q.CD1.006)</td>
+<td>This process returns the value of the data at the final data grid point. <br /> <strong>Input:</strong> <br /> [<a href="../quantities/#Data">Data (Q.GE1.002)</a>, <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>] <br /> <strong>Output</strong>: <br /> <a href="../quantities/#f_fin"><em>f<sub>fin</sub></em> (Q.CD1.006)</a></td>
 <td>--</td>
 </tr>
 <tr>
 <td>G.CD1.007</td>
-<td>Calculate final data grid point</td>
+<td><a name="Calcx_fin"></a> Calculate final data grid point</td>
 <td>--</td>
 <td><em>Calcx<sub>fin</sub></em></td>
-<td>This process returns the last data grid point of a given data grid. <br /> <strong>Input:</strong> <br /> Data grid (Q.GE1.001) <br /> <strong>Output</strong>: <br /> <em>x<sub>fin</sub></em> (Q.C1D.007)</td>
+<td>This process returns the last data grid point of a given data grid. <br /> <strong>Input:</strong> <br /> <a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a> <br /> <strong>Output</strong>: <br /> <a href="../quantities/#x_fin"><em>x<sub>fin</sub></em> (Q.C1D.007)</a></td>
 <td>--</td>
 </tr>
 <tr>
 <td>G.CD1.008</td>
-<td>Calculate maximum deviation from baseline</td>
+<td><a name="Calcf_BL_max"></a> Calculate maximum deviation from baseline</td>
 <td>--</td>
 <td><img src="https://latex.codecogs.com/svg.image?Calc\Delta&space;f_{BL,max}" title="https://latex.codecogs.com/svg.image?Calc\Delta f_{BL,max}" /></td>
-<td>This process returns the maximum absolute deviation of a given data set and baseline.  <br /> <strong>Input:</strong> <br /> Data (Q.GE1.002), <br /> Baseline (Q.BL1.001)<br /> <strong>Output</strong>: <br /> <img src="https://latex.codecogs.com/svg.image?\Delta&space;f_{BL,max}" title="https://latex.codecogs.com/svg.image?\Delta f_{BL,max}" /> (Q.D.008)</td>
+<td>This process returns the maximum absolute deviation of a given data set and baseline.  <br /> <strong>Input:</strong> <br /> <a href="../quantities/#Data">Data (Q.GE1.002)</a>, <br /> <a href="../quantities/#f_BL">Baseline value (Q.BL1.001)</a> <br /> <strong>Output</strong>: <br /> <a href="../quantities/#maxDev"><img src="https://latex.codecogs.com/svg.image?\Delta&space;f_{BL,max}" title="https://latex.codecogs.com/svg.image?\Delta f_{BL,max}" /> (Q.CD1.008)</a></td>
 <td>--</td>
 </tr>
 <tr>
 <td>G.CD1.009</td>
-<td>Derivative at data grid point</td>
+<td><a name="">CalcDeriv</a> Derivative at data grid point</td>
 <td>--</td>
 <td><img src="https://latex.codecogs.com/svg.image?Calc\frac{df(x_i)}{dx}" title="https://latex.codecogs.com/svg.image?Calc\frac{df(x_i)}{dx}" /></td>
 <td>This process returns the value of the derivative of a given data set at the data grid point x<sub>i</sub>. <br /></td>
@@ -986,7 +986,7 @@
 </tr>
 <tr>
 <td>G.CD1.010</td>
-<td>Calculate time to peak</td>
+<td><a name="">CalcTTP</a> Calculate time to peak</td>
 <td>--</td>
 <td>CalcTTP</td>
 <td>This process returns the time to peak for a given bolus arrival time and data grid point of maximum value. <br /> <strong>Input:</strong> <br /> <em>x<sub>max</sub></em> (Q.CD1.003),<br /> <em>BAT</em> (Q.BA1.001) <br /> <strong>Output</strong>:<br />  <em>TTP</em> (Q.CD1.010)</td>
@@ -994,7 +994,7 @@
 </tr>
 <tr>
 <td>G.CD1.011</td>
-<td>Calculate wash-in slope</td>
+<td><a name="CalcWIS"></a> Calculate wash-in slope</td>
 <td>--</td>
 <td>CalcWIS</td>
 <td>This process returns the wash-in-slope for a given baseline, maximum value and time to peak of a data set. <br /> <strong>Input:</strong> <br /> <em>f<sub>max</sub></em> (Q.CD1.002), <br /> <em>f<sub>BL</sub></em> (Q.BL1.001), <br /> <em>TTP</em> (Q.CD1.010)  <br /> <strong>Output</strong>:<br /> <em>WIS</em> (Q.CD1.011)</td>
@@ -1002,7 +1002,7 @@
 </tr>
 <tr>
 <td>G.CD1.012</td>
-<td>Calculate wash-out slope</td>
+<td><a name="CalcWOS"></a> Calculate wash-out slope</td>
 <td>--</td>
 <td>CalcWOS</td>
 <td>This process returns the wash-out-slope for a given maximum value, final data value and the data grid points of the maximum and final data value of a data set. <br /> <strong>Input:</strong> <br /> <em>f<sub>max</sub></em> (Q.CD1.002), <br /> <em>f<sub>fin</sub></em>(Q.CD1.006), <br /> <em>x<sub>max</sub></em> (Q.CD1.003), <br /> <em>x<sub>fin</sub></em> (Q.CD1.007)  <br /> <strong>Output</strong>:<br/> <em>WOS (Q.CD1.012)</em></td>
@@ -1010,7 +1010,7 @@
 </tr>
 <tr>
 <td>G.CD1.013</td>
-<td>Calculate area under curve</td>
+<td><a name="CalcAUC"></a> Calculate area under curve</td>
 <td>--</td>
 <td><img src="https://latex.codecogs.com/svg.image?CalcAUC_{x_{start},x_{end}}" title="https://latex.codecogs.com/svg.image?CalcAUC_{x_{start},x_{end}}" /></td>
 <td>This process returns the integral of data on a data grid in between a range of data grid points <em>x<sub>start</sub></em> and <em>x<sub>end</sub></em>. <br /> <strong>Input:</strong> <br /> [Data (Q.GE1.002), Data grid (Q.GE1.001)],<br/> [<em>x<sub>start</sub></em> (Q.GE1.013), <em>x<sub>end</sub></em>(Q.GE1.014)] <br /> <strong>Output</strong>:<br /> <em>AUC<sub>x<sub>start</sub>,x<sub>end</sub></sub></em> (Q.CD1.013)</td>
@@ -1042,7 +1042,7 @@
 <tbody>
 <tr>
 <td>G.SE1.001</td>
-<td>Create binary mask</td>
+<td><a name=""></a> Create binary mask</td>
 <td>--</td>
 <td>--</td>
 <td>This process creates a binary segmentation mask on a given data set using a specified segmentation method. <br /> <strong>Input:</strong> <br /> Data (Q.GE1.002), <br /> Segmentation method (G.SE1.003) <br /> <strong>Output</strong>: <br /> Binary mask (Q.SE1.001)</td>
@@ -1050,7 +1050,7 @@
 </tr>
 <tr>
 <td>G.SE1.002</td>
-<td>Apply binary mask</td>
+<td><a name=""></a> Apply binary mask</td>
 <td>--</td>
 <td>--</td>
 <td>This process masks a given data set with a given mask. <br/> <strong>Input:</strong> <br /> Data (Q.GE1.002), Binary mask (Q.SE1.001) <br /> <strong>Output</strong>: <br /> Data (Q.GE1.002)</td>
@@ -1058,7 +1058,7 @@
 </tr>
 <tr>
 <td>G.SE1.003</td>
-<td>Segmentation method</td>
+<td><a name=""></a> Segmentation method</td>
 <td>--</td>
 <td>--</td>
 <td>Method to create a segmentation mask. Select from <a href="#Segmentation methods">Segmentation methods</a></td>
@@ -1081,7 +1081,7 @@
 <tbody>
 <tr>
 <td>G.SE2.001</td>
-<td>Freehand</td>
+<td><a name=""></a> Freehand</td>
 <td>--</td>
 <td>--</td>
 <td>Manual freehand drawing of contours. <br/> <strong>Input:</strong> <br />  Data (Q.GE1.002) <br /> <strong>Output</strong>: <br /> Binary mask (Q.SE1.001)</td>
@@ -1089,7 +1089,7 @@
 </tr>
 <tr>
 <td>G.SE2.002</td>
-<td>Threshold</td>
+<td><a name=""></a> Threshold</td>
 <td>--</td>
 <td>--</td>
 <td>This method selects all input data with values in a specified range between lower and upper threshold. <br/> <strong>Input:</strong> <br /> Data (Q.GE1.002), <br /> Lower threshold (Q.GE1.010), <br /> Upper threshold (Q.GE1.011) <br /> <strong>Output</strong>: Binary mask (Q.SE1.001)</td>
@@ -1097,7 +1097,7 @@
 </tr>
 <tr>
 <td>G.SE2.003</td>
-<td>Region growing</td>
+<td><a name=""></a> Region growing</td>
 <td>--</td>
 <td>--</td>
 <td>This method grows a region from selected seeds with values between the lower and upper value threshold in the neighborhood of the seeds.  <br/> <strong>Input:</strong> <br /> Data (Q.GE1.002), <br /> Seeds (Q.SE1.004), <br /> Lower threshold (Q.GE1.010), <br /> Upper threshold (Q.GE1.011) <br /> <strong>Output</strong>: Binary mask (Q.SE1.001)</td>
@@ -1105,7 +1105,7 @@
 </tr>
 <tr>
 <td>G.SE2.004</td>
-<td><em>k</em>-means clustering</td>
+<td><a name=""></a> <em>k</em>-means clustering</td>
 <td>--</td>
 <td>--</td>
 <td>This method partitions the input data in a number of clusters using the <em>K</em>-means clustering algorithm and selects the cluster with the ith index as binary mask. <br/> <strong>Input:</strong> <br /> Data (Q.GE1.002), <br /> Number of <em>K</em>-Means clusters (Q.SE1.005), <br /> <em>i</em> (Q.GE1.003)<br /> <strong>Output</strong>: <br /> Binary mask (Q.SE1.001)</td>
@@ -1151,7 +1151,7 @@
 <tbody>
 <tr>
 <td>G.AV1.001</td>
-<td>Calculate Average</td>
+<td><a name=""></a> Calculate Average</td>
 <td>--</td>
 <td>CalcAv</td>
 <td>This process returns the average of input data according to a specified averaging method. <br/> <strong>Input:</strong> <br /> Data (Q.GE1.002), Averaging method (select from uncertainty estimation and statistics processes e.g. <img src="https://latex.codecogs.com/svg.image?\bar{x}" title="https://latex.codecogs.com/svg.image?\bar{x}" /> (G.US1.001) ) <br/> <strong>Output:</strong> <br /> Data (Q.GE1.002)</td>
