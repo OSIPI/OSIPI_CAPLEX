@@ -556,11 +556,11 @@
 </thead>
 <tbody>
 <tr>
-<td>M.G.001</td>
+<td>M.GF1.001</td>
 <td><a name="Forward model"></a> Forward model</td>
 <td>--</td>
 <td>--</td>
-<td>A forward model to be inverted. Selected from <a href="#section M">Section M</a>.</td>
+<td>A forward model to be inverted (select from <a href="#section M">Section M</a>.</td>
 <td>--</td>
 </tr>
 </tbody>
@@ -582,19 +582,19 @@ The exception is section “Magnitude models: DCE - R1 in the fast water exchang
 </thead>
 <tbody>
 <tr>
-<td>M.S.001</td>
+<td>M.SM1.001</td>
 <td><a name="GRE model"></a> Gradient echo model</td>
 <td>--</td>
 <td>GE model</td>
-<td>This forward model is given by the following equation: </br> <img src="https://latex.codecogs.com/svg.image?S&space;=&space;S_0\cdot&space;e^{-TE\cdot&space;R_2^*}&space;" title="https://latex.codecogs.com/svg.image?S = S_0\cdot e^{-TE\cdot R_2^*} " />  </br> with </br> <a href="../quantities/#TE"><em>TE</em> (Q.S.005)</a>, </br> <em>S<sub>0</sub></em> (Q.S.010), </br> <em>R<sub>2</sub><sup></em></sup>* (Q.E.007), </br> <em>S</em> (Q.S.001).</td>
+<td>This forward model is given by the following equation: </br> <img src="https://latex.codecogs.com/svg.image?S&space;=&space;S_0\cdot&space;e^{-TE\cdot&space;R_2^*}&space;" title="https://latex.codecogs.com/svg.image?S = S_0\cdot e^{-TE\cdot R_2^*} " />  </br> with </br> <a href="../quantities/#TE"><em>TE</em> (Q.MS1.005)</a>, </br> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a>, </br> <a href="../quantities/#R2Star"><em>R<sub>2</sub><sup></em></sup>* (Q.EL1.007)</a>, </br> <a href="../quantities/#S"><em>S</em> (Q.MS1.001)</a>.</td>
 <td>Jackson et al. 2005</td>
 </tr>
 <tr>
-<td>M.S.002</td>
+<td>M.SM1.002</td>
 <td><a name="SE model"></a> Spin echo model</td>
 <td>--</td>
 <td>SE model</td>
-<td>This forward model is given by the following equation: </br> <img src="https://latex.codecogs.com/svg.image?S&space;=&space;S_0\cdot&space;e^{-TE\cdot&space;R_2}&space;" title="https://latex.codecogs.com/svg.image?S = S_0\cdot e^{-TE\cdot R_2} " /> </br>  with </br> <a href="../quantities/#TE"><em>TE</em> (Q.S.005)</a>, </br> <em>S<sub>0</sub></em> (Q.S.010), </br> <em>R<sub>2</sub></em> (Q.E.004),</br><em>S</em> (Q.S.001).</td>
+<td>This forward model is given by the following equation: </br> <img src="https://latex.codecogs.com/svg.image?S&space;=&space;S_0\cdot&space;e^{-TE\cdot&space;R_2}&space;" title="https://latex.codecogs.com/svg.image?S = S_0\cdot e^{-TE\cdot R_2} " /> </br>  with </br> <a href="../quantities/#TE"><em>TE</em> (Q.MS1.005)</a>, </br> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a>, </br> <a href="../quantities/#R2"><em>R<sub>2</sub></em> (Q.EL1.004)</a>,</br> <a href="../quantities/#S"><em>S</em> (Q.MS1.001)</a>.</td>
 <td>Jackson et al. 2005</td>
 </tr>
 </tbody>
@@ -613,51 +613,51 @@ The exception is section “Magnitude models: DCE - R1 in the fast water exchang
 </thead>
 <tbody>
 <tr>
-<td>M.S.003</td>
-<td><a name="LinModel_M.S.003"></a> Linear model</td>
+<td>M.SM2.001</td>
+<td><a name="LinModel_SM2"></a> Linear model</td>
 <td>--</td>
 <td>Linear</td>
-<td>This forward model is given by the following equation: </br> <img src="https://latex.codecogs.com/svg.image?S=k\cdot&space;R_1" title="https://latex.codecogs.com/svg.image?S=k\cdot R_1" /> </br> with </br> <em>k</em> (Q.G.009), </br> <em>R<sub>1</sub></em> (Q.E.001),</br> <em>S</em> (Q.S.001).</td>
+<td>This forward model is given by the following equation: </br> <img src="https://latex.codecogs.com/svg.image?S=k\cdot&space;R_1" title="https://latex.codecogs.com/svg.image?S=k\cdot R_1" /> </br> with </br> <a href="../quantities/#const"><em>k</em> (Q.GE1.009)</a>, </br> <a href="../quantities/#R1"><em>R<sub>1</sub></em> (Q.EL1.001)</a>,</br> <a href="../quantities/#S"><em>S</em> (Q.MS1.001)</a>.</td>
 <td>--</td>
 </tr>
 <tr>
-<td>M.S.004</td>
+<td>M.SM2.002</td>
 <td><a name="SPGR model"></a> Spoiled gradient recalled echo model</td>
 <td>FLASH model</td>
 <td>SPGR model</td>
-<td>This forward model is given by the following equation: <img src="https://latex.codecogs.com/svg.image?S=S_0\cdot&space;\frac{sin(\alpha)[1-e^{-TR\cdot&space;R_1}]}{1-cos(\alpha)\cdot&space;e^{-TR\cdot&space;R_1}}" title="https://latex.codecogs.com/svg.image?S=S_0\cdot \frac{sin(\alpha)[1-e^{-TR\cdot R_1}]}{1-cos(\alpha)\cdot e^{-TR\cdot R_1}}" /> </br> with </br> <em>S<sub>0</sub></em> (Q.S.010), </br> <em>R<sub>1</sub></em> (Q.E.001), </br> <em>TR</em> (Q.S.006), </br><img src="https://latex.codecogs.com/svg.image?\alpha&space;" title="https://latex.codecogs.com/svg.image?\alpha " /> (Q.S.007), </br> <em>S</em> (Q.S.001)</td>
+<td>This forward model is given by the following equation: <img src="https://latex.codecogs.com/svg.image?S=S_0\cdot&space;\frac{sin(\alpha)[1-e^{-TR\cdot&space;R_1}]}{1-cos(\alpha)\cdot&space;e^{-TR\cdot&space;R_1}}" title="https://latex.codecogs.com/svg.image?S=S_0\cdot \frac{sin(\alpha)[1-e^{-TR\cdot R_1}]}{1-cos(\alpha)\cdot e^{-TR\cdot R_1}}" /> </br> with </br> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a>, </br> <a href="../quantities/#R1"><em>R<sub>1</sub></em> (Q.EL1.001)</a>, </br> <a href="../quantities/#TR"><em>TR</em> (Q.MS1.006)</a>, </br> <a href="../quantities/#Flip angle">α (Q.MS1.007)</a>, </br> <a href="../quantities/#S"><em>S</em> (Q.MS1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
-<td>M.S.005</td>
+<td>M.SM2.003</td>
 <td><a name="SS-SR-SPGR-c model"></a> Single-shot saturation recovery SPGR with centric encoding model</td>
 <td>SS-SR-FLASH-c model</td>
 <td>SS-SR-SPGR-c model</td>
-<td>This forward model is given by the following equation: <img src="https://latex.codecogs.com/svg.image?S=&space;S_0\cdot(1-e^{-PD\cdot&space;R_1})" title="https://latex.codecogs.com/svg.image?S= S_0\cdot(1-e^{-PD\cdot R_1})" /> </br> with </br> <em>S<sub>0</sub></em> (Q.S.010), </br> <em>R<sub>1</sub></em> (Q.E.001), </br> PD (Q.S.008), </br> <em>S</em> (Q.S.001)</td>
+<td>This forward model is given by the following equation: <img src="https://latex.codecogs.com/svg.image?S=&space;S_0\cdot(1-e^{-PD\cdot&space;R_1})" title="https://latex.codecogs.com/svg.image?S= S_0\cdot(1-e^{-PD\cdot R_1})" /> </br> with </br> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a>, </br> <a href="../quantities/#R1"><em>R<sub>1</sub></em> (Q.EL1.001)</a>, </br> <a href="../quantities/#PD">PD (Q.MS1.008)</a>, </br> <a href="../quantities/#S"><em>S</em> (Q.MS1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
-<td>M.S.006</td>
+<td>M.SM2.004</td>
 <td><a name="SR-turboSPGR-lin model"></a> Saturation-recovery SPGR with linear encoding model</td>
 <td>SR-turboFLASH-lin model</td>
 <td>SR-turboSPGR-lin model</td>
-<td>This forward model is given by the following equation: <img src="https://latex.codecogs.com/svg.image?S=&space;S_0\cdot&space;sin(\alpha&space;)[(1-e^{-PD\cdot&space;R_1})a^{n-1}&plus;b\frac{(1-a^{n-1})}{(1-a)}]" title="https://latex.codecogs.com/svg.image?S= S_0\cdot sin(\alpha )[(1-e^{-PD\cdot R_1})a^{n-1}+b\frac{(1-a^{n-1})}{(1-a)}]" /> </br> with </br> <img src="https://latex.codecogs.com/svg.image?a=cos(\alpha&space;)\cdot&space;e^{-TR\cdot&space;R_1}" title="https://latex.codecogs.com/svg.image?a=cos(\alpha )\cdot e^{-TR\cdot R_1}" />, </br> <img src="https://latex.codecogs.com/svg.image?b=1-e^{-TR\cdot&space;R_1}" title="https://latex.codecogs.com/svg.image?b=1-e^{-TR\cdot R_1}" />, </br> <em>S<sub>0</sub></em> (Q.S.010), </br> <em>R<sub>1</sub></em> (Q.E.001), </br> PD (Q.S.008), </br> <em>TR</em> (Q.S.006), </br> <img src="https://latex.codecogs.com/svg.image?\alpha&space;" title="https://latex.codecogs.com/svg.image?\alpha " /> (Q.S.006)= 90°, </br> n (Q.S.001), </br> <em>S</em> (Q.S.001)</td>
+<td>This forward model is given by the following equation: <img src="https://latex.codecogs.com/svg.image?\begin{aligned}S&space;&=&space;S_0\cdot&space;sin(\alpha)\cdot[(1-e^{-PD\cdot&space;R_1})a^{n-1}\\&&space;&plus;b\frac{(1-a^{n-1})}{(1-a)}]\end{aligned}" title="https://latex.codecogs.com/svg.image?\begin{aligned}S &= S_0\cdot sin(\alpha)\cdot[(1-e^{-PD\cdot R_1})a^{n-1}\\& +b\frac{(1-a^{n-1})}{(1-a)}]\end{aligned}" /> </br> with </br> <img src="https://latex.codecogs.com/svg.image?a=cos(\alpha&space;)\cdot&space;e^{-TR\cdot&space;R_1}" title="https://latex.codecogs.com/svg.image?a=cos(\alpha )\cdot e^{-TR\cdot R_1}" />, </br> <img src="https://latex.codecogs.com/svg.image?b=1-e^{-TR\cdot&space;R_1}" title="https://latex.codecogs.com/svg.image?b=1-e^{-TR\cdot R_1}" />, </br> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a>, </br> <a href="../quantities/#R1"><em>R<sub>1</sub></em> (Q.EL1.001)</a>, </br> <a href="../quantities/#PD">PD (Q.MS1.008)</a>, </br> <a href="../quantities/#TR"><em>TR</em> (Q.MS1.006)</a>, </br> <a href="../quantities/#Flip angle">α (Q.MS1.006)</a>= 90°, </br> <a href="../quantities/#n k-space">n (Q.MS1.011)</a>, </br> <a href="../quantities/#S"><em>S</em> (Q.MS1.001)</a></td>
 <td>Larson 2001</td>
 </tr>
 <tr>
-<td>M.S.007</td>
+<td>M.SM2.005</td>
 <td><a name="SS-IR-SPGR-c model"></a> Single-shot inversion recovery SPGR with centric encoding model</td>
 <td>SS-IR-FLASH-c model</td>
 <td>SS-IR-SPGR-c model</td>
-<td>This forward model is given by the following equation: <img src="https://latex.codecogs.com/svg.image?S&space;=&space;S_0\cdot(1-2e^{-PD\cdot&space;R_1})" title="https://latex.codecogs.com/svg.image?S = S_0\cdot(1-2e^{-PD\cdot R_1})" />  </br> with </br> <em>S<sub>0</sub></em> (Q.S.010), </br> <em>R<sub>1</sub></em> (Q.E.001), </br> PD (Q.S.008), </br> <em>S</em> (Q.S.001)</td>
+<td>This forward model is given by the following equation: <img src="https://latex.codecogs.com/svg.image?S&space;=&space;S_0\cdot(1-2e^{-PD\cdot&space;R_1})" title="https://latex.codecogs.com/svg.image?S = S_0\cdot(1-2e^{-PD\cdot R_1})" />  </br> with </br> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a>, </br> <a href="../quantities/#R1"><em>R<sub>1</sub></em> (Q.EL1.001)</a>, </br> <a href="../quantities/#PD">PD (Q.MS1.008)</a>, </br> <a href="../quantities/#S"><em>S</em> (Q.MS1.001)</a></td>
 <td>Ordidge et al. 1990</td>
 </tr>
 <tr>
-<td>M.S.008</td>
+<td>M.SM2.006</td>
 <td><a name="IR-turboFLASH-lin model"></a> Inversion-recovery spoiled gradient recalled echo with linear encoding model</td>
 <td>IR-turboFLASH-lin model</td>
 <td>IR-turboSPGR-lin model</td>
-<td>This forward model is given by the following equation: <img src="https://latex.codecogs.com/svg.image?\inline&space;S=&space;S_0\cdot&space;sin(\alpha&space;)[\frac{C&plus;bA-\frac{1}{cos(\alpha&space;)}D&plus;1}{1&plus;BD}e^{-PD\cdot&space;R_1}&space;a^{n-1}&plus;...\\...(1-e^{-PD\cdot&space;R_1})a^{n-1}&plus;b\frac{1-a^{n-1}}{1-a}]" title="https://latex.codecogs.com/svg.image?\inline S= S_0\cdot sin(\alpha )[\frac{C+bA-\frac{1}{cos(\alpha )}D+1}{1+BD}e^{-PD\cdot R_1} a^{n-1}+...\\...(1-e^{-PD\cdot R_1})a^{n-1}+b\frac{1-a^{n-1}}{1-a}]" /> </br> with </br> <img src="https://latex.codecogs.com/svg.image?\inline&space;a=cos(\alpha&space;)e^{-TR\cdot&space;R_1}" title="https://latex.codecogs.com/svg.image?\inline a=cos(\alpha )e^{-TR\cdot R_1}" />, </br> <img src="https://latex.codecogs.com/svg.image?\inline&space;b=1-e^{-TR\cdot&space;R_1}" title="https://latex.codecogs.com/svg.image?\inline b=1-e^{-TR\cdot R_1}" />, </br> <img src="https://latex.codecogs.com/svg.image?\inline&space;C=a^{N-1}(1-e^{-PD\cdot&space;R_1})" title="https://latex.codecogs.com/svg.image?\inline C=a^{N-1}(1-e^{-PD\cdot R_1})" />, </br> <img src="https://latex.codecogs.com/svg.image?\inline&space;A&space;=&space;\frac{1-a^{N-1}}{1-a}" title="https://latex.codecogs.com/svg.image?\inline A = \frac{1-a^{N-1}}{1-a}" />, </br> <img src="https://latex.codecogs.com/svg.image?\inline&space;D&space;=&space;cos(\alpha&space;)e^{-PD\cdot&space;R_1}" title="https://latex.codecogs.com/svg.image?\inline D = cos(\alpha )e^{-PD\cdot R_1}" />, </br> <img src="https://latex.codecogs.com/svg.image?\inline&space;B&space;=&space;a^{N-1}e^{-PD\cdot&space;R_1}" title="https://latex.codecogs.com/svg.image?\inline B = a^{N-1}e^{-PD\cdot R_1}" />, </br>  <em>S<sub>0</sub></em>  (Q.S.010),</br> <em>R<sub>1</sub></em> (Q.E.001), </br> <em>PD</em> (Q.S.008), </br>  <img src="https://latex.codecogs.com/svg.image?\inline&space;\alpha&space;" title="https://latex.codecogs.com/svg.image?\inline \alpha " /> (Q.S.007) , </br> <em>TR</em> (Q.S.006), </br> <em>n</em> (Q.S.001), </br> <em>N</em> (Q.S.012), </br> <em>S</em> (Q.S.001)</td>
+<td>This forward model is given by the following equation: <img src="https://latex.codecogs.com/svg.image?\begin{aligned}S&space;&=&space;S_0\cdot&space;sin(\alpha)\cdot\\&&space;[\frac{(C&plus;bA-\frac{1}{cos(\alpha)}D&plus;1)}{1&plus;BD}\cdot\\&&space;e^{-PD\cdot&space;R_1}a^{n-1}&plus;(1-e^{-PD\cdot&space;R_1})a^{n-1}&plus;\\&&space;b\frac{1-a^{n-1}}{1-a}]\end{aligned}" title="https://latex.codecogs.com/svg.image?\begin{aligned}S &= S_0\cdot sin(\alpha)\cdot\\& [\frac{(C+bA-\frac{1}{cos(\alpha)}D+1)}{1+BD}\cdot\\& e^{-PD\cdot R_1}a^{n-1}+(1-e^{-PD\cdot R_1})a^{n-1}+\\& b\frac{1-a^{n-1}}{1-a}]\end{aligned}" /> </br> with </br> <img src="https://latex.codecogs.com/svg.image?\inline&space;a=cos(\alpha&space;)e^{-TR\cdot&space;R_1}" title="https://latex.codecogs.com/svg.image?\inline a=cos(\alpha )e^{-TR\cdot R_1}" />, </br> <img src="https://latex.codecogs.com/svg.image?\inline&space;b=1-e^{-TR\cdot&space;R_1}" title="https://latex.codecogs.com/svg.image?\inline b=1-e^{-TR\cdot R_1}" />, </br> <img src="https://latex.codecogs.com/svg.image?\inline&space;C=a^{N-1}(1-e^{-PD\cdot&space;R_1})" title="https://latex.codecogs.com/svg.image?\inline C=a^{N-1}(1-e^{-PD\cdot R_1})" />, </br> <img src="https://latex.codecogs.com/svg.image?\inline&space;A&space;=&space;\frac{1-a^{N-1}}{1-a}" title="https://latex.codecogs.com/svg.image?\inline A = \frac{1-a^{N-1}}{1-a}" />, </br> <img src="https://latex.codecogs.com/svg.image?\inline&space;D&space;=&space;cos(\alpha&space;)e^{-PD\cdot&space;R_1}" title="https://latex.codecogs.com/svg.image?\inline D = cos(\alpha )e^{-PD\cdot R_1}" />, </br> <img src="https://latex.codecogs.com/svg.image?\inline&space;B&space;=&space;a^{N-1}e^{-PD\cdot&space;R_1}" title="https://latex.codecogs.com/svg.image?\inline B = a^{N-1}e^{-PD\cdot R_1}" />, </br> <a href="../quantities/#S_0"><em>S<sub>0</sub></em> (Q.MS1.010)</a>,</br> <a href="../quantities/#R1"><em>R<sub>1</sub></em> (Q.EL1.001)</a>, </br> <a href="../quantities/#PD"><em>PD</em> (Q.MS1.008)</a>, </br> <a href="../quantities/#Flip angle">α (Q.MS1.007)</a> , </br> <a href="../quantities/#TR"><em>TR</em> (Q.MS1.006)</a>, </br> <a href="../quantities/#n k-space"><em>n</em> (Q.MS1.011)</a>, </br> <a href="../quantities/#N k-space"><em>N</em> (Q.MS1.012)</a>, </br> <a href="../quantities/#S"><em>S</em> (Q.MS1.001)</a></td>
 <td>Larson 2001</td>
 </tr>
 </tbody>
@@ -676,7 +676,7 @@ The exception is section “Magnitude models: DCE - R1 in the fast water exchang
 </thead>
 <tbody>
 <tr>
-<td>M.S.009</td>
+<td>M.MS3.001</td>
 <td><a name="LinModel_M.S.009"></a> Linear model</td>
 <td>--</td>
 <td>Linear</td>
@@ -684,7 +684,7 @@ The exception is section “Magnitude models: DCE - R1 in the fast water exchang
 <td>--</td>
 </tr>
 <tr>
-<td>M.S.010</td>
+<td>M.MS3.002</td>
 <td><a name="ASE"></a> Absolute signal enhancement model</td>
 <td>--</td>
 <td>ASE</td>
@@ -692,7 +692,7 @@ The exception is section “Magnitude models: DCE - R1 in the fast water exchang
 <td>&space;S-S_{BL}\right</td>
 </tr>
 <tr>
-<td>M.S.011</td>
+<td>M.MS3.003</td>
 <td><a name="RSE"></a> Relative signal enhancement model</td>
 <td>--</td>
 <td>RSE</td>
