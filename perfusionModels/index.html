@@ -309,6 +309,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#magnitude-models-combined-dcedsc-r1r2r2" class="md-nav__link">
+     Magnitude models: Combined DCE/DSC - R1/R2/R2*
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#phase-models" class="md-nav__link">
      Phase models
   </a>
@@ -470,6 +477,13 @@
           <li class="md-nav__item">
   <a href="#magnitude-models-combined-dcedsc-r1-r2-r1" class="md-nav__link">
      Magnitude models: Combined DCE/DSC - R1/ R2/ R1*
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magnitude-models-combined-dcedsc-r1r2r2" class="md-nav__link">
+     Magnitude models: Combined DCE/DSC - R1/R2/R2*
   </a>
   
 </li>
@@ -740,7 +754,8 @@ The exception is section “Magnitude models: DCE - R1 in the fast water exchang
 </tbody>
 </table>
 <h3 id="magnitude-models-dce-r1-in-the-presence-of-restricted-water-exchange"><a name="Magnitude models: DCE - R1 in the presence of restricted water exchange"></a> Magnitude models: DCE - R1 in the presence of restricted water exchange<a class="headerlink" href="#magnitude-models-dce-r1-in-the-presence-of-restricted-water-exchange" title="Permanent link">&para;</a></h3>
-<h3 id="magnitude-models-combined-dcedsc-r1-r2-r1"><a name="Magnitude models: DCE - R1 in the presence of restricted water exchange"></a> Magnitude models: Combined DCE/DSC - <em>R<sub>1</sub></em>/ <em>R<sub>2</sub></em>/ <em>R<sub>1</sub><sup></em></sup>*<a class="headerlink" href="#magnitude-models-combined-dcedsc-r1-r2-r1" title="Permanent link">&para;</a></h3>
+<h3 id="magnitude-models-combined-dcedsc-r1-r2-r1"><a name="Magnitude models: DCE - R1 in the presence of finite water exchange (Shutter speed models) "></a> Magnitude models: Combined DCE/DSC - <em>R<sub>1</sub></em>/ <em>R<sub>2</sub></em>/ <em>R<sub>1</sub><sup></em></sup>*<a class="headerlink" href="#magnitude-models-combined-dcedsc-r1-r2-r1" title="Permanent link">&para;</a></h3>
+<h3 id="magnitude-models-combined-dcedsc-r1r2r2"><a name="Magnitude models: Combined DCE/DSC - R1/R2/R2* "></a> Magnitude models: Combined DCE/DSC - R1/R2/R2*<a class="headerlink" href="#magnitude-models-combined-dcedsc-r1r2r2" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -755,18 +770,18 @@ The exception is section “Magnitude models: DCE - R1 in the fast water exchang
 <tbody>
 <tr>
 <td>M.SM6.001</td>
+<td>DSC Multi-echo (GE) model</td>
 <td>--</td>
 <td>--</td>
-<td>--</td>
-<td>--</td>
+<td>This forward model is given by the following equation: <img src="https://latex.codecogs.com/svg.image?S&space;=&space;S_{DCE,FXL}(R_1)e^{-TE\cdot&space;R_2^*}" title="https://latex.codecogs.com/svg.image?S = S_{DCE,FXL}(R_1)e^{-TE\cdot R_2^*}" /> <br/> where S<sub>DCE,FXL</sub>(R<sub>1</sub>) is a forward model selected from <a href="#Magnitude models: DCE - R1 in the fast water exchange limit">Magnitude models: DCE- R1 in fast water exchange limit</a>,<br/> <a href="../quantities/#TE">TE (Q.MS1.005)</a>, <br/> <a href="../quantities/#R2Star">R<sub>2</sub><sup>*</sup> (Q.EL1.007)</a>, <br/> <a href="../quantities/#S">S (Q.MS1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
 <td>M.SM6.002</td>
+<td>DSC Multi-echo (SE) model</td>
 <td>--</td>
 <td>--</td>
-<td>--</td>
-<td>--</td>
+<td>This forward model is given by the following equation: <img src="https://latex.codecogs.com/svg.image?S&space;=&space;S_{DCE,FXL}(R_1)e^{-TE\cdot&space;R_2}" title="https://latex.codecogs.com/svg.image?S = S_{DCE,FXL}(R_1)e^{-TE\cdot R_2}" /> where S<sub>DCE,FXL</sub>(R<sub>1</sub>) is a forward model selected from <a href="#Magnitude models: DCE - R1 in the fast water exchange limit">Magnitude models: DCE- R1 in fast water exchange limit</a>,<br/> <a href="../quantities/#TE">TE (Q.MS1.005)</a>, <br/> <a href="../quantities/#R2">R<sub>2</sub> (Q.EL1.004)</a>, <br/> <a href="../quantities/#S">S (Q.MS1.001)</a></td>
 <td>--</td>
 </tr>
 <tr>
@@ -780,9 +795,36 @@ The exception is section “Magnitude models: DCE - R1 in the fast water exchang
 </tbody>
 </table>
 <h3 id="phase-models"><a name="Phase models: DSC"></a> Phase models<a class="headerlink" href="#phase-models" title="Permanent link">&para;</a></h3>
-<p>| -- | -- | -- | -- | -- | -- |
-| M.SM7.001 | -- | -- | -- | -- | -- |
-| M.SM7.999 | <a name="not listed SM7"></a> Model not listed | -- | -- | This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | -- |</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.SM7.001</td>
+<td>--</td>
+<td>--</td>
+<td>--</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.SM7.999</td>
+<td><a name="not listed SM7"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
 <h2 id="electromagnetic-property-models"><a name="Electromagnetic property models"></a> Electromagnetic property models<a class="headerlink" href="#electromagnetic-property-models" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
