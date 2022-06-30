@@ -809,10 +809,10 @@ The exception is section “Magnitude models: DCE - R1 in the fast water exchang
 <tbody>
 <tr>
 <td>M.SM7.001</td>
+<td>Linear susceptibility signal model</td>
 <td>--</td>
 <td>--</td>
-<td>--</td>
-<td>--</td>
+<td>This forward model is given by the following equation: <br/> <img src="https://latex.codecogs.com/svg.image?\inline&space;S&space;=&space;k\cdot \chi" title="https://latex.codecogs.com/svg.image?\inline S = k\cdot \chi" /> </br> with <br/s> <a href="../quantities/#const">k (Q.GE1.009)</a>,<br/> <a href="../quantities/#Chi">&#967; (Q.EL1.011)</a>, <br/> <a href="../quantities/#S">S (Q.MS1.001)</a>.</td>
 <td>--</td>
 </tr>
 <tr>
@@ -826,6 +826,7 @@ The exception is section “Magnitude models: DCE - R1 in the fast water exchang
 </tbody>
 </table>
 <h2 id="electromagnetic-property-models"><a name="Electromagnetic property models"></a> Electromagnetic property models<a class="headerlink" href="#electromagnetic-property-models" title="Permanent link">&para;</a></h2>
+<p>This section covers models that describe how electromagnetic properties (EP), such as relaxation rates R<sub>1</sub>, R<sub>2</sub> and R<sub>2</sub><sup>*</sup> or the magnetic susceptibility &#967; , are realted to indicator concentrations.</p>
 <table>
 <thead>
 <tr>
@@ -840,51 +841,51 @@ The exception is section “Magnitude models: DCE - R1 in the fast water exchang
 <tbody>
 <tr>
 <td>M.EL1.001</td>
+<td>Transverse relaxation rate (GE), linear with relaxivity model</td>
+<td>Effective relaxation rate (GE), linear with relaxivity model</td>
 <td>--</td>
-<td>--</td>
-<td>--</td>
-<td>--</td>
-<td>--</td>
+<td>This forward model is given by the following equation: <br/> <img src="https://latex.codecogs.com/svg.image?R_2^*=R_{20}^*&plus;r_2^*\cdot&space;C" title="https://latex.codecogs.com/svg.image?R_2^*=R_{20}^*+r_2^*\cdot C" /> <br/> with <br/> <a href="../quantities/#R2Star0">R<sub>20</sub><sup>*</sup> (Q.EL1.008)</a>, <br/> <a href="../quantities/#r2star">r<sub>2</sub><sup>*</sup> (Q.EL1.017)</a>, <br/> <a href="../quantities/#C">C (Q.IC1.001)</a>, <br/> <a href="../quantities/#R2Star">R<sub>2</sub><sup>*</sup> (Q.EL1.007)</a></td>
+<td>(Rosen et al. 1990)</td>
 </tr>
 <tr>
 <td>M.EL1.002</td>
+<td>Transverse relaxation rate (SE), linear with relaxivity model</td>
+<td>Natural relaxation rate (GE), linear with relaxivity model</td>
 <td>--</td>
-<td>--</td>
-<td>--</td>
-<td>--</td>
-<td>--</td>
+<td>This forward model is given by the following equation:<br/> <img src="https://latex.codecogs.com/svg.image?R_2=R_{20}&plus;r_2\cdot&space;C" title="https://latex.codecogs.com/svg.image?R_2=R_{20}+r_2\cdot C" /> <br/> with <br/> <a href="../quantities/#R20">R<sub>20</sub> (Q.EL1.005)</a>, <br/> <a href="../quantities/#r2">r<sub>2</sub> (Q.EL1.016)</a>, <br/> <a href="../quantities/#C">C (Q.IC1.001)</a>, <br/> <a href="../quantities/#R2">R<sub>2</sub> (Q.EL1.004)</a></td>
+<td>(Rosen et al. 1990)</td>
 </tr>
 <tr>
 <td>M.EL1.003</td>
+<td>Longitudinal relaxation rate, linear with relaxivity model</td>
 <td>--</td>
 <td>--</td>
-<td>--</td>
-<td>--</td>
-<td>--</td>
+<td>This forward model is given by the following equation:<br/> <img src="https://latex.codecogs.com/svg.image?R_1=R_{10}&plus;r_1\cdot&space;C" title="https://latex.codecogs.com/svg.image?R_1=R_{10}+r_1\cdot C" /> <br/> with <br/> <a href="../quantities/#R10">R<sub>10</sub> (Q.EL1.002)</a>, <br/> <a href="../quantities/#r1">r<sub>1</sub> (Q.EL1.015)</a>, <br/> <a href="../quantities/#C">C (Q.IC1.001)</a>, <br/> <a href="../quantities/#R1">R<sub>1</sub> (Q.EL1.001)</a></td>
+<td>(Rosen et al. 1990)</td>
 </tr>
 <tr>
 <td>M.EL1.004</td>
+<td>Transverse relaxation rate (GE) with gradient leakage correction model</td>
 <td>--</td>
 <td>--</td>
-<td>--</td>
-<td>--</td>
-<td>--</td>
+<td>This forward model is given by the following equation:<br/></td>
+<td>Sourbron et al  2012</td>
 </tr>
 <tr>
 <td>M.EL1.005</td>
+<td>Transverse relaxation rate (GE), quadratic model</td>
 <td>--</td>
 <td>--</td>
-<td>--</td>
-<td>--</td>
-<td>--</td>
+<td>This forward model is given by the following equation:<br/></td>
+<td>Van Osch 2003 (also see Calamante 2013)</td>
 </tr>
 <tr>
 <td>M.EL1.006</td>
+<td>Linear susceptibility concentration model</td>
 <td>--</td>
 <td>--</td>
-<td>--</td>
-<td>--</td>
-<td>--</td>
+<td>This forward model is given by the following equation:<br/></td>
+<td>(Conturo et al. 1992)</td>
 </tr>
 <tr>
 <td>M.EL1.999</td>
