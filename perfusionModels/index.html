@@ -901,6 +901,92 @@ The exception is section “Magnitude models: DCE - R1 in the fast water exchang
 <h3 id="indicator-kinetic-models"><a name="Indicator kinetic models"></a> Indicator kinetic models<a class="headerlink" href="#indicator-kinetic-models" title="Permanent link">&para;</a></h3>
 <h3 id="arterial-input-function-models"><a name="AIF models"></a> Arterial input function models<a class="headerlink" href="#arterial-input-function-models" title="Permanent link">&para;</a></h3>
 <h2 id="descriptive-models"><a name="Descriptive models"></a> Descriptive models<a class="headerlink" href="#descriptive-models" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.DM1.001</td>
+<td>Unit step model</td>
+<td>Heaviside step function</td>
+<td><em>u</em></td>
+<td>This forward model is given by the following equation:</br> <img src="https://latex.codecogs.com/svg.image?f(x-T)&space;=&space;0,&space;x\leq&space;T" title="https://latex.codecogs.com/svg.image?f(x-T) = 0, x\leq T" />, </br> <img src="https://latex.codecogs.com/svg.image?f(x-T)&space;=&space;1,&space;x&gt&space;T" title="https://latex.codecogs.com/svg.image?f(x-T) = 1, x&gt T" /> ,</br> where <em>T</em> is a defined data grid point, at which the step function changes from 0 to 1 and  [x, f(x)]= [<a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>, <a href="../quantities/#Data">Data (Q.GE1.002)</a>].</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.DM1.002</td>
+<td>Linear-quadratic model</td>
+<td>--</td>
+<td>LQM</td>
+<td>This forward model is given by the following equation:</br> <img src="https://latex.codecogs.com/svg.image?f(x)=f_{BL},&space;x\leqslant&space;BAT" title="https://latex.codecogs.com/svg.image?f(x)=f_{BL}, x\leqslant BAT" />, </br> <img src="https://latex.codecogs.com/svg.image?f(x)=f_{BL}&space;&plus;&space;\beta_1(x-BAT)&plus;\beta_2(x-BAT)^2" title="https://latex.codecogs.com/svg.image?f(x)=f_{BL} + \beta_1(x-BAT)+\beta_2(x-BAT)^2" /> , </br> <img src="https://latex.codecogs.com/svg.image?x&space;&gt&space;BAT" title="https://latex.codecogs.com/svg.image?x &gt BAT" />, </br> where BAT is the <a href="../quantities/#BAT">bolus arrival time (Q.BA1.001)</a>,  f<sub>BL</sub> the <a href="../quantities/#f_BL">baseline (Q.BL1.001)</a>, β<sub>1</sub> the slope after the BAT, β<sub>2</sub> a quadratic component and [x, f(x)]= [<a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>, <a href="../quantities/#Data">Data (Q.GE1.002)</a>].</td>
+<td>(Cheong et al. 2003)</td>
+</tr>
+<tr>
+<td>M.DM1.003</td>
+<td>Two step linear model</td>
+<td>--</td>
+<td>2SLM</td>
+<td>This forward model is given by the following equation:</br> <img src="https://latex.codecogs.com/svg.image?f(x)=f_{BL},&space;x\leq&space;BAT" title="https://latex.codecogs.com/svg.image?f(x)=f_{BL}, x\leq BAT" /> </br> <img src="https://latex.codecogs.com/svg.image?f(x)=f_{BL}&plus;b_1(x-BAT)&space;&space;,&space;x&gt BAT" title="https://latex.codecogs.com/svg.image?f(x)=f_{BL}+b_1(x-BAT) , x&gt BAT" /> </br>, where BAT is the <a href="../quantities/#BAT">bolus arrival time (Q.BA1.001)</a>, f<sub>BL</sub> is the <a href="../quantities/#f_BL">baseline (Q.BL1.001)</a>, b<sub>1</sub> the slope after the BAT and [x, f(x)]= [<a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>, <a href="../quantities/#Data">Data (Q.GE1.002)</a>].</td>
+<td>Cheong et al. 2003)</td>
+</tr>
+<tr>
+<td>M.DM1.004</td>
+<td>Three step linear mode</td>
+<td>--</td>
+<td>3SLM</td>
+<td>This forward model is given by the following equation:</br>  <img src="https://latex.codecogs.com/svg.image?f(x)=f_{BL},&space;x\leq&space;BAT" title="https://latex.codecogs.com/svg.image?f(x)=f_{BL}, x\leq BAT" /> </br> <img src="https://latex.codecogs.com/svg.image?f(x)=f_{BL}&plus;b_1(x-BAT)&space;&space;,&space;BAT\leq&space;x\leq&space;\beta" title="https://latex.codecogs.com/svg.image?f(x)=f_{BL}+b_1(x-BAT) , BAT\leq x\leq \beta" /> </br> <img src="https://latex.codecogs.com/svg.image?f(x)=f_{BL}&plus;b_1(x-BAT)&plus;b_2(x-\beta)&space;&space;,&space;x&gt&space;\beta" title="https://latex.codecogs.com/svg.image?f(x)=f_{BL}+b_1(x-BAT)+b_2(x-\beta) , x&gt \beta" /> ,</br> where BAT is the <a href="../quantities/#BAT">bolus arrival time (Q.BA1.001)</a>,  f<sub>BL</sub> is the <a href="../quantities/#f_BL">baseline (Q.BL1.001)</a>, β is the point of intersection of the 2<sup>nd</sup> and 3<sup>rd</sup> line segment. b<sub>1</sub> and b<sub>2</sub> are the slopes of the 2<sup>nd</sup> and 3<sup>rd</sup> line segments and [x, f(x)]= [<a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>, <a href="../quantities/#Data">Data (Q.GE1.002)</a>].</td>
+<td>(Singh et al. 2009)</td>
+</tr>
+<tr>
+<td>M.DM1.005</td>
+<td>Multi-exponential model</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation:</br> <img src="https://latex.codecogs.com/svg.image?f(x)=A_1e^{-x\cdot&space;a_1}&plus;...&plus;A_ne^{-x\cdot&space;a_n}" title="https://latex.codecogs.com/svg.image?f(x)=A_1e^{-x\cdot a_1}+...+A_ne^{-x\cdot a_n}" />,</br> where  A<sub>1</sub>, …, A<sub>n</sub> and a<sub>1</sub>,...,a<sub>n</sub> are arbitrary coefficients and [x, f(x)]= [<a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>, <a href="../quantities/#Data">Data (Q.GE1.002)</a>].</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.DM1.006</td>
+<td>Gamma-variate model</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: <img src="https://latex.codecogs.com/svg.image?f(x)=\frac{1}{\Gamma(\alpha)\beta^{\alpha}}(x-BAT)^{\alpha-1}e^{-(x-BAT)/\beta}" title="https://latex.codecogs.com/svg.image?f(x)=\frac{1}{\Gamma(\alpha)\beta^{\alpha}}(x-BAT)^{\alpha-1}e^{-(x-BAT)/\beta}" /> </br> </br> where BAT is the <a href="../quantities/#BAT">bolus arrival time (Q.BA1.001)</a>, α is a shape parameter, β is a scale parameter, Γ(α) is the gamma function and [x, f(x)]= [<a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>, <a href="../quantities/#Data">Data (Q.GE1.002)</a>].</td>
+<td>Mouridsen 2006</td>
+</tr>
+<tr>
+<td>M.DM1.007</td>
+<td>Fermi model</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation:</br> ,<br/></td>
+<td>(Brinch et al.  1999)</td>
+</tr>
+<tr>
+<td>M.DM1.008</td>
+<td>Normal distribution model</td>
+<td>Gaussian distribution model</td>
+<td><em>N</em></td>
+<td>This forward model is given by the following equation:</br>  &lt;&gt;</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.DM1.999</td>
+<td><a name="not listed DM1"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
 <h2 id="leakage-correction-models"><a name="Leakage correction models"></a> Leakage correction models<a class="headerlink" href="#leakage-correction-models" title="Permanent link">&para;</a></h2>
 <h2 id="perfusion-identity-models"><a name="Perfusion identity models"></a> Perfusion identity models<a class="headerlink" href="#perfusion-identity-models" title="Permanent link">&para;</a></h2>
 
