@@ -380,6 +380,26 @@
      Perfusion identity models
   </a>
   
+    <nav class="md-nav" aria-label=" Perfusion identity models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scalar-quantities" class="md-nav__link">
+     Scalar quantities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalars-derived-from-dynamic-curves" class="md-nav__link">
+     Scalars derived from dynamic curves
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -552,6 +572,26 @@
   <a href="#perfusion-identity-models" class="md-nav__link">
      Perfusion identity models
   </a>
+  
+    <nav class="md-nav" aria-label=" Perfusion identity models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scalar-quantities" class="md-nav__link">
+     Scalar quantities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalars-derived-from-dynamic-curves" class="md-nav__link">
+     Scalars derived from dynamic curves
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -918,7 +958,7 @@ The exception is section “Magnitude models: DCE - R1 in the fast water exchang
 <td>Parker AIF model</td>
 <td>--</td>
 <td>Parker AIF</td>
-<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(C_{a,b}(t)=\sum_{n=1}^{2}\frac{A_n}{\sigma_n\sqrt{2\pi}}e^{-\frac{(t-T_n)^2}{2\sigma_n^2}}+\frac{\alpha e^{-\beta t}}{1+e^{-s(t-\tau)}},\)</span> </br> where  <span class="arithmatex">\(A_n\)</span>, <span class="arithmatex">\(T_n\)</span> and <span class="arithmatex">\(\sigma_n\)</span> are the scaling constants, center and widths of the nth Gaussian; <span class="arithmatex">\(\alpha\)</span> and <span class="arithmatex">\(\beta\)</span> are the amplitude and decay constants of the exponential; and <span class="arithmatex">\(s\)</span> and <span class="arithmatex">\(\tau\)</span> are the width and center of the sigmoid, and  [<a href="../quantities/#C"><span class="arithmatex">\(C_{a,b}(t)\)</span> (Q.IC1.001.[a,b])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>]. If not specified otherwise, the values from the publication are assumed: [<span class="arithmatex">\(A_1\)</span>, <span class="arithmatex">\(A_2\)</span>, <span class="arithmatex">\(T_1\)</span>, <span class="arithmatex">\(T_2\)</span>, <span class="arithmatex">\(\sigma_1\)</span>, <span class="arithmatex">\(\sigma_2\)</span>, <span class="arithmatex">\(\alpha\)</span> , <span class="arithmatex">\(\beta\)</span> , s, <span class="arithmatex">\(\tau\)</span> ] = [48.54 mmol<span class="arithmatex">\(\cdot\)</span>s, 19.8 mmol<span class="arithmatex">\(\cdot\)</span>s, 10.2276 s, 21.9 s, 3.378 s, 7.92 s, 1.050 mmol, 0.0028 s-1, 0.6346 s-1, 28.98 s]. </br></td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(C_{a,b}(t)=\sum_{n=1}^{2}\frac{A_n}{\sigma_n\sqrt{2\pi}}e^{-\frac{(t-T_n)^2}{2\sigma_n^2}}+\frac{\alpha e^{-\beta t}}{1+e^{-s(t-\tau)}},\)</span> </br> where  <span class="arithmatex">\(A_n\)</span>, <span class="arithmatex">\(T_n\)</span> and <span class="arithmatex">\(\sigma_n\)</span> are the scaling constants, center and widths of the nth Gaussian; <span class="arithmatex">\(\alpha\)</span> and <span class="arithmatex">\(\beta\)</span> are the amplitude and decay constants of the exponential; and <span class="arithmatex">\(s\)</span> and <span class="arithmatex">\(\tau\)</span> are the width and center of the sigmoid, and  [<a href="../quantities/#C"><span class="arithmatex">\(C_{a,b}\)</span> (Q.IC1.001.[a,b])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>]. If not specified otherwise, the values from the publication are assumed: [<span class="arithmatex">\(A_1\)</span>, <span class="arithmatex">\(A_2\)</span>, <span class="arithmatex">\(T_1\)</span>, <span class="arithmatex">\(T_2\)</span>, <span class="arithmatex">\(\sigma_1\)</span>, <span class="arithmatex">\(\sigma_2\)</span>, <span class="arithmatex">\(\alpha\)</span> , <span class="arithmatex">\(\beta\)</span> , s, <span class="arithmatex">\(\tau\)</span> ] = [48.54 mmol<span class="arithmatex">\(\cdot\)</span>s, 19.8 mmol<span class="arithmatex">\(\cdot\)</span>s, 10.2276 s, 21.9 s, 3.378 s, 7.92 s, 1.050 mmol, 0.0028 s-1, 0.6346 s-1, 28.98 s]. </br></td>
 <td>(Parker et al. 2006)</td>
 </tr>
 <tr>
@@ -926,7 +966,7 @@ The exception is section “Magnitude models: DCE - R1 in the fast water exchang
 <td>Georgiou AIF model</td>
 <td>--</td>
 <td>Georgiou AIF</td>
-<td>The AIF between the start of the nth recirculation and (n+1)th recirculation is given by: </br> <span class="arithmatex">\(C_{a,p}(t)=(\sum_{i=1}^{3}A_ie^{-m_it})\cdot(\sum_{j=0}^{n}\gamma((j+1)\alpha+j,\beta,t-j\tau)),\)</span> </br> with <span class="arithmatex">\(n\tau&lt;t&lt;(n+1)\tau\)</span> </br> and <span class="arithmatex">\(\gamma(\alpha, \beta, \tau)=\frac{t^\alpha e^{-\frac{t}{\beta}}}{\beta^{\alpha+1}\Gamma(\alpha +1)}\)</span> with <span class="arithmatex">\(t\geq 0\)</span>, </br> where  <span class="arithmatex">\(A_1\)</span>, <span class="arithmatex">\(A_2\)</span>, <span class="arithmatex">\(A_3\)</span> and <span class="arithmatex">\(m_1\)</span>, <span class="arithmatex">\(m_2\)</span>, <span class="arithmatex">\(m_3\)</span> are the amplitudes and time constants of the exponential terms, the coefficients and  reflect the number of theoretical mixing chambers and the ratio of the volume of the mixing chambers to the volume flow rate, and  is the recirculation time, [<a href="../quantities/#C"><span class="arithmatex">\(C_{a,p}(t)\)</span> (Q.IC1.001.[a,p])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>]. <span class="arithmatex">\(\gamma = 0\)</span> for <span class="arithmatex">\(t&lt;0\)</span>. </br> If not specified otherwise, the values from the publication are assumed: [ <span class="arithmatex">\(A_1\)</span>, <span class="arithmatex">\(A_2\)</span>, <span class="arithmatex">\(A_3\)</span>, <span class="arithmatex">\(m_1\)</span>, <span class="arithmatex">\(m_2\)</span>, <span class="arithmatex">\(m_3\)</span>, <span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\(\beta\)</span> , <span class="arithmatex">\(\tau\)</span> ] = [0.37 mM, 0.33 mM, 10.06 mM, 0.002 s-1, 0.02 <span class="arithmatex">\(s^{-1}\)</span>, 0.267 <span class="arithmatex">\(s^{-1}\)</span>, 5.26, 1.92 s, 7.74 s].</td>
+<td>The AIF between the start of the nth recirculation and (n+1)th recirculation is given by: </br> <span class="arithmatex">\(C_{a,p}(t)=(\sum_{i=1}^{3}A_ie^{-m_it})\cdot(\sum_{j=0}^{n}\gamma((j+1)\alpha+j,\beta,t-j\tau)),\)</span> </br> with <span class="arithmatex">\(n\tau&lt;t&lt;(n+1)\tau\)</span> </br> and <span class="arithmatex">\(\gamma(\alpha, \beta, \tau)=\frac{t^\alpha e^{-\frac{t}{\beta}}}{\beta^{\alpha+1}\Gamma(\alpha +1)}\)</span> with <span class="arithmatex">\(t\geq 0\)</span>, </br> where  <span class="arithmatex">\(A_1\)</span>, <span class="arithmatex">\(A_2\)</span>, <span class="arithmatex">\(A_3\)</span> and <span class="arithmatex">\(m_1\)</span>, <span class="arithmatex">\(m_2\)</span>, <span class="arithmatex">\(m_3\)</span> are the amplitudes and time constants of the exponential terms, the coefficients and  reflect the number of theoretical mixing chambers and the ratio of the volume of the mixing chambers to the volume flow rate, and  is the recirculation time, [<a href="../quantities/#C"><span class="arithmatex">\(C_{a,p}\)</span> (Q.IC1.001.[a,p])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>]. <span class="arithmatex">\(\gamma = 0\)</span> for <span class="arithmatex">\(t&lt;0\)</span>. </br> If not specified otherwise, the values from the publication are assumed: [ <span class="arithmatex">\(A_1\)</span>, <span class="arithmatex">\(A_2\)</span>, <span class="arithmatex">\(A_3\)</span>, <span class="arithmatex">\(m_1\)</span>, <span class="arithmatex">\(m_2\)</span>, <span class="arithmatex">\(m_3\)</span>, <span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\(\beta\)</span> , <span class="arithmatex">\(\tau\)</span> ] = [0.37 mM, 0.33 mM, 10.06 mM, 0.002 s-1, 0.02 <span class="arithmatex">\(s^{-1}\)</span>, 0.267 <span class="arithmatex">\(s^{-1}\)</span>, 5.26, 1.92 s, 7.74 s].</td>
 <td>(Georgiou et al. 2019)</td>
 </tr>
 <tr>
@@ -934,7 +974,7 @@ The exception is section “Magnitude models: DCE - R1 in the fast water exchang
 <td>Weinmann AIF model</td>
 <td>--</td>
 <td>Weinmann AIF</td>
-<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(C_{a,p}(t)=D(a_1e^{-m_1t}+a_2e^{-m_2t}),\)</span> </br> where <span class="arithmatex">\(D\)</span> is the dose of contrast agent and <span class="arithmatex">\(a_1\)</span>, <span class="arithmatex">\(a_2\)</span>, <span class="arithmatex">\(m_1\)</span> and <span class="arithmatex">\(m_2\)</span> are the amplitudes and time constants of the exponential terms, and [<a href="../quantities/#C"><span class="arithmatex">\(C_{a,p}(t)\)</span> (Q.IC1.001.[a,p])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>]. </br> If the model parameters are not specified, the values from the publication are assumed: [<span class="arithmatex">\(D\)</span>, <span class="arithmatex">\(a_1\)</span>, <span class="arithmatex">\(m_1\)</span>, <span class="arithmatex">\(a_2\)</span>, <span class="arithmatex">\(m_2\)</span>] = [0.25 mmol/kg, 3.99 kg/l, 0.0024 s-1, 4.78 kg/l, 0.0002 <span class="arithmatex">\(s^{-1}\)</span>].</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(C_{a,p}(t)=D(a_1e^{-m_1t}+a_2e^{-m_2t}),\)</span> </br> where <span class="arithmatex">\(D\)</span> is the dose of contrast agent and <span class="arithmatex">\(a_1\)</span>, <span class="arithmatex">\(a_2\)</span>, <span class="arithmatex">\(m_1\)</span> and <span class="arithmatex">\(m_2\)</span> are the amplitudes and time constants of the exponential terms, and [<a href="../quantities/#C"><span class="arithmatex">\(C_{a,p}\)</span> (Q.IC1.001.[a,p])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>]. </br> If the model parameters are not specified, the values from the publication are assumed: [<span class="arithmatex">\(D\)</span>, <span class="arithmatex">\(a_1\)</span>, <span class="arithmatex">\(m_1\)</span>, <span class="arithmatex">\(a_2\)</span>, <span class="arithmatex">\(m_2\)</span>] = [0.25 mmol/kg, 3.99 kg/l, 0.0024 s-1, 4.78 kg/l, 0.0002 <span class="arithmatex">\(s^{-1}\)</span>].</td>
 <td>(Weinmann et al. 1984)</td>
 </tr>
 <tr>
@@ -963,9 +1003,9 @@ The exception is section “Magnitude models: DCE - R1 in the fast water exchang
 <tr>
 <td>M.DM1.001</td>
 <td>Unit step model</td>
-<td>Heaviside step function</td>
+<td>Heaviside step model</td>
 <td><em>u</em></td>
-<td>This forward model is given by the following equation:</br> <span class="arithmatex">\(f(x-T)=0,\ \ x\leq T\)</span>, </br> <span class="arithmatex">\(f(x-T)=1,\ \ x\gt T\)</span> ,</br>  where <em>T</em> is a defined data grid point, at which the step function changes from 0 to 1 and  [x, f(x)]= [<a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>, <a href="../quantities/#Data">Data (Q.GE1.002)</a>].</td>
+<td>This forward model is given by the following equation:</br> <span class="arithmatex">\(f(x-T)=0,\    \ x\leq T\)</span>, </br> <span class="arithmatex">\(f(x-T)=1,\ \ x\gt T\)</span> ,</br>  where <em>T</em> is a defined data grid point, at which the step function changes from 0 to 1 and  [x, f(x)]= [<a href="../quantities/#DataGrid">Data grid (Q.GE1.001)</a>, <a href="../quantities/#Data">Data (Q.GE1.002)</a>].</td>
 <td>--</td>
 </tr>
 <tr>
@@ -1077,6 +1117,190 @@ but at the same time cannot be derived as a composition of kinetic models, elect
 </tbody>
 </table>
 <h2 id="perfusion-identity-models"><a name="Perfusion identity models"></a> Perfusion identity models<a class="headerlink" href="#perfusion-identity-models" title="Permanent link">&para;</a></h2>
+<p>This group lists relationships between perfusion quantities that can be used to derive one quantity from another under certain assumptions. 
+This group is divided into the derivation of scalar quantities and the derivation of scalar derived from dynamic curves. </p>
+<h3 id="scalar-quantities"><a name="Scalar quantities"></a> Scalar quantities<a class="headerlink" href="#scalar-quantities" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.ID1.001</td>
+<td>Central volume theorem</td>
+<td>--</td>
+<td>CVT</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(v_p=MTT\cdot F_p\)</span> </br> with </br> <a href="../quantities/#MTT">MTT (Q.PH1.006)</a>,</br> <a href="../quantities/#Fp"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>, </br> <a href="../quantities/#v"><span class="arithmatex">\(v_p\)</span> (Q.PH1.001.[p])</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.002</td>
+<td>Total volume of distribution</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(v=v_p+v_e+v_i\)</span> </br> with </br> <a href="../quantities/#v"><span class="arithmatex">\(v_p\)</span> (Q.PH1.001.[p])</a>, </br> <a href="../quantities/#v"><span class="arithmatex">\(v_e\)</span> (Q.PH1.001.[e])</a>, </br> <a href="../quantities/#v"><span class="arithmatex">\(v_i\)</span> (Q.PH1.001.[i])</a>, </br> <a href="../quantities/#v"><span class="arithmatex">\(v\)</span> (Q.PH1.001)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.003</td>
+<td>Blood vs plasma volume fraction</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(v_b=\frac{v_p}{(1-Hct)}\)</span> </br> with </br> <a href="../quantities/#v"><span class="arithmatex">\(v_p\)</span> (Q.PH1.001.[p])</a>, </br><a href="../quantities/#Hct"><span class="arithmatex">\(Hct\)</span> (Q.PH1.012)</a>, </br> <a href="../quantities/#v"><span class="arithmatex">\(v_b\)</span> (Q.PH1.001.[b])</a>.</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.004</td>
+<td>Blood vs plasma flow</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(F_b=\frac{F_p}{(1-Hct)}\)</span> </br> with </br> <a href="../quantities/#Fp"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>,</br> <a href="../quantities/#Hct"><span class="arithmatex">\(Hct\)</span> (Q.PH1.012)</a>, </br> <a href="../quantities/#Fb"><span class="arithmatex">\(F_b\)</span> (Q.PH1.003)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.005</td>
+<td>Blood vs plasma AIF</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(C_{a,b}(t)=C_{a,p}(t)\cdot(1-Hct_a)\)</span>, </br> with </br> [<a href="../quantities/#C"><span class="arithmatex">\(C_{a,p}\)</span> (Q.IC1.001.[a,p])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#C"><span class="arithmatex">\(C_{a,b}\)</span> (Q.IC1.001.[a,b])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>], </br> <a href="../quantities/#Hct"><span class="arithmatex">\(Hct_a\)</span> (Q.PH1.012.[a])</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.006</td>
+<td>Small vessel hematocrit correction</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(Hct_f=\frac{1-Hct_a}{1-Hct_t}\)</span> </br> with </br> <a href="../quantities/#Hct"><span class="arithmatex">\(Hct_a\)</span> (Q.PH1.012.[a])</a>, </br><a href="../quantities/#Hct"><span class="arithmatex">\(Hct_t\)</span> (Q.PH1.012[t])</a>,</br> <a href="../quantities/#Hctf"><span class="arithmatex">\(Hct_f\)</span> (Q.PH1.013)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.007</td>
+<td>Compartment extraction fraction</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(E=\frac{PS}{F_p+PS}\)</span> </br> with </br> <a href="../quantities/#PS"><span class="arithmatex">\(PS\)</span> (Q.PH1.004)</a>,</br>  <a href="../quantities/#Fp"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>,</br> <a href="../quantities/#E"><span class="arithmatex">\(E\)</span> (Q.PH1.005)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.008</td>
+<td>Plug flow extraction fraction</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(E=1-e^{-\frac{PS}{F_p}}\)</span> </br> with </br> <a href="../quantities/#PS"><span class="arithmatex">\(PS\)</span> (Q.PH1.004)</a>,</br> <a href="../quantities/#Fp"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>,</br> <a href="../quantities/#E"><span class="arithmatex">\(E\)</span> (Q.PH1.005)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.009</td>
+<td>Plasma MTT identity</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(MTT_p=\frac{v_p}{F_p+PS}\)</span> </br> with </br> <a href="../quantities/#v"><span class="arithmatex">\(v_p\)</span> (Q.PH1.001.[p])</a>, </br> <a href="../quantities/#PS"><span class="arithmatex">\(PS\)</span> (Q.PH1.004)</a>, </br> <a href="../quantities/#Fp"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>, </br> <a href="../quantities/#MTT"><span class="arithmatex">\(MTT_p\)</span> (Q.PH1.006.[p])</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.010</td>
+<td>Interstitial MTT identity</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(MTT_e=\frac{v_e}{PS}\)</span> </br> with </br> <a href="../quantities/#v"><span class="arithmatex">\(v_e\)</span> (Q.PH1.001.[e])</a>,</br> <a href="../quantities/#PS"><span class="arithmatex">\(PS\)</span> (Q.PH1.004)</a>, </br> <a href="../quantities/#MTT"><span class="arithmatex">\(MTT_e\)</span> (Q.PH1.006.[e])</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.011</td>
+<td><span class="arithmatex">\(K^{trans}\)</span> identity</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(K^{trans}=E\cdot F_p\)</span>, </br> with </br> <a href="../quantities/#E">E (Q.PH1.005)</a>, </br> <a href="../quantities/#Fp"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>, </br> <a href="../quantities/#Ktrans"><span class="arithmatex">\(K^{trans}\)</span> (Q.PH1.008)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.012</td>
+<td><span class="arithmatex">\(k_{ep}\)</span> identity</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(k_{ep}=\frac{K^{trans}}{v_e}\)</span>, </br> <a href="../quantities/#Ktrans"><span class="arithmatex">\(K^{trans}\)</span> (Q.PH1.008)</a>,</br> <a href="../quantities/#v"><span class="arithmatex">\(v_e\)</span> (Q.PH1.001.[e])</a>,</br> <a href="../quantities/#k"><span class="arithmatex">\(k_{e-&gt;p}\)</span> (Q.PH1.009.[e-&gt;p])</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.999</td>
+<td><a name="not listed ID1"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scalars-derived-from-dynamic-curves"><a name="Scalars derived from dynamic curves"></a> Scalars derived from dynamic curves<a class="headerlink" href="#scalars-derived-from-dynamic-curves" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.ID2.001</td>
+<td>Bolus delay identity</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(MTT_a=\int_{0}^{\infty}h_a(t) dt\)</span> </br> with </br> [ <a href="../quantities/#ha"><span class="arithmatex">\(h_a\)</span> (Q.IC1.004)</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>],</br> <a href="../quantities/#MTT"><span class="arithmatex">\(MTT_a\)</span> (Q.PH1.006.[a])</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID2.002</td>
+<td>Tissue mean transit time identity</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> </br> with </br></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID2.003</td>
+<td>Blood plasma flow from maximum</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> </br> with </br></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID2.004</td>
+<td>Blood plasma flow from first time frame</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> </br> with </br></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID2.005</td>
+<td>Capillary transit time heterogeneity identity</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> </br> with </br></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID2.999</td>
+<td><a name="not listed ID2"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
 
               
             </article>
