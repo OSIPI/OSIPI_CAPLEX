@@ -901,6 +901,52 @@ The exception is section “Magnitude models: DCE - R1 in the fast water exchang
 <h2 id="indicator-concentration-models"><a name="Indicator concentration models"></a> Indicator concentration models<a class="headerlink" href="#indicator-concentration-models" title="Permanent link">&para;</a></h2>
 <h3 id="indicator-kinetic-models"><a name="Indicator kinetic models"></a> Indicator kinetic models<a class="headerlink" href="#indicator-kinetic-models" title="Permanent link">&para;</a></h3>
 <h3 id="arterial-input-function-models"><a name="AIF models"></a> Arterial input function models<a class="headerlink" href="#arterial-input-function-models" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.IC2.001</td>
+<td>Parker AIF model</td>
+<td>--</td>
+<td>Parker AIF</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(C_{a,b}(t)=\sum_{n=1}^{2}\frac{A_n}{\sigma_n\sqrt{2\pi}}e^{-\frac{(t-T_n)^2}{2\sigma_n^2}}+\frac{\alpha e^{-\beta t}}{1+e^{-s(t-\tau)}},\)</span> </br> where  <span class="arithmatex">\(A_n\)</span>, <span class="arithmatex">\(T_n\)</span> and <span class="arithmatex">\(\sigma_n\)</span> are the scaling constants, center and widths of the nth Gaussian; <span class="arithmatex">\(\alpha\)</span> and <span class="arithmatex">\(\beta\)</span> are the amplitude and decay constants of the exponential; and <span class="arithmatex">\(s\)</span> and <span class="arithmatex">\(\tau\)</span> are the width and center of the sigmoid, and  [<a href="../quantities/#C"><span class="arithmatex">\(C_{a,b}(t)\)</span> (Q.IC1.001.[a,b])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>]. If not specified otherwise, the values from the publication are assumed: [<span class="arithmatex">\(A_1\)</span>, <span class="arithmatex">\(A_2\)</span>, <span class="arithmatex">\(T_1\)</span>, <span class="arithmatex">\(T_2\)</span>, <span class="arithmatex">\(\sigma_1\)</span>, <span class="arithmatex">\(\sigma_2\)</span>, <span class="arithmatex">\(\alpha\)</span> , <span class="arithmatex">\(\beta\)</span> , s, <span class="arithmatex">\(\tau\)</span> ] = [48.54 mmol<span class="arithmatex">\(\cdot\)</span>s, 19.8 mmol<span class="arithmatex">\(\cdot\)</span>s, 10.2276 s, 21.9 s, 3.378 s, 7.92 s, 1.050 mmol, 0.0028 s-1, 0.6346 s-1, 28.98 s]. </br></td>
+<td>(Parker et al. 2006)</td>
+</tr>
+<tr>
+<td>M.IC2.002</td>
+<td>Georgiou AIF model</td>
+<td>--</td>
+<td>Georgiou AIF</td>
+<td>The AIF between the start of the nth recirculation and (n+1)th recirculation is given by: </br> <span class="arithmatex">\(C_{a,p}(t)=(\sum_{i=1}^{3}A_ie^{-m_it})\cdot(\sum_{j=0}^{n}\gamma((j+1)\alpha+j,\beta,t-j\tau)),\)</span> </br> with <span class="arithmatex">\(n\tau&lt;t&lt;(n+1)\tau\)</span> </br> and <span class="arithmatex">\(\gamma(\alpha, \beta, \tau)=\frac{t^\alpha e^{-\frac{t}{\beta}}}{\beta^{\alpha+1}\Gamma(\alpha +1)}\)</span> with <span class="arithmatex">\(t\geq 0\)</span>, </br> where  <span class="arithmatex">\(A_1\)</span>, <span class="arithmatex">\(A_2\)</span>, <span class="arithmatex">\(A_3\)</span> and <span class="arithmatex">\(m_1\)</span>, <span class="arithmatex">\(m_2\)</span>, <span class="arithmatex">\(m_3\)</span> are the amplitudes and time constants of the exponential terms, the coefficients and  reflect the number of theoretical mixing chambers and the ratio of the volume of the mixing chambers to the volume flow rate, and  is the recirculation time, [<a href="../quantities/#C"><span class="arithmatex">\(C_{a,p}(t)\)</span> (Q.IC1.001.[a,p])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>]. <span class="arithmatex">\(\gamma = 0\)</span> for <span class="arithmatex">\(t&lt;0\)</span>. </br> If not specified otherwise, the values from the publication are assumed: [ <span class="arithmatex">\(A_1\)</span>, <span class="arithmatex">\(A_2\)</span>, <span class="arithmatex">\(A_3\)</span>, <span class="arithmatex">\(m_1\)</span>, <span class="arithmatex">\(m_2\)</span>, <span class="arithmatex">\(m_3\)</span>, <span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\(\beta\)</span> , <span class="arithmatex">\(\tau\)</span> ] = [0.37 mM, 0.33 mM, 10.06 mM, 0.002 s-1, 0.02 <span class="arithmatex">\(s^{-1}\)</span>, 0.267 <span class="arithmatex">\(s^{-1}\)</span>, 5.26, 1.92 s, 7.74 s].</td>
+<td>(Georgiou et al. 2019)</td>
+</tr>
+<tr>
+<td>M.IC2.003</td>
+<td>Weinmann AIF model</td>
+<td>--</td>
+<td>Weinmann AIF</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(C_{a,p}(t)=D(a_1e^{-m_1t}+a_2e^{-m_2t}),\)</span> </br> where <span class="arithmatex">\(D\)</span> is the dose of contrast agent and <span class="arithmatex">\(a_1\)</span>, <span class="arithmatex">\(a_2\)</span>, <span class="arithmatex">\(m_1\)</span> and <span class="arithmatex">\(m_2\)</span> are the amplitudes and time constants of the exponential terms, and [<a href="../quantities/#C"><span class="arithmatex">\(C_{a,p}(t)\)</span> (Q.IC1.001.[a,p])</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>]. </br> If the model parameters are not specified, the values from the publication are assumed: [<span class="arithmatex">\(D\)</span>, <span class="arithmatex">\(a_1\)</span>, <span class="arithmatex">\(m_1\)</span>, <span class="arithmatex">\(a_2\)</span>, <span class="arithmatex">\(m_2\)</span>] = [0.25 mmol/kg, 3.99 kg/l, 0.0024 s-1, 4.78 kg/l, 0.0002 <span class="arithmatex">\(s^{-1}\)</span>].</td>
+<td>(Weinmann et al. 1984)</td>
+</tr>
+<tr>
+<td>M.IC2.999</td>
+<td><a name="not listed IC2"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
 <h2 id="descriptive-models"><a name="Descriptive models"></a> Descriptive models<a class="headerlink" href="#descriptive-models" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
