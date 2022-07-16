@@ -939,7 +939,128 @@ The exception is section “Magnitude models: DCE - R1 in the fast water exchang
 </tbody>
 </table>
 <h2 id="indicator-concentration-models"><a name="Indicator concentration models"></a> Indicator concentration models<a class="headerlink" href="#indicator-concentration-models" title="Permanent link">&para;</a></h2>
+<p>This section covers models that describe how indicator concentrations in tissue and blood vary with time. </p>
 <h3 id="indicator-kinetic-models"><a name="Indicator kinetic models"></a> Indicator kinetic models<a class="headerlink" href="#indicator-kinetic-models" title="Permanent link">&para;</a></h3>
+<p>In the current version of the lexicon the list of indicator kinetic models is restricted to linear and stationary tissues, and specific models with two distribution spaces. A summary of common pharmacokinetic models in contrast-agent based perfusion MRI is given in (Sourbron and Buckley 2013). 
+We provide the differential equations and impulse response functions using the consistent parameterizations to enable straightforward comparisons between models.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.IC1.001</td>
+<td>Linear and stationary system model</td>
+<td>--</td>
+<td>LSS model</td>
+<td>This forward model is given by the following equations: </br> <span class="arithmatex">\(C(t)=I(t)\ast C_{a,p}(t)\)</span> </br> with </br> [<a href="../quantities/#IRF">I (Q.IC1.005)</a>, <a href="../quantities/#time">t (Q.GE1.004)</a>],</br> [<a href="../quantities/#C"><span class="arithmatex">\(C_{a,p}\)</span> (Q.IC1.001.[a,p])</a>, <a href="../quantities/#time"><span class="arithmatex">\(t\)</span> (Q.GE1.004)</a>],</br> [<a href="../quantities/#C"><span class="arithmatex">\(C_t\)</span> (Q.IC1.001.[t])</a>, <a href="../quantities/#time"><span class="arithmatex">\(t\)</span> (Q.GE1.004)</a>]</td>
+<td>(Rempp et al. 1994)</td>
+</tr>
+<tr>
+<td>M.IC1.002</td>
+<td>Two-compartment exchange model</td>
+<td>--</td>
+<td>2CXM</td>
+<td>This forward model is given by the following equations: </br> <span class="arithmatex">\(v_p\)</span> </br></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.IC1.003</td>
+<td>Distributed-parameter model</td>
+<td>--</td>
+<td>DP model</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.IC1.004</td>
+<td>Tissue-homogeneity model</td>
+<td>Johnson-Wilson model</td>
+<td>TH model</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.IC1.005</td>
+<td>Adiabatic approximation tissue model</td>
+<td>--</td>
+<td>AATH model</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.IC1.006</td>
+<td>Extended tofts model</td>
+<td>Modified Tofts Model, Extended Generalized Kinetic Model, Extended Patlak model</td>
+<td>ETM</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.IC1.007</td>
+<td>Compartmental Tissue Uptake model</td>
+<td>--</td>
+<td>C-TU</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.IC1.008</td>
+<td>Plug-flow Tissue Uptake model</td>
+<td>--</td>
+<td>P-TU</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.IC1.009</td>
+<td>Patlak model</td>
+<td>--</td>
+<td>PM</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.IC1.010</td>
+<td>One-compartment, fast indicator exchange model</td>
+<td>--</td>
+<td>1C-FE model</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.IC1.011</td>
+<td>Standard Tofts model</td>
+<td>Tofts Model, One-compartment Model, Generalized Kinetic Model</td>
+<td>TM</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.IC1.012</td>
+<td>One-compartment, no exchange  model</td>
+<td>--</td>
+<td>1C-NE model</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.IC1.999</td>
+<td><a name="not listed IC1"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
 <h3 id="arterial-input-function-models"><a name="AIF models"></a> Arterial input function models<a class="headerlink" href="#arterial-input-function-models" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
