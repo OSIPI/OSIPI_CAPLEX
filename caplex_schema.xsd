@@ -1,0 +1,654 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified"
+    vc:minVersion="1.1" targetNamespace="http://www.osipi.com/osipi_paper_schema.xsd"
+    xmlns:ex="http://www.osipi.com/osipi_paper_schema.xsd" attributeFormDefault="qualified">
+
+    <!--Defining the formatting for Pipeline. Pipeline can include Processes-->
+    <xs:element name="Pipeline">
+        <xs:annotation>
+            <xs:documentation>The top level program</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:group ref="ex:PipelineGroup" minOccurs="1" maxOccurs="100"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:group name="PipelineGroup">
+        <xs:choice>
+            <xs:element ref="ex:Process" minOccurs="0" maxOccurs="100"/>
+            <xs:element ref="ex:SetEqual" minOccurs="0" maxOccurs="100"/>
+        </xs:choice>
+    </xs:group>
+
+
+    <xs:element name="Process">
+        <xs:complexType>
+            <xs:annotation>
+                <xs:documentation>This is the basic definition for all the things needed when
+                    defining a Process</xs:documentation>
+            </xs:annotation>
+            <xs:sequence>
+                <xs:group ref="ex:ProcessGroup" minOccurs="1" maxOccurs="100"/>
+            </xs:sequence>
+
+            <xs:attribute name="value" type="ex:ProcessName" use="required"/>
+            <xs:attribute name="code" type="ex:CodeName" use="required"/>
+            <xs:attribute name="instance" type="xs:string" use="optional"/>
+
+            <xs:assert test="
+                    if (@ex:value = 'Estimate AIF') then
+                        (@ex:code = 'P.AE1.001')
+                    else
+                        true()"/>
+            <xs:assert test="
+                    if (@ex:value = 'Mean ROI AIF') then
+                        (@ex:code = 'P.AE2.002')
+                    else
+                        true()"/>
+            <xs:assert test="
+                    if (@ex:value = 'Model-based parameter extraction') then
+                        (@ex:code = 'P.EX1.001')
+                    else
+                        true()"/>
+            <xs:assert test="
+                    if (@ex:value = 'Inversion Method') then
+                        (@ex:code = 'G.MI1.001')
+                    else
+                        true()"/>
+            <xs:assert test="
+                    if (@ex:value = 'Optimisation') then
+                        (@ex:code = 'G.MI1.002')
+                    else
+                        true()"/>
+            <xs:assert test="
+                    if (@ex:value = 'Levenberg Marquardt') then
+                        (@ex:code = 'G.OP1.001')
+                    else
+                        true()"/>
+            <xs:assert test="
+                    if (@ex:value = 'Non-linear Least Squares') then
+                        (@ex:code = 'G.OP2.001')
+                    else
+                        true()"/>
+            <xs:assert test="
+                    if (@ex:value = 'Create Binary Mask') then
+                        (@ex:code = 'G.SE.001')
+                    else
+                        true()"/>
+            <xs:assert test="
+                    if (@ex:value = 'Freehand') then
+                        (@ex:code = 'G.SE.004')
+                    else
+                        true()"/>
+        </xs:complexType>
+    </xs:element>
+
+
+    <!--<xs:assert test="if (@value = ('Optimiser')) then (@code = ('asdf')) else @code ='aaa'"/>-->
+    <!--Defining a group for components that can be repeatedly called in Process. A process must have an input, which can be a quantity, another process, or a model. If it is a process or model, then it does not need an output. If it is a quantity, then the process always returns an output quantity-->
+    <xs:group name="ProcessGroup">
+        <xs:choice>
+            <xs:element ref="ex:Process" minOccurs="0"/>
+            <xs:element ref="ex:InputQuantity" minOccurs="0"/>
+            <xs:element ref="ex:OutputQuantity" minOccurs="0"/>
+            <xs:element ref="ex:Model" minOccurs="0"/>
+        </xs:choice>
+
+    </xs:group>
+
+    <!--Defining the required attributes for input and output quantities-->
+    <xs:complexType name="InputOutputType"> </xs:complexType>
+
+    <!--Defining input elements-->
+    <xs:element name="InputQuantity">
+        <xs:complexType>
+            <xs:annotation>
+                <xs:documentation>This is the basic definition for all the things needed when
+                    defining an input to a process, which can be a quantity, model or
+                    process</xs:documentation>
+            </xs:annotation>
+            <xs:attribute name="value" type="ex:QuantityName" use="required"/>
+            <xs:attribute name="unit" type="ex:UnitType" use="required"/>
+            <xs:attribute name="code" type="xs:string" use="required"/>
+            <xs:attribute name="subscript" type="ex:Subscript" use="optional"/>
+            <xs:attribute name="instance" type="xs:string" use="optional"/>
+            <xs:attribute name="type" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!--Defining output elements-->
+    <xs:element name="OutputQuantity">
+        <xs:complexType>
+            <xs:annotation>
+                <xs:documentation>This is the basic definition for all the things needed when
+                    defining an input to a process, which can be a quantity, model or
+                    process</xs:documentation>
+            </xs:annotation>
+            <xs:attribute name="value" type="ex:QuantityName" use="required"/>
+            <xs:attribute name="unit" type="ex:UnitType" use="required"/>
+            <xs:attribute name="code" type="xs:string" use="required"/>
+            <xs:attribute name="subscript" type="ex:Subscript" use="optional"/>
+            <xs:attribute name="instance" type="xs:string" use="optional"/>
+            <xs:attribute name="type" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!--Defining the element definition for model-->
+    <xs:element name="Model">
+        <xs:complexType>
+            <xs:annotation>
+                <xs:documentation>This is the basic definition for all the things needed when
+                    defining an model</xs:documentation>
+            </xs:annotation>
+            <xs:sequence> </xs:sequence>
+            <xs:attribute name="value" type="ex:ModelName" use="required"/>
+            <xs:attribute name="code" type="xs:string" use="required"/>
+            <xs:attribute name="instance" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!--Now restrict the types of values allowed for Process to be the ones in the lexicon. Can we also link codes to these names?-->
+    <xs:simpleType name="ProcessName">
+        <xs:annotation>
+            <xs:documentation>A restriction on strings, so that only processes that are defined in
+                the lexicon can be used</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <!--Perfusion processes-->
+            <!--Native R1 estimation-->
+            <xs:enumeration value="Estimate native R1"/>
+            <!--Native R1 estimation methods-->
+            <xs:enumeration value="Fixed value"/>
+            <xs:enumeration value="Variable flip angle"/>
+            <xs:enumeration value="Multi-delay saturation recovery"/>
+            <xs:enumeration value="Multi-delay inversion recovery"/>
+            <!--Bolus arrival time estimation-->
+            <xs:enumeration value="Estimate bolus arrive time"/>
+            <!--Bolus arrival time estimation methods-->
+            <xs:enumeration value="Manually"/>
+            <xs:enumeration value="Data value exceeds threshold"/>
+            <xs:enumeration value="Derivative of data values exceeds threshold"/>
+            <xs:enumeration value="Intersection-based"/>
+            <xs:enumeration value="Model-based"/>
+            <!--Baseline estimation -->
+            <xs:enumeration value="Estimate baseline"/>
+            <!--Baseline estimation methods-->
+            <xs:enumeration value="Manually"/>
+            <xs:enumeration value="nth data value"/>
+            <xs:enumeration value="Mean baseline of range"/>
+            <xs:enumeration value="Minimum value"/>
+            <xs:enumeration value="Model based"/>
+            <!--Signal calibration-->
+            <xs:enumeration value="Estimate signal scaling factor"/>
+            <!--Signal calibration estimation methods-->
+            <xs:enumeration value="S0 from native R1 estimation"/>
+            <xs:enumeration value="S0 from baseline dynamic signal"/>
+            <!--AIF estimation-->
+            <xs:enumeration value="Estimate AIF"/>
+            <!--AIF estimation methods-->
+            <xs:enumeration value="Literature-based AIF"/>
+            <xs:enumeration value="Mean ROI AIF"/>
+            <xs:enumeration value="Model-based AIF"/>
+            <xs:enumeration value="Automatic k-means cluster-based AIF"/>
+            <xs:enumeration value="Automatic fuzzy c-means cluster-based AIF"/>
+            <!--AIF correction and measurement preparation-->
+            <xs:enumeration value="Partial-volume effect corrected"/>
+            <xs:enumeration value="Dual bolus"/>
+            <!--Conversion from signal to indicator concentration-->
+            <xs:enumeration value="Convert signal to concentration"/>
+            <!--Conversion from signal to indicator concentration methods-->
+            <xs:enumeration value="Direct conversion from signal to concentration"/>
+            <xs:enumeration value="Conversion via electromagnetic property"/>
+            <!--Dynamic signal to electromagnetic property conversion AND Conversion from electromagnetic property to concentration AND leakage correction-->
+            <xs:enumeration value="Model based"/>
+            <!--Leakage correction-->
+            <xs:enumeration value="Leakage correction"/>
+            <!--Extraction of parameteters-->
+            <xs:enumeration value="Model-based parameter extraction"/>
+            <xs:enumeration value="Curve descriptive quantities"/>
+            <xs:enumeration value="Derivation of parameters from other parameters"/>
+            
+            <!--General purpose processes-->
+            <!--Forward model inversion-->
+            <xs:enumeration value="Analytical inversion"/>
+            <xs:enumeration value="Optimisation"/>
+            <xs:enumeration value="Deconvolution"/>
+            <!--Optimisers-->
+            <xs:enumeration value="Levenberg-Marquardt"/>
+            <!--Cost functions-->
+            <xs:enumeration value="Linear least squares"/>
+            <xs:enumeration value="Non-linear least squares"/>
+            <xs:enumeration value="Standard-Ford Tikhonov"/>
+            <xs:enumeration value="Generalised cross-validation"/>
+            <xs:enumeration value="L-curve"/>
+            <!--Regularisation parameters-->
+            <xs:enumeration value="Fixed"/>
+            <xs:enumeration value="Generalised cross-validation"/><!--ALSO ABOVE-->
+            <xs:enumeration value="L-curve criterion"/>  
+            <!--Deconvolution-->
+            <xs:enumeration value="Discretization method"/>
+            <xs:enumeration value="Regularisation method"/>  
+            <!--Deconvolution methods-->
+            <xs:enumeration value="Singular value decomposition"/>  
+            <!--Deconvolution methods-->
+            <xs:enumeration value="Numerical convolution (first order)"/>  
+            <xs:enumeration value="Block circulant"/> 
+            <xs:enumeration value="Volterra linear"/>  
+            <xs:enumeration value="Singular"/>  
+            <xs:enumeration value="Hybrid"/>
+            <xs:enumeration value="Exponential convolution"/>
+            <xs:enumeration value="Singular"/>  
+            <!--Curve Descriptive processes-->
+            <xs:enumeration value="Calculate value at data grid point"/>
+            <xs:enumeration value="Calculate maximum of data"/>  
+            <xs:enumeration value="Calculate data grid point of maximum data value"/>  
+            <xs:enumeration value="Calculate minimum of data"/>  
+            <xs:enumeration value="Calculate data grid point of minimum data value"/>  
+            <xs:enumeration value="Calculate value of final data point"/>  
+            <xs:enumeration value="Calculate final data grid point"/>  
+            <xs:enumeration value="Calculate maximum deviation from baseline"/>  
+            <xs:enumeration value="Calculate derivative at data grid point"/>  
+            <xs:enumeration value="Calculate time to peak"/>  
+            <xs:enumeration value="Calculate wash-in slope"/>  
+            <xs:enumeration value="Calculate wash-out slope"/>  
+            <xs:enumeration value="Calculate area under curve"/>  
+            <!--Segmentation-->
+            <xs:enumeration value="Create binary mask"/>  
+            <xs:enumeration value="Apply binary mask"/>  
+            <xs:enumeration value="Freehand"/>  
+            <xs:enumeration value="Threshold"/> 
+            <xs:enumeration value="Region growing"/>  
+            <xs:enumeration value="K-means clustering"/>  
+            <!--Uncertainty estimation and statistical processes-->
+            <xs:enumeration value="Calculate arithemetic mean (sample)"/>  
+            <xs:enumeration value="Calculate geometric mean (sample)"/>  
+            <xs:enumeration value="Calculate variance (sample)"/>  
+            <xs:enumeration value="Calculate standard deviation (sample)"/>  
+            <xs:enumeration value="Calculate median value (sample)"/>  
+            <xs:enumeration value="Calculate coefficient of variation (sample)"/>  
+            <xs:enumeration value="Calculate standard error"/>  
+            <xs:enumeration value="Uncertainty estimation using the covariance matrix"/>  
+            <xs:enumeration value="Calculate SNR"/>  
+            <xs:enumeration value="Calculate CNR"/>  
+            <xs:enumeration value="Calculate Mean"/>  
+            <xs:enumeration value="Calculate Std"/> 
+            <xs:enumeration value="Calculate Median"/> 
+            <xs:enumeration value="Calculate Average"/> 
+           
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--Now restrict the types of values allowed for Process to be the ones in the lexicon. Can we also link codes to these names?-->
+    <xs:simpleType name="CodeName">
+        <xs:annotation>
+            <xs:documentation>A restriction on codes, so that only processes that are defined in the
+                lexicon can be used</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="P.AE1.001"/>
+            <xs:enumeration value="P.AE2.001"/>
+            <xs:enumeration value="P.AE2.002"/>
+            <xs:enumeration value="P.AE2.003"/>
+            <xs:enumeration value="P.AE2.004"/>
+            <xs:enumeration value="P.EX1.001"/>
+            <xs:enumeration value="G.MI1.001"/>
+            <xs:enumeration value="G.MI1.002"/>
+            <xs:enumeration value="G.OP1.001"/>
+            <xs:enumeration value="G.OP3.001"/>
+            <xs:enumeration value="G.OP2.001"/>
+            <xs:enumeration value="G.SE.001"/>
+            <xs:enumeration value="G.SE.002"/>
+            <xs:enumeration value="G.SE.003"/>
+            <xs:enumeration value="G.SE.004"/>
+
+            <!--Quantities-->
+            <xs:enumeration value="Q.PH1.001"/>
+            <xs:enumeration value="Q.PH1.002"/>
+            <xs:enumeration value="Q.PH1.003"/>
+            <xs:enumeration value="Q.PH1.004"/>
+            <xs:enumeration value="Q.PH1.005"/>
+            <xs:enumeration value="Q.PH1.006.[p]"/>
+            <xs:enumeration value="Q.IC1.001.[a,b]"/>
+            <xs:enumeration value="Q.IC1.001.[t]"/>
+            <xs:enumeration value="Q.SE.003"/>
+            <xs:enumeration value="Q.GE1.001"/>
+            <xs:enumeration value="Q.GE1.002"/>
+            <xs:enumeration value="Q.GE1.003"/>
+            <xs:enumeration value="Q.GE1.004"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--Now restrict the types of values allowed for Process to be the ones in the lexicon-->
+    <xs:simpleType name="QuantityName">
+        <xs:annotation>
+            <xs:documentation>A restriction on quantities, so that only quantites that are defined
+                in the lexicon can be used</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <!--MR signal quantities Q.MS1-->
+            <xs:enumeration value="Signal"/>
+            <xs:enumeration value="Baseline signal"/>
+            <xs:enumeration value="Absolute enhancement"/>
+            <xs:enumeration value="Relative enhancement"/>
+            <xs:enumeration value="Echo time"/>
+            <xs:enumeration value="Repetition time"/>
+            <xs:enumeration value="Prescribed flip angle"/>
+            <xs:enumeration value="Prepulse delay time"/>
+            <xs:enumeration value="Prescribed prepulse flip angle"/>
+            <xs:enumeration value="Signal scaling factor"/>
+            <xs:enumeration value="Number of lines to k-space centre"/>
+            <xs:enumeration value="Total number of k-space lines"/>
+            <xs:enumeration value="Sequence name"/>
+            <xs:enumeration value="Scan mode"/>
+            <xs:enumeration value="Scan orientation"/>
+            <xs:enumeration value="Field of view"/>
+            <xs:enumeration value="Voxel size"/>
+            <!--Electromagnetic quantities Q.EL1-->
+            <xs:enumeration value="Longitudinal relaxation rate"/>
+            <xs:enumeration value="Native longitudinal relaxation rate"/>
+            <xs:enumeration value="Change in longitudinal relaxation rate"/>
+            <xs:enumeration value="Transverse relaxation rate (SE)"/>
+            <xs:enumeration value="Native transverse relaxation rate (SE)"/>
+            <xs:enumeration value="Change in transverse relaxation rate (SE)"/>
+            <xs:enumeration value="Transverse relaxation rate (GE)"/>
+            <xs:enumeration value="Native transverse relaxation rate (GE)"/>
+            <xs:enumeration value="Change in transverse relaxation rate (GE)"/>
+            <xs:enumeration value="Change in reference transverse relaxation rate"/>
+            <xs:enumeration value="Molar magnetic susceptibility"/>
+            <xs:enumeration value="Native molar magnetic susceptibility"/>
+            <xs:enumeration value="Change in molar magnetic susceptibility"/>
+            <xs:enumeration
+                value="Molar magnetic susceptibility change per unit concentration of indicator"/>
+            <xs:enumeration value="Longitudinal relaxivity"/>
+            <xs:enumeration value="Transverse relaxaivity (SE)"/>
+            <xs:enumeration value="Transverse relaxaivity (GE)"/>
+            <xs:enumeration value="Longitudinal relaxaivity of free indicator"/>
+            <xs:enumeration value="Longitudinal relaxaivity of bound indicator"/>
+            <xs:enumeration value="Transverse relaxivities of the quadratic model (GE)"/>
+            <!--Indicator concentration quantities quantities Q.IC1-->
+            <xs:enumeration value="Indicator concentration"/>
+            <xs:enumeration value="Tissue residue function"/>
+            <xs:enumeration value="Tissue transit time distribution"/>
+            <xs:enumeration value="Arterial transit time distribution"/>
+            <xs:enumeration value="Tissue impulse response function"/>
+            <xs:enumeration value="General impulse response function"/>
+            <!--Physiological Quantities Q.PH1-->
+            <xs:enumeration value="Relative volume fraction"/>
+            <xs:enumeration value="Blood plasma flow"/>
+            <xs:enumeration value="Blood flow"/>
+            <xs:enumeration value="Permeability surface area product"/>
+            <xs:enumeration value="Extraction fraction"/>
+            <xs:enumeration value="Mean transit time"/>
+            <xs:enumeration value="Arterial delay time"/>
+            <xs:enumeration value="Volume transfer constant"/>
+            <xs:enumeration value="Indicator exchange rate"/>
+            <xs:enumeration value="Water exchange rate"/>
+            <xs:enumeration value="Density"/>
+            <xs:enumeration value="Capillary hematocrit"/>
+            <xs:enumeration value="Arterial hematocrit"/>
+            <xs:enumeration value="Hematocrit factor"/>
+            <xs:enumeration value="Capillary transit time heterogeneity"/>
+            <xs:enumeration value="Maximum oxygen extraction fraction"/>
+            <!--General physical and mathematical quantities Q.GE1-->
+            <xs:enumeration value="Data grid"/>
+            <xs:enumeration value="Data"/>
+            <xs:enumeration value="Index"/>
+            <xs:enumeration value="Time"/>
+            <xs:enumeration value="Time step"/>
+            <xs:enumeration value="Frequency"/>
+            <xs:enumeration value="Axial length"/>
+            <xs:enumeration value="Axial position"/>
+            <xs:enumeration value="Constant value"/>
+            <xs:enumeration value="Lower threshold"/>
+            <xs:enumeration value="Upper threshold"/>
+            <xs:enumeration value="Dynamic function"/>
+            <xs:enumeration value="Start of range"/>
+            <xs:enumeration value="End of range"/>
+            <xs:enumeration value="Sample size"/>
+            <!--Curve descriptive quantities Q.CD1-->
+            <xs:enumeration value="Data value at data grid point"/>
+            <xs:enumeration value="Maximum value"/>
+            <xs:enumeration value="Data grid point of maximum value"/>
+            <xs:enumeration value="Minimum value"/>
+            <xs:enumeration value="Data grid point of minimum value"/>
+            <xs:enumeration value="Final data value"/>
+            <xs:enumeration value="Final data grid point"/>
+            <xs:enumeration value="Maximum deviation from baseline"/>
+            <xs:enumeration value="Derivative at data grid point x"/>
+            <xs:enumeration value="Time to peak"/>
+            <xs:enumeration value="Wash in slope"/>
+            <xs:enumeration value="Area under the curve"/>
+            <!--Bolus arrival time estimation quantities Q.BA1-->
+            <xs:enumeration value="Bolus arrival time"/>
+            <xs:enumeration value="Intersection-based BAT estimation parameters"/>
+            <!--Baseline estimation quantities Q.BL1-->
+            <xs:enumeration value="Baseline value"/>
+            <!--Descriptive model quantities Q.DM1-->
+            <xs:enumeration value="Unit step model parameters"/>
+            <xs:enumeration value="Linear quadratic model parameters"/>
+            <xs:enumeration value="Two step linear model parameters"/>
+            <xs:enumeration value="Three step linear model parameters"/>
+            <xs:enumeration value="Multi-exponential model parameters"/>
+            <xs:enumeration value="Gamma-variate model parameters"/>
+            <xs:enumeration value="Fermi model parameters"/>
+            <xs:enumeration value="Normal distribution model parameters"/>
+            <!--Leakage correction model quantities Q.LC1-->
+            <xs:enumeration value="Uncontaminated R2* scaling term"/>
+            <xs:enumeration value="Leakage scaling term"/>
+            <!--Uncertainty and statistical quantities Q.US1-->
+            <xs:enumeration value="Arithemetic mean (sample)"/>
+            <xs:enumeration value="Geometric mean (sample)"/>
+            <xs:enumeration value="Variance (sample)"/>
+            <xs:enumeration value="Standard deviation (sample)"/>
+            <xs:enumeration value="Median value (sample)"/>
+            <xs:enumeration value="Coefficient of variation (sample)"/>
+            <xs:enumeration value="Mean (population)"/>
+            <xs:enumeration value="Standard error of the mean"/>
+            <xs:enumeration value="Variance (population)"/>
+            <xs:enumeration value="Estimated variance (population)"/>
+            <xs:enumeration value="Estimated covariance of two quantities x and y"/>
+            <xs:enumeration value="Range"/>
+            <xs:enumeration value="Interquartile range"/>
+            <xs:enumeration value="Gamma-quantile"/>
+            <xs:enumeration value="Gamma-quantile value"/>
+            <xs:enumeration value="Confidence interval probability"/>
+            <xs:enumeration value="Confidence interval"/>
+            <xs:enumeration value="Signal to noise ratio"/>
+            <xs:enumeration value="Contrast to noise ratio"/>
+            <xs:enumeration value="Sum of squared errors"/>
+            <xs:enumeration value="Goodness-of-fit parameter"/>
+            <xs:enumeration value="Degrees of freedom"/>
+            <xs:enumeration value="Akaike-information criterion"/>
+            <xs:enumeration value="Jacobian matrix"/>
+            <xs:enumeration value="Hessian matrix"/>
+            <xs:enumeration value="Covariance matrix"/>
+            <xs:enumeration value="Cramer Rao lower bound"/>
+            <!--Analytical inversion quantities Q.AI1-->
+            <xs:enumeration value="Static model parameters"/>
+            <xs:enumeration value="Model parameters"/>
+            <!--Optimisation quantities Q.OP1-->
+            <xs:enumeration value="Model parameters"/>
+            <xs:enumeration value="Estimated model parameters"/>
+            <xs:enumeration value="Cost function value"/>
+            <xs:enumeration value="Cost function value at optimum"/>
+            <xs:enumeration value="Initial model parameters"/>
+            <xs:enumeration value="Model parameters lower bounds"/>
+            <xs:enumeration value="Model parameters upper bounds"/>
+            <xs:enumeration value="Data weights"/>
+            <xs:enumeration value="Maximum number of iterations"/>
+            <xs:enumeration value="Convergence threshold"/>
+            <xs:enumeration value="Linear coefficients matrix"/>
+            <xs:enumeration value="Regularisation parameter"/>
+            <xs:enumeration value="Normalised regularisation parameter"/>
+            <xs:enumeration value="Fixed lambda value"/>
+            <xs:enumeration value=""/>
+            <xs:enumeration value=""/>
+            <xs:enumeration value=""/>
+            <!--Native R1 estimation quantities Q.NR1-->
+            <xs:enumeration value="Fixed R10 value"/>
+            <!--AIF estimation quantities Q.AE1-->
+            <xs:enumeration value="k-means cluter algoritm parameters"/>
+            <xs:enumeration value="Fuzzy c-means cluster algoirthm parameters"/>
+            <xs:enumeration value="Partial volume corrected"/>
+            <xs:enumeration value="Dual bolus"/>
+            <xs:enumeration value="Arterial partial volume correction factor"/>
+            <!--Segmenetation quantities Q.SE1-->
+            <xs:enumeration value="Binary mask"/>
+            <xs:enumeration value="Binary AIF mask"/>
+            <xs:enumeration value="Binary tissue mask"/>
+            <xs:enumeration value="Seeds"/>
+            <xs:enumeration value="Number of k-mean clusters"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--Now restrict the types of values allowed for Model to be the ones in the lexicon-->
+    <xs:simpleType name="ModelName">
+        <xs:annotation>
+            <xs:documentation>A restriction on models, so that only quantites that are defined in
+                the lexicon can be used</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <!--general forward model-->
+            <xs:enumeration value="Forward model"/>
+            <!--magnitude model DSC model-->
+            <xs:enumeration value="Gradient echo model"/>
+            <xs:enumeration value="Spin echo model"/>
+            <!--magnitude model DCE - R1 in the fast exchange limit-->
+            <xs:enumeration value="Linear model"/>
+            <xs:enumeration value="Spoiled gradient recalled echo model"/>
+            <xs:enumeration value="Single-shot saturation recovery SPGR with centric encoding model"/>
+            <xs:enumeration value="Single-shot saturation recovery SPGR with linear encoding model"/>
+            <xs:enumeration value="Single-shot inversion recovery SPGR with centric encoding model"/>
+            <xs:enumeration value="Single-shot inversion recovery SPGR with linear encoding model"/>
+            <xs:enumeration value=""/>
+            <!--Magnitude models: DCE - R1 in the fast water exchange limit, direct relationship with indicator concentration-->
+            <xs:enumeration value="Absolute signal enhancement model"/>
+            <xs:enumeration value="Relative signal enhancement model"/>
+            <!--Magnitude models: DCE - R1 in the presence of no water exchange-->
+            <xs:enumeration value="Fast transendothelial water exchange, no transcytolemmal water exchange"/>
+            <xs:enumeration value="No transendothelial water exchange, fast transcytolemmal water exchange"/>
+            <xs:enumeration value="No water exchange"/>
+            <!--Magnitude models: DCE - R1 in presence of finite water exchange (Shutter speed models) -->
+            <xs:enumeration value="Fast transendothelial water exchange, finite transcytolemmal water exchange"/>
+            <xs:enumeration value="Finite transendothelial exchange, fast transcytolemmal exchange"/>
+            <xs:enumeration value="Finite transendothelial exchange, finite transcytolemmal water exchange"/>
+            <!--Magnitude models: Combined DCE/DSC - R1/R2/R2* -->
+            <xs:enumeration value="DSC Multi-echo (GE) model"/>
+            <xs:enumeration value="DSC Multi-echo (SE) model"/>
+            <!--Magnitude models: Combined DCE/DSC - R1/R2/R2* -->
+            <xs:enumeration value="Linear susceptibility signal model"/>
+            <!--Electromagnetic property models -->
+            <xs:enumeration value="Transverse relaxation rate (GE), linear with relaxivity model"/>
+            <xs:enumeration value="Transverse relaxation rate (SE), linear with relaxivity model"/>
+            <xs:enumeration value="Longitudinal relaxation rate, linear with relaxivity model"/>
+            <xs:enumeration value="Transverse relaxation rate (GE) with gradient leakage correction model"/>
+            <xs:enumeration value="Transverse relaxation rate (GE), quadratic model"/>
+            <xs:enumeration value="Linear susceptibility concentration model"/>
+            <!--Indicator kinetic models-->
+            <xs:enumeration value="Linear and stationary system model"/>
+            <xs:enumeration value="Two-compartment exchange model"/>
+            <xs:enumeration value="Distributed-parameter model "/>
+            <xs:enumeration value="Tissue-homogeneity model"/>
+            <xs:enumeration value="Adiabatic approximation tissue homogeneity model"/>
+            <xs:enumeration value="Standard Tofts model"/>    
+            <xs:enumeration value="Extended Tofts model"/>
+            <xs:enumeration value="Compartmental tissue uptake model"/>
+            <xs:enumeration value="Plug-flow tissue uptake model"/>
+            <xs:enumeration value="Patlak model"/>
+            <xs:enumeration value="One-compartment, fast indicator exchange model"/>
+            <xs:enumeration value="One-compartment, no indicator exchange  model (intravascular model)"/>
+            <!--AIF models-->
+            <xs:enumeration value="Parker AIF model"/>
+            <xs:enumeration value="Georgiou AIF model"/>
+            <xs:enumeration value="Weinmann AIF model"/>
+            <!--Descriptive models-->
+            <xs:enumeration value="Unit step model"/>
+            <xs:enumeration value="Linear-quadratic model"/>
+            <xs:enumeration value="Two step linear model"/>
+            <xs:enumeration value="Three step linear model"/>
+            <xs:enumeration value="Multi-exponential model"/>
+            <xs:enumeration value="Gamma-variate model"/>
+            <xs:enumeration value="Fermi model"/>
+            <xs:enumeration value="Normal distribution model"/>
+            <!--Leakage correction models-->
+            <xs:enumeration value="Boxerman - Schmainda - Weisskoff (BSW) leakage correction model"/>
+            <xs:enumeration value="Bidirectional leakage correction model"/>
+            <!--Perfusion identity models-->
+            <xs:enumeration value="Central volume theorem"/>
+            <xs:enumeration value="Total volume of distribution"/>
+            <xs:enumeration value="Blood vs plasma volume fraction"/>
+            <xs:enumeration value="Blood vs plasma flow"/>
+            <xs:enumeration value="Blood vs plasma AIF"/>
+            <xs:enumeration value="Small vessel hematocrit correction"/>
+            <xs:enumeration value="Compartment extraction fraction"/>
+            <xs:enumeration value="Plug flow extraction fraction"/>
+            <xs:enumeration value="Plasma MTT identity"/>
+            <xs:enumeration value="Interstitial MTT identity"/>
+            <xs:enumeration value="Ktrans identity"/>
+            <xs:enumeration value="kep identity"/>
+            <!--Scalars derived from dynamic curves-->
+            <xs:enumeration value="Bolus delay identity"/>
+            <xs:enumeration value="Tissue mean transit time identity"/>
+            <xs:enumeration value="Blood plasma flow from maximum"/>
+            <xs:enumeration value="Blood plasma flow from first time frame"/>
+            <xs:enumeration value="Capillary transit time heterogeneity identity"/>
+            <xs:enumeration value="Interstitial MTT identity"/>
+            <xs:enumeration value="Interstitial MTT identity"/>
+            
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--Now restrict the types of values allowed for Units to be the ones in the lexicon-->
+    <xs:simpleType name="UnitType">
+        <xs:annotation>
+            <xs:documentation>A restriction on models, so that only quantites that are defined in
+                the lexicon can be used</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="s"/>
+            <xs:enumeration value="1/s"/>
+            <xs:enumeration value="mL/min/mL"/>
+            <xs:enumeration value="mL/mL"/>
+            <xs:enumeration value="mM"/>
+            <xs:enumeration value="arbitrary"/>
+            <xs:enumeration value="unitless"/>
+            <xs:enumeration value="variable"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--Now restrict the types of values allowed for Units to be the ones in the lexicon-->
+    <xs:simpleType name="Subscript">
+        <xs:annotation>
+            <xs:documentation>A restriction on models, so that only quantites that are defined in
+                the lexicon can be used</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Not applicable"/>
+            <xs:enumeration value="t (tissue)"/>
+            <xs:enumeration value="a (arterial)"/>
+            <xs:enumeration value="c (capillary)"/>
+            <xs:enumeration value="v (venous)"/>
+            <xs:enumeration value="p (plasma)"/>
+            <xs:enumeration value="b (blood)"/>
+            <xs:enumeration value="i (intracellular)"/>
+            <xs:enumeration value="e (extravascular extracellular)"/>
+            <xs:enumeration value="a,b (arterial blood)"/>
+            <xs:enumeration value="c,b (capillary blood)"/>
+            <xs:enumeration value="v,b (venous blood)"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--Define basic definition of set assumption element-->
+    <xs:element name="SetEqual">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string"/>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <!--Now we want to restrict the values of code and units based on values of Process, Input, Output, Model etc. We do this using XSD 1.1's Conditional Type Assignment:-->
+</xs:schema>
