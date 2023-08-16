@@ -1,9 +1,8 @@
 # DCE literature library
 
 **OSIPI papers**
- - Dickie B.R, Ahmed Z, Arvidsson J, Bell L, Buckley DL, Debus C, Fedorov A, Floca R, Gutmann I, van der Heijden RA, van Houdt PJ, Sourbron S, Thrippleton MJ, Quarles C,  Kompan I. A community-endorsed open-source lexicon for contrast-agent based perfusion MRI (CAPLEX): A consensus guidelines report from the ISMRM Open Science Initiative for Perfusion Imaging (OSIPI), Mag Resn Med, 2023
- - van Houdt PJ, Ragunathan S, Berks M, Ahmed Z, Kershaw L, Gurney-Champion O, Tadimalla S, Arvidsson J, Sun Y, Kallehauge J, Dickie BR, Lévy S, Bell L, Sourbron S, 
- Thrippleton MJ, Contrast-agent-based perfusion MRI code repository and testing framework: ISMRM Open Science Initiative for Perfusion Imaging (OSIPI),  Mag Resn Med, 2023.
+- Dickie B.R, Ahmed Z, Arvidsson J, Bell L, Buckley DL, Debus C, Fedorov A, Floca R, Gutmann I, van der Heijden RA, van Houdt PJ, Sourbron S, Thrippleton MJ, Quarles C,  Kompan I. A community-endorsed open-source lexicon for contrast-agent based perfusion MRI (CAPLEX): A consensus guidelines report from the ISMRM Open Science Initiative for Perfusion Imaging (OSIPI), Mag Resn Med, 2023
+- van Houdt PJ, Ragunathan S, Berks M, Ahmed Z, Kershaw L, Gurney-Champion O, Tadimalla S, Arvidsson J, Sun Y, Kallehauge J, Dickie BR, Lévy S, Bell L, Sourbron S, Thrippleton MJ, Contrast-agent-based perfusion MRI code repository and testing framework: ISMRM Open Science Initiative for Perfusion Imaging (OSIPI),  Mag Resn Med, 2023.
 
 **Seminal papers**
 - Tofts PS. Modeling tracer kinetics in dynamic Gd-DTPA MR imaging. J Magn Reson Imaging. 1997 Jan-Feb;7(1):91-101. doi: 10.1002/jmri.1880070113. PMID: 9039598.
