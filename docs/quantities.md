@@ -7,6 +7,7 @@ The items in this group are related to the MR signal and quantities of the MR se
 | Code | OSIPI name| Alternative names|Notation|Description|OSIPI units|Reference|
 | -- | -- | -- | -- | -- | -- | -- |
 | Q.MS1.001.[j] | <a name="S"></a> Signal | -- | *S<sub>j</sub>* | The MR signal (magnitude, phase or complex depending on context) in compartment *j*. | a.u. | -- |
+| Q.MS1.001.[j] | <a id="S" href="#S"></a>Signal <button class="md-button" onclick="copyToClip(document.getElementById('Signal').href)">HYPERLINK</button> | -- | *S<sub>j</sub>* | The MR signal (magnitude, phase or complex depending on context) in compartment *j*. | a.u. | -- |
 | Q.MS1.002.[j] | <a name="S_BL"></a> Baseline signal | --| *S<sub>BL,j</sub>* | Pre-contrast MR signal (magnitude, phase or complex depending on context) in compartment *j* before the arrival of indicator at the tissue of interest. | a.u. | -- |
 | Q.MS1.003.[j] | <a name="AE"></a> Absolute enhancement | -- | *AE<sub>j</sub>* | The absolute signal change from baseline  $\left\| S_j-S_{BL,j} \right\|$ in compartment *j* induced by an indicator. In DCE, the enhancement is positive and in DSC, the enhancement is negative.| a.u. | -- |
 | Q.MS1.004.[j] | <a name="RE"></a> Relative enhancement | -- | *RE<sub>j</sub>* | The relative signal change from baseline $\left\|\frac{S_j}{S_{BL,j}}-1\right\|$ in compartment *j* induced by the indicator. In DCE, the enhancement is positive and in DSC, the enhancement is negative. | -- | -- |
