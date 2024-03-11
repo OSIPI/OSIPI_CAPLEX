@@ -89,6 +89,16 @@ markdown_extensions:
   - md_in_html
   - abbr
 
+
+
+extra:
+  og:
+    type: website  
+    title: Contrast-agent based perfusion MRI lexicon (CAPLEX)
+    description: CAPLEX
+    image: Social Card.png
+    url: https://osipi.github.io/OSIPI_CAPLEX/
+
 extra_javascript:
   - javascripts/extra.js
   - javascripts/mathjax.js
