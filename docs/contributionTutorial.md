@@ -292,9 +292,10 @@ with an optional configuration inside `{}`(1) at the end. For example, <br>`![te
 
 1.  Multiple configurations should all be included within a single `{}` with spaces between, e.g. `{ width="100" align=right }`.
 
-![test](osipiImgs/OSIPI_logo_only_square.png){ width="100" }
 
-![test](osipiImgs/OSIPI_logo_only_square.png){ width="100" align=right }
+![test](osipiImgs/OSIPI_logo_only_square.png){ width="150" align=right }
+
+![test](osipiImgs/OSIPI_logo_only_square.png){ width="150" }
 
 We can also align the image to the right using `{ align=right }`.
 
