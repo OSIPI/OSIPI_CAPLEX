@@ -1,0 +1,2434 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="CAPLEX">
+      
+      
+        <meta name="author" content="Open Science Initiative for Perfusion Imaging (OSIPI)">
+      
+      
+      
+        <link rel="prev" href="../quantities/">
+      
+      
+        <link rel="next" href="../perfusionProcesses/">
+      
+      
+      <link rel="icon" href="../osipiImgs/OSIPI_logo_only_square.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>M - Perfusion models - Contrast-agent based perfusion MRI lexicon (CAPLEX)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M64%2032C28.7%2032%200%2060.7%200%2096v320c0%2035.3%2028.7%2064%2064%2064h224V368c0-26.5%2021.5-48%2048-48h112V96c0-35.3-28.7-64-64-64zm384%20320H336c-8.8%200-16%207.2-16%2016v112l32-32%2064-64z%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-86.2-346.7c7.9-22.3%2029.1-37.3%2052.8-37.3h58.3c34.9%200%2063.1%2028.3%2063.1%2063.1%200%2022.6-12.1%2043.5-31.7%2054.8L280%20264.4c-.2%2013-10.9%2023.6-24%2023.6-13.3%200-24-10.7-24-24v-13.5c0-8.6%204.6-16.5%2012.1-20.8l44.3-25.4c4.7-2.7%207.6-7.7%207.6-13.1%200-8.4-6.8-15.1-15.1-15.1h-58.3c-3.4%200-6.4%202.1-7.5%205.3l-.4%201.2c-4.4%2012.5-18.2%2019-30.6%2014.6s-19-18.2-14.6-30.6l.4-1.2zM224%20352a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%2032c14.2%200%2027.3%207.5%2034.5%2019.8l216%20368c7.3%2012.4%207.3%2027.7.2%2040.1S486.3%20480%20472%20480H40c-14.3%200-27.6-7.7-34.7-20.1s-7-27.8.2-40.1l216-368C228.7%2039.5%20241.8%2032%20256%2032m0%20128c-13.3%200-24%2010.7-24%2024v112c0%2013.3%2010.7%2024%2024%2024s24-10.7%2024-24V184c0-13.3-10.7-24-24-24m32%20224a32%2032%200%201%200-64%200%2032%2032%200%201%200%2064%200%22/%3E%3C/svg%3E');}</style>
+
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M17%2013h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-27M7GKVZFQ"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-27M7GKVZFQ",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-27M7GKVZFQ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#section-m-perfusion-models" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Contrast-agent based perfusion MRI lexicon (CAPLEX)" class="md-header__button md-logo" aria-label="Contrast-agent based perfusion MRI lexicon (CAPLEX)" data-md-component="logo">
+      
+  <img src="../osipiImgs/OSIPI_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Contrast-agent based perfusion MRI lexicon (CAPLEX)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              M - Perfusion models
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OSIPI/OSIPI_CAPLEX" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OSIPI_CAPLEX
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Contrast-agent based perfusion MRI lexicon (CAPLEX)" class="md-nav__button md-logo" aria-label="Contrast-agent based perfusion MRI lexicon (CAPLEX)" data-md-component="logo">
+      
+  <img src="../osipiImgs/OSIPI_logo.png" alt="logo">
+
+    </a>
+    Contrast-agent based perfusion MRI lexicon (CAPLEX)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OSIPI/OSIPI_CAPLEX" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OSIPI_CAPLEX
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About Caplex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CAPLEX structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qualityOfLife/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to use the website
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../improved-contribution-tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to contribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sections
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sections
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quantities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Q - Quantities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    M - Perfusion models
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    M - Perfusion models
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-forward-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      General forward model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mr-signal-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      MR signal models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MR signal models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#magnitude-models-dsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Magnitude models: DSC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magnitude-models-dce-r1-in-the-fast-water-exchange-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Magnitude models: DCE - R1 in the fast water exchange limit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magnitude-models-dce-r1-in-the-fast-water-exchange-limit-direct-relationship-with-indicator-concentration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Magnitude models: DCE - R1 in the fast water exchange limit, direct relationship with indicator concentration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#magnitude-models-dce-r1-in-the-presence-of-restricted-water-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Magnitude models: DCE - R1 in the presence of restricted water exchange
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Magnitude models: DCE - R1 in the presence of restricted water exchange">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#magnitude-models-dce-r1-in-the-presence-of-no-water-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Magnitude models: DCE - R1 in the presence of no water exchange
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magnitude-models-dce-r1-in-the-presence-of-finite-water-exchange-shutter-speed-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Magnitude models: DCE - R1 in the presence of finite water exchange (Shutter speed models)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magnitude-models-combined-dcedsc-r1r2r2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Magnitude models: Combined DCE/DSC - R1/R2/R2*
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-models-dsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase models: DSC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#electromagnetic-property-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electromagnetic property models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indicator-concentration-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indicator concentration models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Indicator concentration models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indicator-kinetic-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indicator kinetic models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arterial-input-function-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arterial input function models
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descriptive-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriptive models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leakage-correction-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leakage correction models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perfusion-identity-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perfusion identity models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Perfusion identity models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scalar-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scalar quantities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalars-derived-from-dynamic-curves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scalars derived from dynamic curves
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../perfusionProcesses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    P - Perfusion processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalPurposeProcesses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    G - General purpose processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivedProcesses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    D - Derived processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Implementation Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Implementation Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DCE/DSC resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            DCE/DSC resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dceliterature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DCE literature library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Software tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Software tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../softwareOverview.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Software overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simulationTools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data simulation tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysisToolboxes.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analysis toolboxes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sampleDatasets.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sample datasets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-forward-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      General forward model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mr-signal-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      MR signal models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MR signal models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#magnitude-models-dsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Magnitude models: DSC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magnitude-models-dce-r1-in-the-fast-water-exchange-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Magnitude models: DCE - R1 in the fast water exchange limit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magnitude-models-dce-r1-in-the-fast-water-exchange-limit-direct-relationship-with-indicator-concentration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Magnitude models: DCE - R1 in the fast water exchange limit, direct relationship with indicator concentration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#magnitude-models-dce-r1-in-the-presence-of-restricted-water-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Magnitude models: DCE - R1 in the presence of restricted water exchange
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Magnitude models: DCE - R1 in the presence of restricted water exchange">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#magnitude-models-dce-r1-in-the-presence-of-no-water-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Magnitude models: DCE - R1 in the presence of no water exchange
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magnitude-models-dce-r1-in-the-presence-of-finite-water-exchange-shutter-speed-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Magnitude models: DCE - R1 in the presence of finite water exchange (Shutter speed models)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magnitude-models-combined-dcedsc-r1r2r2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Magnitude models: Combined DCE/DSC - R1/R2/R2*
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-models-dsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase models: DSC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#electromagnetic-property-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electromagnetic property models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indicator-concentration-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indicator concentration models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Indicator concentration models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indicator-kinetic-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indicator kinetic models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arterial-input-function-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arterial input function models
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descriptive-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriptive models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leakage-correction-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leakage correction models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perfusion-identity-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perfusion identity models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Perfusion identity models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scalar-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scalar quantities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalars-derived-from-dynamic-curves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scalars derived from dynamic curves
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="section-m-perfusion-models"><a id="Section M"></a> Section M: Perfusion Models<a class="headerlink" href="#section-m-perfusion-models" title="Permanent link">&para;</a></h1>
+<h2 id="general-forward-model">General forward model<a class="headerlink" href="#general-forward-model" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.GF1.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Forward model"></a> Forward model</td>
+<td>--</td>
+<td>--</td>
+<td>A forward model to be inverted (select from <a href="#section M">Section M</a>).</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mr-signal-models"><a id="MR signal models"></a> <abbr title="Magnetic Resonance">MR</abbr> signal models<a class="headerlink" href="#mr-signal-models" title="Permanent link">&para;</a></h2>
+<p>This section covers models that describe how the measured <abbr title="Magnetic Resonance">MR</abbr> signal <em>S</em> depends on electromagnetic properties, such as the relaxation rates <em>R<sub>1</sub></em>, <em>R<sub>1</sub></em> and <em>R<sub>2</sub><sup></em></sup>* or the magnetic susceptibility <span class="arithmatex">\(\chi\)</span> , and on <abbr title="Magnetic Resonance">MR</abbr> sequence parameters such as TR and TE. </br>
+The exception is section "Magnitude models: <abbr title="Dynamic Contrast Enhanced">DCE</abbr> - R1 in the fast water exchange limit, direct relationship with indicator concentration", in which the model describes how the <abbr title="Magnetic Resonance">MR</abbr> signal depends directly on the indicator concentration.</p>
+<h3 id="magnitude-models-dsc"><a id="Magnitude models: DSC"></a> Magnitude models: <abbr title="Dynamic Susceptibility Contrast">DSC</abbr><a class="headerlink" href="#magnitude-models-dsc" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.SM1.001 <button class="md-button md-button--hyperlink" onclick="copyToClip(document.getElementById('GRE model').href)">COPY LINK</button></td>
+<td><a id="GRE model" href="#GRE model"></a>Gradient echo model</td>
+<td>--</td>
+<td><abbr title="Gradient Echo">GE</abbr> model</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(S=S_0\cdot e^{-TE\cdot R_2^*}\)</span>  </br> with </br> <a href="../quantities/#TE" target="_blank"><span class="arithmatex">\(TE\)</span> (Q.MS1.005)</a>, </br> <a href="../quantities/#S_0" target="_blank"><span class="arithmatex">\(S_0\)</span> (Q.MS1.010)</a>, </br> <a href="../quantities/#R2Star" target="_blank"><span class="arithmatex">\(R_2^*\)</span> (Q.EL1.007)</a>, </br> <a href="../quantities/#S" target="_blank"><span class="arithmatex">\(S\)</span> (Q.MS1.001)</a>.</td>
+<td><a href="https://doi.org/10.1007/b137553" target="_blank">Jackson et al. 2005</a></td>
+</tr>
+<tr>
+<td>M.SM1.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="SE model"></a> Spin echo model</td>
+<td>--</td>
+<td><abbr title="Spin Echo">SE</abbr> model</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(S=S_0\cdot e^{-TE\cdot R_2}\)</span> </br>  with </br> <a href="../quantities/#TE" target="_blank"><em>TE</em> (Q.MS1.005)</a>, </br> <a href="../quantities/#S_0" target="_blank"><em>S<sub>0</sub></em> (Q.MS1.010)</a>, </br> <a href="../quantities/#R2" target="_blank"><em>R<sub>2</sub></em> (Q.EL1.004)</a>,</br> <a href="../quantities/#S" target="_blank"><em>S</em> (Q.MS1.001)</a>.</td>
+<td><a href="https://doi.org/10.1007/b137553" target="_blank">Jackson et al. 2005</a></td>
+</tr>
+<tr>
+<td>M.SM1.999</td>
+<td><a id="not listed SM1"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h3 id="magnitude-models-dce-r1-in-the-fast-water-exchange-limit"><a id="Magnitude models: DCE - R1 in the fast water exchange limit"></a> Magnitude models: <abbr title="Dynamic Contrast Enhanced">DCE</abbr> - R1 in the fast water exchange limit<a class="headerlink" href="#magnitude-models-dce-r1-in-the-fast-water-exchange-limit" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.SM2.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="LinModel_SM2"></a> Linear model</td>
+<td>--</td>
+<td>Linear</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(S=k \cdot R_1\)</span> </br> with </br> <a href="../quantities/#const" target="_blank"><em>k</em> (Q.GE1.009)</a>, </br> <a href="../quantities/#R1" target="_blank"><em>R<sub>1</sub></em> (Q.EL1.001)</a>,</br> <a href="../quantities/#S" target="_blank"><em>S</em> (Q.MS1.001)</a>.</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.SM2.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="SPGR model"></a> Spoiled gradient recalled echo model</td>
+<td>FLASH model</td>
+<td><abbr title="Spoiled Gradient Echo">SPGR</abbr> model</td>
+<td>This forward model is given by the following equation: <span class="arithmatex">\(S=S_0 \cdot \frac{sin(\alpha)[1-e^{TR\cdot R_1}]}{1-cos(\alpha)\cdot e^{-TR\cdot R_1}}\)</span> </br> with </br> <a href="../quantities/#S_0" target="_blank"><em>S<sub>0</sub></em> (Q.MS1.010)</a>, </br> <a href="../quantities/#R1" target="_blank"><em>R<sub>1</sub></em> (Q.EL1.001)</a>, </br> <a href="../quantities/#TR" target="_blank"><em>TR</em> (Q.MS1.006)</a>, </br> <a href="../quantities/#Flip angle" target="_blank"><span class="arithmatex">\(\alpha\)</span> (Q.MS1.007)</a>, </br> <a href="../quantities/#S" target="_blank"><em>S</em> (Q.MS1.001)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.SM2.003 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="SS-SR-SPGR-c model"></a> Single-shot saturation recovery <abbr title="Spoiled Gradient Echo">SPGR</abbr> with centric encoding model</td>
+<td>SS-SR-FLASH-c model</td>
+<td>SS-SR-<abbr title="Spoiled Gradient Echo">SPGR</abbr>-c model</td>
+<td>This forward model is given by the following equation: <span class="arithmatex">\(S = S_0\cdot(1-e^{-PD\cdot R_1})\)</span> </br> with </br> <a href="../quantities/#S_0" target="_blank"><em>S<sub>0</sub></em> (Q.MS1.010)</a>, </br> <a href="../quantities/#R1" target="_blank"><em>R<sub>1</sub></em> (Q.EL1.001)</a>, </br> <a href="../quantities/#PD" target="_blank">PD (Q.MS1.008)</a>, </br> <a href="../quantities/#S" target="_blank"><em>S</em> (Q.MS1.001)</a></td>
+<td><a href="https://doi.org/10.1053/crad.1999.0327" target="_blank">Parker et al. 2000</a></td>
+</tr>
+<tr>
+<td>M.SM2.004 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="SR-turboSPGR-lin model"></a> Saturation-recovery <abbr title="Spoiled Gradient Echo">SPGR</abbr> with linear encoding model</td>
+<td>SR-turboFLASH-lin model</td>
+<td>SR-turboSPGR-lin model</td>
+<td>This forward model is given by the following equation: <span class="arithmatex">\(S=S_0\cdot sin(\alpha)\cdot[(1-e^{-PD\cdot R_1})a^{n-1}+b\frac{(1-a^{n-1})}{(1-a)}]\)</span> </br> with </br> <span class="arithmatex">\(a=cos(\alpha)\cdot e^{-TR\cdot R_1}\)</span>, </br> <span class="arithmatex">\(b=1-e^{-TR\cdot R_1}\)</span>, </br> <a href="../quantities/#S_0" target="_blank">S<sub>0</sub> (Q.MS1.010)</a>, </br> <a href="../quantities/#R1" target="_blank"><em>R<sub>1</sub></em> (Q.EL1.001)</a>, </br> <a href="../quantities/#PD" target="_blank">PD (Q.MS1.008)</a>, </br> <a href="../quantities/#TR" target="_blank"><em>TR</em> (Q.MS1.006)</a>, </br> <a href="../quantities/#Flip angle" target="_blank"><span class="arithmatex">\(\alpha\)</span> (Q.MS1.006)</a>= 90°, </br> <a href="../quantities/#n k-space" target="_blank">n (Q.MS1.011)</a>, </br> <a href="../quantities/#S" target="_blank"><em>S</em> (Q.MS1.001)</a></td>
+<td>Larson 2001</td>
+</tr>
+<tr>
+<td>M.SM2.005 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="SS-IR-SPGR-c model"></a> Single-shot inversion recovery <abbr title="Spoiled Gradient Echo">SPGR</abbr> with centric encoding model</td>
+<td>SS-IR-FLASH-c model</td>
+<td>SS-IR-<abbr title="Spoiled Gradient Echo">SPGR</abbr>-c model</td>
+<td>This forward model is given by the following equation: <span class="arithmatex">\(S = S_0\cdot(1-2e^{-PD\cdot R_1})\)</span>  </br> with </br> <a href="../quantities/#S_0" target="_blank"><em>S<sub>0</sub></em> (Q.MS1.010)</a>, </br> <a href="../quantities/#R1" target="_blank"><em>R<sub>1</sub></em> (Q.EL1.001)</a>, </br> <a href="../quantities/#PD" target="_blank">PD (Q.MS1.008)</a>, </br> <a href="../quantities/#S" target="_blank"><em>S</em> (Q.MS1.001)</a></td>
+<td>Ordidge et al. 1990</td>
+</tr>
+<tr>
+<td>M.SM2.006 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="IR-turboFLASH-lin model"></a> Inversion-recovery spoiled gradient recalled echo with linear encoding model</td>
+<td>IR-turboFLASH-lin model</td>
+<td>IR-turboSPGR-lin model</td>
+<td>This forward model is given by the following equation: <span class="arithmatex">\(S=S_0\cdot sin(\alpha)\cdot [\frac{(C+bA-\frac{1}{cos(\alpha)}D+1)}{1+BD}\cdot e^{-PD\cdot R_1}a^{n-1}\)</span></br>&emsp;&emsp;<span class="arithmatex">\(+(1-e^{-PD\cdot R_1})a^{n-1}+b\frac{1-a^{n-1}}{1-a}]\)</span> </br> with </br> <span class="arithmatex">\(a=cos(\alpha)e^{-TR\cdot R_1}\)</span>, </br> <span class="arithmatex">\(b=1-e^{-TR\cdot R_1}\)</span>, </br> <span class="arithmatex">\(C=a^{N-1}(1-e^{-PD\cdot R_1})\)</span>, </br> <span class="arithmatex">\(A=\frac{1-a^{N-1}}{1-a}\)</span>, </br> <span class="arithmatex">\(D=cos(\alpha)e^{-PD\cdot R_1}\)</span>, </br> <span class="arithmatex">\(B=a^{N-1}e^{-PD\cdot R_1}\)</span>, </br> <a href="../quantities/#S_0" target="_blank"><em>S<sub>0</sub></em> (Q.MS1.010)</a>,</br> <a href="../quantities/#R1" target="_blank"><em>R<sub>1</sub></em> (Q.EL1.001)</a>, </br> <a href="../quantities/#PD" target="_blank"><em>PD</em> (Q.MS1.008)</a>, </br> <a href="../quantities/#Flip angle" target="_blank"><span class="arithmatex">\(\alpha\)</span> (Q.MS1.007)</a> , </br> <a href="../quantities/#TR" target="_blank"><em>TR</em> (Q.MS1.006)</a>, </br> <a href="../quantities/#n k-space" target="_blank"><em>n</em> (Q.MS1.011)</a>, </br> <a href="../quantities/#N k-space" target="_blank"><em>N</em> (Q.MS1.012)</a>, </br> <a href="../quantities/#S" target="_blank"><em>S</em> (Q.MS1.001)</a></td>
+<td>Larson 2001</td>
+</tr>
+<tr>
+<td>M.SM2.999</td>
+<td><a id="not listed SM2"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h3 id="magnitude-models-dce-r1-in-the-fast-water-exchange-limit-direct-relationship-with-indicator-concentration"><a id="Magnitude models: DCE - R1 in the fast water exchange limit, direct relationship with indicator concentration"></a> Magnitude models: <abbr title="Dynamic Contrast Enhanced">DCE</abbr> - R1 in the fast water exchange limit, direct relationship with indicator concentration<a class="headerlink" href="#magnitude-models-dce-r1-in-the-fast-water-exchange-limit-direct-relationship-with-indicator-concentration" title="Permanent link">&para;</a></h3>
+<p>In this section models are described which assume a direct relationship between the measured <abbr title="Magnetic Resonance">MR</abbr> signal <em>S</em> and the indicator concentration.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.MS3.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="LinModel_MS3"></a> Linear model</td>
+<td>--</td>
+<td>Linear</td>
+<td>This forward model is given by the following equation:</br> <span class="arithmatex">\(S=k\cdot C\)</span> </br> with </br> <a href="../quantities/#C" target="_blank"><em>C</em> (Q.IC1.001)</a>, </br> <a href="../quantities/#const" target="_blank"><em>k</em> (Q.GE1.009)</a>, <br/> <a href="../quantities/#S" target="_blank"><em>S</em> (Q.MS1.001)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.MS3.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="ASE"></a> Absolute signal enhancement model</td>
+<td>--</td>
+<td>ASE</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(\left\| S-S_{BL} \right\|=k\cdot C\)</span> , <br/> with <br/>  <a href="../quantities/#C" target="_blank"><em>C</em> (Q.IC1.001)</a>, <br/> <a href="../quantities/#S_BL" target="_blank"><em>S<sub>BL</sub></em> (Q.MS1.002)</a>, <br/> <a href="../quantities/#const" target="_blank"><em>k</em> (Q.GE1.009)</a>, <br/> <a href="../quantities/#S" target="_blank"><em>S</em> (Q.MS1.001)</a></td>
+<td><a href="https://doi.org/10.1007/s10928-013-9315-3" target="_blank">Ingrisch and Sourbron 2013</a></td>
+</tr>
+<tr>
+<td>M.MS3.003 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="RSE"></a> Relative signal enhancement model</td>
+<td>--</td>
+<td>RSE</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(\left\| \frac{S}{S_{BL}}-1 \right\|=k\cdot C\)</span> <br/> with <br/> <a href="../quantities/#C" target="_blank">C (Q.IC1.001)</a>, <br/> <a href="../quantities/#S_BL" target="_blank">S<sub>BL</sub> (Q.MS1.002)</a>, <br/> <a href="../quantities/#const" target="_blank">k (Q.GE1.009)</a>, <br/> <a href="../quantities/#S" target="_blank">S (Q.MS1.001)</a></td>
+<td><a href="https://doi.org/10.1007/s10928-013-9315-3" target="_blank">Ingrisch and Sourbron 2013</a></td>
+</tr>
+<tr>
+<td>M.SM3.999</td>
+<td><a id="not listed SM3"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="magnitude-models-dce-r1-in-the-presence-of-restricted-water-exchange"><a id="Magnitude models: DCE - R1 in the presence of restricted water exchange"></a> Magnitude models: <abbr title="Dynamic Contrast Enhanced">DCE</abbr> - R1 in the presence of restricted water exchange<a class="headerlink" href="#magnitude-models-dce-r1-in-the-presence-of-restricted-water-exchange" title="Permanent link">&para;</a></h2>
+<p>Notation: 
+<span class="arithmatex">\(S_{DCE,FXL}\)</span> is one of the <abbr title="Dynamic Contrast Enhanced">DCE</abbr> signal models from the table above (<abbr title="Dynamic Contrast Enhanced">DCE</abbr> - R1 in fast water exchange limit). In <strong>all the models below</strong>, water exchange across red blood cell membranes is considered to be in the fast exchange limit. We also assume that the tissue-blood partition coefficient for water is equal to 1. Models with restricted water-exchange between one or more compartments are also referred to as shutter-speed models.</p>
+<h3 id="magnitude-models-dce-r1-in-the-presence-of-no-water-exchange"><a id="Magnitude models: DCE - R1 in the presence of no water exchange"></a> Magnitude models: <abbr title="Dynamic Contrast Enhanced">DCE</abbr> - R1 in the presence of no water exchange<a class="headerlink" href="#magnitude-models-dce-r1-in-the-presence-of-no-water-exchange" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.SM4.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="FTeWENTcWE"></a> Fast transendothelial water exchange, no transcytolemmal water exchange</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation:<br/><span class="arithmatex">\(S = \left( p_{b} + p_{e}\right)S_{DCE,FXL}\left( R_{1,be}\right)+p_iS_{DCE,FXL}\left( R_{1,i}\right)\)</span>,<br/>where <span class="arithmatex">\(S_{DCE,FXL}\)</span> is a forward model selected from <a href="./#Magnitude models: DCE - R1 in the fast water exchange limit">Magnitude models: <abbr title="Dynamic Contrast Enhanced">DCE</abbr>- R1 in fast water exchange limit</a>, <br/><a href="../quantities/#VWPF" target="_blank"><span class="arithmatex">\(p_b\)</span> (Q.PH1.017.b)</a>, <br/><a href="../quantities/#VWPF" target="_blank"><span class="arithmatex">\(p_e\)</span> (Q.PH1.017.e)</a>, <br/><a href="../quantities/#VWPF" target="_blank"><span class="arithmatex">\(p_i\)</span> (Q.PH1.017.i)</a>, <br/><a href="../quantities/#R1" target="_blank"><span class="arithmatex">\(R_{1,be}\)</span> (Q.EL1.001.be)</a>, <br/><a href="../quantities/#R1" target="_blank"><span class="arithmatex">\(R_{1,i}\)</span> (Q.EL1.001.i)</a>, <br/><a href="../quantities/#S" target="_blank">S (Q.MS1.001)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.SM4.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="NTeWEFTcWE"></a> No transendothelial water exchange, fast transcytolemmal water exchange</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation:<br/><span class="arithmatex">\(S = p_bS_{DCE,FXL}\left( R_{1,b}\right)+\left( p_e + p_i\right)S_{DCE,FXL}\left( R_{1,ei}\right)\)</span>,<br/>where <span class="arithmatex">\(S_{DCE,FXL}\)</span> is a forward model selected from <a href="./#Magnitude models: DCE - R1 in the fast water exchange limit">Magnitude models: <abbr title="Dynamic Contrast Enhanced">DCE</abbr>- R1 in fast water exchange limit</a>, <br/><a href="../quantities/#VWPF" target="_blank"><span class="arithmatex">\(p_b\)</span> (Q.PH1.017.b)</a>, <br/><a href="../quantities/#VWPF" target="_blank"><span class="arithmatex">\(p_e\)</span> (Q.PH1.017.e)</a>, <br/><a href="../quantities/#VWPF" target="_blank"><span class="arithmatex">\(p_i\)</span> (Q.PH1.017.i)</a>, <br/><a href="../quantities/#R1" target="_blank"><span class="arithmatex">\(R_{1,b}\)</span> (Q.EL1.001.b)</a>, <br/><a href="../quantities/#R1" target="_blank"><span class="arithmatex">\(R_{1,ei}\)</span> (Q.EL1.001.ei)</a>, <br/><a href="../quantities/#S" target="_blank">S (Q.MS1.001)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.SM4.003 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="NWE"></a> No water exchange</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation:<br/><span class="arithmatex">\(S = p_bS_{DCE,FXL}\left( R_{1,b}\right)+p_eS_{DCE,FXL}\left( R_{1,e}\right)+p_iS_{DCE,FXL}\left( R_{1,i}\right)\)</span>,<br/> where <span class="arithmatex">\(S_{DCE,FXL}\)</span> is a forward model selected from <a href="./#Magnitude models: DCE - R1 in the fast water exchange limit">Magnitude models: <abbr title="Dynamic Contrast Enhanced">DCE</abbr>- R1 in fast water exchange limit</a>, <br/><a href="../quantities/#VWPF" target="_blank"><span class="arithmatex">\(p_b\)</span> (Q.PH1.017.b)</a>, <br/><a href="../quantities/#VWPF" target="_blank"><span class="arithmatex">\(p_e\)</span> (Q.PH1.017.e)</a>, <br/><a href="../quantities/#VWPF" target="_blank"><span class="arithmatex">\(p_i\)</span> (Q.PH1.017.i)</a>, <br/><a href="../quantities/#R1" target="_blank"><span class="arithmatex">\(R_{1,b}\)</span> (Q.EL1.001.b)</a>, <br/><a href="../quantities/#R1" target="_blank"><span class="arithmatex">\(R_{1,e}\)</span> (Q.EL1.001.e)</a>, <br/><a href="../quantities/#R1" target="_blank"><span class="arithmatex">\(R_{1,i}\)</span> (Q.EL1.001.i)</a>, <br/><a href="../quantities/#S" target="_blank">S (Q.MS1.001)</a></td>
+<td><a href="https://doi.org/10.1002/mrm.22430" target="_blank">Bains et al. 2010</a></td>
+</tr>
+<tr>
+<td>M.SM4.999</td>
+<td><a id="not listed SM4"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state the doi of a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h3 id="magnitude-models-dce-r1-in-the-presence-of-finite-water-exchange-shutter-speed-models"><a id="Magnitude models: DCE - R1 in the presence of finite water exchange (Shutter speed models)"></a> Magnitude models: <abbr title="Dynamic Contrast Enhanced">DCE</abbr> - R1 in the presence of finite water exchange (Shutter speed models)<a class="headerlink" href="#magnitude-models-dce-r1-in-the-presence-of-finite-water-exchange-shutter-speed-models" title="Permanent link">&para;</a></h3>
+<p>Non-zero exchange for the restricted ones</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.SM5.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="FTeWEFiTcWE"></a> Fast transendothelial water exchange, finite transcytolemmal water exchange</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation:<br/><span class="arithmatex">\(S=p_+S_{DCE,FXL}\left( R_{1,+}\right)+\left( 1-p_+\right)S_{DCE,FXL}\left( R_{1,-}\right)\)</span>,<br/>with<br/><span class="arithmatex">\(R_{1\pm}=0.5\left( R_{1,i}+\tau_i^{-1}+R_{1,be}+\tau_{be}^{-1} \right)\)</span><br/>&emsp;&emsp;&emsp;<span class="arithmatex">\(\pm0.5\sqrt{\left( R_{1,i}+\tau_i^{-1}-R_{1,be}-\tau_{be}^{-1} \right)^2+4\tau_i^{-1}\tau_{be}^{-1}}\)</span><br/><br/><span class="arithmatex">\(p_+=0.5-0.5\frac{\left( R_{i,i}-R_{1,be}\right)\left( 2(p_{be}+p_i)-1\right)+\tau_i^{-1}+\tau_{be}^{-1}}{\sqrt{\left( R_{1,i}+\tau_i^{-1}-R_{1,be}-\tau_{be}^{-1} \right)^2+4\tau_i^{-1}\tau_{be}^{-1}}}\)</span>,<br/> where <span class="arithmatex">\(S_{DCE,FXL}\)</span> is a forward model selected from <a href="./#Magnitude models: DCE - R1 in the fast water exchange limit">Magnitude models: <abbr title="Dynamic Contrast Enhanced">DCE</abbr>- R1 in fast water exchange limit</a>, <br/><a href="../quantities/#VWPF" target="_blank"><span class="arithmatex">\(p_{be}\)</span> (Q.PH1.017.be)</a>, <br/><a href="../quantities/#VWPF" target="_blank"><span class="arithmatex">\(p_i\)</span> (Q.PH1.017.i)</a>, <br/><a href="../quantities/#R1" target="_blank"><span class="arithmatex">\(R_{1,be}\)</span> (Q.EL1.001.be)</a>, <br/><a href="../quantities/#R1" target="_blank"><span class="arithmatex">\(R_{1,i}\)</span> (Q.EL1.001.i)</a>, <br/><a href="../quantities/#PELoW" target="_blank"><span class="arithmatex">\(\tau_{be}\)</span> (Q.PH1.016.be)</a>, <br/><a href="../quantities/#PELoW" target="_blank"><span class="arithmatex">\(\tau_i\)</span> (Q.PH1.016.i)</a>, <br/><a href="../quantities/#S" target="_blank">S (Q.MS1.001)</a></td>
+<td><a href="https://doi.org/10.1002/mrm.27456" target="_blank">Buckley 2018</a></td>
+</tr>
+<tr>
+<td>M.SM5.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="FTeEFaTcWE"></a>Finite transendothelial exchange, fast transcytolemmal water exchange</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation:<br/><span class="arithmatex">\(S=p_+S_{DCE,FXL}\left( R_{1,+}\right)+\left( 1-p_+\right)S_{DCE,FXL}\left( R_{1,-}\right)\)</span>,<br/>with<br/><span class="arithmatex">\(R_{1\pm}=0.5\left( R_{1,ei}+\tau_{ei}^{-1}+R_{1,b}+\tau_{b}^{-1} \right)\)</span><br/>&emsp;&emsp;&emsp;<span class="arithmatex">\(\pm0.5\sqrt{\left( R_{1,ei}+\tau_{ei}^{-1}-R_{1,b}-\tau_b^{-1} \right)^2+4\tau_{ei}^{-1}\tau_b^{-1}}\)</span><br/><br/><span class="arithmatex">\(p_+=0.5-0.5\frac{\left( R_{1,ei}-R_{1,b}\right)\left( 2(p_{ei}+p_b)-1\right)+\tau_{ei}^{-1}+\tau_b^{-1}}{\sqrt{\left( R_{1,ei}+\tau_{ei}^{-1}-R_{1,b}-\tau_b^{-1} \right)^2+4\tau_{ei}^{-1}\tau_b^{-1}}}\)</span>,<br/> where <span class="arithmatex">\(S_{DCE,FXL}\)</span> is a forward model selected from <a href="./#Magnitude models: DCE - R1 in the fast water exchange limit">Magnitude models: <abbr title="Dynamic Contrast Enhanced">DCE</abbr>- R1 in fast water exchange limit</a>, <br/><a href="../quantities/#VWPF" target="_blank"><span class="arithmatex">\(p_{b}\)</span> (Q.PH1.017.b)</a>, <br/><a href="../quantities/#VWPF" target="_blank"><span class="arithmatex">\(p_{ei}\)</span> (Q.PH1.017.ei)</a>, <br/><a href="../quantities/#R1" target="_blank"><span class="arithmatex">\(R_{1,b}\)</span> (Q.EL1.001.b)</a>, <br/><a href="../quantities/#R1" target="_blank"><span class="arithmatex">\(R_{1,ei}\)</span> (Q.EL1.001.ei)</a>, <br/><a href="../quantities/#PELoW" target="_blank"><span class="arithmatex">\(\tau_{b}\)</span> (Q.PH1.016.b)</a>, <br/><a href="../quantities/#PELoW" target="_blank"><span class="arithmatex">\(\tau_{ei}\)</span> (Q.PH1.016.ei)</a>, <br/><a href="../quantities/#S" target="_blank">S (Q.MS1.001)</a></td>
+<td><a href="https://doi.org/10.1002/mrm.1910370521" target="_blank">Schwarzbauer et al. 1997</a><br/><a href="https://doi.org/10.1016/j.neuroimage.2018.09.030" target="_blank">Dickie 2019</a></td>
+</tr>
+<tr>
+<td>M.SM5.003 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="FTeEFiTcWE"></a> Finite transendothelial exchange, finite transcytolemmal water exchange</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation:<br/><span class="arithmatex">\(S=S_b+S_e+S_i\)</span>,<br/>where<br/><span class="arithmatex">\(\begin{pmatrix} S_b\\S_e\\S_i\end{pmatrix}=S_{DCE,FXL}(\textbf{X})\begin{pmatrix} p_b\\p_e\\p_i\end{pmatrix}\)</span><br/>where<br/><span class="arithmatex">\(\textbf{X}=\begin{pmatrix} -R_{1,b}-\tau_b^{-1}&amp;\tau_e^{-1}-\frac{p_i\tau_i^{-1}}{p_e}&amp;0\\\tau_b^{-1}&amp;-R_{1,e}-\tau_e^{-1}&amp;\tau_i^{-1}\\0&amp;\tau_e^{-1}-\frac{p_b\tau_e^{-1}}{p_e}&amp;-R_{1,i}-\tau_i^{-1}\end{pmatrix}\)</span><br/>where <span class="arithmatex">\(S_{DCE,FXL}\)</span> is a forward model selected from <a href="./#Magnitude models: DCE - R1 in the fast water exchange limit">Magnitude models: <abbr title="Dynamic Contrast Enhanced">DCE</abbr>- R1 in fast water exchange limit</a> with 1’s replaced with the 3 x 3 identity matrix, <br/><a href="../quantities/#VWPF" target="_blank"><span class="arithmatex">\(p_b\)</span> (Q.PH1.017.b)</a>, <br/><a href="../quantities/#VWPF" target="_blank"><span class="arithmatex">\(p_e\)</span> (Q.PH1.017.e)</a>, <br/><a href="../quantities/#VWPF" target="_blank"><span class="arithmatex">\(p_i\)</span> (Q.PH1.017.i)</a>, <br/><a href="../quantities/#R1" target="_blank"><span class="arithmatex">\(R_{1,b}\)</span> (Q.EL1.001.b)</a>, <br/><a href="../quantities/#R1" target="_blank"><span class="arithmatex">\(R_{1,e}\)</span> (Q.EL1.001.e)</a>, <br/><a href="../quantities/#R1" target="_blank"><span class="arithmatex">\(R_{1,i}\)</span> (Q.EL1.001.i)</a>, <br/><a href="../quantities/#PELoW" target="_blank"><span class="arithmatex">\(\tau_{b}\)</span> (Q.PH1.016.b)</a>, <br/><a href="../quantities/#PELoW" target="_blank"><span class="arithmatex">\(\tau_e\)</span> (Q.PH1.016.e)</a>, <br/><a href="../quantities/#PELoW" target="_blank"><span class="arithmatex">\(\tau_i\)</span> (Q.PH1.016.i)</a>, <br/><a href="../quantities/#S" target="_blank">S (Q.MS1.001)</a></td>
+<td><a href="https://doi.org/10.1002/jmri.27118" target="_blank">Ruiliang et al. 2020</a><br/><a href="https://doi.org/10.1002/mrm.22430" target="_blank">Bains et al. 2010</a></td>
+</tr>
+<tr>
+<td>M.SM5.999</td>
+<td><a id="not listed SM5"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state the doi of a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h3 id="magnitude-models-combined-dcedsc-r1r2r2"><a id="Magnitude models: Combined DCE/DSC - R1/R2/R2* "></a> Magnitude models: Combined <abbr title="Dynamic Contrast Enhanced">DCE</abbr>/<abbr title="Dynamic Susceptibility Contrast">DSC</abbr> - R1/R2/R2*<a class="headerlink" href="#magnitude-models-combined-dcedsc-r1r2r2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.SM6.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><abbr title="Dynamic Susceptibility Contrast">DSC</abbr> Multi-echo (<abbr title="Gradient Echo">GE</abbr>) model</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: <br/><span class="arithmatex">\(S=S_{DCE,FXL}(R_1)e^{-TE\cdot R_2^*}\)</span> </br> where <span class="arithmatex">\(S_{DCE,FXL}\)</span>(<span class="arithmatex">\(R_1\)</span>) is a forward model selected from <a href="./#Magnitude models: DCE - R1 in the fast water exchange limit">Magnitude models: <abbr title="Dynamic Contrast Enhanced">DCE</abbr>- R1 in fast water exchange limit</a>,<br/> <a href="../quantities/#TE" target="_blank">TE (Q.MS1.005)</a>, <br/> <a href="../quantities/#R2Star" target="_blank">R<sub>2</sub><sup>*</sup> (Q.EL1.007)</a>, <br/> <a href="../quantities/#S" target="_blank">S (Q.MS1.001)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.SM6.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><abbr title="Dynamic Susceptibility Contrast">DSC</abbr> Multi-echo (<abbr title="Spin Echo">SE</abbr>) model</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: <br/><span class="arithmatex">\(S=S_{DCE,FXL}(R_1)e^{-TE\cdot R_2}\)</span> </br> where <span class="arithmatex">\(S_{DCE,FXL}\)</span>(<span class="arithmatex">\(R_1\)</span>) is a forward model selected from <a href="./#Magnitude models: DCE - R1 in the fast water exchange limit">Magnitude models: <abbr title="Dynamic Contrast Enhanced">DCE</abbr>- R1 in fast water exchange limit</a>,<br/> <a href="../quantities/#TE" target="_blank">TE (Q.MS1.005)</a>, <br/> <a href="../quantities/#R2" target="_blank">R<sub>2</sub> (Q.EL1.004)</a>, <br/> <a href="../quantities/#S" target="_blank">S (Q.MS1.001)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.SM6.999</td>
+<td><a id="not listed SM6"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h3 id="phase-models-dsc"><a id="Phase models: DSC"></a> Phase models: <abbr title="Dynamic Susceptibility Contrast">DSC</abbr><a class="headerlink" href="#phase-models-dsc" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.SM7.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Linear susceptibility signal model</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: <br/> <span class="arithmatex">\(S=k\cdot \chi\)</span>, </br> with <br/> <a href="../quantities/#const" target="_blank">k (Q.GE1.009)</a>,<br/> <a href="../quantities/#Chi" target="_blank"><span class="arithmatex">\(\chi\)</span> (Q.EL1.011)</a>, <br/> <a href="../quantities/#S" target="_blank">S (Q.MS1.001)</a>.</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.SM7.999</td>
+<td><a id="not listed SM7"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="electromagnetic-property-models"><a id="Electromagnetic property models"></a> Electromagnetic property models<a class="headerlink" href="#electromagnetic-property-models" title="Permanent link">&para;</a></h2>
+<p>This section covers models that describe how electromagnetic properties (EP), such as relaxation rates R<sub>1</sub>, R<sub>2</sub> and R<sub>2</sub><sup>*</sup> or the magnetic susceptibility <span class="arithmatex">\(\chi\)</span> , are modulated by the indicator concentrations.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.EL1.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Transverse relaxation rate (<abbr title="Gradient Echo">GE</abbr>), linear with relaxivity model</td>
+<td>Effective relaxation rate (<abbr title="Gradient Echo">GE</abbr>), linear with relaxivity model</td>
+<td>--</td>
+<td>This forward model is given by the following equation: <br/> <span class="arithmatex">\(R_2^*=R_{20}^*+r_2^*\cdot C\)</span> <br/> with <br/> <a href="../quantities/#R2Star0" target="_blank">R<sub>20</sub><sup>*</sup> (Q.EL1.008)</a>, <br/> <a href="../quantities/#r2star" target="_blank">r<sub>2</sub><sup>*</sup> (Q.EL1.017)</a>, <br/> <a href="../quantities/#C" target="_blank">C (Q.IC1.001)</a>, <br/> <a href="../quantities/#R2Star" target="_blank">R<sub>2</sub><sup>*</sup> (Q.EL1.007)</a></td>
+<td>(Rosen et al. 1990)</td>
+</tr>
+<tr>
+<td>M.EL1.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Transverse relaxation rate (<abbr title="Spin Echo">SE</abbr>), linear with relaxivity model</td>
+<td>Natural relaxation rate (<abbr title="Gradient Echo">GE</abbr>), linear with relaxivity model</td>
+<td>--</td>
+<td>This forward model is given by the following equation:<br/> <span class="arithmatex">\(R_2=R_{20}+r_2\cdot C\)</span> <br/> with <br/> <a href="../quantities/#R20" target="_blank">R<sub>20</sub> (Q.EL1.005)</a>, <br/> <a href="../quantities/#r2" target="_blank">r<sub>2</sub> (Q.EL1.016)</a>, <br/> <a href="../quantities/#C" target="_blank">C (Q.IC1.001)</a>, <br/> <a href="../quantities/#R2" target="_blank">R<sub>2</sub> (Q.EL1.004)</a></td>
+<td>(Rosen et al. 1990)</td>
+</tr>
+<tr>
+<td>M.EL1.003 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Longitudinal relaxation rate, linear with relaxivity model</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation:<br/> <span class="arithmatex">\(R_1=R_{10}+r_1\cdot C\)</span> <br/> with <br/> <a href="../quantities/#R10" target="_blank">R<sub>10</sub> (Q.EL1.002)</a>, <br/> <a href="../quantities/#r1" target="_blank">r<sub>1</sub> (Q.EL1.015)</a>, <br/> <a href="../quantities/#C" target="_blank">C (Q.IC1.001)</a>, <br/> <a href="../quantities/#R1" target="_blank">R<sub>1</sub> (Q.EL1.001)</a></td>
+<td>(Rosen et al. 1990)</td>
+</tr>
+<tr>
+<td>M.EL1.004 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Transverse relaxation rate (<abbr title="Gradient Echo">GE</abbr>) with gradient leakage correction model</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation:<br/> <span class="arithmatex">\(R_2^*=R_{20}^*+r_{2v}^*\left\| C_p-C_e \right\| +r_{2e}^*C_e,\)</span> </br> with </br> <a href="../quantities/#R2Star0" target="_blank"><span class="arithmatex">\(R_{20}^*\)</span> (Q.EL1.008)</a>, </br> <a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_p\)</span> (Q.IC1.001.p)</a>, </br> <a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_e\)</span> (Q.IC1.001.e)</a>, </br> <a href="../quantities/#r2star" target="_blank"><span class="arithmatex">\(r_{2e}^*\)</span> (Q.EL1.017.e)</a>, </br> <a href="../quantities/#r2star" target="_blank"><span class="arithmatex">\(r_{2v}^*\)</span> (Q.EL1.017.v)</a>, </br> <a href="../quantities/#R2Star" target="_blank"><span class="arithmatex">\(R_2^*\)</span>(Q.EL1.007)</a></td>
+<td>Sourbron et al  2012</td>
+</tr>
+<tr>
+<td>M.EL1.005 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Transverse relaxation rate (<abbr title="Gradient Echo">GE</abbr>), quadratic model</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation:<br/> <span class="arithmatex">\(R_2^*=R_{20}^*+k_1\cdot C_p+k_2C_p^2\)</span> </br> with </br> <a href="../quantities/#R2Star0" target="_blank"><span class="arithmatex">\(R_{20}^*\)</span> (Q.EL1.008)</a>, </br> <a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_p\)</span> (Q.IC1.001.p)</a>, </br> <a href="../quantities/#k1k2" target="_blank">[<span class="arithmatex">\(k_1\)</span>,<span class="arithmatex">\(k_2\)</span>] (Q.EL1.020)</a>, </br> <a href="../quantities/#R2Star" target="_blank"><span class="arithmatex">\(R_2^*\)</span> (Q.EL1.007)</a></td>
+<td>Van Osch 2003 (also see Calamante 2013)</td>
+</tr>
+<tr>
+<td>M.EL1.006 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Linear susceptibility concentration model</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation:<br/> <span class="arithmatex">\(\chi=\chi_0+\delta\chi\cdot C\)</span> </br> with </br> <a href="../quantities/#Chi0" target="_blank"><span class="arithmatex">\(\chi_0\)</span> (Q.EL1.012)</a>, </br> <a href="../quantities/#DeltaChi" target="_blank"><span class="arithmatex">\(\delta\chi\)</span> (Q.EL1.013)</a>,</br> <a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C\)</span> (Q.IC1.001)</a>, </br> <a href="../quantities/#Chi" target="_blank"><span class="arithmatex">\(\chi\)</span> (Q.EL1.011)</a></td>
+<td>(Conturo et al. 1992)</td>
+</tr>
+<tr>
+<td>M.EL1.999</td>
+<td><a id="not listed EL1"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="indicator-concentration-models"><a id="Indicator concentration models"></a> Indicator concentration models<a class="headerlink" href="#indicator-concentration-models" title="Permanent link">&para;</a></h2>
+<p>This section covers models that describe how indicator concentrations in tissue and blood vary with time. </p>
+<h3 id="indicator-kinetic-models"><a id="Indicator kinetic models"></a> Indicator kinetic models<a class="headerlink" href="#indicator-kinetic-models" title="Permanent link">&para;</a></h3>
+<p>In the current version of the lexicon the list of indicator kinetic models is restricted to linear and stationary tissues, and specific models with two distribution spaces. A summary of common pharmacokinetic models in contrast-agent based perfusion <abbr title="Magnetic Resonance Imaging">MRI</abbr> is given in <a href="https://doi.org/10.1002/nbm.2940" target="_blank">Sourbron and Buckley 2013</a>. 
+We provide the differential equations and impulse response functions using the consistent parameterizations to enable straightforward comparisons between models.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.IC1.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="LSSM"></a> Linear and stationary system model</td>
+<td>--</td>
+<td>LSSM</td>
+<td>This forward model is given by the following equations: </br> <span class="arithmatex">\(C(t)=I(t)\ast C_{a,p}(t)\)</span> </br> with </br> [<a href="../quantities/#IRF" target="_blank">I (Q.IC1.005)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>],</br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{a,p}\)</span> (Q.IC1.001.a,p)</a>, <a href="../quantities/#time" target="_blank"><span class="arithmatex">\(t\)</span> (Q.GE1.004)</a>],</br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_t\)</span> (Q.IC1.001.t)</a>, <a href="../quantities/#time" target="_blank"><span class="arithmatex">\(t\)</span> (Q.GE1.004)</a>]</td>
+<td>(Rempp et al. 1994)</td>
+</tr>
+<tr>
+<td>M.IC1.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="1CNEX"></a> One-compartment, no indicator exchange  model</td>
+<td>--</td>
+<td>1CNEXM</td>
+<td>The one compartment no indicator exchange model describes an intravascular model with no vascular to <abbr title="Extravascular Extracellular Spaces">EES</abbr> indicator exchange. This forward model is given by the following differential equation: </br> <span class="arithmatex">\(v_{p}\frac{dC_{t}(t)}{dt} = F_{p}C_{a,p} - F_{p}C_{c,p}(t)\)</span></br>The impulse response function is given by: </br> <span class="arithmatex">\(I(t) = F_{p}e^{{-\frac{F_{p}}{v_{p}}t}}\)</span> </br> with </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{a,p}\)</span> (Q.IC1.001.a,p)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{c,p}\)</span> (Q.IC1.001.c,p)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_t\)</span> (Q.IC1.001.t)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>],</br>  [<a href="../quantities/#IRF" target="_blank">I (Q.IC1.005)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> <a href="../quantities/#Fp" target="_blank"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{p}\)</span> (Q.PH1.001.p)</a></td>
+<td>(Tofts et al. 1999)</td>
+</tr>
+<tr>
+<td>M.IC1.003 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="1CFEX"></a> One-compartment, fast indicator exchange  model</td>
+<td>--</td>
+<td>1CFEXM</td>
+<td>The one compartment fast exchange model describes infinitely fast bi-directional exchange of indicator between vascular to extravascular extracellular spaces. The capillary and <abbr title="Extravascular Extracellular Spaces">EES</abbr> effectively act as a single compartment. This forward model is given by the following differential equation: </br> <span class="arithmatex">\(\frac{dC_{t}(t)}{dt} = F_{p}C_{a,p} - \frac{F_{p}}{v_{p} + v_{e}}C_{t}(t)\)</span> </br> The impulse response function is given by: </br> <span class="arithmatex">\(I(t) = F_{p}e^{{-\frac{F_{p}}{v_{p} + v_{e}}t}}\)</span> </br> with </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{a,p}\)</span> (Q.IC1.001.a,p)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_t\)</span> (Q.IC1.001.t)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>],</br>  [<a href="../quantities/#IRF" target="_blank">I (Q.IC1.005)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> <a href="../quantities/#Fp" target="_blank"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{p}\)</span> (Q.PH1.001.p)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{e}\)</span> (Q.PH1.001.e)</a></td>
+<td>(Sourbron et al. 2013)</td>
+</tr>
+<tr>
+<td>M.IC1.004 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="TM"></a> Tofts Model</td>
+<td>Kety model, Generalized Kinetic Model</td>
+<td>TM</td>
+<td>The Tofts model describes bi-directional exchange of indicator between vascular to extravascular extracellular spaces. The capillary compartment is assumed to have negligible volume. The <abbr title="Extravascular Extracellular Spaces">EES</abbr> is modeled as well-mixed compartment. The forward model is given by the following differential equation: </br> <span class="arithmatex">\(\frac{dC_{t}(t)}{dt} = K^{trans}C_{a,p} - \frac{K^{trans}}{v_{e}}C_{t}(t)\)</span> </br> The impulse response function is given by: </br> <span class="arithmatex">\(I(t) = K^{trans}e^{{-\frac{K^{trans}}{v_{e}}t}}\)</span> </br> with </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{a,p}\)</span> (Q.IC1.001.a,p)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_t\)</span> (Q.IC1.001.t)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>],</br>  [<a href="../quantities/#IRF" target="_blank">I (Q.IC1.005)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> <a href="../quantities/#Ktrans" target="_blank"><span class="arithmatex">\(K^{trans}\)</span> (Q.PH1.008)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{e}\)</span> (Q.PH1.001.e)</a></td>
+<td>(Tofts and Kermode 1991)</td>
+</tr>
+<tr>
+<td>M.IC1.005 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="ETM"></a> Extended Tofts Model</td>
+<td>Modified Tofts Model, Extended Generalized Kinetic Model, Modified Kety model</td>
+<td>ETM</td>
+<td>The extended Tofts model describes bi-directional exchange of indicator between vascular to extravascular extracellular spaces. The capillary and <abbr title="Extravascular Extracellular Spaces">EES</abbr> are modeled as well-mixed compartments. It is equivalent to the <abbr title="Two Compartment Exchange Model">2CXM</abbr> in the highly perfused limit. Dispersion of indicator within the capillary bed is assumed negligible: </br> <span class="arithmatex">\(C_{c,p} = C_{a,p}\)</span> </br> The forward model is given by the following differential equation: </br> <span class="arithmatex">\(v_{e}\frac{dC_{e}(t)}{dt} = PSC_{c,p} - PSC_{e}(t)\)</span> </br> The impulse response function is given by: </br> <span class="arithmatex">\(I(t) = v_{p}\delta(t) + K^{trans}e^{{-\frac{K^{trans}}{v_{e}}t}}\)</span> </br> with </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{c,p}\)</span> (Q.IC1.001.c,p)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_e\)</span> (Q.IC1.001.e)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>],</br>  [<a href="../quantities/#IRF" target="_blank">I (Q.IC1.005)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> <a href="../quantities/#delta" target="_blank"><span class="arithmatex">\(\delta\)</span> (M.DM1.009)</a>, </br> <a href="../quantities/#PS" target="_blank">PS (Q.PH1.004)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{e}\)</span> (Q.PH1.001.e)</a>, </br> <a href="../quantities/#Ktrans" target="_blank"><span class="arithmatex">\(K^{trans}\)</span> (Q.PH1.008)</a></td>
+<td>(Tofts 1997)</td>
+</tr>
+<tr>
+<td>M.IC1.006 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Patlak"></a> Patlak Model</td>
+<td>--</td>
+<td>PM</td>
+<td>The Patlak model allows uni-directional exchange of indicator from vascular to extravascular extracellular spaces. Indicator exchange from the <abbr title="Extravascular Extracellular Spaces">EES</abbr> to the intravascular space is considered negligible during the timeframe of the imaging experiment. The capillary and <abbr title="Extravascular Extracellular Spaces">EES</abbr> are modeled as well-mixed compartments. It is equivalent to the two compartment uptake model in the highly perfused limit. Dispersion of indicator within the capillary bed is assumed negligible: </br> <span class="arithmatex">\(C_{c,p} = C_{a,p}\)</span> </br> The forward model is given by the following differential equation: </br> <span class="arithmatex">\(v_{e}\frac{dC_{e}(t)}{dt} = PSC_{c,p}\)</span> </br> The impulse response function is given by: </br> <span class="arithmatex">\(I(t) = v_{p}\delta(t) + PS\)</span> </br> with </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{c,p}\)</span> (Q.IC1.001.c,p)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_e\)</span> (Q.IC1.001.e)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>],</br>  [<a href="../quantities/#IRF" target="_blank">I (Q.IC1.005)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> <a href="../quantities/#delta" target="_blank"><span class="arithmatex">\(\delta\)</span> (Q.PH1.009)</a>, </br> <a href="../quantities/#PS" target="_blank">PS (Q.PH1.004)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{p}\)</span> (Q.PH1.001.p)</a></td>
+<td>(Patlak et al. 1983)</td>
+</tr>
+<tr>
+<td>M.IC1.007 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="2CUM"></a> Two compartment uptake model</td>
+<td>--</td>
+<td>2CUM</td>
+<td>The <abbr title="Two Compartment Uptake">2CU</abbr> model allows uni-directional exchange of indicator from vascular to extravascular extracellular spaces. Indicator exchange from the <abbr title="Extravascular Extracellular Spaces">EES</abbr> to the intravascular space is considered negligible during the timeframe of the imaging experiment. The capillary and <abbr title="Extravascular Extracellular Spaces">EES</abbr> are modeled as well-mixed compartments. The forward model is given by the following differential equations:  </br> <span class="arithmatex">\(v_{p}\frac{dC_{c,p}(t)}{dt} = F_{p}C_{a,p} - F_{p}C_{c,p} - PSC_{a,p}\)</span> </br> </br> <span class="arithmatex">\(v_{e}\frac{dC_{e}(t)}{dt} = PSC_{a,p}\)</span> </br> The impulse response function is given by: </br> <span class="arithmatex">\(I(t) = F_{p}e^{-({\frac{F_{p} + PS}{v_{p}}})t} + E(1 - e^{-({\frac{F_{p} + PS}{v_{p}}})t})\)</span> </br> with </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{a,p}\)</span> (Q.IC1.001.a,p)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{c,p}\)</span> (Q.IC1.001.c,p)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#C"><span class="arithmatex">\(C_{e}\)</span> (Q.IC1.001.e)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#IRF" target="_blank">I (Q.IC1.005)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> <a href="../quantities/#Fp" target="_blank"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>, </br> <a href="../quantities/#PS" target="_blank">PS (Q.PH1.004)</a>, </br> <a href="../quantities/#E" target="_blank">E (Q.PH1.005)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{e}\)</span> (Q.PH1.001.e)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{p}\)</span> (Q.PH1.001.p)</a></td>
+<td>(Pradel et al. 2003), (Sourbron 2009)</td>
+</tr>
+<tr>
+<td>M.IC1.008 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="PFUM"></a> Plug flow uptake model</td>
+<td>--</td>
+<td>PFUM</td>
+<td>The plug flow uptake model allows uni-directional exchange of indicator from vascular to extravascular extracellular spaces. Indicator exchange from the <abbr title="Extravascular Extracellular Spaces">EES</abbr> to the intravascular space is considered negligible during the timeframe of the imaging experiment. The capillary space is modeled as a plug flow system and the <abbr title="Extravascular Extracellular Spaces">EES</abbr> as a well-mixed compartment. The forward model is given by the following differential equations: </br> <span class="arithmatex">\(v_{p}\frac{\partial C_{c,p}(x_{ax}, t)}{\partial t} = -F_{p}L_{ax}\frac{\partial C_{a,p}(x_{ax}, t)}{\partial x_{ax}} - PSC_{a,p}(x_{ax}, t)\)</span> </br> </br> <span class="arithmatex">\(v_{e}\frac{dC_{e}(t)}{dt} = PS \int_{0}^{L_{ax}} C_{c,p} (x_{ax},t) dx\)</span> </br> The impulse response function is ... TO ADD IRF <br/> with </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{c,p}\)</span> (Q.IC1.001.c,p)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{e}\)</span> (Q.IC1.001.e)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#IRF" target="_blank">I (Q.IC1.005)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> <a href="../quantities/#Fp" target="_blank"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>, </br> <a href="../quantities/#PS" target="_blank">PS (Q.PH1.004)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{e}\)</span> (Q.PH1.001.e)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{p}\)</span> (Q.PH1.001.p)</a>, <br/> <a href="../quantities/#Lax" target="_blank"><span class="arithmatex">\(L_{ax}\)</span> (Q.GE1.007)</a>, <br/> <a href="../quantities/#xax" target="_blank"><span class="arithmatex">\(x_{ax}\)</span> (Q.GE1.008)</a></td>
+<td>(St. Lawrence and Frank 2000)</td>
+</tr>
+<tr>
+<td>M.IC1.009 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="2CXM"></a> Two compartment exchange model</td>
+<td>--</td>
+<td><abbr title="Two Compartment Exchange Model">2CXM</abbr></td>
+<td>The 2CX model allows bi-directional exchange of indicator between vascular and extravascular extracellular compartments. Indicator is assumed to be well mixed within each compartment. The forward model is given by the following differential equations: </br> <span class="arithmatex">\(v_{p}\frac{dC_{c,p}}{dt} = F_{p}C_{a,p}(t) - F_{p}C_{c,p}(t) - PSC_{c,p}(t) + PSC_{e}(t)\)</span> </br> </br> <span class="arithmatex">\(v_{e}\frac{dC_{e}}{dt} = PSC_{c,p}(t) - PSC_{e}(t)\)</span> </br> The impulse response function is given by </br> <span class="arithmatex">\(I(t) = F_{p}e^{-K_{+}t} + E_{-}(e^{-K_{+}t} - e^{-K_{-}t})\)</span> </br> </br> <span class="arithmatex">\(K_{\pm} = \frac{1}{2}\Biggl(\frac{F_{p} + PS}{v_{p}} + \frac{PS}{v_{p}} \pm \sqrt{(\frac{F_{p} + PS}{v_{p}} + \frac{PS}{v_{e}})^{2} - 4\frac{F_{p}PS}{v_{p}v_{e}}}\Biggl)\)</span> </br> </br> <span class="arithmatex">\(E_{-} = \frac{K_{+} + \frac{F_{p}}{v_{p}}}{K_{+} + K_{-}}\)</span> </br> with </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{a,p}\)</span> (Q.IC1.001.a,p)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{c,p}\)</span> (Q.IC1.001.c,p)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{e}\)</span> (Q.IC1.001.e)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#IRF" target="_blank">I (Q.IC1.005)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> <a href="../quantities/#Fp" target="_blank"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>, </br> <a href="../quantities/#PS" target="_blank">PS (Q.PH1.004)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{e}\)</span> (Q.PH1.001.e)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{p}\)</span> (Q.PH1.001.p)</a></td>
+<td>(Brix et al. 2004), (Sourbron et al. 2009), (Donaldson et al. 2010)</td>
+</tr>
+<tr>
+<td>M.IC1.010 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="DPM"></a> Distributed parameter model</td>
+<td>--</td>
+<td>DPM</td>
+<td>The DP model allows bi-directional exchange of indicator between vascular and extravascular extracellular compartments. The capillary space is modeled as a plug flow system. The <abbr title="Extravascular Extracellular Spaces">EES</abbr> is modeled as a series of infinitesimal compartments which only exchange indicator with nearby locations in the capillary bed.This forward model is given by the following differential equations: </br> <span class="arithmatex">\(v_{p}\frac{∂C_{c,p}}{∂t}(x_{ax},t) = F_{p}L_{ax}\frac{∂C_{cp}}{∂x_{ax}}(x_{ax},t) - PSC_{c,p}(x_{ax},t) + PSC_{e}(x_{ax},t)\)</span> </br></br> <span class="arithmatex">\(v_{e}\frac{∂C_{e}}{∂t}(x_{ax},t) = PSC_{c,p}(x_{ax},t) - PSC_{e}(x_{ax},t)\)</span> </br> The impulse response function is given by  </br> <span class="arithmatex">\(I(t) = F_{p}(1-u(t{-}\frac{v_{p}}{F_{p}})) e^\frac{-PS}{F_{p}} (1-\int_{0}^{t{-} \frac{v_{p}}{F_{p}}} x(τ)dτ)\)</span> </br> where </br> <span class="arithmatex">\(x(τ) = u(t) e^\frac{-t\cdot PS}{v_{e}} \sqrt{\frac{PS^2}{t\cdot v_{e} \cdot F_{p}}} I_{1}\Bigl(2\sqrt{\frac{PS^2 \cdot t}{v_{e}\cdot F_{p}}}\Bigl)\)</span> </br></br> Where <span class="arithmatex">\(I_{1}\)</span> is the first order bessel function of the first kind with </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{c,p}\)</span> ((Q.IC1.001.c,p))</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>],[<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{e}\)</span> (Q.IC1.001.e)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#IRF" target="_blank">I (Q.IC1.005)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#u" target="_blank">u (M.DM1.001)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> <a href="../quantities/#Fp" target="_blank"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>, </br> <a href="../quantities/#PS" target="_blank">PS (Q.PH1.004)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{e}\)</span> (Q.PH1.001.e)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{p}\)</span> (Q.PH1.001.p)</a>, <br/> <a href="../quantities/#Lax" target="_blank"><span class="arithmatex">\(L_{ax}\)</span> (Q.GE1.007)</a>, <br/> <a href="../quantities/#xax" target="_blank"><span class="arithmatex">\(x_{ax}\)</span> (Q.GE1.008)</a></td>
+<td>(Sangren and Sheppard 1953) (Sourbron 2011)</td>
+</tr>
+<tr>
+<td>M.IC1.011 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="THM"></a> Tissue homogeneity model</td>
+<td>Johnson-Wilson model</td>
+<td>THM</td>
+<td>The TH model allows bi-directional exchange of indicator between vascular and extravascular extracellular compartments. The capillary space is modeled as a plug flow system and the <abbr title="Extravascular Extracellular Spaces">EES</abbr> as a well mixed compartment. This forward model is given by the following differential equations: </br> <span class="arithmatex">\(v_{p}\frac{∂C_{e}}{∂t}(x_{ax},t) = -F_{p}L_{ax}\frac{∂C_{c,p}}{∂x_{ax}}(x_{ax},t) - PSC_{c,p}(x_{ax},t) + PSC_{e}\)</span></br></br> <span class="arithmatex">\(v_{e}\frac{∂C_{e}}{∂t} = \frac{PS}{L_{ax}} \int_{0}^{L_{ax}} C_{c,p}(x_{ax},t)dx - PSC_{e}(t)\)</span></br> The impulse response function is given by:</br></br> <span class="arithmatex">\(I(t) = u(t) - u(t-\frac{v_{p}}{F_{p}})(1-E)\left\{ 1 + \int_{0}^{t - \frac{v_{p}}{F_{p}}} \sqrt{\frac{F_{p}}{v_{e} τ}} ln(1-E)I_{1}(2ln(1-E)\sqrt{\frac{F_{p}}{v_{e}τ}} dτ)\right\}\)</span> </br></br> Where <span class="arithmatex">\(I_{1}\)</span> is the first order bessel function of the first kind with </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{c,p}\)</span> ((Q.IC1.001.c,p))</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>],[<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{e}\)</span> (Q.IC1.001.e)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#IRF" target="_blank">I (Q.IC1.005)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#u" target="_blank">u (M.DM1.001)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> <a href="../quantities/#Fp" target="_blank"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>, </br> <a href="../quantities/#PS" target="_blank">PS (Q.PH1.004)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{e}\)</span> (Q.PH1.001.e)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{p}\)</span> (Q.PH1.001.p)</a>, <br/> <a href="../quantities/#Lax" target="_blank"><span class="arithmatex">\(L_{ax}\)</span> (Q.GE1.007)</a>, <br/> <a href="../quantities/#xax" target="_blank"><span class="arithmatex">\(x_{ax}\)</span> (Q.GE1.008)</a></td>
+<td>(Johnson and Wilson 1966) (Lawrence and Lee 1998) (Kershaw 2010) (Koh et al. 2003)</td>
+</tr>
+<tr>
+<td>M.IC1.012 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="AATHM"></a> Adiabatic Approximation to the Tissue homogeneity model</td>
+<td></td>
+<td>AATHM</td>
+<td>The AATH model allows bi-directional exchange of indicator between vascular and extravascular extracellular compartments. The capillary space is modeled as a plug flow system and the <abbr title="Extravascular Extracellular Spaces">EES</abbr> as a well mixed compartment. The adiabatic approximation assumes that the indicator concentration in the <abbr title="Extravascular Extracellular Spaces">EES</abbr> changes much more slowly than the change in concentration in the plasma. </br></br> This forward model is given by the following differential equations:</br> <span class="arithmatex">\(v_{p}\frac{∂C_{e}}{∂t}(x_{ax},t) = -F_{p}L_{ax}\frac{∂C_{c,p}}{∂x_{ax}}(x_{ax},t)\)</span> </br><br> <span class="arithmatex">\(v_{e} \frac{dC_{e}}{dt}(t) = EF_{p}C_{p}(L_{ax},t) - EF_{p}C_{e}(t)\)</span> </br></br> The impulse response function is given by: </br></br> <span class="arithmatex">\(I(t) = EF_{p}e^\frac{EF_{p}}{v_e}(t-{v_{p}}{F_{p}}) , for \quad t &gt;\!\frac{v_{p}}{F_{p}}\)</span> </br> with </br>[<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{c,p}\)</span> ((Q.IC1.001.c,p))</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>],[<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{e}\)</span> (Q.IC1.001.e)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#IRF" target="_blank">I (Q.IC1.005)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#u" target="_blank">u (M.DM1.001)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> <a href="../quantities/#Fp" target="_blank"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>, </br> <a href="../quantities/#PS" target="_blank">PS (Q.PH1.004)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{e}\)</span> (Q.PH1.001.e)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{p}\)</span> (Q.PH1.001.p)</a>, <br/> <a href="../quantities/#Lax" target="_blank"><span class="arithmatex">\(L_{ax}\)</span> (Q.GE1.007)</a>, <br/> <a href="../quantities/#xax" target="_blank"><span class="arithmatex">\(x_{ax}\)</span> (Q.GE1.008)</a></td>
+<td>((Lawrence and Lee 1998)Kershaw et al. 2010) (Sourbron et al. 2012)</td>
+</tr>
+<tr>
+<td>M.IC1.013 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="2CFM"></a> Two compartment filtration model</td>
+<td>--</td>
+<td>2CFM</td>
+<td>The 2CFM models unidirectional flow (filtration) from a vascular compartment into an extravascular compartment. A fraction of the filtrate (1-f) is reabsorbed. This model is appropriate for the kidney cortex or whole kidney. The forward model is given by the following differential equations: </br> <span class="arithmatex">\(v_{p}\frac{dC_{c,p}}{dt} = F_{p}C_{a,p}(t) - F_{p}C_{c,p}(t) - PSC_{c,p}(t)\)</span> </br> </br> <span class="arithmatex">\(v_{e}\frac{dC_{e}}{dt} = PSC_{c,p}(t) - (1 - f)PSC_{e}(t)\)</span> </br>. The impulse response function is given by: </br> <span class="arithmatex">\(I(t) = v_{p}C_{c,p} + PSe^{-t\frac{(1-f)PS}{v_{e}}} \circledast C_{c,p}\)</span> </br> </br> where <span class="arithmatex">\(C_{c,p} = \frac{F_{p}}{v_{p}}e^{-t\frac{F_{p}}{v_{p}}}\)</span> </br> with </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{a,p}\)</span> (Q.IC1.001.a,p)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{c,p}\)</span> (Q.IC1.001.c,p)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#C"><span class="arithmatex">\(C_{e}\)</span> (Q.IC1.001.e)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#IRF" target="_blank">I (Q.IC1.005)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> <a href="../quantities/#Fp" target="_blank"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>, </br> <a href="../quantities/#PS" target="_blank">PS (Q.PH1.004)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{e}\)</span> (Q.PH1.001.e)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_{p}\)</span> (Q.PH1.001.p)</a>,  </br> <a href="../quantities/#f" target="_blank"><span class="arithmatex">\(f\)</span> (Q.PH1.018)</a></td>
+<td><a href="https://doi.org/10.1097/RLI.0b013e31815597c5" target="_blank">Sourbron et al. 2008</a></td>
+</tr>
+<tr>
+<td>M.IC1.999</td>
+<td><a id="not listed IC1"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arterial-input-function-models"><a id="AIF models"></a> Arterial input function models<a class="headerlink" href="#arterial-input-function-models" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.IC2.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="ParkerAIF"></a> Parker <abbr title="Arterial Input Function">AIF</abbr> model</td>
+<td>--</td>
+<td>Parker <abbr title="Arterial Input Function">AIF</abbr></td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(C_{a,b}(t)=\sum_{n=1}^{2}\frac{A_n}{\sigma_n\sqrt{2\pi}}e^{-\frac{(t-T_n)^2}{2\sigma_n^2}}+\frac{\alpha e^{-\beta t}}{1+e^{-s(t-\tau)}},\)</span> </br> where  <span class="arithmatex">\(A_n\)</span>, <span class="arithmatex">\(T_n\)</span> and <span class="arithmatex">\(\sigma_n\)</span> are the scaling constants, center and widths of the nth Gaussian; <span class="arithmatex">\(\alpha\)</span> and <span class="arithmatex">\(\beta\)</span> are the amplitude and decay constants of the exponential; and <span class="arithmatex">\(s\)</span> and <span class="arithmatex">\(\tau\)</span> are the width and center of the sigmoid, and  [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{a,b}\)</span> (Q.IC1.001.a,b)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>]. If not specified otherwise, the values from the publication are assumed: [<span class="arithmatex">\(A_1\)</span>, <span class="arithmatex">\(A_2\)</span>, <span class="arithmatex">\(T_1\)</span>, <span class="arithmatex">\(T_2\)</span>, <span class="arithmatex">\(\sigma_1\)</span>, <span class="arithmatex">\(\sigma_2\)</span>, <span class="arithmatex">\(\alpha\)</span> , <span class="arithmatex">\(\beta\)</span> , s, <span class="arithmatex">\(\tau\)</span> ] = [48.54 mmol <span class="arithmatex">\(\cdot\)</span> s, 19.8 mmol <span class="arithmatex">\(\cdot\)</span> s, 10.2276 s, 21.9 s, 3.378 s, 7.92 s, 1.050 mmol, 0.0028 s-1, 0.6346 s-1, 28.98 s]. </br></td>
+<td>(Parker et al. 2006)</td>
+</tr>
+<tr>
+<td>M.IC2.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Georgiou AIF"></a> Georgiou <abbr title="Arterial Input Function">AIF</abbr> model</td>
+<td>--</td>
+<td>Georgiou <abbr title="Arterial Input Function">AIF</abbr></td>
+<td>The <abbr title="Arterial Input Function">AIF</abbr> between the start of the nth recirculation and (n+1)th recirculation is given by: </br> <span class="arithmatex">\(C_{a,p}(t)=(\sum_{i=1}^{3}A_ie^{-m_it})\cdot(\sum_{j=0}^{n}\gamma((j+1)\alpha+j,\beta,t-j\tau)),\)</span> </br> with <span class="arithmatex">\(n\tau&lt;t&lt;(n+1)\tau\)</span> </br> and <span class="arithmatex">\(\gamma(\alpha, \beta, \tau)=\frac{t^\alpha e^{-\frac{t}{\beta}}}{\beta^{\alpha+1}\Gamma(\alpha +1)}\)</span> with <span class="arithmatex">\(t\geq 0\)</span>, </br> where  <span class="arithmatex">\(A_1\)</span>, <span class="arithmatex">\(A_2\)</span>, <span class="arithmatex">\(A_3\)</span> and <span class="arithmatex">\(m_1\)</span>, <span class="arithmatex">\(m_2\)</span>, <span class="arithmatex">\(m_3\)</span> are the amplitudes and time constants of the exponential terms, the coefficients and  reflect the number of theoretical mixing chambers and the ratio of the volume of the mixing chambers to the volume flow rate, and  is the recirculation time, [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{a,p}\)</span> (Q.IC1.001.a,p)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>]. <span class="arithmatex">\(\gamma = 0\)</span> for <span class="arithmatex">\(t&lt;0\)</span>. </br> If not specified otherwise, the values from the publication are assumed: [ <span class="arithmatex">\(A_1\)</span>, <span class="arithmatex">\(A_2\)</span>, <span class="arithmatex">\(A_3\)</span>, <span class="arithmatex">\(m_1\)</span>, <span class="arithmatex">\(m_2\)</span>, <span class="arithmatex">\(m_3\)</span>, <span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\(\beta\)</span> , <span class="arithmatex">\(\tau\)</span> ] = [0.37 mM, 0.33 mM, 10.06 mM, 0.002 <span class="arithmatex">\(s^{-1}\)</span>, 0.02 <span class="arithmatex">\(s^{-1}\)</span>, 0.267 <span class="arithmatex">\(s^{-1}\)</span>, 5.26, 1.92 s, 7.74 s].</td>
+<td>(Georgiou et al. 2019)</td>
+</tr>
+<tr>
+<td>M.IC2.003 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="WeinmannAIF"></a> Weinmann <abbr title="Arterial Input Function">AIF</abbr> model</td>
+<td>--</td>
+<td>Weinmann <abbr title="Arterial Input Function">AIF</abbr></td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(C_{a,p}(t)=D(a_1e^{-m_1t}+a_2e^{-m_2t}),\)</span> </br> where <span class="arithmatex">\(D\)</span> is the dose of contrast agent and <span class="arithmatex">\(a_1\)</span>, <span class="arithmatex">\(a_2\)</span>, <span class="arithmatex">\(m_1\)</span> and <span class="arithmatex">\(m_2\)</span> are the amplitudes and time constants of the exponential terms, and [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{a,p}\)</span> (Q.IC1.001.a,p)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>]. </br> If the model parameters are not specified, the values from the publication are assumed: [<span class="arithmatex">\(D\)</span>, <span class="arithmatex">\(a_1\)</span>, <span class="arithmatex">\(m_1\)</span>, <span class="arithmatex">\(a_2\)</span>, <span class="arithmatex">\(m_2\)</span>] = [0.25 mmol/kg, 3.99 kg/l, 0.0024 <span class="arithmatex">\(s^{-1}\)</span>, 4.78 kg/l, 0.0002 <span class="arithmatex">\(s^{-1}\)</span>].</td>
+<td>(Weinmann et al. 1984)</td>
+</tr>
+<tr>
+<td>M.IC2.999</td>
+<td><a id="not listed IC2"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="descriptive-models"><a id="Descriptive models"></a> Descriptive models<a class="headerlink" href="#descriptive-models" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.DM1.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Unit-step"></a> Unit step model</td>
+<td>Heaviside step model</td>
+<td><em>u</em></td>
+<td>This forward model is given by the following equation:</br> <span class="arithmatex">\(f(x-T)=0,\   \ x\leq T\)</span>, </br> <span class="arithmatex">\(f(x-T)=1,\ \ x\gt T\)</span> ,<br/>  where <em>T</em> is a defined data grid point, at which the step function changes from 0 to 1 and  <span class="arithmatex">\([x, f(x)]\)</span>= [<a href="../quantities/#DataGrid" target="_blank">Data grid (Q.GE1.001)</a>, <a href="../quantities/#Data" target="_blank">Data (Q.GE1.002)</a>].</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.DM1.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Linear-quad"></a> Linear-quadratic model</td>
+<td>--</td>
+<td>LQM</td>
+<td>This forward model is given by the following equation:<br/> <span class="arithmatex">\(f(x)=f_{BL},\ \ x\leq BAT\)</span>, <br/> <span class="arithmatex">\(f(x)=f_{BL}+\beta_1(x-BAT)+\beta_2(x-BAT)^2,\)</span></br><span class="arithmatex">\(x\gt BAT\)</span>,  </br> where <abbr title="Bolus Arrival Time">BAT</abbr> is the <a href="../quantities/#BAT" target="_blank">bolus arrival time (Q.BA1.001)</a>,  f<sub>BL</sub> the <a href="../quantities/#f_BL" target="_blank">baseline (Q.BL1.001)</a>, <span class="arithmatex">\(\beta\)</span><sub>1</sub> the slope after the <abbr title="Bolus Arrival Time">BAT</abbr>, <span class="arithmatex">\(\beta\)</span><sub>2</sub> a quadratic component and <span class="arithmatex">\([x, f(x)]\)</span>= [<a href="../quantities/#DataGrid" target="_blank">Data grid (Q.GE1.001)</a>, <a href="../quantities/#Data" target="_blank">Data (Q.GE1.002)</a>].</td>
+<td>(Cheong et al. 2003)</td>
+</tr>
+<tr>
+<td>M.DM1.003 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Two-step-linear"></a> Two step linear model</td>
+<td>--</td>
+<td>2SLM</td>
+<td>This forward model is given by the following equation:<br/> <span class="arithmatex">\(f(x)=f_{BL},\ \ x\leq BAT,\)</span> </br> <span class="arithmatex">\(f(x)=f_{BL}+b_1(x-BAT),\ \ x\gt BAT,\)</span> </br> where <abbr title="Bolus Arrival Time">BAT</abbr> is the <a href="../quantities/#BAT" target="_blank">bolus arrival time (Q.BA1.001)</a>, f<sub>BL</sub> is the <a href="../quantities/#f_BL" target="_blank">baseline (Q.BL1.001)</a>, b<sub>1</sub> the slope after the <abbr title="Bolus Arrival Time">BAT</abbr> and <span class="arithmatex">\([x, f(x)]\)</span>= [<a href="../quantities/#DataGrid" target="_blank">Data grid (Q.GE1.001)</a>, <a href="../quantities/#Data" target="_blank">Data (Q.GE1.002)</a>].</td>
+<td>Cheong et al. 2003</td>
+</tr>
+<tr>
+<td>M.DM1.004 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Three-step-linear"></a> Three step linear mode</td>
+<td>--</td>
+<td>3SLM</td>
+<td>This forward model is given by the following equation:<br/> <span class="arithmatex">\(f(x)=f_{BL},\ \ x\leq BAT,\)</span> <br/> <span class="arithmatex">\(f(x)=f_{BL}+b_1(x-BAT),\ \ BAT\leq x\leq \beta,\)</span> </br> <span class="arithmatex">\(f(x)=f_{BL}+b_1(x-BAT)+b_2(x-\beta),\ \ x\gt\beta\)</span> ,<br/> where <abbr title="Bolus Arrival Time">BAT</abbr> is the <a href="../quantities/#BAT" target="_blank">bolus arrival time (Q.BA1.001)</a>,  f<sub>BL</sub> is the <a href="../quantities/#f_BL" target="_blank">baseline (Q.BL1.001)</a>, <span class="arithmatex">\(\beta\)</span> is the point of intersection of the 2<sup>nd</sup> and 3<sup>rd</sup> line segment. b<sub>1</sub> and b<sub>2</sub> are the slopes of the 2<sup>nd</sup> and 3<sup>rd</sup> line segments and <span class="arithmatex">\([x, f(x)]\)</span>= [<a href="../quantities/#DataGrid" target="_blank">Data grid (Q.GE1.001)</a>, <a href="../quantities/#Data" target="_blank">Data (Q.GE1.002)</a>].</td>
+<td>(Singh et al. 2009)</td>
+</tr>
+<tr>
+<td>M.DM1.005 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Multi-exp"></a> Multi-exponential model</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation:</br> <span class="arithmatex">\(f(x)=A_1\cdot e^{-x\cdot a_1}+;...+A_n\cdot e^{-x\cdot a_n}\)</span> <br/> where  A<sub>1</sub>, …, A<sub>n</sub> and a<sub>1</sub>,...,a<sub>n</sub> are arbitrary coefficients and <span class="arithmatex">\([x, f(x)]\)</span>= [<a href="../quantities/#DataGrid" target="_blank">Data grid (Q.GE1.001)</a>, <a href="../quantities/#Data" target="_blank">Data (Q.GE1.002)</a>].</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.DM1.006 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Gamma-variate"></a> Gamma-variate model</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: <br/> <span class="arithmatex">\(f(x)=\frac{1}{\Gamma(\alpha)\beta^{\alpha}}(x-BAT)^{\alpha-1}e^{-(x-BAT)/\beta}\)</span> </br> where <abbr title="Bolus Arrival Time">BAT</abbr> is the <a href="../quantities/#BAT" target="_blank">bolus arrival time (Q.BA1.001)</a>, <span class="arithmatex">\(\alpha\)</span> is a shape parameter, <span class="arithmatex">\(\beta\)</span> is a scale parameter, <span class="arithmatex">\(\Gamma\)</span>(<span class="arithmatex">\(\alpha\)</span>) is the gamma function and <span class="arithmatex">\([x, f(x)]\)</span>= [<a href="../quantities/#DataGrid" target="_blank">Data grid (Q.GE1.001)</a>, <a href="../quantities/#Data" target="_blank">Data (Q.GE1.002)</a>].</td>
+<td>Mouridsen 2006</td>
+</tr>
+<tr>
+<td>M.DM1.007 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Fermi"></a> Fermi model</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation:<br/> <span class="arithmatex">\(f(x)=F\cdot\frac{1+b}{1+b\cdot e^{x\cdot a}}\)</span> ,<br/> where <span class="arithmatex">\(F\)</span> is the blood flow, <span class="arithmatex">\(a\)</span> und <span class="arithmatex">\(b\)</span> are arbitrary fit parameters and <span class="arithmatex">\([x, f(x)]\)</span>= [<a href="../quantities/#DataGrid" target="_blank">Data grid (Q.GE1.001)</a>, <a href="../quantities/#Data" target="_blank">Data (Q.GE1.002)</a>].</td>
+<td>(Brinch et al.  1999)</td>
+</tr>
+<tr>
+<td>M.DM1.008 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Normal"></a> Normal distribution model</td>
+<td>Gaussian distribution model</td>
+<td><em>N</em></td>
+<td>This forward model is given by the following equation:<br/> <span class="arithmatex">\(f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}},\)</span> </br> where <span class="arithmatex">\(\mu\)</span> is the <a href="../quantities/#Avg" target="_blank">mean (population) (Q.US1.007)</a>, <span class="arithmatex">\(\sigma\)</span> is the <a href="../quantities/#Std" target="_blank">standard deviation (Q.US1.010)</a> and <span class="arithmatex">\([x, f(x)]\)</span>= [<a href="../quantities/#DataGrid" target="_blank">Data grid (Q.GE1.001)</a>, <a href="../quantities/#Data" target="_blank">Data (Q.GE1.002)</a>].</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.DM1.009 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Dirac"></a> Dirac delta model</td>
+<td>Unit pulse model</td>
+<td><em><span class="arithmatex">\(\delta\)</span></em></td>
+<td>This forward model is given by the following equation:</br> <span class="arithmatex">\(\delta(x)=+ \infty\)</span> for <span class="arithmatex">\(x = 0\)</span>, <br/> <span class="arithmatex">\(\delta = 0\)</span>, elsewhere </br> with <span class="arithmatex">\([x, \delta(x)]\)</span>= [<a href="../quantities/#DataGrid" target="_blank">Data grid (Q.GE1.001)</a>, <a href="../quantities/#Data" target="_blank">Data (Q.GE1.002)</a>].</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.DM1.999</td>
+<td><a id="not listed DM1"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="leakage-correction-models"><a id="Leakage correction models"></a> Leakage correction models<a class="headerlink" href="#leakage-correction-models" title="Permanent link">&para;</a></h2>
+<p>This section is concerned with models for <abbr title="Dynamic Susceptibility Contrast">DSC</abbr> leakage correction. 
+They are not descriptive models in the sense that they are defined for very specific physical quantities, 
+but at the same time cannot be derived as a composition of kinetic models, electromagnetic tissue property models or <abbr title="Magnetic Resonance">MR</abbr> signal models. </p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.LC1.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Boxerman-Schmainda-Weisskoff (BSW) leakage correction model</td>
+<td>--</td>
+<td>BSW leakage correction model</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(R_2^*(t)=R_{20}^*+K_1\overline{\Delta R_{2,ref}^*(t)}-K_2\int_0^t \overline{\Delta R_{2,ref}^*(t')dt'},\)</span> </br> with </br> [<a href="../quantities/#R2ref" target="_blank"><span class="arithmatex">\(\overline{\Delta R_{2,ref}^*}\)</span>(Q.EL1.010)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>] </br> <a href="../quantities/#R2Star0" target="_blank"><span class="arithmatex">\(R_{20}^*\)</span> (Q.EL1.008)</a>, </br> <a href="../quantities/#K1" target="_blank"><span class="arithmatex">\(K_1\)</span> (Q.LC1.001)</a>, </br> <a href="../quantities/#K2" target="_blank"><span class="arithmatex">\(K_2\)</span> (Q.LC1.002)</a>, </br> [<a href="../quantities/#R2Star" target="_blank"><span class="arithmatex">\(R_2^*\)</span> (Q.EL1.007)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.LC1.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Bidirectional leakage correction model</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(R_2^*(t)=R_{20}^*+K_1\overline{\Delta R_{2,ref}^*(t)}\)</span></br>&emsp;&emsp;&emsp;&emsp;<span class="arithmatex">\(-K_2\int_0^t \overline{\Delta R_{2,ref}^*(t')}\cdot e^{-k_{e-&gt;p}(t-t')}dt',\)</span> </br> with </br> [<a href="../quantities/#R2ref" target="_blank"><span class="arithmatex">\(\overline{\Delta R_{2,ref}^*}\)</span>(Q.EL1.010)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>] </br> <a href="../quantities/#R2Star0" target="_blank"><span class="arithmatex">\(R_{20}^*\)</span> (Q.EL1.008)</a>, </br> <a href="../quantities/#K1" target="_blank"><span class="arithmatex">\(K_1\)</span> (Q.LC1.001)</a>, </br> <a href="../quantities/#K2" target="_blank"><span class="arithmatex">\(K_2\)</span> (Q.LC1.002)</a>, </br> <a href="../quantities/#k" target="_blank"><span class="arithmatex">\(k_{e-&gt;p}\)</span> (Q.PH1.009.e-&gt;p)</a> </br> [<a href="../quantities/#R2Star" target="_blank"><span class="arithmatex">\(R_2^*\)</span> (Q.EL1.007)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.LC1.999</td>
+<td><a id="not listed LC1"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="perfusion-identity-models"><a id="Perfusion identity models"></a> Perfusion identity models<a class="headerlink" href="#perfusion-identity-models" title="Permanent link">&para;</a></h2>
+<p>This group lists relationships between perfusion quantities that can be used to derive one quantity from another under certain assumptions. 
+This group is divided into the derivation of scalar quantities and the derivation of scalar derived from dynamic curves. </p>
+<h3 id="scalar-quantities"><a id="Scalar quantities"></a> Scalar quantities<a class="headerlink" href="#scalar-quantities" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.ID1.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Central volume theorem</td>
+<td>--</td>
+<td>CVT</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(v_p=MTT\cdot F_p\)</span> </br> with </br> <a href="../quantities/#MTT" target="_blank">MTT (Q.PH1.006)</a>,</br> <a href="../quantities/#Fp" target="_blank"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_p\)</span> (Q.PH1.001.p)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Total volume of distribution</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(v=v_p+v_e+v_i\)</span> </br> with </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_p\)</span> (Q.PH1.001.p)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_e\)</span> (Q.PH1.001.e)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_i\)</span> (Q.PH1.001.i)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v\)</span> (Q.PH1.001)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.003 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Blood vs plasma volume fraction</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(v_b=\frac{v_p}{(1-Hct)}\)</span> </br> with </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_p\)</span> (Q.PH1.001.p)</a>, </br><a href="../quantities/#Hct" target="_blank"><span class="arithmatex">\(Hct\)</span> (Q.PH1.012)</a>, </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_b\)</span> (Q.PH1.001.b)</a>.</td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.004 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Blood vs plasma flow</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(F_b=\frac{F_p}{(1-Hct)}\)</span> </br> with </br> <a href="../quantities/#Fp" target="_blank"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>,</br> <a href="../quantities/#Hct" target="_blank"><span class="arithmatex">\(Hct\)</span> (Q.PH1.012)</a>, </br> <a href="../quantities/#Fb" target="_blank"><span class="arithmatex">\(F_b\)</span> (Q.PH1.003)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.005 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Blood vs plasma <abbr title="Arterial Input Function">AIF</abbr></td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(C_{a,b}(t)=C_{a,p}(t)\cdot(1-Hct_a)\)</span>, </br> with </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{a,p}\)</span> (Q.IC1.001.a,p)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> [<a href="../quantities/#C" target="_blank"><span class="arithmatex">\(C_{a,b}\)</span> (Q.IC1.001.a,b)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>], </br> <a href="../quantities/#Hct" target="_blank"><span class="arithmatex">\(Hct_a\)</span> (Q.PH1.012.a)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.006 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Small vessel hematocrit correction</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(Hct_f=\frac{1-Hct_a}{1-Hct_t}\)</span> </br> with </br> <a href="../quantities/#Hct" target="_blank"><span class="arithmatex">\(Hct_a\)</span> (Q.PH1.012.a)</a>, </br><a href="../quantities/#Hct" target="_blank"><span class="arithmatex">\(Hct_t\)</span> (Q.PH1.012.t)</a>,</br> <a href="../quantities/#Hctf" target="_blank"><span class="arithmatex">\(Hct_f\)</span> (Q.PH1.013)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.007 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Compartment extraction fraction</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(E=\frac{PS}{F_p+PS}\)</span> </br> with </br> <a href="../quantities/#PS" target="_blank"><span class="arithmatex">\(PS\)</span> (Q.PH1.004)</a>,</br>  <a href="../quantities/#Fp" target="_blank"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>,</br> <a href="../quantities/#E" target="_blank"><span class="arithmatex">\(E\)</span> (Q.PH1.005)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.008 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Plug flow extraction fraction</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(E=1-e^{-\frac{PS}{F_p}}\)</span> </br> with </br> <a href="../quantities/#PS" target="_blank"><span class="arithmatex">\(PS\)</span> (Q.PH1.004)</a>,</br> <a href="../quantities/#Fp" target="_blank"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>,</br> <a href="../quantities/#E" target="_blank"><span class="arithmatex">\(E\)</span> (Q.PH1.005)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.009 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Plasma MTT identity</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(MTT_p=\frac{v_p}{F_p+PS}\)</span> </br> with </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_p\)</span> (Q.PH1.001.p)</a>, </br> <a href="../quantities/#PS" target="_blank"><span class="arithmatex">\(PS\)</span> (Q.PH1.004)</a>, </br> <a href="../quantities/#Fp" target="_blank"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>, </br> <a href="../quantities/#MTT" target="_blank"><span class="arithmatex">\(MTT_p\)</span> (Q.PH1.006.p)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.010 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Interstitial MTT identity</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(MTT_e=\frac{v_e}{PS}\)</span> </br> with </br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_e\)</span> (Q.PH1.001.e)</a>,</br> <a href="../quantities/#PS" target="_blank"><span class="arithmatex">\(PS\)</span> (Q.PH1.004)</a>, </br> <a href="../quantities/#MTT" target="_blank"><span class="arithmatex">\(MTT_e\)</span> (Q.PH1.006.e)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.011 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><span class="arithmatex">\(K^{trans}\)</span> identity</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(K^{trans}=E\cdot F_p\)</span>, </br> with </br> <a href="../quantities/#E" target="_blank">E (Q.PH1.005)</a>, </br> <a href="../quantities/#Fp" target="_blank"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a>, </br> <a href="../quantities/#Ktrans" target="_blank"><span class="arithmatex">\(K^{trans}\)</span> (Q.PH1.008)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.012 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><span class="arithmatex">\(k_{ep}\)</span> identity</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(k_{ep}=\frac{K^{trans}}{v_e}\)</span>, </br> <a href="../quantities/#Ktrans" target="_blank"><span class="arithmatex">\(K^{trans}\)</span> (Q.PH1.008)</a>,</br> <a href="../quantities/#v" target="_blank"><span class="arithmatex">\(v_e\)</span> (Q.PH1.001.e)</a>,</br> <a href="../quantities/#k" target="_blank"><span class="arithmatex">\(k_{e-&gt;p}\)</span> (Q.PH1.009.e-&gt;p)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID1.999</td>
+<td><a id="not listed ID1"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scalars-derived-from-dynamic-curves"><a id="Scalars derived from dynamic curves"></a> Scalars derived from dynamic curves<a class="headerlink" href="#scalars-derived-from-dynamic-curves" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M.ID2.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Bolus delay identity</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(MTT_a=\int_{0}^{\infty}h_a(t)dt\)</span> </br> with </br> [ <a href="../quantities/#ha" target="_blank"><span class="arithmatex">\(h_a\)</span> (Q.IC1.004)</a>, <a href="../quantities/#time" target="_blank">t (Q.GE1.004)</a>],</br> <a href="../quantities/#MTT" target="_blank"><span class="arithmatex">\(MTT_a\)</span> (Q.PH1.006.a)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID2.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Tissue mean transit time identity</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(MTT_t=\int_{0}^{\infty}R(t)dt\)</span></br> with </br> [ <a href="../quantities/#R" target="_blank"><span class="arithmatex">\(R\)</span> (Q.IC1.002)</a>,</br> <a href="../quantities/#time" target="_blank"><span class="arithmatex">\(t\)</span> (Q.GE1.004)</a>],</br> <a href="../quantities/#MTT" target="_blank"><span class="arithmatex">\(MTT_t\)</span> (Q.PH1.006.t)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID2.003 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Blood plasma flow from maximum</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(F_p=max(I(t))\)</span>  </br> with </br> [ <a href="../quantities/#IRF" target="_blank"><span class="arithmatex">\(I\)</span> (Q.IC1.005)</a>, <a href="../quantities/#time" target="_blank"><span class="arithmatex">\(t\)</span> (Q.GE1.004)</a>],</br> <a href="../quantities/#Fp" target="_blank"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID2.004 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Blood plasma flow from first time frame</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(F_p=I(0)\)</span> </br> with </br>[ <a href="../quantities/#IRF" target="_blank"><span class="arithmatex">\(I\)</span> (Q.IC1.005)</a>, <a href="../quantities/#time" target="_blank"><span class="arithmatex">\(t\)</span> (Q.GE1.004)</a>],</br> <a href="../quantities/#Fp" target="_blank"><span class="arithmatex">\(F_p\)</span> (Q.PH1.002)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID2.005 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td>Capillary transit time heterogeneity identity</td>
+<td>--</td>
+<td>--</td>
+<td>This forward model is given by the following equation: </br> <span class="arithmatex">\(CTTH=\int_{0}^{\infty}\sqrt{(t-MTT)^2}h(t)dt\)</span> </br> with </br> [<a href="../quantities/#h" target="_blank"><span class="arithmatex">\(h\)</span> (Q.IC1.003)</a>, <a href="../quantities/#time" target="_blank"><span class="arithmatex">\(t\)</span> (Q.GE1.004)</a>],<br/><a href="../quantities/#MTT" target="_blank"><span class="arithmatex">\(MTT\)</span> (Q.PH1.006)</a>,<br/><a href="../quantities/#CTTH" target="_blank"><span class="arithmatex">\(CTTH\)</span> (Q.PH1.014)</a></td>
+<td>--</td>
+</tr>
+<tr>
+<td>M.ID2.999</td>
+<td><a id="not listed ID2"></a> Model not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a model of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="https://forms.gle/dsfUEZx6P91rBwJe6" target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="https://forms.gle/dsfUEZx6P91rBwJe6" target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="#__consent">Change cookie settings</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our lexicon and whether users find what they're searching for. With your consent, you're helping us to make our lexicon better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["search.suggest"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

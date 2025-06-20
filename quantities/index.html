@@ -1,0 +1,3253 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="CAPLEX">
+      
+      
+        <meta name="author" content="Open Science Initiative for Perfusion Imaging (OSIPI)">
+      
+      
+      
+        <link rel="prev" href="../improved-contribution-tutorial/">
+      
+      
+        <link rel="next" href="../perfusionModels/">
+      
+      
+      <link rel="icon" href="../osipiImgs/OSIPI_logo_only_square.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Q - Quantities - Contrast-agent based perfusion MRI lexicon (CAPLEX)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M64%2032C28.7%2032%200%2060.7%200%2096v320c0%2035.3%2028.7%2064%2064%2064h224V368c0-26.5%2021.5-48%2048-48h112V96c0-35.3-28.7-64-64-64zm384%20320H336c-8.8%200-16%207.2-16%2016v112l32-32%2064-64z%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-86.2-346.7c7.9-22.3%2029.1-37.3%2052.8-37.3h58.3c34.9%200%2063.1%2028.3%2063.1%2063.1%200%2022.6-12.1%2043.5-31.7%2054.8L280%20264.4c-.2%2013-10.9%2023.6-24%2023.6-13.3%200-24-10.7-24-24v-13.5c0-8.6%204.6-16.5%2012.1-20.8l44.3-25.4c4.7-2.7%207.6-7.7%207.6-13.1%200-8.4-6.8-15.1-15.1-15.1h-58.3c-3.4%200-6.4%202.1-7.5%205.3l-.4%201.2c-4.4%2012.5-18.2%2019-30.6%2014.6s-19-18.2-14.6-30.6l.4-1.2zM224%20352a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%2032c14.2%200%2027.3%207.5%2034.5%2019.8l216%20368c7.3%2012.4%207.3%2027.7.2%2040.1S486.3%20480%20472%20480H40c-14.3%200-27.6-7.7-34.7-20.1s-7-27.8.2-40.1l216-368C228.7%2039.5%20241.8%2032%20256%2032m0%20128c-13.3%200-24%2010.7-24%2024v112c0%2013.3%2010.7%2024%2024%2024s24-10.7%2024-24V184c0-13.3-10.7-24-24-24m32%20224a32%2032%200%201%200-64%200%2032%2032%200%201%200%2064%200%22/%3E%3C/svg%3E');}</style>
+
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M17%2013h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-27M7GKVZFQ"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-27M7GKVZFQ",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-27M7GKVZFQ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#section-q-quantities" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Contrast-agent based perfusion MRI lexicon (CAPLEX)" class="md-header__button md-logo" aria-label="Contrast-agent based perfusion MRI lexicon (CAPLEX)" data-md-component="logo">
+      
+  <img src="../osipiImgs/OSIPI_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Contrast-agent based perfusion MRI lexicon (CAPLEX)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Q - Quantities
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OSIPI/OSIPI_CAPLEX" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OSIPI_CAPLEX
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Contrast-agent based perfusion MRI lexicon (CAPLEX)" class="md-nav__button md-logo" aria-label="Contrast-agent based perfusion MRI lexicon (CAPLEX)" data-md-component="logo">
+      
+  <img src="../osipiImgs/OSIPI_logo.png" alt="logo">
+
+    </a>
+    Contrast-agent based perfusion MRI lexicon (CAPLEX)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OSIPI/OSIPI_CAPLEX" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    OSIPI_CAPLEX
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About Caplex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CAPLEX structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qualityOfLife/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to use the website
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../improved-contribution-tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to contribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sections
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sections
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Q - Quantities
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Q - Quantities
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mr-signal-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      MR signal quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#electromagnetic-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electromagnetic quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indicator-concentration-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indicator concentration quantities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Indicator concentration quantities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indicator-kinetic-model-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indicator kinetic model quantities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#physiological-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physiological quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-physical-and-mathematical-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      General physical and mathematical quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curve-descriptive-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Curve descriptive quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bolus-arrival-time-estimation-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bolus arrival time estimation quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#baseline-estimation-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Baseline estimation quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descriptive-model-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriptive model quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leakage-correction-model-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leakage correction model quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uncertainty-and-statistical-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uncertainty and statistical quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytical-inversion-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analytical inversion quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimization quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#native-r1-estimation-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Native R1 estimation quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arterial-input-function-estimation-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arterial input function estimation quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segmentation-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Segmentation quantities
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../perfusionModels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M - Perfusion models
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../perfusionProcesses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    P - Perfusion processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalPurposeProcesses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    G - General purpose processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivedProcesses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    D - Derived processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Implementation Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Implementation Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DCE/DSC resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            DCE/DSC resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dceliterature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DCE literature library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Software tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Software tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../softwareOverview.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Software overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simulationTools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data simulation tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysisToolboxes.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analysis toolboxes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sampleDatasets.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sample datasets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mr-signal-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      MR signal quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#electromagnetic-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electromagnetic quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indicator-concentration-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indicator concentration quantities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Indicator concentration quantities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indicator-kinetic-model-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indicator kinetic model quantities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#physiological-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physiological quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-physical-and-mathematical-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      General physical and mathematical quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curve-descriptive-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Curve descriptive quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bolus-arrival-time-estimation-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bolus arrival time estimation quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#baseline-estimation-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Baseline estimation quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descriptive-model-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriptive model quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leakage-correction-model-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leakage correction model quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uncertainty-and-statistical-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uncertainty and statistical quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytical-inversion-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analytical inversion quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimization quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#native-r1-estimation-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Native R1 estimation quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arterial-input-function-estimation-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arterial input function estimation quantities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segmentation-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Segmentation quantities
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="section-q-quantities">Section Q: Quantities<a class="headerlink" href="#section-q-quantities" title="Permanent link">&para;</a></h1>
+<h2 id="mr-signal-quantities"><a id="MR signal quantities"></a> <abbr title="Magnetic Resonance">MR</abbr> signal quantities<a class="headerlink" href="#mr-signal-quantities" title="Permanent link">&para;</a></h2>
+<p>The items in this group are related to the <abbr title="Magnetic Resonance">MR</abbr> signal and quantities of the <abbr title="Magnetic Resonance">MR</abbr> sequence used to acquire the signal.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>OSIPI units</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q.MS1.001.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="S"></a> Signal</td>
+<td>--</td>
+<td><em>S<sub>j</sub></em></td>
+<td>The <abbr title="Magnetic Resonance">MR</abbr> signal (magnitude, phase or complex depending on context) in compartment <em>j</em>.</td>
+<td>a.u.</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.MS1.002.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="S_BL"></a> Baseline signal</td>
+<td>--</td>
+<td><em>S<sub>BL,j</sub></em></td>
+<td>Pre-contrast <abbr title="Magnetic Resonance">MR</abbr> signal (magnitude, phase or complex depending on context) in compartment <em>j</em> before the arrival of indicator at the tissue of interest.</td>
+<td>a.u.</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.MS1.003.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="AE"></a> Absolute enhancement</td>
+<td>--</td>
+<td><em>AE<sub>j</sub></em></td>
+<td>The absolute signal change from baseline  <span class="arithmatex">\(\left\| S_j-S_{BL,j} \right\|\)</span> in compartment <em>j</em> induced by an indicator. In <abbr title="Dynamic Contrast Enhanced">DCE</abbr>, the enhancement is positive and in <abbr title="Dynamic Susceptibility Contrast">DSC</abbr>, the enhancement is negative.</td>
+<td>a.u.</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.MS1.004.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="RE"></a> Relative enhancement</td>
+<td>--</td>
+<td><em>RE<sub>j</sub></em></td>
+<td>The relative signal change from baseline <span class="arithmatex">\(\left\|\frac{S_j}{S_{BL,j}}-1\right\|\)</span> in compartment <em>j</em> induced by the indicator. In <abbr title="Dynamic Contrast Enhanced">DCE</abbr>, the enhancement is positive and in <abbr title="Dynamic Susceptibility Contrast">DSC</abbr>, the enhancement is negative.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.MS1.005 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="TE"></a> Echo time</td>
+<td>--</td>
+<td>TE</td>
+<td>The time between the application of the radiofrequency excitation pulse and the center of the echo.</td>
+<td>ms</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.MS1.006 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="TR"></a> Repetition time</td>
+<td>--</td>
+<td>TR</td>
+<td>The time between the beginning of a pulse sequence and the beginning of a succeeding (essentially identical) pulse sequence.</td>
+<td>ms</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.MS1.007 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Flip angle"></a> Prescribed excitatory flip angle</td>
+<td>--</td>
+<td><span class="arithmatex">\(\alpha\)</span></td>
+<td>The prescribed nutation angle of the net magnetization immediately following an excitation <abbr title="Radio Frequency">RF</abbr> pulse.</td>
+<td>deg</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.MS1.008 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="PD"></a> Prepulse delay time</td>
+<td>Inversion time TI (in case of an inversion recovery sequence)</td>
+<td>PD</td>
+<td>The time between the middle of a prepulse (e.g. inversion pulse) and the middle of the pulse that reads out the center of k-space.</td>
+<td>ms</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.MS1.009 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="PF Flip angle"></a> Prepulse flip angle</td>
+<td>--</td>
+<td><span class="arithmatex">\(\alpha_{p}\)</span></td>
+<td>The nutation angle of the net magnetization immediately following a prepulse.</td>
+<td>deg</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.MS1.010 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="S_0"></a> Signal scaling factor</td>
+<td>--</td>
+<td><em>S<sub>0</sub></em></td>
+<td>A constant scaling factor in a signal model. <span class="arithmatex">\(S_0\)</span> typically includes contributions from the receiver gain, the proton density and the coil sensitivities.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.MS1.011 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="n k-space"></a> Number of lines to k-space center</td>
+<td>--</td>
+<td><em>n</em></td>
+<td>The number of lines to <em>k</em>-space center in the phase encoding direction.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.MS1.012 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="N k-space"></a> Total number of k-space lines</td>
+<td>--</td>
+<td><em>N</em></td>
+<td>The total number of phase encoding lines for acquiring an image.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.MS1.999</td>
+<td><a id="not listed MS1"></a> Quantity not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>[variable]</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="electromagnetic-quantities"><a name="Electromagnetic quantities"></a> Electromagnetic quantities<a class="headerlink" href="#electromagnetic-quantities" title="Permanent link">&para;</a></h2>
+<p>The items in this group are related to electromagnetic tissue properties and electromagnetic properties of contrast agents. The abbreviations <abbr title="Spin Echo">SE</abbr> and <abbr title="Gradient Echo">GE</abbr> denote spin and gradient echo.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>OSIPI units</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q.EL1.001.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="R1"></a> Longitudinal relaxation rate</td>
+<td><em>R<sub>1</sub></em> -relaxation rate</td>
+<td><span class="arithmatex">\(R_{1,j}\)</span></td>
+<td>Longitudinal relaxation rate in compartment <em>j</em>.</td>
+<td>1/s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.002.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="R10"></a> Native longitudinal relaxation rate</td>
+<td>Baseline <em>R<sub>1</sub></em></td>
+<td><span class="arithmatex">\(R_{10,j}\)</span></td>
+<td>Longitudinal relaxation rate in compartment <em>j</em>.</td>
+<td>1/s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.003.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="DeltaR1"></a> Change in longitudinal relaxation rate</td>
+<td>--</td>
+<td><span class="arithmatex">\(\Delta R_{1,j}^*\)</span></td>
+<td>Change in longitudinal relaxation rate with respect to <span class="arithmatex">\(R_{10,j}\)</span> in compartment <em>j</em>.</td>
+<td>1/s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.004.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="R2"></a>  Transverse relaxation rate (<abbr title="Spin Echo">SE</abbr>)</td>
+<td><em>R<sub>2</sub></em>-relaxation rate</td>
+<td><span class="arithmatex">\(R_{2,j}\)</span></td>
+<td>Natural transverse relaxation rate (observed using a <abbr title="Spin Echo">SE</abbr>) in compartment <em>j</em>.</td>
+<td>1/s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.005.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="R20"></a> Native transverse relaxation rate (<abbr title="Spin Echo">SE</abbr>)</td>
+<td>Baseline <em>R<sub>2</sub></em>-relaxation rate</td>
+<td><span class="arithmatex">\(R_{20,j}\)</span></td>
+<td>Pre-contrast natural transverse relaxation rate (observed using a <abbr title="Spin Echo">SE</abbr>) in compartment <em>j</em>.</td>
+<td>1/s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.006.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="DeltaR2"></a> Change in transverse relaxation rate (<abbr title="Spin Echo">SE</abbr>)</td>
+<td>--</td>
+<td><span class="arithmatex">\(\Delta R_{2,j}\)</span></td>
+<td>Change in natural transverse relaxation rate (observed using a <abbr title="Spin Echo">SE</abbr>) with respect to <span class="arithmatex">\(R_{20}\)</span> in compartment <em>j</em>.</td>
+<td>1/s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.007.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="R2Star"></a> Transverse relaxation rate (<abbr title="Gradient Echo">GE</abbr>)</td>
+<td><span class="arithmatex">\(R_{2}^*\)</span>-relaxation rate</td>
+<td><span class="arithmatex">\(R_{2,j}^*\)</span></td>
+<td>Effective transverse relaxation rate (observed using a <abbr title="Gradient Echo">GE</abbr>) in compartment <em>j</em>.</td>
+<td>1/s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.008.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="R2Star0"></a> Native transverse relaxation rate (<abbr title="Gradient Echo">GE</abbr>)</td>
+<td>Baseline <span class="arithmatex">\(R_{2}^*\)</span></td>
+<td><span class="arithmatex">\(R_{20,j}^*\)</span></td>
+<td>Pre-contrast effective transverse relaxation rate (observed using a <abbr title="Gradient Echo">GE</abbr>) in compartment <em>j</em>.</td>
+<td>1/s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.009.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="DeltaR2Star"></a> Change in transverse relaxation rate (<abbr title="Gradient Echo">GE</abbr>)</td>
+<td>--</td>
+<td><span class="arithmatex">\(\Delta R_{2,j}^*\)</span></td>
+<td>Change in effective transverse relaxation rate (observed using a <abbr title="Gradient Echo">GE</abbr>) with respect to <span class="arithmatex">\(R_{20}^*\)</span> in compartment <em>j</em>.</td>
+<td>1/s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.010 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="R2ref"></a> Change in a reference transverse relaxation rate</td>
+<td>--</td>
+<td><span class="arithmatex">\(\overline{\Delta R}_{2,ref}^*\)</span></td>
+<td>Average change in effective transverse relaxation rate in a reference area with no indicator extravasation.</td>
+<td>1/s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.011.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Chi"></a> Molar magnetic susceptibility</td>
+<td>--</td>
+<td><span class="arithmatex">\(\chi_j\)</span></td>
+<td>Molar magnetic susceptibility in compartment <em>j</em>.</td>
+<td>mL/mol</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.012.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Chi0"></a> Native molar magnetic susceptibility</td>
+<td>Baseline <span class="arithmatex">\(\chi\)</span></td>
+<td><span class="arithmatex">\(\chi_{0,j}\)</span></td>
+<td>Pre-contrast molar magnetic susceptibility in compartment <em>j</em>.</td>
+<td>mL/mol</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.013.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="DeltaChi"></a> Change in molar magnetic susceptibility</td>
+<td>--</td>
+<td><span class="arithmatex">\(\Delta \chi_j\)</span></td>
+<td>Change in molar magnetic susceptibility with respect to <span class="arithmatex">\(\chi_{0}\)</span> in compartment <em>j</em>.</td>
+<td>mL/mol</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.014.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="DelChi"></a>  Molar magnetic susceptibility change per unit concentration of indicator</td>
+<td>--</td>
+<td><span class="arithmatex">\(\delta \chi_j\)</span></td>
+<td>Molar magnetic susceptibility change per unit concentration of indicator in compartment <em>j</em>.</td>
+<td>mL/mol/mM</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.015.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="r1"></a> Longitudinal relaxivity</td>
+<td><em>r<sub>1</sub></em> -relaxivity</td>
+<td><em>r<sub>1,j</sub></em></td>
+<td>Longitudinal relaxivity in compartment <em>j</em>.</td>
+<td>1/s/mM</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.016.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="r2"></a> Transverse relaxivity (<abbr title="Spin Echo">SE</abbr>)</td>
+<td><em>r<sub>2</sub></em> -relaxivity</td>
+<td><em>r<sub>2,j</sub></em></td>
+<td>Transverse relaxivity (observed using a <abbr title="Spin Echo">SE</abbr>) in compartment <em>j</em>.</td>
+<td>1/s/mM</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.017 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="r2star"></a> Transverse relaxivity (<abbr title="Gradient Echo">GE</abbr>)</td>
+<td><em>r<sub>2</sub><sup></em></sup>* -relaxivity</td>
+<td><em>r<sub>2</sub><sup></em></sup>*</td>
+<td>Transverse relaxivity (observed using a <abbr title="Gradient Echo">GE</abbr>) in the voxel.</td>
+<td>1/s/mM</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.018 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="r1f"></a> Longitudinal relaxivity of free indicator</td>
+<td>--</td>
+<td><em>r<sub>1,f</sub></em></td>
+<td>Longitudinal relaxivity of free (unbound) indicator.</td>
+<td>1/s/mM</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.019 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="r1b"></a> Longitudinal relaxivity of bound indicator</td>
+<td>--</td>
+<td><em>r<sub>1,b</sub></em></td>
+<td>Longitudinal relaxivity of bound indicator.</td>
+<td>1/s/mM</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.020 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="k1k2"></a> Transverse relaxivities of the quadratic model (<abbr title="Gradient Echo">GE</abbr>)</td>
+<td>--</td>
+<td>[<em>k<sub>1</sub></em>,k<sub>2</sub>]</td>
+<td>First and second order relaxivities for the quadratic model of the transverse relaxation rate (<abbr title="Gradient Echo">GE</abbr>)</td>
+<td>[1/s/mM,1/s/mM]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.EL1.999</td>
+<td><a id="not listed EL1"></a> Quantity not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>[variable]</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="indicator-concentration-quantities"><a id="Indicator concentration quantities"></a> Indicator concentration quantities<a class="headerlink" href="#indicator-concentration-quantities" title="Permanent link">&para;</a></h2>
+<p>The items of this group of quantities are either measured or modeled quantities used when pharmacokinetic modeling is applied. This section is split into the subsections indicator kinetic model quantities and <abbr title="Arterial Input Function">AIF</abbr> model quantities. The latter contains only quantities specific to often used <abbr title="Arterial Input Function">AIF</abbr> models.</p>
+<h3 id="indicator-kinetic-model-quantities"><a id="Indicator kinetic model quantities"></a>  Indicator kinetic model quantities<a class="headerlink" href="#indicator-kinetic-model-quantities" title="Permanent link">&para;</a></h3>
+<p>The items of this group of quantities are either measured or modeled quantities used when pharmacokinetic modeling is applied.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>OSIPI units</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q.IC1.001.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="C"></a> Indicator concentration</td>
+<td>--</td>
+<td><em>C<sub>j</sub></em></td>
+<td>Concentration of indicator molecules in compartment <em>j</em>.</td>
+<td>mM</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.IC1.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="R"></a> Tissue residue function</td>
+<td>--</td>
+<td><em>R</em></td>
+<td>Fraction of indicator molecules entering a volume of distribution at time t=0 that are still present at time t.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.IC1.003 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="h"></a> Tissue transit time distribution</td>
+<td>--</td>
+<td><em>h</em></td>
+<td>Probability distribution of transit times through volume of interest.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.IC1.004 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="ha"></a> Arterial transit time distribution</td>
+<td>--</td>
+<td><em>h<sub>a</sub></em></td>
+<td>Probability distribution of transit times through the arterial tree (between <abbr title="Arterial Input Function">AIF</abbr> location and tissue of interest).</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.IC1.005 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="IRF"></a> Tissue impulse response function</td>
+<td><em>IRF</em></td>
+<td><em>I</em></td>
+<td>Defined by the relationship <span class="arithmatex">\(C_t=I\otimes C_{a,p}\)</span> .</td>
+<td>1/s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.IC1.006 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="IRFGeneral"></a> General impulse response function</td>
+<td><em>IRF</em></td>
+<td><em>I</em></td>
+<td>Defined by the relationship <span class="arithmatex">\(C_x=I\otimes C_y\)</span> .</td>
+<td>1/s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.IC1.999</td>
+<td><a id="not listed IC1"></a> Quantity not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>[variable]</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="physiological-quantities"><a id="Physiological quantities"></a> Physiological quantities<a class="headerlink" href="#physiological-quantities" title="Permanent link">&para;</a></h2>
+<p>In this group commonly used quantities with a physiological meaning are listed.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>OSIPI units</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q.PH1.001.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="v"></a> Relative volume fraction</td>
+<td>--</td>
+<td><em>v<sub>j</sub></em></td>
+<td>The relative volume fraction of compartment <em>j</em>. Only capillary vasculature is considered, thus the <em>c</em> subscript is dropped.</td>
+<td>mL/100mL</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.PH1.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Fp"></a> Blood plasma flow</td>
+<td>--</td>
+<td><em>F<sub>p</sub></em></td>
+<td>The volume of blood plasma flowing into a unit tissue volume per unit time. The flow inputs and exits the capillary vasculature.</td>
+<td>mL/min/100mL</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.PH1.003 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Fb"></a> Blood flow</td>
+<td>Cerebral blood flow (CBF)</td>
+<td><em>F<sub>b</sub></em></td>
+<td>The volume of blood flowing into a unit tissue volume per unit time. The flow inputs and exits the capillary vasculature.</td>
+<td>mL/min/100mL</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.PH1.004 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="PS"></a> Permeability surface area product</td>
+<td>Extraction flow (FE)</td>
+<td><em>PS</em></td>
+<td>The volume of tissue plasma that is fully cleared of indicator in a unit of time by a unit tissue volume.</td>
+<td>mL/min/100mL</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.PH1.005 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="E"></a> Extraction fraction</td>
+<td>--</td>
+<td><em>E</em></td>
+<td>The fraction of indicator particles that is extracted from plasma in one pass through the vasculature.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.PH1.006.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="MTT"></a> Mean transit time</td>
+<td>--</td>
+<td><em>MTT<sub>j</sub></em></td>
+<td>The average time the indicator spends in compartment <em>j</em> before exchanging into another compartment.</td>
+<td>s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.PH1.007 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Ta"></a> Arterial delay time</td>
+<td>--</td>
+<td><em>T<sub>a</sub></em></td>
+<td>Delay between indicator arrival at the arterial input function location and the voxel or tissue region of interest.</td>
+<td>s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.PH1.008 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Ktrans"></a> Volume transfer constant</td>
+<td>Transfer constant</td>
+<td><em>K<sup>trans</sup></em></td>
+<td>The rate of indicator particle delivery from the blood plasma to the extravascular, extracellular volume per unit of tissue volume, per unit arterial plasma concentration.</td>
+<td>1/min</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.PH1.009.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="k"></a> Indicator exchange rate</td>
+<td>--</td>
+<td><em>k<sub>j</sub></em></td>
+<td>Indicator exchange  rate constant between two compartments (e.g. <span class="arithmatex">\(k_{e \to b}\)</span>)</td>
+<td>1/s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.PH1.010.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="kw"></a> Water exchange rate</td>
+<td><em>k<sub>in</sub></em>, <em>k<sub>out</sub></em></td>
+<td><em>k<sub>w,j</sub></em></td>
+<td>Equilibrium water exchange rate between two compartments  (e.g. <span class="arithmatex">\(k_{w, e \to b}\)</span>)</td>
+<td>1/s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.PH1.011 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="rho"></a> Density</td>
+<td>--</td>
+<td><span class="arithmatex">\(\rho\)</span></td>
+<td>The density of the tissue of interest.</td>
+<td>g/mL</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.PH1.012.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Hct"></a> Hematocrit</td>
+<td>--</td>
+<td><em>Hct<sub>j</sub></em></td>
+<td>The volume percentage of red blood cells in the blood compartment <em>j</em>.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.PH1.013 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Hctf"></a> Hematocrit factor</td>
+<td>--</td>
+<td><em>Hct<sub>f</sub></em></td>
+<td>Blood flow correction factor accounting for the difference in arterial hematocrit <em>Hct<sub>a</sub></em> and capillary hematocrit <em>Hct<sub>c</sub></em>.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.PH1.014 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="CTTH"></a> Capillary transit time heterogeneity</td>
+<td>--</td>
+<td><em>CTTH</em></td>
+<td>Standard deviation of the capillary transit time distribution.</td>
+<td>s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.PH1.015 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="OEFmax"></a> Maximum oxygen extraction fraction</td>
+<td>--</td>
+<td>OEF<sup>max</max></td>
+<td>Upper biophysical limit of the proportion of oxygen that can be extracted by tissue.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.PH1.016.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="PELoW"></a> Pre-exchange lifetime of water</td>
+<td>--</td>
+<td><span class="arithmatex">\(\tau_j\)</span></td>
+<td>The average time water molecules spend in compartment j before exchanging into another compartment.</td>
+<td><span class="arithmatex">\(s^{-1}\)</span></td>
+<td><a href="https://doi.org/10.1002/jmri.1880070114" target="_blank">Donahue et al. 1997</a>,<br/> <a href="https://doi.org/10.1063/1.1731931" target="_blank">Woessner 1961</a></td>
+</tr>
+<tr>
+<td>Q.PH1.017.[j] <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="VWPF"></a> Visible water population fraction</td>
+<td>--</td>
+<td><span class="arithmatex">\(p_j\)</span></td>
+<td>The water population fraction inside compartment j.</td>
+<td>Unitless</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.PH1.018 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="ReabsorptionFrac"></a> Filtrate reabsorption fraction</td>
+<td>--</td>
+<td><span class="arithmatex">\(f\)</span></td>
+<td>The fraction of filtrate lost due to reabsorption.</td>
+<td>Unitless</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.PH1.999</td>
+<td><a id="not listed PH1"></a> Quantity not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>[variable]</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="general-physical-and-mathematical-quantities"><a id="General physical and mathematical quantities"></a> General physical and mathematical quantities<a class="headerlink" href="#general-physical-and-mathematical-quantities" title="Permanent link">&para;</a></h2>
+<p>This section contains general physical and mathematical quantities which are used in the context of perfusion image analysis.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>OSIPI units</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q.GE1.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="DataGrid"></a> Data grid</td>
+<td>--</td>
+<td><span class="arithmatex">\([x_1,...,x_n]\)</span></td>
+<td>Sampling points of a data set (typically time or frequency).</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.GE1.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Data"></a> Data</td>
+<td>--</td>
+<td><span class="arithmatex">\([f_1,...,f_n]\)</span></td>
+<td>Values of a data set with respect to a data grid. The data set has the value <span class="arithmatex">\(f_i\)</span> at data grid point <span class="arithmatex">\(x_i\)</span>.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.GE1.003 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="index"></a> Index</td>
+<td>--</td>
+<td><span class="arithmatex">\(i\)</span></td>
+<td>The number of the index of a data or data grid point.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.GE1.004 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="time"></a> Time</td>
+<td>--</td>
+<td><span class="arithmatex">\(t\)</span></td>
+<td>Time</td>
+<td>s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.GE1.005 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="timeStep"></a> Time step</td>
+<td>--</td>
+<td><span class="arithmatex">\(\Delta t\)</span></td>
+<td>Time between two successive data points, e.g. two images (for fixed temporal resolution).</td>
+<td>s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.GE1.006 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="freq"></a> Frequency</td>
+<td>--</td>
+<td><span class="arithmatex">\(\nu\)</span></td>
+<td>Frequency</td>
+<td>1/s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.GE1.007 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Lax"></a> Axial length</td>
+<td>--</td>
+<td><span class="arithmatex">\(L_{ax}\)</span></td>
+<td>The axial length of a cylindrical object, e.g. a capillary.</td>
+<td><span class="arithmatex">\(\mu m\)</span></td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.GE1.008 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="xax"></a>  Axial position</td>
+<td>--</td>
+<td><span class="arithmatex">\(x_{ax}\)</span></td>
+<td>The spatial position within a cylindrical object, e.g. a capillary. In the case of a capillary x=0 denotes the arterial inlet position and x=L<sub>ax</sub> the venous outlet position.</td>
+<td><span class="arithmatex">\(\mu m\)</span></td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.GE1.009 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="const"></a> Constant value</td>
+<td>--</td>
+<td><span class="arithmatex">\(k\)</span></td>
+<td>A constant value which can be used e.g. for scaling.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.GE1.010 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="L"></a> Lower threshold</td>
+<td>--</td>
+<td><span class="arithmatex">\(L\)</span></td>
+<td>The lower value at which the behavior of a function or algorithm changes.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.GE1.011 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="U"></a> Upper threshold</td>
+<td>--</td>
+<td><span class="arithmatex">\(U\)</span></td>
+<td>The upper value at which the behavior of a function or algorithm changes.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.GE1.012 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="f(x)"></a> Dynamic function</td>
+<td>--</td>
+<td><span class="arithmatex">\(f(x)\)</span></td>
+<td>A function of an independent variable <em>x</em> (typically time or frequency) with value <span class="arithmatex">\(f(x_i)\)</span> at data grid point <span class="arithmatex">\(x_i\)</span>.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.GE1.013 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="x_start"></a> Start of range</td>
+<td>--</td>
+<td><span class="arithmatex">\(x_{start}\)</span></td>
+<td>The start point of the range [<span class="arithmatex">\(x_{start}\)</span>, <span class="arithmatex">\(x_{end}\)</span>].</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.GE1.014 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="x_end"></a> End of range</td>
+<td>--</td>
+<td><span class="arithmatex">\(x_{end}\)</span></td>
+<td>The end point of the range [<span class="arithmatex">\(x_{start}\)</span>, <span class="arithmatex">\(x_{end}\)</span>].</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.GE1.015 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="sampleSize"></a> Sample size</td>
+<td>--</td>
+<td><span class="arithmatex">\(n\)</span></td>
+<td>The number samples within a data set.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.GE1.999</td>
+<td><a id="not listed GE1"></a> Quantity not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>[variable]</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="curve-descriptive-quantities"><a id="Curve descriptive quantities"></a> Curve descriptive quantities<a class="headerlink" href="#curve-descriptive-quantities" title="Permanent link">&para;</a></h2>
+<p>Descriptive parameters describe the shape of a data set sampled at a data grid, but do not offer a direct physiological interpretation. <br/>
+The data set is often the measured <abbr title="Magnetic Resonance">MR</abbr> signal sampled at specified time points, but it can also be some normalized version of it, or a derived signal such as dynamic concentration time curve or dynamic relaxation rate curve derived from an <abbr title="Magnetic Resonance">MR</abbr> signal.
+To keep the inputs of these processes flexible, they are all defined for general data <span class="arithmatex">\(f(x_i)\)</span> on a data grid of points <span class="arithmatex">\(f(x_i)\)</span> and it is left to the user to specify the data and data grid these processes are applied to (e.g. [Tissue indicator concentration (Q.I.002) , Time (Q.G.004)]).</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>OSIPI units</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q.CD1.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="f(x_i)"></a> Data value at data grid point</td>
+<td>--</td>
+<td><span class="arithmatex">\(f(x_i)\)</span></td>
+<td>The data value at the data grid point <span class="arithmatex">\(x_i\)</span>.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.CD1.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="f_max"></a> Maximum value</td>
+<td>--</td>
+<td><span class="arithmatex">\(f_{max}\)</span></td>
+<td>The maximum value of given data.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.CD1.003 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="x_max"></a> Data grid point of maximum value</td>
+<td>--</td>
+<td><span class="arithmatex">\(x_{max}\)</span></td>
+<td>The data grid point at which the maximum value of a given data set occurs.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.CD1.004 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="f_min"></a> Minimum value</td>
+<td>--</td>
+<td><span class="arithmatex">\(f_{min}\)</span></td>
+<td>The minimum value of given data.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.CD1.005 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="x_min"></a> Data grid point of minimum value</td>
+<td>--</td>
+<td><span class="arithmatex">\(x_{min}\)</span></td>
+<td>The data grid point at which the minimum value of a given data set occurs.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.CD1.006 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="f_fin"></a> Final data value</td>
+<td>--</td>
+<td><span class="arithmatex">\(f_{fin}\)</span></td>
+<td>The value of the data at the last data grid point.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.CD1.007 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="x_fin"></a> Final data grid point</td>
+<td>--</td>
+<td><span class="arithmatex">\(x_{fin}\)</span></td>
+<td>The last point of a given data grid.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.CD1.008 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="maxDev"></a> Maximum deviation from baseline</td>
+<td>--</td>
+<td><span class="arithmatex">\(\Delta f_{BL, max}\)</span></td>
+<td>The maximum absolute deviation of a given data set from the baseline.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.CD1.009 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Deriv"></a> Derivative at data grid point <span class="arithmatex">\(x_i\)</span></td>
+<td>--</td>
+<td><span class="arithmatex">\(\frac{df(x_{i})}{dx}\)</span></td>
+<td>Derivative of a function <em>f</em> with respect to the independent variable <em>x</em> at the data grid point <span class="arithmatex">\(x_i\)</span>.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.CD1.010 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="TTP"></a> Time to peak</td>
+<td>--</td>
+<td><em>TTP</em></td>
+<td>The time between the bolus arrival time (<abbr title="Bolus Arrival Time">BAT</abbr>) and the maximum time point <em>x<sub>max</sub></em>: <span class="arithmatex">\(TTP = x_{max} - BAT\)</span> <br/>(Remark: this is expressed for time rather than a general data grid, because TTP is an often used parameter in perfusion analysis).</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.CD1.011 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="WIS"></a> Wash-in-slope</td>
+<td>--</td>
+<td><em>WIS</em></td>
+<td>The ratio of the difference of the maximum data value <span class="arithmatex">\(f_{max}\)</span> and the baseline value <span class="arithmatex">\(f_{BL}\)</span> and the time to peak: <span class="arithmatex">\(WIS = \frac{f_{max}-f_{BL}}{TTP}\)</span></td>
+<td><span class="arithmatex">\(\frac{variable_{1}}{variable_{2}}\)</span></td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.CD1.012 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="WOS"></a> Wash-out-slope</td>
+<td>--</td>
+<td><em>WOS</em></td>
+<td>The ratio of the difference of the maximum data value <span class="arithmatex">\(f_{max}\)</span> and the data value at the last data grid point <span class="arithmatex">\(f_{fin}\)</span> and difference between the last time point and the time at which the maximum occurs: <span class="arithmatex">\(WOS = \frac{f_{max}-f_{fin}}{x_{max}-x_{fin}}\)</span></td>
+<td><span class="arithmatex">\(\frac{variable_{1}}{variable_{2}}\)</span></td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.CD1.013 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="AUC"></a> Area under curve</td>
+<td>--</td>
+<td><span class="arithmatex">\(AUC_{x_{start}, x_{end}}\)</span></td>
+<td>The integral value of a given dynamic function <em>f</em> (or the numeric approximation for discrete data <span class="arithmatex">\([f_{1}, ...f_{n}]\)</span> ) between the data grid points <span class="arithmatex">\(x_{1}\)</span> and <span class="arithmatex">\(x_{2}\)</span>.</td>
+<td><span class="arithmatex">\(variable_{1} * variable_{2}\)</span></td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.DC1.999</td>
+<td><a id="not listed DC1"></a> Quantity not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>[variable]</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="bolus-arrival-time-estimation-quantities"><a id="Bolus arrival time estimation quantities"></a> Bolus arrival time estimation quantities<a class="headerlink" href="#bolus-arrival-time-estimation-quantities" title="Permanent link">&para;</a></h2>
+<p>This section lists all quantities related to the estimation process of the bolus arrival time of a data curve.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>OSIPI units</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q.BA1.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="BAT"></a> Bolus arrival time</td>
+<td>Onset Time, Lag Time</td>
+<td><em><abbr title="Bolus Arrival Time">BAT</abbr></em></td>
+<td>The time between the first data grid point and the onset obtained by applying a specified <abbr title="Bolus Arrival Time">BAT</abbr> estimation method.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.BA1.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="IntersectionBATParms"></a> Intersection- based <abbr title="Bolus Arrival Time">BAT</abbr> estimation parameters</td>
+<td>--</td>
+<td><em>[N]</em></td>
+<td>Vector of ordered inputs to the intersection-based <abbr title="Bolus Arrival Time">BAT</abbr> estimation process.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.BA1.999</td>
+<td><a id="not listed BA1"></a> Quantity not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>[variable]</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="baseline-estimation-quantities"><a id="Baseline estimation quantities"></a> Baseline estimation quantities<a class="headerlink" href="#baseline-estimation-quantities" title="Permanent link">&para;</a></h2>
+<p>This section lists all quantities related to the estimation process of the baseline of a data curve.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>OSIPI units</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q.BL1.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="f_BL"></a> Baseline value</td>
+<td>--</td>
+<td>f<sub>BL</sub></td>
+<td>The value of a series of data of constant values in the beginning of a data set before the behavior of the data set changes. The baseline value is obtained by applying the baseline estimation process.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.BL.999</td>
+<td><a id="not listed BL1"></a> Quantity not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>[variable]</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="descriptive-model-quantities"><a id="Descriptive model quantities"></a> Descriptive model quantities<a class="headerlink" href="#descriptive-model-quantities" title="Permanent link">&para;</a></h2>
+<p>This section lists all quantities related to the estimation process of the baseline of a data curve.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>OSIPI units</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q.DM1.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="UnitStepParams"></a> Unit step model parameters</td>
+<td>--</td>
+<td><em>[T]</em></td>
+<td>Vector of ordered inputs to the unit step model (M.DM1.001).</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.DM1.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="LinQuandraticParams"></a> Linear-quadratic model parameters</td>
+<td>--</td>
+<td><em>[<abbr title="Bolus Arrival Time">BAT</abbr>, f<sub>BL</sub>, <span class="arithmatex">\(\beta_{1}\)</span>, <span class="arithmatex">\(\beta_{2}\)</span>]</em></td>
+<td>Vector of ordered inputs to the linear quadratic model (M.DM1.002).</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.DM1.003 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="2SLParams"></a> Two step linear model parameters</td>
+<td>--</td>
+<td><em>[<abbr title="Bolus Arrival Time">BAT</abbr>, f<sub>BL</sub>, b<sub>1</sub>]</em></td>
+<td>Vector of ordered inputs to the two step linear model (M.DM1.003).</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.DM1.004 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="3SLPamars"></a> Three step linear model parameters</td>
+<td>--</td>
+<td><em>[<abbr title="Bolus Arrival Time">BAT</abbr>, f<sub>BL</sub>, <span class="arithmatex">\(\beta\)</span>, b<sub>1</sub>, b<sub>2</sub>]</em></td>
+<td>Vector of ordered inputs to the three step linear model (M.DM1.004).</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.DM1.005 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="MultiExpParams"></a> Multi-exponential model parameters</td>
+<td>--</td>
+<td><em>[A<sub>1</sub>, ...A<sub>n</sub>, a<sub>1</sub>, ...a<sub>n</sub>]</em></td>
+<td>Vector of ordered inputs to the multi-exponential model (M.DM1.005).</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.DM1.006 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="GammaVarParams"></a> Gamma-variate model parameters</td>
+<td>--</td>
+<td><em>[<abbr title="Bolus Arrival Time">BAT</abbr>, <span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\(\beta\)</span>]</em></td>
+<td>Vector of ordered inputs to the gamma-variate model (M.DM1.006).</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.DM1.007 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="FermiParams"></a> Fermi model parameters</td>
+<td>--</td>
+<td><em>[F, a, b]</em></td>
+<td>Vector of ordered inputs to the Fermi model (M.DM1.007).</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.DM1.008 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="NormalParams"></a> Normal distribution model parameters</td>
+<td>--</td>
+<td><em>[<span class="arithmatex">\(\mu\)</span>, <span class="arithmatex">\(\sigma\)</span>]</em></td>
+<td>Vector of ordered inputs to normal distribution model (M.DM1.008).</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.DM1.999</td>
+<td><a id="not listed DM1"></a> Quantity not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>[variable]</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="leakage-correction-model-quantities"><a id="Leakage correction model quantities"></a> Leakage correction model quantities<a class="headerlink" href="#leakage-correction-model-quantities" title="Permanent link">&para;</a></h2>
+<p>Leakage correction model parameters are typically ad-hoc correction factors for physical models that are not purely descriptive but are not derived from rigorous physical models, therefore they are not listed in the physiological quantities group. </p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>OSIPI units</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q.LC1.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="K1"></a> Uncontaminated R<sub>2</sub><sup>*</sup> scaling term</td>
+<td>--</td>
+<td>K<sub>1</sub></td>
+<td>Scaling constant for the uncontaminated effective transverse relaxation rate in the BSW leakage correction model and Bidirectional leakage correction model.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.LC1.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="K2"></a> Leakage scaling term</td>
+<td>--</td>
+<td>K<sub>2</sub></td>
+<td>Scaling constant which reflects the effects of leakage in the BSW leakage correction model and Bidirectional leakage correction model.</td>
+<td>1/s</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.LC1.999</td>
+<td><a id="not listed LC1"></a> Quantity not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>[variable]</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="uncertainty-and-statistical-quantities"><a id="Uncertainty and statistical quantities"></a> Uncertainty and statistical quantities<a class="headerlink" href="#uncertainty-and-statistical-quantities" title="Permanent link">&para;</a></h2>
+<p><b><font color=#FF0000>This section is currently work in progress</font></b> </br></br>
+In this group commonly used quantities to describe uncertainties of the extracted parameters and other statistical properties in the context of perfusion image analysis.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>OSIPI units</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q.US1.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Mean_sample"></a> Arithmetic mean (sample)</td>
+<td>Average</td>
+<td><span class="arithmatex">\(\bar{x}\)</span></td>
+<td>The mean value of a given data sample <em>[x<sub>1</sub>,...,x<sub>n</sub>]</em>, with sample size n, calculated as <br /> <span class="arithmatex">\(\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_i\)</span>.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="GeomMean_sample"></a> Geometric mean (sample)</td>
+<td>--</td>
+<td><span class="arithmatex">\(\bar{x}_{geom}\)</span></td>
+<td>The mean value of a given data sample <em>[x<sub>1</sub>,...,x<sub>n</sub>]</em>, with sample size n, calculated as <br /> <span class="arithmatex">\(\bar{x}_{geom}=\sqrt[n]{\prod_{i=1}^{n}x_i}\)</span></td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.003 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Var"></a> Variance (sample)</td>
+<td>--</td>
+<td><em>s<sup>2</sup></em></td>
+<td>Mean squared deviation of the mean of a given data set <em>[x<sub>1</sub>,...,x<sub>n</sub>]</em> with sample size <em>n</em> and mean value <span class="arithmatex">\(\bar{x}\)</span>, calculated as <br /> <span class="arithmatex">\(s^2=\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}\)</span>.</td>
+<td>variable<sup>2</sup></td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.004 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="StdDev"></a> Standard deviation (sample)</td>
+<td>--</td>
+<td><em>s</em></td>
+<td>The standard deviation of the mean value of a given data set <em>[x<sub>1</sub>,...,x<sub>n</sub>]</em> with sample size <em>n</em> and mean value <span class="arithmatex">\(\bar{x}\)</span> , calculated as <br /> <span class="arithmatex">\(s^2=\sqrt{\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}}\)</span>.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.005 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Median"></a> Median value (sample)</td>
+<td>--</td>
+<td><em>x<sub>median</sub></em></td>
+<td>Centermost point <span class="arithmatex">\(x_{\frac{n+1}{2}}\)</span> of ordered data points <span class="arithmatex">\(\left[x_{1}\leq x_{2}...\leq x_{n-1}\leq x_{n}\right]\)</span> for an odd number of samples or the average of the two centermost points <span class="arithmatex">\(\frac{x_{n/2}+x_{n/2+1}}{2}\)</span> for an even number of samples.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.006 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="CoV"></a> Coefficient of variation (sample)</td>
+<td>--</td>
+<td>CV</td>
+<td>The standard deviation (sample) <em>s</em> of a given data set divided by the mean value (sample) <span class="arithmatex">\(\bar{x}\)</span> same dataset (only applicable to ratio scaled variables), calculated as <span class="arithmatex">\(CV=\frac{s}{\bar{x}}\)</span></td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.007 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Avg"></a> Mean (population)</td>
+<td>--</td>
+<td><span class="arithmatex">\(\mu _{x}\)</span></td>
+<td>The mean is a parameter used to characterize the center of a population distribution of the quantity <em>x</em>. <br /> (Remark: For simplicity the subscript x can be omitted.)</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.008 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="SEM"></a> Standard error of the mean</td>
+<td>Standard error</td>
+<td>SEM</td>
+<td>The SEM quantifies how precisely the population mean <span class="arithmatex">\(\mu _{x}\)</span> is estimated from the sample mean. <span class="arithmatex">\(\bar{x}\)</span> of a sample of size <em>n</em> : <br /> <span class="arithmatex">\(SEM = \frac{s}{\sqrt{n}}\)</span></td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.009 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Var"></a> Variance (population)</td>
+<td>--</td>
+<td><span class="arithmatex">\(\sigma_{x}^2\)</span></td>
+<td>The variance is a parameter used to characterize the amount of variation or dispersion of a population distribution of the quantity <em>x</em>. <br /> (Remark: For simplicity the subscript x can be omitted.)</td>
+<td>variable<sup>2</sup></td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.010 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Std"></a> Standard deviation (population)</td>
+<td>--</td>
+<td><span class="arithmatex">\(\sigma_{x}\)</span></td>
+<td>The standard deviation is a parameter used to characterize the amount of variation or dispersion of a population distribution of the quantity <em>x</em>. <br /> (Remark: For simplicity the subscript x can be omitted.)</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.011 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="EstVar"></a> Estimated variance (population)</td>
+<td>--</td>
+<td><span class="arithmatex">\(\hat{\sigma_x^2}\)</span></td>
+<td>The estimated variance of a population distribution of the quantity <em>x</em>.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.012 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="EstCvr"></a> Estimated covariance</td>
+<td>--</td>
+<td><span class="arithmatex">\(\hat{\sigma_{xy}^2}\)</span></td>
+<td>The estimated covariance of two quantities <em>x</em> and <em>y</em>.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.013 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Range"></a> Range</td>
+<td>--</td>
+<td>r</td>
+<td>The range of a dataset <span class="arithmatex">\(\left[ x_1, ..., x_n \right]\)</span> is given as <span class="arithmatex">\(r = \left[ x_{min}, x_{max} \right]\)</span></td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.014 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="IQR"></a> Interquartal range</td>
+<td>--</td>
+<td>IQR</td>
+<td>The interquartile range of a data set <span class="arithmatex">\(\left[ x_1, ..., x_n \right]\)</span> is determined by dividing the ordered data into 4 equally sized groups with <span class="arithmatex">\(\geq 25\%\)</span> of values <span class="arithmatex">\(\leq Q_1\)</span> and <span class="arithmatex">\(\geq 75\%\)</span> of values <span class="arithmatex">\(\leq Q_3\)</span> and calculating <span class="arithmatex">\(IQR=Q_3-Q_1\)</span>.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.015 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="GQV"></a> Gamma-quantile value</td>
+<td>--</td>
+<td><span class="arithmatex">\(\gamma\)</span></td>
+<td>The number <span class="arithmatex">\(0 \leq \gamma \leq 1\)</span> defining the <span class="arithmatex">\(\gamma\)</span>-quantile.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.016 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="GQ"></a> Gamma-quantile</td>
+<td><span class="arithmatex">\(\left( \gamma * 100\% \right)^{th}\)</span> percentile</td>
+<td><span class="arithmatex">\(f_\gamma\)</span></td>
+<td>For <span class="arithmatex">\(0 \leq \gamma \leq 1\)</span>, <span class="arithmatex">\(f_\gamma\)</span> is the <span class="arithmatex">\(\gamma\)</span>-quantile of a distribution if <span class="arithmatex">\(\gamma * 100\%\)</span> of the values (distributed according to f) lie below <span class="arithmatex">\(f_\gamma\)</span> and <span class="arithmatex">\((1-\gamma) * 100\%\)</span> of the values lie above it.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.017 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="PerRange"></a> Percentile range</td>
+<td>--</td>
+<td>PR</td>
+<td>The difference between two <span class="arithmatex">\(\gamma\)</span>-quantiles <span class="arithmatex">\(f_{\gamma_1} - f_{\gamma_2}\)</span>.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.018 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="CIP"></a> Confidence interval probability</td>
+<td>--</td>
+<td><span class="arithmatex">\(\alpha\)</span></td>
+<td>The probability <span class="arithmatex">\((1-\alpha)\%\)</span> with which a confidence interval covers a population parameter.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.019 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="CI"></a> Confidence interval</td>
+<td>--</td>
+<td>CI</td>
+<td>The interval which contains a population parameters with a probability of <span class="arithmatex">\((1-\alpha)\%\)</span>.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.020 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="SNR"></a> Signal to noise ratio</td>
+<td>--</td>
+<td>SNR</td>
+<td>The mean value (sample) of a given data set <span class="arithmatex">\(\bar{x}\)</span> divided by the standard deviation (sample) <em>s</em> from the same dataset: <span class="arithmatex">\(\frac{\bar{x}}{s}\)</span></td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.021 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="CNR"></a> Contrast to noise ratio</td>
+<td>--</td>
+<td>CNR</td>
+<td>The absolute deviation of a given data value <span class="arithmatex">\(f_1\)</span> from another data value <span class="arithmatex">\(f_2\)</span>, divided by the standard deviation <em>s</em> (noise), all from the same data set: <span class="arithmatex">\(\frac{\left\| f_1 - f_2 \right\|}{s}\)</span></td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.022 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="CR"></a> Contrast ratio</td>
+<td>--</td>
+<td>CR</td>
+<td>The absolute deviation of a given data value <span class="arithmatex">\(f_1\)</span> from another data value <span class="arithmatex">\(f_2\)</span>, divided by the sum of the two data values: <span class="arithmatex">\(\frac{\left\| f_1 - f_2 \right\|}{f_1 + f_2}\)</span></td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.023 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="SSE"></a> Sum of squared errors</td>
+<td>--</td>
+<td>SSE</td>
+<td><span class="arithmatex">\(SSE = \sum_{i=0}^{N}\left[ f(t_i) - f_{model}(t_i)\right]^2\)</span>, where <em>N</em> is the number of samples, <span class="arithmatex">\(f(t_i)\)</span> measured value and <span class="arithmatex">\(f_{model}(t_i)\)</span> is the modeled value. This is valid for linear and non-linear least-squares optimization.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.024 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="GoFP"></a> Goodness-of-fit parameter</td>
+<td>--</td>
+<td><span class="arithmatex">\(\chi^2\)</span></td>
+<td><span class="arithmatex">\(\chi^2 = \frac{SSE}{\sigma_N^2}\)</span>, where <span class="arithmatex">\(\sigma_N^2\)</span> is the random noise variance. This is valid for linear and non-linear least-squares optimization.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.025 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="DoF"></a> Degrees of freedom</td>
+<td>--</td>
+<td><em>df</em></td>
+<td><span class="arithmatex">\(N-p\)</span>, where <em>N</em> is the number of samples and <em>p</em> is the number of quantities to be determined e.g. model parameters.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.026 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="AIC"></a> Akaike-information-criterion</td>
+<td>--</td>
+<td>AIC</td>
+<td><span class="arithmatex">\(AIC = 2p + Nln(SSE)\)</span>, where <em>p</em> is the number of model parameters, <em>N</em> is the number of samples.<br /> This is valid for linear and non-linear least-squares optimization.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.027 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="JM"></a> Jacobian matrix</td>
+<td>--</td>
+<td><em>J</em></td>
+<td><em>J</em> is a matrix of the first derivatives of a function <em>f(x)</em> with respect to the parameters <span class="arithmatex">\(p_1,...,p_n\)</span>: <span class="arithmatex">\(J_{ij}(x) = \left[ \frac{df_j(x)}{dp_i} \right]\)</span></td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.028 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="HM"></a> Hessian matrix</td>
+<td>--</td>
+<td><em>H</em></td>
+<td><em>H</em> is a matrix of the second derivatives of a function <em>f(x)</em> with respect to the parameters <span class="arithmatex">\(p_1,...,p_n\)</span>: <span class="arithmatex">\(H_{ij}(x) = \frac{\partial^2f(x)}{\partial p_i \partial p_j}\)</span></td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.029 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="CovM"></a> Covariance matrix</td>
+<td>--</td>
+<td><em>Cov</em></td>
+<td><span class="arithmatex">\(Cov = (J^T \cdot J)^{-1} \cdot \frac{SSE}{df}\)</span></td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.030 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="CRLB"></a> Cramer Rao lower bound</td>
+<td>--</td>
+<td>CRLB</td>
+<td>Lower bound on the variance of any unbiased estimator.</td>
+<td>variable</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.US1.999</td>
+<td>Quantity not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>[variable]</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="analytical-inversion-quantities"><a id="Analytical inversion quantities"></a> Analytical inversion quantities<a class="headerlink" href="#analytical-inversion-quantities" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>OSIPI units</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q.AI1.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="AI_SMP"></a> Static model parameters</td>
+<td>--</td>
+<td>SMP</td>
+<td>A vector of the known quantities of a forward model. Select from section Q.</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.AI1.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="AI_MP"></a> Model parameters</td>
+<td>--</td>
+<td>MP</td>
+<td>A vector of the quantities to be determined by the analytical inversion of a forward model. Select from section Q.</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.AI1.999</td>
+<td><a id=""></a> Quantity not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>[variable]</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="optimization-quantities"><a id="Optimization quantities"></a> Optimization quantities<a class="headerlink" href="#optimization-quantities" title="Permanent link">&para;</a></h2>
+<p>In this group, quantities related to optimization methods are listed. In this version, only least squares optimization methods are considered. Approaches that use e.g. maximum likelihood estimation, bayesian inference, machine learning will be taken into account in future versions of the lexicon.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>OSIPI units</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q.OP1.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="MP"></a> Model parameters</td>
+<td>--</td>
+<td><span class="arithmatex">\(\phi\)</span>, MP</td>
+<td>A vector of quantities which are the variable of the model fitting process. Select from section Q.</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.OP1.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="SMP"></a> Static model parameters</td>
+<td>--</td>
+<td><span class="arithmatex">\(\theta\)</span>, SMP</td>
+<td>A vector of the quantities of the forward model to be fitted which are not in the scope of the optimization. Select from section Q.</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.OP1.003 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="EMP"></a> Estimated model parameter</td>
+<td>--</td>
+<td><span class="arithmatex">\(\hat{\phi}\)</span>, EMP</td>
+<td>A vector (in the same order as model parameters, indicated with “^”) of the estimated model parameters resulting from the optimization process.</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.OP1.004 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="CostValue"></a> Cost value</td>
+<td>--</td>
+<td><em>C</em></td>
+<td>The scalar or vectorial value of a specified cost function.</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.OP1.005 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="CostValue_min"></a> Cost value minimum</td>
+<td>--</td>
+<td><span class="arithmatex">\(C_{opt}\)</span></td>
+<td>The minimum cost value as returned by an optimizer. This can be a local or global minimum.</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.OP1.006 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="MP_init"></a> Initial model parameters</td>
+<td>--</td>
+<td><span class="arithmatex">\(\phi_{init}\)</span></td>
+<td>Vector of the starting values of the search for the model parameters.</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.OP1.007 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="MP_L"></a> Model parameter lower bounds</td>
+<td>--</td>
+<td><span class="arithmatex">\(\phi_{LB}\)</span></td>
+<td>Vector of the lower bounds for the search for the model parameters.</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.OP1.008 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="MP_U"></a> Model parameter upper bounds</td>
+<td>--</td>
+<td><span class="arithmatex">\(\phi_{UB}\)</span></td>
+<td>Vector of the upper bounds for the search for the model parameters.</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.OP1.009 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Weights"></a> Data weights</td>
+<td>--</td>
+<td><span class="arithmatex">\(\omega\)</span></td>
+<td>Vector of weights on the measured values during the optimization process.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.OP1.010 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="N_iter_max"></a> Maximum <br>number of iterations</td>
+<td>--</td>
+<td><span class="arithmatex">\(N_{it, max}\)</span></td>
+<td>Largest number of steps taken in an iterative optimization.</td>
+<td>-</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.OP1.011 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="ConvThresh"></a> Convergence threshold</td>
+<td>--</td>
+<td><em>e</em></td>
+<td>Convergence threshold on the optimizer.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.OP1.012 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="A"></a> Linear coefficients matrix</td>
+<td>--</td>
+<td><em>A</em></td>
+<td>A matrix with elements A<sub>ij</sub> with which a function linear in the model parameters  can be  expressed as <span class="arithmatex">\(f(\phi;x_i)= \sum_{j=1}^{m}A_{ij}\phi_j\)</span>. <br />The <span class="arithmatex">\(A_{ij}\)</span> contain the data grid and the static model parameters.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.OP1.013 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Lambda"></a> Regularization parameter</td>
+<td>--</td>
+<td><span class="arithmatex">\(\lambda\)</span></td>
+<td>A parameter which determines the weight of the regularization in an optimization.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.OP1.014 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Lambda_norm"></a> Normalized regularization parameter</td>
+<td>--</td>
+<td><span class="arithmatex">\(\hat{\lambda}\)</span></td>
+<td>The regularization parameter is expressed relative to the largest singular value <span class="arithmatex">\(\sigma_1\)</span> of a <abbr title="Singular Value Decomposition">SVD</abbr>: <span class="arithmatex">\(\hat{\lambda}=\frac{\lambda}{\sigma_1}\)</span> .</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.OP1.015 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Lambda_fixed"></a> Fixed <span class="arithmatex">\(\lambda\)</span> value</td>
+<td>--</td>
+<td><span class="arithmatex">\(\lambda_{fixed}\)</span></td>
+<td>A fixed value, e.g. a literature value, assumed as regularization parameter.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.OP1.999</td>
+<td><a id="not listed OP1"></a> Quantity not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>[variable]</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="native-r1-estimation-quantities"><a id="Native R1 estimation quantities"></a> Native R1 estimation quantities<a class="headerlink" href="#native-r1-estimation-quantities" title="Permanent link">&para;</a></h2>
+<p>This group lists quantities required in the context of native R1 estimation.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>OSIPI units</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q.NR1.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="R10_fixed"></a> Fixed <span class="arithmatex">\(R_{10}\)</span> value</td>
+<td>--</td>
+<td><span class="arithmatex">\(R_{10, fixed}\)</span></td>
+<td>A fixed value, e.g. a literature value, assumed as native <em>R<sub>1</sub></em> relaxation rate value.</td>
+<td>1/ms</td>
+<td><a href="https://doi.org/10.1002/jmri.22987" target="_blank">Haacke, et al. 2007</a></td>
+</tr>
+<tr>
+<td>Q.NR1.999</td>
+<td><a id="not listed NR1"></a> Quantity not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>[variable]</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="arterial-input-function-estimation-quantities"><a id="Arterial input function estimation quantities"></a> Arterial input function estimation quantities<a class="headerlink" href="#arterial-input-function-estimation-quantities" title="Permanent link">&para;</a></h2>
+<p>The items of this group are quantities which are required to describe arterial input function estimation methods.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>OSIPI units</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q.AE1.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="kMeansParams"></a> <em>k</em>-means-cluster-algorithm-parameters</td>
+<td>--</td>
+<td><em>[k]</em></td>
+<td>Vector of ordered inputs to the <em>k</em>-means <abbr title="Arterial Input Function">AIF</abbr> detection algorithm.</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.AE1.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="fuzzycMeansParams"></a> Fuzzy-c-means-cluster-algorithm-parameters</td>
+<td>--</td>
+<td><em>[m, <span class="arithmatex">\(\epsilon\)</span>, c, P<sub>c</sub>, c<sub>i</sub>]</em></td>
+<td>Vector of ordered inputs to the fuzzy-c-means <abbr title="Arterial Input Function">AIF</abbr> detection algorithm.</td>
+<td>[variable units]</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.AE1.003 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="PVC"></a> Partial-volume corrected</td>
+<td>--</td>
+<td>PVE</td>
+<td>If the value of this flag is 1, partial volume effects are accounted for. Otherwise, or if not specified, no partial volume effect correction was done.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.AE1.004 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="DB"></a> Dual Bolus</td>
+<td>--</td>
+<td>DB</td>
+<td>The full-dose <abbr title="Arterial Input Function">AIF</abbr> is reconstructed from pre-bolus injection with a smaller dose. If the value of this flag is 1, a dual bolus approach is used. Otherwise, or if not specified, no dual bolus approach is used.</td>
+<td>--</td>
+<td><a href="https://doi.org/10.1002/jmri.20747" target="_blank">Risse, et al. 2006</a></td>
+</tr>
+<tr>
+<td>Q.AE1.005 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="PA"></a> Arterial partial volume correction factor</td>
+<td>--</td>
+<td><em>P<sub>A</sub></em></td>
+<td>A factor that scales signal or indicator concentrations measured in a partial volume affected artery such that partial volume effects are removed. Usually this is estimated by deconvolving arterial and venous signals or indicator concentrations.</td>
+<td>--</td>
+<td><a href="https://doi.org/10.1002/mrm.22005" target="_blank">Sourbron, et al. 2009</a></td>
+</tr>
+<tr>
+<td>Q.AE1.999</td>
+<td><a id="not listed AE1"></a> Quantity not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>[variable]</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="segmentation-quantities"><a id="Segmentation quantities"></a> Segmentation quantities<a class="headerlink" href="#segmentation-quantities" title="Permanent link">&para;</a></h2>
+<p>This group contains quantities related to the process of image segmentation.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>OSIPI name</th>
+<th>Alternative names</th>
+<th>Notation</th>
+<th>Description</th>
+<th>OSIPI units</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q.SE1.001 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="BinMask"></a> Binary mask</td>
+<td>--</td>
+<td>Mask</td>
+<td>Binary mask of segmented region of interest.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.SE1.002 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="BinAIFMask"></a> Binary <abbr title="Arterial Input Function">AIF</abbr> mask</td>
+<td>--</td>
+<td><abbr title="Arterial Input Function">AIF</abbr> mask</td>
+<td>Binary mask of a vessel in which the arterial input function is estimated.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.SE1.003 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="BinROIMask"></a> Binary <abbr title="Region Of Interest">ROI</abbr> mask</td>
+<td>--</td>
+<td><abbr title="Region Of Interest">ROI</abbr> mask</td>
+<td>Binary mask of a tissue region of interest.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.SE1.004 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="Seeds"></a> Seeds</td>
+<td>--</td>
+<td>[seeds]</td>
+<td>Vector of ordered voxel coordinates of seed points for seed based segmentation (e.g. region growing segmentation).</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.SE1.005 <button class="md-button md-button--hyperlink">COPY LINK</button></td>
+<td><a id="N_kMeans"></a> Number of k–means clusters</td>
+<td>--</td>
+<td><em>N<sub>k-means</sub></em></td>
+<td>Number of clusters in the k-means clustering algorithm.</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Q.SE1.999</td>
+<td><a id="not listed SE1"></a> Quantity not listed</td>
+<td>--</td>
+<td>--</td>
+<td>This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage.</td>
+<td>[variable]</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="https://forms.gle/dsfUEZx6P91rBwJe6" target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="https://forms.gle/dsfUEZx6P91rBwJe6" target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="#__consent">Change cookie settings</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our lexicon and whether users find what they're searching for. With your consent, you're helping us to make our lexicon better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["search.suggest"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
