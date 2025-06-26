@@ -9,6 +9,10 @@ copyright: >
 
 theme:
   name: material
+  features:
+    - search.suggest
+    - search.highlight
+    - search.share
   logo: osipiImgs/OSIPI_logo.png
   favicon: osipiImgs/OSIPI_logo_only_square.png
   palette:
@@ -28,6 +32,8 @@ theme:
         name: Switch to light mode
   features:
     - search.suggest
+    - search.highlight
+    - search.share
   icon:
     admonition:
       note: fontawesome/solid/note-sticky
@@ -62,7 +68,14 @@ nav:
 plugins:
   - search:
       lang: en
-      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+      separator: '[\s\-\.,:;!?\[\]\(\)"/\*\^_~\+]+|(?<=[a-z])(?=[A-Z])'
+      prebuild_index: true
+      min_search_length: 2
+      indexing: full
+      boost: 7
+      pipeline:
+        - stopWordFilter
+
 
 markdown_extensions:
   - toc:
