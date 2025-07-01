@@ -1,3 +1,13 @@
+---
+title: Quality of Life Additions
+description: Tools and features to improve user experience on the CAPLEX website.
+tags:
+  - usability
+  - search
+  - abbreviations
+  - help
+---
+
 ## Quality of life additions
 
 This section will introduce you to some tools available on this website to make your experience better.
@@ -19,6 +29,8 @@ You can right-click on any [link](#copying-reference-doi), such as a reference t
 <b><font color=#FF0000>This feature is currently worked on. Your [feedback](https://forms.gle/dsfUEZx6P91rBwJe6){target="_blank"} would be greatly appreciated.</font></b>
 
 At the top of the webpage, you may find the `Search` bar allowing you to find resources within the website quickly. If you wish to find a table row by code, enclose the code using `""`, for example to find Gradient echo model you could search for `"M.SM1.001"`.
+
+**See the [Search Help](search-help.md) page for tips on getting the best results.**
 
 !!! warning
     

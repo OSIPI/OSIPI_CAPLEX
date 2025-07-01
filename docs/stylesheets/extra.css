@@ -4,7 +4,7 @@
 }
 
 .md-typeset__table table:not([class]) {
-    display: table
+    display: table;
 }
 /* This automatically stretches the site contents to monitor width*/
 .md-grid {
@@ -19,4 +19,11 @@
     /* top | right | bottom | left */
     padding: 3px 2px;
     font-size: 12px;
+}
+/* docs/stylesheets/extra.css */
+.md-search-result__highlight {
+    background-color: #ffe066;
+    color: #222;
+    padding: 0 2px;
+    border-radius: 2px;
 }
