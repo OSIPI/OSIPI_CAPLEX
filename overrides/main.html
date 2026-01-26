@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block analytics %}
+  <script>
+    /* Prevent Google Analytics from tracking localhost, 127.0.0.1, and GitHub Codespaces */
+    if (window.location.hostname === "localhost" || 
+        window.location.hostname === "127.0.0.1" || 
+        window.location.hostname.endsWith(".github.dev")) { 
+      console.log("Analytics disabled (Development Mode)");
+      window['ga-disable-G-27M7GKVZFQ'] = true; 
+    }
+  </script>
+  {{ super() }}
+{% endblock %}
