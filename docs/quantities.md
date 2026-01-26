@@ -112,6 +112,7 @@ This section contains general physical and mathematical quantities which are use
 | Q.GE1.013 <button class="md-button md-button--hyperlink">COPY LINK</button> | <a id="x_start"></a> Start of range | -- | $x_{start}$ | The start point of the range [$x_{start}$, $x_{end}$].  | variable | -- |
 | Q.GE1.014 <button class="md-button md-button--hyperlink">COPY LINK</button> | <a id="x_end"></a> End of range | -- | $x_{end}$  | The end point of the range [$x_{start}$, $x_{end}$]. | variable | -- |
 | Q.GE1.015 <button class="md-button md-button--hyperlink">COPY LINK</button> | <a id="sampleSize"></a> Sample size | -- | $n$ | The number samples within a data set.| variable | -- |
+| Q.GE1.016 <button class="md-button md-button--hyperlink">COPY LINK</button> | <a id="t0"></a> Offset time | -- | $t_0$ | Time offset (e.g. delay between trigger and acquisition). | s | -- |
 | Q.GE1.999 | <a id="not listed GE1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
 
 
