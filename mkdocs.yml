@@ -11,6 +11,7 @@ theme:
   name: material
   logo: osipiImgs/OSIPI_logo.png
   favicon: osipiImgs/OSIPI_logo_only_square.png
+  custom_dir: overrides
   palette:
 
     # Palette toggle for light mode
