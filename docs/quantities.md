@@ -62,7 +62,7 @@ The items of this group of quantities are either measured or modeled quantities 
 | Q.IC1.003 <button class="md-button md-button--hyperlink">COPY LINK</button> | <a id="h"></a> Tissue transit time distribution| -- | *h* | Probability distribution of transit times through volume of interest.  | -- | -- |
 | Q.IC1.004 <button class="md-button md-button--hyperlink">COPY LINK</button> | <a id="ha"></a> Arterial transit time distribution | -- | *h<sub>a</sub>* |Probability distribution of transit times through the arterial tree (between AIF location and tissue of interest). | -- | -- |
 | Q.IC1.005 <button class="md-button md-button--hyperlink">COPY LINK</button> | <a id="IRF"></a> Tissue impulse response function | *IRF* | *I* |Defined by the relationship $C_t=I\otimes C_{a,p}$ . | 1/s | -- |
-| Q.IC1.006 <button class="md-button md-button--hyperlink">COPY LINK</button> | <a id="IRFGeneral"></a> General impulse response function |*IRF* | *I* |Defined by the relationship $C_x=I\otimes C_y$ . | 1/s | -- |
+| Q.IC1.007 <button class="md-button md-button--hyperlink">COPY LINK</button> | <a id="Ct"></a> Tissue concentration | -- | $C_{tissue}$ or $C_t$ | The volume-weighted average concentration of indicator within a voxel, calculated as the sum of concentrations in all compartments weighted by their relative volume fractions (e.g. $C_t = v_p C_p + v_e C_e$). | mM | -- |
 | Q.IC1.999 | <a id="not listed IC1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
 
 
