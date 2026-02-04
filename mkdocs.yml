@@ -11,23 +11,57 @@ theme:
   name: material
   logo: osipiImgs/OSIPI_logo.png
   favicon: osipiImgs/OSIPI_logo_only_square.png
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    # - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
   palette:
-
-    # Palette toggle for light mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
+      primary: indigo
+      accent: indigo
       toggle:
-        icon: material/weather-sunny
+        icon: material/toggle-switch
         name: Switch to dark mode
-
-    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: black
+      accent: indigo
       toggle:
-        icon: material/weather-night
-        name: Switch to light mode
-  features:
-    - search.suggest
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+
   icon:
     admonition:
       note: fontawesome/solid/note-sticky
@@ -63,6 +97,9 @@ plugins:
   - search:
       lang: en
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - minify:
+      minify_html: true
+  - open-in-new-tab
 
 markdown_extensions:
   - toc:
@@ -102,17 +139,13 @@ extra:
     description: CAPLEX
     image: Social Card.png
     url: https://osipi.github.io/OSIPI_CAPLEX/
+    
+  social:
+  - icon: fontawesome/brands/github
+    link: https://github.com/OSIPI
+  - icon: fontawesome/brands/slack
+    link: https://app.slack.com/client/TFGVCE9HS
 
-extra_javascript:
-  - javascripts/extra.js
-  - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML
-
-extra_css:
-  - stylesheets/extra.css
-
-extra:
   analytics:
     provider: google
     property: G-27M7GKVZFQ
@@ -138,3 +171,12 @@ extra:
       as to measure the effectiveness of our lexicon and whether users
       find what they're searching for. With your consent, you're helping us to
       make our lexicon better.
+
+extra_javascript:
+  - javascripts/extra.js
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML
+
+extra_css:
+  - stylesheets/extra.css
