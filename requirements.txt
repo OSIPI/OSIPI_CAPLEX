@@ -3,3 +3,4 @@ mkdocs-material
 mkdocs-material-extensions
 mkdocs-minify-plugin
 mkdocs-open-in-new-tab
+pymdown-extensions
