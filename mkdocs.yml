@@ -42,7 +42,7 @@ theme:
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/link
+        icon: material/brightness-auto
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -77,7 +77,10 @@ nav:
       - About Caplex: index.md
       - CAPLEX structure: structure.md
       - How to use the website: qualityOfLife.md
-      - How to contribute: improved-contribution-tutorial.md
+      - How to contribute: contributionTutorial.md
+      - Practical examples: practical-examples.md
+      - Quick reference: quick-reference.md
+      - Style guide: style-guide.md
   - Sections:
     - Q - Quantities: quantities.md
     - M - Perfusion models: perfusionModels.md
@@ -88,10 +91,9 @@ nav:
     - DCE/DSC resources:
       - DCE literature library: dceliterature.md
     - Software tools:
-      - Software overview: softwareOverview.md
       - Data simulation tools: simulationTools.md
-      - Analysis toolboxes: analysisToolboxes.md
-    - Sample datasets: sampleDatasets.md
+      - Analysis toolboxes: AnalysisToolboxes.md
+    - Sample datasets: SampleDatasets.md
 
 plugins:
   - search:
