@@ -1,3 +1,5 @@
+<img src="osipiImgs/OSIPI_logo_only_square.png" align="right" width="150" style="margin-left: 20px; margin-bottom: 20px;">
+
 # The OSIPI Contrast Agent Perfusion MRI Lexicon (CAPLEX)
 
 ## What is CAPLEX?
