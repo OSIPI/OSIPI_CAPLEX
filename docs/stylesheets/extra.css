@@ -4,16 +4,20 @@
 }
 
 .md-typeset__table table:not([class]) {
-    display: table
+    display: table;
 }
-/* This automatically stretches the site contents to monitor width*/
+
+/* This automatically stretches the site contents to monitor width */
 .md-grid {
     max-width: 90vw;
 }
+
 /* Preserve words so they are not broken in the middle on newlines */
 .md-typeset td {
     overflow-wrap: break-word;
+    word-break: break-word; /* Fixes jumping text behavior on interaction */
 }
+
 /* Control hyperlink button properties */
 .md-button.md-button--hyperlink {
     /* top | right | bottom | left */
