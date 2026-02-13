@@ -1,19 +1,24 @@
+<img src="osipiImgs/OSIPI_logo_only_square.png" align="right" width="150" style="margin-left: 20px; margin-bottom: 20px;">
+
 # The OSIPI Contrast Agent Perfusion MRI Lexicon (CAPLEX)
 
-## What is CAPLEX?
-CAPLEX is a library of standardised (reference) definitions of quantities, models and analysis processes commonly used in contrast-agent based perfusion MRI (DCE and DSC-MRI). 
+## Mission
+The **C**ontrast **A**gent **P**erfusion MRI **LEX**icon (CAPLEX) provides a standardized library of definitions for quantities, models, and analysis processes commonly used in Dynamic Contrast-Enhanced (DCE) and Dynamic Susceptibility Contrast (DSC) MRI.
 
-## Why do we need CAPLEX?
-Very little guidance or standards exist relating to reporting of DCE\DSC analyses. This ultimately hinders progress of the technique towards clinical adoption. The aim of CAPLEX is to reduce reporting variability by providing reference definitions for commonly used quantities, models, or processes.
+## The Challenge
+Consistency in perfusion MRI reporting is a known challenge in the field. Ambiguities in terminology, units, and modeling assumptions often hinder reproducibility and clinical adoption. 
 
-## Who created CAPLEX?
-CAPLEX was created by Taskforce 4.2 of [OSIPI](https://osipi.github.io/index.html){target="_blank"}, an intiative of the [ISMRM](https://www.ismrm.org/){target="_blank"}. 
+**CAPLEX aims to solve this** by providing a unified reference for:
+* **Quantities:** Standard notation for concentration, relaxation rates, and physiological parameters.
+* **Models:** Explicit equations for Pharmacokinetic (PK) models and AIF estimation.
+* **Processes:** Step-by-step definitions for analysis pipelines.
 
-## Contributing to CAPLEX
-**Currently recruiting new Taskforce members!!!**
+## Origin & Governance
+CAPLEX is an initiative of **Taskforce 4.2** of the [Open Science Initiative for Perfusion Imaging (OSIPI)](https://osipi.github.io/index.html){target="_blank"}, a study group of the [ISMRM](https://www.ismrm.org/){target="_blank"}.
 
-There are several ways to join the effort:
+## How to Contribute
+We are actively recruiting new Taskforce members to help expand and refine this lexicon.
 
-1. Become a member of the task force: email **ben.dickie@manchester.ac.uk**. Anyone with relevant expertise can join - PhDs and postdocs working in DCE/DSC MRI field are particularly encouraged to apply.
-
-2. To suggest edits to the lexicon, go to the CAPLEX Github page: https://github.com/OSIPI/OSIPI_CAPLEX and follow the instructions on how to contribute in the README.md. Additionally, a tutorial on how to contribute can be found [here](contributionTutorial.md).
+* **Join the Taskforce:** Email **ben.dickie@manchester.ac.uk**. We welcome PhDs, postdocs, and researchers with expertise in DCE/DSC MRI.
+* **Suggest Edits:** Visit our [GitHub Repository](https://github.com/OSIPI/OSIPI_CAPLEX){target="_blank"} to open issues or submit pull requests.
+* **Learn More:** Read our [Contribution Tutorial](improved-contribution-tutorial.md).
